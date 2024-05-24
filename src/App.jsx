@@ -1,4 +1,4 @@
-import { MapDisplay } from "./MapDisplay";
+import MapDisplay  from "./MapDisplay";
 
 function App() {
   return (
