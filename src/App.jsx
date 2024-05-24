@@ -1,10 +1,12 @@
-function App() {
+import { MapDisplay } from "./MapDisplay";
 
+function App() {
   return (
     <>
       <h1>JAPOW!</h1>
+      <MapDisplay></MapDisplay>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
