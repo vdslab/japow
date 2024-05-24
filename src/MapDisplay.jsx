@@ -1,47 +1,67 @@
-// import React, { useEffect } from "react";
-// import * as d3 from "d3";
-import JapanData from "./assets/prefectures.json";
+import React, { useEffect, useRef, useState } from "react";
+import * as d3 from "d3";
+import JapanData from "./assets/Japan.json";
 
-// export const MapDisplay = () => {
-//   console.log();
-//   return (
-//     <div id="map-container" style={{ width: "100%", height: "400px" }}></div>
-//   );
-// };
+const ZoomableSVG = (props) => {
+  const { children } = props;
 
-// src/Map.js
-import React, { useEffect, useRef } from 'react';
-import * as d3 from 'd3';
-// import japanData from './japan.json'; // 日本のGeoJSONデータ
+  const svgRef = useRef();
+  const [k, setK] = useState(1);
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+
+  useEffect(() => {
+    const zoom = d3.zoom().on("zoom", (event) => {
+      const { x, y, k } = event.transform;
+      setX(x);
+      setY(y);
+      setK(k);
+    });
+    d3.select(svgRef.current).call(zoom);
+  }, []);
+  return (
+    <svg ref={svgRef} width={window.innerWidth} height={window.innerHeight}>
+      <g transform={`translate(${x + 300},${y + 200})scale(${k - 0.5})`}>
+        {children}
+      </g>
+    </svg>
+  );
+};
 
 const MapDisplay = () => {
   const svgRef = useRef(null);
+  const width = 800;
+  const height = 600;
+  // const [tooltipContent, setTooltipContent] = useState("");
+  var svg;
 
   useEffect(() => {
-    const width = 800;
-    const height = 600;
-
-    const projection = d3.geoMercator()
+    const projection = d3
+      .geoMercator()
       .center([137, 38]) // 日本の中心座標
-      .scale(1000)       // スケール調整
+      .scale(1000) // スケール調整
       .translate([width / 2, height / 2]);
 
     const path = d3.geoPath().projection(projection);
 
-    const svg = d3.select(svgRef.current)
-      .attr('width', width)
-      .attr('height', height);
+    svg = d3.select(svgRef.current).attr("width", width).attr("height", height);
 
-    svg.selectAll('path')
+    svg
+      .selectAll("path")
       .data(JapanData.features)
-      .enter().append('path')
-      .attr('d', path)
-      .attr('fill', '#ccc')
-      .attr('stroke', '#000');
+      .enter()
+      .append("path")
+      .attr("d", path)
+      .attr("fill", "#ccc")
+      .attr("stroke", "#000");
   }, []);
 
   return (
-    <svg ref={svgRef}></svg>
+    <>
+      <ZoomableSVG>
+        <svg ref={svgRef} viewBox={`0 0 ${width} ${height}`}></svg>
+      </ZoomableSVG>
+    </>
   );
 };
 
