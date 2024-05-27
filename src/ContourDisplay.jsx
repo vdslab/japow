@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import * as d3 from "d3";
 import geoJson from "./assets/Japan.json";
 import volcanoData from "./assets/volcano.json";
+import prefData from "./assets/prefectures.json";
+import snowData from "./assets/snowlev-2023020212.json";
 
 export const ContourDisplay = () => {
   const n = volcanoData.width;
@@ -29,25 +31,33 @@ export const ContourDisplay = () => {
   //   );
 
   // console.log(volcanoData);
-  console.log(volcanoData.value)
-  console.log(path(contours(volcanoData.values)[0]));
-  console.log(path(geoJson.features[0]));
+  // console.log(volcanoData.value)
+  // console.log(path(contours(volcanoData.values)[0]));
+  // console.log(path(geoJson.features[0]));
   // console.log(path(geoJson.features[1].geometry));
+
+  console.log(snowData);
 
   return (
     <div id="map-container" style={{ width: "100%", height: "400px" }}>
       <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
-        <g stroke={"#0"}>
+        <g >
+
+        </g>
+      </svg>
+      <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
+        <g stroke={"#0"} transform={`translate(0, ${height}) scale(1, -1)`}>
+          <circle cx="0" cy="0" r="5" fill="red" />
           <g >
             {
-              // geoJson.features.map((value, id) => {
-              //   return (
-              //     <g stroke="#0">
-              //       {/* <path d={pathJapan(value.geometry)} fill="#ccc" stroke="#0" key={id} /> */}
-              //       <path d={pathJapan(value.geometry)} fill="#ccc" stroke="#0" key={id} />
-              //     </g>
-              //   );
-              // })
+              prefData.features.map((value, id) => {
+                return (
+                  <g stroke="#0">
+                    {/* <path d={pathJapan(value.geometry)} fill="#ccc" stroke="#0" key={id} /> */}
+                    <path d={pathJapan(value.geometry)} fill="#ccc" stroke="#0" key={id} />
+                  </g>
+                );
+              })
             }
           </g>
         </g>
@@ -57,7 +67,7 @@ export const ContourDisplay = () => {
           {
             contours(volcanoData.values).map((value, index) => {
               return (
-                <path d={path(value)} fill={color(value.value)} stroke="black" key={index} />
+                <path d={path(value)} fill="none" stroke={color(value.value)} key={index} />
               );
             })
           }

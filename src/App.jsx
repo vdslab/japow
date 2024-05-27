@@ -5,8 +5,8 @@ function App() {
   return (
     <>
       <h1>JAPOW!</h1>
-      <MapDisplay></MapDisplay>
       <ContourDisplay></ContourDisplay>
+      {/* <MapDisplay></MapDisplay> */}
     </>
   );
 }
