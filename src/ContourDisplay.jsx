@@ -29,6 +29,7 @@ export const ContourDisplay = () => {
   //   );
 
   // console.log(volcanoData);
+  console.log(volcanoData.value)
   console.log(path(contours(volcanoData.values)[0]));
   console.log(path(geoJson.features[0]));
   // console.log(path(geoJson.features[1].geometry));
@@ -39,14 +40,14 @@ export const ContourDisplay = () => {
         <g stroke={"#0"}>
           <g >
             {
-              geoJson.features.map((value, id) => {
-                return (
-                  <g stroke="#0">
-                    {/* <path d={pathJapan(value.geometry)} fill="#ccc" stroke="#0" key={id} /> */}
-                    <path d={pathJapan(value.geometry)} fill="#ccc" stroke="#0" key={id} />
-                  </g>
-                );
-              })
+              // geoJson.features.map((value, id) => {
+              //   return (
+              //     <g stroke="#0">
+              //       {/* <path d={pathJapan(value.geometry)} fill="#ccc" stroke="#0" key={id} /> */}
+              //       <path d={pathJapan(value.geometry)} fill="#ccc" stroke="#0" key={id} />
+              //     </g>
+              //   );
+              // })
             }
           </g>
         </g>
