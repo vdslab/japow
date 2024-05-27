@@ -1,10 +1,12 @@
-import MapDisplay  from "./MapDisplay";
+import { ContourDisplay } from "./ContourDisplay";
+import MapDisplay from "./MapDisplay";
 
 function App() {
   return (
     <>
       <h1>JAPOW!</h1>
       <MapDisplay></MapDisplay>
+      <ContourDisplay></ContourDisplay>
     </>
   );
 }
