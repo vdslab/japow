@@ -14,8 +14,6 @@ export const ContourDisplay = () => {
   console.log(volcanoData);
   console.log(contours(volcanoData.values));
 
-  const elm = contours(volcanoData.values)[2];
-
   return (
     <div id="map-container" style={{ width: "100%", height: "400px" }}>
       <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
