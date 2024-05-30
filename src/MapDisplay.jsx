@@ -11,11 +11,10 @@ const ZoomableSVG = (props) => {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const minZoom = 0.7;
-  const maxZoom = 2;
+  const maxZoom = 3;
   useEffect(() => {
     const zoom = d3.zoom().scaleExtent([minZoom, maxZoom]).on("zoom", (event) => {
       const { x, y, k } = event.transform;
-      console.log(x, y, k);
       setX(x);
       setY(y);
       setK(k);
@@ -31,9 +30,6 @@ const ZoomableSVG = (props) => {
   );
 };
 
-const plot = () => {
-
-}
 
 const MapDisplay = () => {
   const svgRef = useRef(null);
@@ -77,7 +73,7 @@ const MapDisplay = () => {
         const coords = projection([d.longitude, d.latitude]);
         return coords ? coords[1] : null;
       })
-      .attr('r', 0.5)
+      .attr('r', 1)
       .attr('fill', 'red')
       .on("click", (event, d) => {
         // クリックイベントのハンドラ
