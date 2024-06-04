@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import JapanData from "./assets/Japan.json";
 import zahyou from "./assets/snowlev-2023020212.json";
+import sukizahyou from "./assets/sukijou-zahyou.json";
 
 const ZoomableSVG = (props) => {
   const { children } = props;
@@ -81,7 +82,27 @@ const MapDisplay = () => {
         // d3.select(event.currentTarget).attr("fill", "blue");
       });
 
-      
+    console.log(sukizahyou);
+    svg.append('g')
+      .selectAll('circle')
+      .data(sukizahyou)
+      .enter()
+      .append('circle')
+      .attr('cx', d => {
+        const coords = projection([d.longitude, d.latitude]);
+        return coords ? coords[0] : null;
+      })
+      .attr('cy', d => {
+        const coords = projection([d.longitude, d.latitude]);
+        return coords ? coords[1] : null;
+      })
+      .attr('r', 1.5)
+      .attr('fill', '#00ffff')
+      .on("click", (event, d) => {
+        console.log("Cliked skijou-data;", d);
+      })
+
+
   }, []);
 
   return (
