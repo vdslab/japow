@@ -3,7 +3,7 @@ import json
 import numpy as np
 
 # GRIBファイルを開く（編集したいファイル名)
-filename = '/grib2/anl_snwlev.2023020212'
+filename = '/grib2/anl_snwlev.2023020812'
 grbs = pygrib.open(filename)
 
 
@@ -14,7 +14,7 @@ japan_lon_min = 120
 japan_lon_max = 150
 
 # JSONファイルを開く (データを入れるファイル名)
-output_filename = '/data/snowlev-2023020212.json'
+output_filename = '/data/snowlev-2023020812.json'
 with open(output_filename, 'w') as json_file:
     # JSON配列の開始
     json_file.write('[\n')
