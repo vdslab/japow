@@ -1,230 +1,230 @@
 [
     {
-        "region": "北海道",
-        "name": "富良野スキー場",
-        "latitude": "43.32481922",
-        "longitude": "142.3541473"
+      "region": "北海道",
+      "name": "富良野スキー場",
+      "latitude": 43.32481922,
+      "longitude": 142.3541473
     },
     {
-        "region": "北海道",
-        "name": "大雪山 黒岳スキー場",
-        "latitude": "43.71090701",
-        "longitude": "142.9388847"
+      "region": "北海道",
+      "name": "大雪山 黒岳スキー場",
+      "latitude": 43.71090701,
+      "longitude": 142.9388847
     },
     {
-        "region": "北海道",
-        "name": "中山峠スキー場",
-        "latitude": "42.85073507",
-        "longitude": "141.0948167"
+      "region": "北海道",
+      "name": "中山峠スキー場",
+      "latitude": 42.85073507,
+      "longitude": 141.0948167
     },
     {
-        "region": "北海道",
-        "name": "カムイスキーリンクス",
-        "latitude": "43.70510658",
-        "longitude": "142.1871449"
+      "region": "北海道",
+      "name": "カムイスキーリンクス",
+      "latitude": 43.70510658,
+      "longitude": 142.1871449
     },
     {
-        "region": "北海道",
-        "name": "函館七飯スノーパーク",
-        "latitude": "41.98617244",
-        "longitude": "140.7517237"
+      "region": "北海道",
+      "name": "函館七飯スノーパーク",
+      "latitude": 41.98617244,
+      "longitude": 140.7517237
     },
     {
-        "region": "秋田",
-        "name": "秋田八幡平スキー場",
-        "latitude": "39.97866641",
-        "longitude": "140.8011462"
+      "region": "秋田",
+      "name": "秋田八幡平スキー場",
+      "latitude": 39.97866641,
+      "longitude": 140.8011462
     },
     {
-        "region": "岩手",
-        "name": "安比高原スキー場",
-        "latitude": "40.00244202",
-        "longitude": "140.9705141"
+      "region": "岩手",
+      "name": "安比高原スキー場",
+      "latitude": 40.00244202,
+      "longitude": 140.9705141
     },
     {
-        "region": "岩手",
-        "name": "夏油高原スキー場",
-        "latitude": "39.2368365",
-        "longitude": "140.9063414"
+      "region": "岩手",
+      "name": "夏油高原スキー場",
+      "latitude": 39.2368365,
+      "longitude": 140.9063414
     },
     {
-        "region": "山形",
-        "name": "天元台高原",
-        "latitude": "37.77461436",
-        "longitude": "140.1365332"
+      "region": "山形",
+      "name": "天元台高原",
+      "latitude": 37.77461436,
+      "longitude": 140.1365332
     },
     {
-        "region": "山形",
-        "name": "蔵王温泉スキー場",
-        "latitude": "38.17365796",
-        "longitude": "140.4116476"
+      "region": "山形",
+      "name": "蔵王温泉スキー場",
+      "latitude": 38.17365796,
+      "longitude": 140.4116476
     },
     {
-        "region": "新潟",
-        "name": "NASPAスキーガーデン",
-        "latitude": "36.92691357",
-        "longitude": "138.808962"
+      "region": "新潟",
+      "name": "NASPAスキーガーデン",
+      "latitude": 36.92691357,
+      "longitude": 138.808962
     },
     {
-        "region": "新潟",
-        "name": "奥只見丸山スキー場",
-        "latitude": "37.16231967",
-        "longitude": "139.2458265"
+      "region": "新潟",
+      "name": "奥只見丸山スキー場",
+      "latitude": 37.16231967,
+      "longitude": 139.2458265
     },
     {
-        "region": "新潟",
-        "name": "アライスノーリゾート",
-        "latitude": "36.98960452",
-        "longitude": "138.1800132"
+      "region": "新潟",
+      "name": "アライスノーリゾート",
+      "latitude": 36.98960452,
+      "longitude": 138.1800132
     },
     {
-        "region": "新潟",
-        "name": "GALA湯沢スキー場",
-        "latitude": "36.95083486",
-        "longitude": "138.7995829"
+      "region": "新潟",
+      "name": "GALA湯沢スキー場",
+      "latitude": 36.95083486,
+      "longitude": 138.7995829
     },
     {
-        "region": "新潟",
-        "name": "湯沢高原スキー場",
-        "latitude": "36.93968445",
-        "longitude": "138.8031026"
+      "region": "新潟",
+      "name": "湯沢高原スキー場",
+      "latitude": 36.93968445,
+      "longitude": 138.8031026
     },
     {
-        "region": "新潟",
-        "name": "ニュー・グリンピア津南",
-        "latitude": "36.96030274",
-        "longitude": "138.686871"
+      "region": "新潟",
+      "name": "ニュー・グリンピア津南",
+      "latitude": 36.96030274,
+      "longitude": 138.686871
     },
     {
-        "region": "新潟",
-        "name": "二ノックススノーパーク",
-        "latitude": "37.92693485",
-        "longitude": "139.4679348"
+      "region": "新潟",
+      "name": "二ノックススノーパーク",
+      "latitude": 37.92693485,
+      "longitude": 139.4679348
     },
     {
-        "region": "新潟",
-        "name": "妙高杉ノ原スキー場",
-        "latitude": "36.85711133",
-        "longitude": "138.1550807"
+      "region": "新潟",
+      "name": "妙高杉ノ原スキー場",
+      "latitude": 36.85711133,
+      "longitude": 138.1550807
     },
     {
-        "region": "長野",
-        "name": "志賀高原 焼額山スキー場",
-        "latitude": "36.75282556",
-        "longitude": "138.5170313"
+      "region": "長野",
+      "name": "志賀高原 焼額山スキー場",
+      "latitude": 36.75282556,
+      "longitude": 138.5170313
     },
     {
-        "region": "長野",
-        "name": "かぐらスキー場",
-        "latitude": "36.86267872",
-        "longitude": "138.7273488"
+      "region": "長野",
+      "name": "かぐらスキー場",
+      "latitude": 36.86267872,
+      "longitude": 138.7273488
     },
     {
-        "region": "長野",
-        "name": "志賀高原 熊の湯スキー場",
-        "latitude": "36.6835827",
-        "longitude": "138.4958783"
+      "region": "長野",
+      "name": "志賀高原 熊の湯スキー場",
+      "latitude": 36.6835827,
+      "longitude": 138.4958783
     },
     {
-        "region": "長野",
-        "name": "つがいけマウンテンリゾート",
-        "latitude": "36.74922824",
-        "longitude": "137.8719108"
+      "region": "長野",
+      "name": "つがいけマウンテンリゾート",
+      "latitude": 36.74922824,
+      "longitude": 137.8719108
     },
     {
-        "region": "長野",
-        "name": "白馬八方尾根スキー場",
-        "latitude": "36.70214751",
-        "longitude": "137.8369446"
+      "region": "長野",
+      "name": "白馬八方尾根スキー場",
+      "latitude": 36.70214751,
+      "longitude": 137.8369446
     },
     {
-        "region": "長野",
-        "name": "エイブル白馬五竜",
-        "latitude": "36.66342317",
-        "longitude": "137.8368217"
+      "region": "長野",
+      "name": "エイブル白馬五竜",
+      "latitude": 36.66342317,
+      "longitude": 137.8368217
     },
     {
-        "region": "長野",
-        "name": "Hakuba47 ウインタースポーツリンク",
-        "latitude": "36.68518065",
-        "longitude": "137.8283548"
+      "region": "長野",
+      "name": "Hakuba47 ウインタースポーツリンク",
+      "latitude": 36.68518065,
+      "longitude": 137.8283548
     },
     {
-        "region": "長野",
-        "name": "野沢温泉スキー場",
-        "latitude": "36.92107244",
-        "longitude": "138.4523166"
+      "region": "長野",
+      "name": "野沢温泉スキー場",
+      "latitude": 36.92107244,
+      "longitude": 138.4523166
     },
     {
-        "region": "長野",
-        "name": "高峰マウンテンパーク",
-        "latitude": "36.40776981",
-        "longitude": "138.4691793"
+      "region": "長野",
+      "name": "高峰マウンテンパーク",
+      "latitude": 36.40776981,
+      "longitude": 138.4691793
     },
     {
-        "region": "長野",
-        "name": "八千穂高原スキー場",
-        "latitude": "36.07003171",
-        "longitude": "138.3807753"
+      "region": "長野",
+      "name": "八千穂高原スキー場",
+      "latitude": 36.07003171,
+      "longitude": 138.3807753
     },
     {
-        "region": "長野",
-        "name": "白馬岩岳スノーフィールド",
-        "latitude": "36.71607068",
-        "longitude": "137.8561516"
+      "region": "長野",
+      "name": "白馬岩岳スノーフィールド",
+      "latitude": 36.71607068,
+      "longitude": 137.8561516
     },
     {
-        "region": "長野",
-        "name": "斑尾高原スキー場",
-        "latitude": "36.85255593",
-        "longitude": "138.2904985"
+      "region": "長野",
+      "name": "斑尾高原スキー場",
+      "latitude": 36.85255593,
+      "longitude": 138.2904985
     },
     {
-        "region": "群馬",
-        "name": "川場スキー場",
-        "latitude": "36.7691589",
-        "longitude": "139.1079846"
+      "region": "群馬",
+      "name": "川場スキー場",
+      "latitude": 36.7691589,
+      "longitude": 139.1079846
     },
     {
-        "region": "群馬",
-        "name": "ホワイトワールド尾瀬岩鞍",
-        "latitude": "36.81522988",
-        "longitude": "139.2200692"
+      "region": "群馬",
+      "name": "ホワイトワールド尾瀬岩鞍",
+      "latitude": 36.81522988,
+      "longitude": 139.2200692
     },
     {
-        "region": "群馬",
-        "name": "万座温泉スキー場",
-        "latitude": "36.63590853",
-        "longitude": "138.5062534"
+      "region": "群馬",
+      "name": "万座温泉スキー場",
+      "latitude": 36.63590853,
+      "longitude": 138.5062534
     },
     {
-        "region": "群馬",
-        "name": "たんばらスキーパーク",
-        "latitude": "36.7785841",
-        "longitude": "139.0727048"
+      "region": "群馬",
+      "name": "たんばらスキーパーク",
+      "latitude": 36.7785841,
+      "longitude": 139.0727048
     },
     {
-        "region": "群馬",
-        "name": "丸沼高原スキー場",
-        "latitude": "36.81476613",
-        "longitude": "139.3299937"
+      "region": "群馬",
+      "name": "丸沼高原スキー場",
+      "latitude": 36.81476613,
+      "longitude": 139.3299937
     },
     {
-        "region": "栃木",
-        "name": "ハンターマウンテン塩原",
-        "latitude": "36.93841078",
-        "longitude": "139.754071"
+      "region": "栃木",
+      "name": "ハンターマウンテン塩原",
+      "latitude": 36.93841078,
+      "longitude": 139.754071
     },
     {
-        "region": "滋賀",
-        "name": "びわ湖バレイ",
-        "latitude": "35.21345216",
-        "longitude": "135.8961225"
+      "region": "滋賀",
+      "name": "びわ湖バレイ",
+      "latitude": 35.21345216,
+      "longitude": 135.8961225
     },
     {
-        "region": "兵庫",
-        "name": "神鍋高原万場スキー場",
-        "latitude": "35.49446722",
-        "longitude": "134.6635963"
+      "region": "兵庫",
+      "name": "神鍋高原万場スキー場",
+      "latitude": 35.49446722,
+      "longitude": 134.6635963
     }
-]
+  ]
