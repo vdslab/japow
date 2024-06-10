@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import gridzahyou from "./assets/snowlev-2023020212.json";
 import skiPoint from "./assets/sukijou-zahyou.json";
 
@@ -140,8 +141,31 @@ const LinearInt = () => {
       const values = bilinearInt(surroundingPoints);
       bilinearedPoint.push(values);
     });
-    console.log(bilinearedPoint);
+    //↓jsonファイル作成
+    //makeJsonFile(bilinearedPoint);
   };
+
+  const makeJsonFile = (data) => {
+    useEffect(() => {
+      const fileName = "calculatedData";
+      const jsonData = data;
+
+      const fileNameWithJson = `${fileName}.json`;
+      const blobData = new Blob([JSON.stringify(jsonData)], {
+        type: "application/json",
+      });
+      const jsonURL = URL.createObjectURL(blobData);
+
+      const link = document.createElement("a");
+      link.href = jsonURL;
+      link.download = fileNameWithJson;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(jsonURL);
+    }, []);
+  };
+
   return <div>{dataMerge()}</div>;
 };
 
