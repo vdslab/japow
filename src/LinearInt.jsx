@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import gridzahyou from "./assets/snowlev-2023020212.json";
 import skiPoint from "./assets/sukijou-zahyou.json";
+import gridzahyou from "../docker-python/data/snowlev-2023020812.json";
 
 // "region": "山形",
 // "name": "蔵王温泉スキー場",
@@ -141,6 +141,7 @@ const LinearInt = () => {
       const values = bilinearInt(surroundingPoints);
       bilinearedPoint.push(values);
     });
+    console.log(bilinearedPoint);
     //↓jsonファイル作成
     //makeJsonFile(bilinearedPoint);
   };
