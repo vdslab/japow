@@ -201,7 +201,7 @@ const LinearInt = () => {
       const values = bilinearInt(surroundingPoints);
       bilinearedPoint.push(values);
     });
-    console.log(bilinearedPoint);
+
     //↓jsonファイル作成
     //makeJsonFile(bilinearedPoint);
   };
