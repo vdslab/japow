@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import JapanData from "./assets/Japan.json";
 import zahyou from "../docker-python/data/snowlev-2023020212.json";
-import sukizahyou from "./assets/sukijou-zahyou.json";
+import sukizahyou from "./assets/ski_resorts_japan.json";
 
 const ZoomableSVG = (props) => {
   const { children } = props;
