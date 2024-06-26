@@ -22,111 +22,74 @@ import gridzahyou from "../docker-python/data/snowlev-2023020212.json";
 
 const LinearInt = () => {
   const grid = gridzahyou;
-
-  const findPoints = (skiPoint, grid) => {
-    const xSorted = grid.slice().sort((a, b) => a.latitude - b.latitude);
-    const ySorted = grid.slice().sort((a, b) => a.longitude - b.longitude);
+  const xSorted = grid.slice().sort((a, b) => a.latitude - b.latitude);
+  const ySorted = grid.slice().sort((a, b) => a.longitude - b.longitude);
+  const findPoints = (skiPoint, grid, nearest) => {
     // console.log(ySorted);
     let x0, x1, y0, y1;
-
-    for (let i = 0; i < xSorted.length - 1; i++) {
-      if (
-        xSorted[i].latitude <= skiPoint.latitude &&
-        xSorted[i + 1].latitude >= skiPoint.latitude
-      ) {
-        x0 = xSorted[i];
-        x1 = xSorted[i + 1];
-        break;
-      }
-    }
-
-    for (let i = 0; i < ySorted.length - 1; i++) {
-      if (
-        ySorted[i].longitude <= skiPoint.longitude &&
-        ySorted[i + 1].longitude >= skiPoint.longitude
-      ) {
-        y0 = ySorted[i];
-        y1 = ySorted[i + 1];
-        break;
-      }
-    }
-
-    if (!x0 || !x1 || !y0 || !y1) {
-      return [];
-    }
-
-    const points = {
-      region: skiPoint.region,
-      name: skiPoint.name,
-      latitude: skiPoint.latitude,
-      longitude: skiPoint.longitude,
-      surroundingPoints: [
-        grid.find(
-          (p) => p.latitude === x0.latitude && p.longitude === y0.longitude
-        ),
-        grid.find(
-          (p) => p.latitude === x1.latitude && p.longitude === y0.longitude
-        ),
-        grid.find(
-          (p) => p.latitude === x0.latitude && p.longitude === y1.longitude
-        ),
-        grid.find(
-          (p) => p.latitude === x1.latitude && p.longitude === y1.longitude
-        ),
-      ],
-    };
-
-    if (points.surroundingPoints.includes(undefined)) {
-      const R = Math.PI / 180;
-      function distance(lat1, lng1, lat2, lng2) {
-        lat1 *= R;
-        lng1 *= R;
-        lat2 *= R;
-        lng2 *= R;
-        return (
-          6371 *
-          Math.acos(
-            Math.cos(lat1) * Math.cos(lat2) * Math.cos(lng2 - lng1) +
-              Math.sin(lat1) * Math.sin(lat2)
-          )
-        );
-      }
-
-      var firstNear, firstIndex;
-      var secondNear, secondIndex;
-
-      var firstResult;
+    if (nearest) {
+      const points = {
+        name: skiPoint.name,
+        latitude: skiPoint.latitude,
+        longitude: skiPoint.longitude,
+        surroundingPoints: FindNearPoint(skiPoint, nearest),
+      };
+      points.values = points.surroundingPoints[0].values;
+      return points;
+    } else {
       for (let i = 0; i < xSorted.length - 1; i++) {
-        var result = distance(
-          xSorted[i].latitude,
-          xSorted[i].longitude,
-          skiPoint.latitude,
-          skiPoint.longitude
-        );
-        if (i === 0) {
-          firstResult = result;
-          firstIndex = i;
-          firstNear = [
-            xSorted[firstIndex].latitude,
-            xSorted[firstIndex].longitude,
-          ];
-        }
-        if (result < firstResult) {
-          firstResult = result;
-          secondIndex = firstIndex;
-          firstIndex = i;
-          secondNear = firstNear;
-          firstNear = [
-            xSorted[firstIndex].latitude,
-            xSorted[firstIndex].longitude,
-          ];
+        if (
+          xSorted[i].latitude <= skiPoint.latitude &&
+          xSorted[i + 1].latitude >= skiPoint.latitude
+        ) {
+          x0 = xSorted[i];
+          x1 = xSorted[i + 1];
+          break;
         }
       }
 
-      points.surroundingPoints = [xSorted[firstIndex], xSorted[secondIndex]];
-      // console.log(points);
+      for (let i = 0; i < ySorted.length - 1; i++) {
+        if (
+          ySorted[i].longitude <= skiPoint.longitude &&
+          ySorted[i + 1].longitude >= skiPoint.longitude
+        ) {
+          y0 = ySorted[i];
+          y1 = ySorted[i + 1];
+          break;
+        }
+      }
+
+      if (!x0 || !x1 || !y0 || !y1) {
+        return [];
+      }
+
+      const points = {
+        name: skiPoint.name,
+        latitude: skiPoint.latitude,
+        longitude: skiPoint.longitude,
+        surroundingPoints: [
+          grid.find(
+            (p) => p.latitude === x0.latitude && p.longitude === y0.longitude
+          ),
+          grid.find(
+            (p) => p.latitude === x1.latitude && p.longitude === y0.longitude
+          ),
+          grid.find(
+            (p) => p.latitude === x0.latitude && p.longitude === y1.longitude
+          ),
+          grid.find(
+            (p) => p.latitude === x1.latitude && p.longitude === y1.longitude
+          ),
+        ],
+      };
+
+      if (points.surroundingPoints.includes(undefined)) {
+        points.surroundingPoints = FindNearPoint(skiPoint, nearest);
+        // console.log(points);
+      }
+
+      return points;
     }
-    return points;
   };
 
   //左下p00,右下p10,左上p01,右上p11
@@ -194,14 +157,75 @@ const LinearInt = () => {
     }
   };
 
+  const FindNearPoint = (skiPoint, nearest) => {
+    const R = Math.PI / 180;
+    function distance(lat1, lng1, lat2, lng2) {
+      lat1 *= R;
+      lng1 *= R;
+      lat2 *= R;
+      lng2 *= R;
+      return (
+        6371 *
+        Math.acos(
+          Math.cos(lat1) * Math.cos(lat2) * Math.cos(lng2 - lng1) +
+            Math.sin(lat1) * Math.sin(lat2)
+        )
+      );
+    }
+
+    var firstNear, firstIndex;
+    var secondNear, secondIndex;
+
+    var firstResult;
+    for (let i = 0; i < xSorted.length - 1; i++) {
+      var result = distance(
+        xSorted[i].latitude,
+        xSorted[i].longitude,
+        skiPoint.latitude,
+        skiPoint.longitude
+      );
+      if (i === 0) {
+        firstResult = result;
+        firstIndex = i;
+        firstNear = [
+          xSorted[firstIndex].latitude,
+          xSorted[firstIndex].longitude,
+        ];
+      }
+      if (result < firstResult) {
+        firstResult = result;
+        secondIndex = firstIndex;
+        firstIndex = i;
+        secondNear = firstNear;
+        firstNear = [
+          xSorted[firstIndex].latitude,
+          xSorted[firstIndex].longitude,
+        ];
+      }
+    }
+    if (nearest) {
+      return [xSorted[firstIndex]];
+    } else {
+      return [xSorted[firstIndex], xSorted[secondIndex]];
+    }
+  };
+
   const dataMerge = () => {
+    //nearest補間にするかどうか、falseならバイリニアになる
+    const nearest = false;
+
     const bilinearedPoint = [];
     skiPoint.map((point, index) => {
-      const surroundingPoints = findPoints(point, grid);
-      const values = bilinearInt(surroundingPoints);
-      bilinearedPoint.push(values);
+      const surroundingPoints = findPoints(point, grid, nearest);
+      if (nearest) {
+        bilinearedPoint.push(surroundingPoints);
+      } else {
+        const values = bilinearInt(surroundingPoints);
+        bilinearedPoint.push(values);
+      }
     });
 
+    console.log(bilinearedPoint);
     //↓jsonファイル作成
     //makeJsonFile(bilinearedPoint);
   };
