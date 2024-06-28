@@ -1,3 +1,4 @@
+import BumpChart from "./BumpChart";
 import LinearInt from "./LinearInt";
 import MapDisplay from "./MapDisplay";
 
@@ -7,6 +8,7 @@ function App() {
       <h1>JAPOW!</h1>
       <MapDisplay></MapDisplay>
       <LinearInt></LinearInt>
+      <BumpChart></BumpChart>
     </>
   );
 }
