@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nivo/bump": "^0.87.0",
+    "@nivo/core": "^0.87.0",
     "@types/kd-tree-javascript": "^1.0.3",
     "d3": "^7.9.0",
     "react": "^18.2.0",
