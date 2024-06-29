@@ -1,7 +1,24 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import skiPoint from "./assets/sukijou-zahyou.json";
-import gridzahyou from "../docker-python/data/snowlev-2023020212.json";
+import gridzahyou from "../docker-python/data/snowlev-2024043012.json";
+
+const days = 2024043012;
+const fileName = `calculatedData${days}`;
+
+// 2024041812
+// 2024041912
+// 2024042012
+// 2024042112
+// 2024042212
+// 2024042312
+// 2024042412
+// 2024042512
+// 2024042612
+// 2024042712
+// 2024042812
+// 2024042912
+// 2024043012
 
 // "region": "山形",
 // "name": "蔵王温泉スキー場",
@@ -224,15 +241,14 @@ const LinearInt = () => {
         bilinearedPoint.push(values);
       }
     });
-
+    console.log(fileName);
     console.log(bilinearedPoint);
     //↓jsonファイル作成
-    //makeJsonFile(bilinearedPoint);
+    makeJsonFile(bilinearedPoint);
   };
 
   const makeJsonFile = (data) => {
     useEffect(() => {
-      const fileName = "calculatedData";
       const jsonData = data;
 
       const fileNameWithJson = `${fileName}.json`;
