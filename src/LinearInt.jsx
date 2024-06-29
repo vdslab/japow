@@ -6,20 +6,6 @@ import gridzahyou from "../docker-python/data/snowlev-2024043012.json";
 const days = 2024043012;
 const fileName = `calculatedData${days}`;
 
-// 2024041812
-// 2024041912
-// 2024042012
-// 2024042112
-// 2024042212
-// 2024042312
-// 2024042412
-// 2024042512
-// 2024042612
-// 2024042712
-// 2024042812
-// 2024042912
-// 2024043012
-
 // "region": "山形",
 // "name": "蔵王温泉スキー場",
 // "latitude": "38.17365796",
@@ -244,7 +230,7 @@ const LinearInt = () => {
     console.log(fileName);
     console.log(bilinearedPoint);
     //↓jsonファイル作成
-    makeJsonFile(bilinearedPoint);
+    //makeJsonFile(bilinearedPoint);
   };
 
   const makeJsonFile = (data) => {
