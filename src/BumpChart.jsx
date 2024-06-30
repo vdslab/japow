@@ -1,5 +1,6 @@
 import React from "react";
 import { ResponsiveBump } from "@nivo/bump";
+// import {関数名} from ;
 
 const data = [
   {
@@ -20,8 +21,8 @@ const data = [
   },
 ];
 
-const BumpChart = () => (
-  <div style={{ height: "500px" }}>
+const BumpChart = (props) => (
+  <div style={{ height: 500 }}>
     <ResponsiveBump
       data={data}
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
