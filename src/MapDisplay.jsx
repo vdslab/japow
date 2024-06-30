@@ -26,7 +26,11 @@ const ZoomableSVG = (props) => {
     d3.select(svgRef.current).call(zoom);
   }, []);
   return (
-    <svg ref={svgRef} width={window.innerWidth} height={window.innerHeight}>
+    <svg
+      ref={svgRef}
+      width={window.innerWidth / 2}
+      height={window.innerHeight / 2}
+    >
       <g transform={`translate(${x + 150},${y})scale(${k - 0.5})`}>
         {children}
       </g>
@@ -38,15 +42,15 @@ const MapDisplay = () => {
   const svgRef = useRef(null);
   const width = 800;
   const height = 800;
-  // const [tooltipContent, setTooltipContent] = useState("");
+
   var svg;
 
   useEffect(() => {
     const projection = d3
       .geoMercator()
       .center([137, 38]) // 日本の中心座標
-      .scale(2000) // スケール調整
-      .translate([width / 2, height / 2]);
+      .scale(4000) // スケール調整
+      .translate([0, height]);
 
     const path = d3.geoPath().projection(projection);
 
@@ -109,7 +113,7 @@ const MapDisplay = () => {
   return (
     <>
       <ZoomableSVG>
-        <svg ref={svgRef} viewBox={`0 0 ${width} ${height}`}></svg>
+        <svg ref={svgRef} viewBox={`0 0 ${width / 2} ${height * 2}`}></svg>
       </ZoomableSVG>
     </>
   );
