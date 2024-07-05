@@ -26,11 +26,7 @@ const ZoomableSVG = (props) => {
     d3.select(svgRef.current).call(zoom);
   }, []);
   return (
-    <svg
-      ref={svgRef}
-      width={window.innerWidth / 2}
-      height={window.innerHeight / 2}
-    >
+    <svg ref={svgRef} width={window.innerWidth / 2} height={window.innerHeight}>
       <g transform={`translate(${x + 150},${y})scale(${k - 0.5})`}>
         {children}
       </g>

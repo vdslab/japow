@@ -4,6 +4,7 @@ import { ResponsiveBump } from "@nivo/bump";
 import skiData from "./assets/snowQualityMap.json";
 import { sort } from "./SortData.js";
 import { rank } from "./MakeRank.js";
+import { avgRank } from "./AverageRank";
 import CustomTooltip from "./CustomTooltip";
 // const data = [
 //   {
@@ -28,6 +29,22 @@ import CustomTooltip from "./CustomTooltip";
 
 const BumpChart = ({ skiTarget, setSkiTarget }) => {
   const scoreSortedData = rank(sort(skiData));
+  const top50 = avgRank(scoreSortedData).slice(0, 50);
+  const top50Names = top50.map((item) => item.name);
+  console.log(top50Names);
+
+  const filterSkiResorts = (data, top50Names) => {
+    return data.map((weekData) => ({
+      week: weekData.week,
+      value: weekData.value.filter((skiResort) =>
+        top50Names.includes(skiResort.name)
+      ),
+    }));
+  };
+
+  const filteredSkiResorts = filterSkiResorts(scoreSortedData, top50Names);
+  console.log(filteredSkiResorts);
+
   const [bumpData, setBumpData] = useState([]);
   useEffect(() => {
     const transformData = (data) => {
@@ -52,7 +69,7 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
     };
 
     //console.log(transformData(scoreSortedData));
-    setBumpData(transformData(scoreSortedData));
+    setBumpData(transformData(filteredSkiResorts));
   }, []);
 
   const a = bumpData.filter(
@@ -77,8 +94,12 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
   return (
     <div style={{ height: 1500 }}>
       <ResponsiveBump
-        data={a.slice(0, 50)}
+        data={bumpData}
         height={1000}
+        width={1000}
+        xPadding={0.9}
+        xOuterPadding={0}
+        yOuterPadding={0}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         xScale={{ type: "point" }}
         yScale={{
@@ -122,12 +143,12 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
           legendPosition: "middle",
         }}
         colors={{ scheme: "nivo" }}
-        pointSize={10}
-        pointColor={{ theme: "background" }}
-        pointBorderWidth={2}
-        pointBorderColor={{ from: "serieColor" }}
-        pointLabelYOffset={-12}
-        useMesh={false}
+        pointSize={6}
+        activePointSize={6}
+        inactivePointSize={0}
+        pointColor={{ from: "serie.color", modifiers: [] }}
+        activePointBorderWidth={2}
+        useMesh={true}
         onClick={(event) => {
           setSkiTarget(
             event.serie.data.id === skiTarget ? null : event.serie.data.id
