@@ -1,15 +1,20 @@
 import BumpChart from "./BumpChart";
 import LinearInt from "./LinearInt";
 import MapDisplay from "./MapDisplay";
+import { useState } from "react";
 import { Stack } from "@mui/material";
 
 function App() {
+  const [skiTarget, setSkiTarget] = useState(null);
   return (
     <>
       <h1>JAPOW!</h1>
-      <MapDisplay></MapDisplay>
+      <MapDisplay
+        skiTarget={skiTarget}
+        setSkiTarget={setSkiTarget}
+      ></MapDisplay>
       <LinearInt></LinearInt>
-      <BumpChart></BumpChart>
+      <BumpChart skiTarget={skiTarget} setSkiTarget={setSkiTarget}></BumpChart>
     </>
   );
 }
