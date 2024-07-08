@@ -35,13 +35,38 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
   console.log(top50Names);
 
   const filterSkiResorts = (data, top50Names) => {
-    return data.map((weekData) => ({
-      week: weekData.week,
-      value: weekData.value.filter((skiResort) =>
-        top50Names.includes(skiResort.name)
-      ),
-    }));
+    console.log(data)
+    // return data.map((monthData) => ({
+    //   return(
+    //     monthData.weeks.map((weekData) => ({
+    //       week: weekData.week,
+    //       value: weekData.value.filter((skiResort) =>
+    //         top50Names.includes(skiResort.name)
+    //       ),
+    //     }))
+
+    // }));
+    return data.map((monthData) => {
+      return monthData.weeks.map((weekData) => {
+        return ({
+          week: weekData.week,
+          value: weekData.values.filter((skiResort) =>
+            top50Names.includes(skiResort.name)
+          ),
+        });
+      })
+    });
   };
+
+  // const filterSkiResorts = (data, top50Names) => {
+  //   console.log(data)
+  //   return data.map((monthData) => ({
+  //     week: weekData.week,
+  //     value: weekData.value.filter((skiResort) =>
+  //       top50Names.includes(skiResort.name)
+  //     ),
+  //   }));
+  // };
 
   const filteredSkiResorts = filterSkiResorts(scoreSortedData, top50Names);
   console.log(filteredSkiResorts);
@@ -49,14 +74,16 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
   useEffect(() => {
     const transformData = (data) => {
       const transformedData = [];
+      console.log(data)
       data.forEach((weekData) => {
-        weekData.value.forEach((skiResort) => {
+        console.log(weekData)
+        weekData.forEach((skiResort) => {
           const existingResort = transformedData.find(
             (resort) => resort.id === skiResort.name
           );
           const point = {
             x: weekData.week,
-            y: skiResort.rank,
+            y: skiResort.value.rank,
           };
           if (existingResort) {
             existingResort.data.push(point);
@@ -70,6 +97,7 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
 
     setBumpData(transformData(filteredSkiResorts));
   }, []);
+  console.log(bumpData)
 
   return (
     <div style={{ height: 1500 }}>

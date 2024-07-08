@@ -1,16 +1,18 @@
 export const avgRank = (SortedData, start, end) => {
   const rankSums = {};
   const rankCounts = {};
-  SortedData.forEach((weekData) => {
-    weekData.value.forEach((skiResort) => {
-      const { name, rank } = skiResort;
-      if (!rankSums[name]) {
-        rankSums[name] = 0;
-        rankCounts[name] = 0;
-      }
-      rankSums[name] += rank;
-      rankCounts[name] += 1;
-    });
+  SortedData.forEach((monthData) => {
+    monthData.weeks.forEach((weekData) => {
+      weekData.values.forEach((skiResort) => {
+        const { name, rank } = skiResort;
+        if (!rankSums[name]) {
+          rankSums[name] = 0;
+          rankCounts[name] = 0;
+        }
+        rankSums[name] += rank;
+        rankCounts[name] += 1;
+      });
+    })
   });
   const averageRanks = [];
   for (const name in rankSums) {

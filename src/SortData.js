@@ -1,6 +1,9 @@
 export const sort = (data) => {
-  data.forEach((week) => {
-    week.value.sort((a, b) => b.snowScore - a.snowScore);
+  data.forEach((month) => {
+    // console.log(week);
+    month.weeks.forEach((week) => {
+      week.values.sort((a, b) => b.snowScore - a.snowScore);
+    })
   });
   return data;
 };
