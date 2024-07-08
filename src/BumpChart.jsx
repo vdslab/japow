@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { ResponsiveBump } from "@nivo/bump";
-import skiData from "./assets/snowQualityMap.json";
 import { sort } from "./SortData.js";
 import { rank } from "./MakeRank.js";
 import { avgRank } from "./AverageRank";
@@ -26,7 +25,7 @@ const CustomTooltip = ({ serie, point }) => {
   );
 };
 
-const BumpChart = ({ skiTarget, setSkiTarget }) => {
+const BumpChart = ({ skiTarget, setSkiTarget, skiData }) => {
   const [bumpData, setBumpData] = useState([]);
   const [highlightedLine, setHighlightedLine] = useState(null);
   const scoreSortedData = rank(sort(skiData));
@@ -71,7 +70,7 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
     };
 
     setBumpData(transformData(filteredSkiResorts));
-  }, []);
+  }, [skiData]);
 
   const handleLineClick = (serie) => {
     setHighlightedLine(serie.id === highlightedLine ? null : serie.id);

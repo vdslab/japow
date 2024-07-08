@@ -49,7 +49,11 @@ function App() {
         setSkiTarget={setSkiTarget}
       ></MapDisplay>
 
-      <BumpChart skiTarget={skiTarget} setSkiTarget={setSkiTarget}></BumpChart>
+      <BumpChart
+        skiTarget={skiTarget}
+        setSkiTarget={setSkiTarget}
+        skiData={snowData}
+      ></BumpChart>
     </>
   );
 }
