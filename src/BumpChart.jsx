@@ -19,7 +19,10 @@ const CustomTooltip = ({ point }) => {
       <br />
       <span>Week: {point.data.x}</span>
       <br />
-      <span>Ranking: {point.data.y}</span>
+      <span>
+        Ranking: {point.data.y}
+        {" 位"}
+      </span>
     </div>
   );
 };
@@ -130,6 +133,7 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
           setSkiTarget(event.serie.id === skiTarget ? null : event.serie.id);
         }}
         pointTooltip={CustomTooltip}
+        animate={false}
       />
     </div>
   );

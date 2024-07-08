@@ -108,6 +108,7 @@ const MapDisplay = ({ skiTarget, setSkiTarget }) => {
       })
       .on("click", (event, d) => {
         console.log("Cliked skijou-data;", d);
+        setSkiTarget(d.name);
       });
 
     console.log(skiTarget);
