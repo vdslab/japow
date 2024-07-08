@@ -227,8 +227,8 @@ const LinearInt = () => {
         bilinearedPoint.push(values);
       }
     });
-    console.log(fileName);
-    console.log(bilinearedPoint);
+    // console.log(fileName);
+    // console.log(bilinearedPoint);
     //↓jsonファイル作成
     //makeJsonFile(bilinearedPoint);
   };

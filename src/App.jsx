@@ -9,6 +9,8 @@ import { Box, Stack } from "@mui/material";
 import { mapFilterBypref, snowFilterBypref } from "./filtering";
 
 function App() {
+
+  const [skiTarget, setSkiTarget] = useState(null);
   //各日付の雪質データ
   const [snowData, setsnowData] = useState([...snowQualityMap]);
   // マップに描画するデータ
@@ -40,9 +42,12 @@ function App() {
         <h1>JAPOW!</h1>
         <Filter filter={filter} setFilter={setFilter}></Filter>
       </Box>
-      <MapDisplay mapData={mapData}></MapDisplay>
+      <MapDisplay mapData={mapData}
+        skiTarget={skiTarget}
+        setSkiTarget={setSkiTarget}>
+      </MapDisplay>
       <LinearInt></LinearInt>
-      <BumpChart></BumpChart>
+      <BumpChart skiTarget={skiTarget} setSkiTarget={setSkiTarget}></BumpChart>
     </>
   );
 }

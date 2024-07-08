@@ -25,11 +25,7 @@ const ZoomableSVG = (props) => {
     d3.select(svgRef.current).call(zoom);
   }, []);
   return (
-    <svg
-      ref={svgRef}
-      width={window.innerWidth / 2}
-      height={window.innerHeight / 2}
-    >
+    <svg ref={svgRef} width={window.innerWidth / 2} height={window.innerHeight}>
       <g transform={`translate(${x + 150},${y})scale(${k - 0.5})`}>
         {children}
       </g>
@@ -37,8 +33,7 @@ const ZoomableSVG = (props) => {
   );
 };
 
-const MapDisplay = ({ mapData }) => {
-  console.log(mapData);
+const MapDisplay = ({ skiTarget, setSkiTarget, mapData }) => {
   const svgRef = useRef(null);
   const width = 800;
   const height = 800;
@@ -91,9 +86,8 @@ const MapDisplay = ({ mapData }) => {
         // d3.select(event.currentTarget).attr("fill", "blue");
       });
 
-    // console.log(sukizahyou);
-    // 新しいデータでサークル要素を作成
-    svg.append("g")
+    svg
+      .append("g")
       .selectAll("circle")
       .data(mapData)
       .enter()
@@ -107,13 +101,20 @@ const MapDisplay = ({ mapData }) => {
         return coords ? coords[1] : null;
       })
       .attr("r", 1.5)
-      .attr("fill", "#00ffff")
+      .attr("fill", (d) => {
+        return !skiTarget
+          ? "#00ffff"
+          : skiTarget === d.name
+          ? "#00ffff"
+          : "rgb(0,0,0)";
+      })
       .on("click", (event, d) => {
-        console.log("Clicked ski area data:", d);
+        console.log("Cliked skijou-data;", d);
+        setSkiTarget(d.name);
       });
 
-      
-  }, [mapData]);
+    //console.log(skiTarget);
+  }, [skiTarget, mapData]);
 
   return (
     <>
