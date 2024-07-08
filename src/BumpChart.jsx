@@ -5,8 +5,7 @@ import { sort } from "./SortData.js";
 import { rank } from "./MakeRank.js";
 import { avgRank } from "./AverageRank";
 
-const CustomTooltip = ({ point }) => {
-  // console.log("Point:", point);
+const CustomTooltip = ({ serie, point }) => {
   return (
     <div
       style={{
@@ -15,7 +14,7 @@ const CustomTooltip = ({ point }) => {
         border: "1px solid #ccc",
       }}
     >
-      <strong>{point.serie.data.id}</strong>
+      <strong>{point.serie.id}</strong>
       <br />
       <span>Week: {point.data.x}</span>
       <br />
@@ -29,6 +28,7 @@ const CustomTooltip = ({ point }) => {
 
 const BumpChart = ({ skiTarget, setSkiTarget }) => {
   const [bumpData, setBumpData] = useState([]);
+  const [highlightedLine, setHighlightedLine] = useState(null);
   const scoreSortedData = rank(sort(skiData));
   const top50 = avgRank(scoreSortedData).slice(0, 50);
   const top50Names = top50.map((item) => item.name);
@@ -73,70 +73,92 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
     setBumpData(transformData(filteredSkiResorts));
   }, []);
 
+  const handleLineClick = (serie) => {
+    setHighlightedLine(serie.id === highlightedLine ? null : serie.id);
+  };
   return (
-    <div style={{ height: 1500 }}>
-      <ResponsiveBump
-        data={bumpData}
-        height={1000}
-        width={1000}
-        xPadding={0.9}
-        xOuterPadding={0}
-        yOuterPadding={0}
-        margin={{ top: 50, right: 120, bottom: 50, left: 60 }}
-        xScale={{ type: "point" }}
-        yScale={{
-          type: "linear",
-          min: "auto",
-          max: "auto",
-          stacked: false,
-          reverse: false,
-        }}
-        theme={{
-          axis: {
-            ticks: {
-              text: {
-                fontSize: 7,
-                fill: "#333333",
-                outlineWidth: 0,
-                outlineColor: "transparent",
+    <div style={{ height: "80vh", width: "100%", overflow: "auto" }}>
+      <div style={{ height: 1500 }}>
+        <ResponsiveBump
+          data={bumpData}
+          height={1500}
+          width={1000}
+          xPadding={0.8}
+          xOuterPadding={0}
+          yOuterPadding={0}
+          margin={{ top: 50, right: 120, bottom: 50, left: 60 }}
+          xScale={{ type: "point" }}
+          yScale={{
+            type: "linear",
+            min: "auto",
+            max: "auto",
+            stacked: false,
+            reverse: false,
+          }}
+          theme={{
+            axis: {
+              ticks: {
+                text: {
+                  fontSize: 7,
+                  fill: "#333333",
+                  outlineWidth: 0,
+                  outlineColor: "transparent",
+                },
               },
             },
-          },
-        }}
-        axisTop={null}
-        axisRight={null}
-        axisBottom={{
-          orient: "bottom",
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: "week",
-          legendOffset: 36,
-          legendPosition: "middle",
-        }}
-        axisLeft={{
-          orient: "left",
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: "ranking",
-          legendOffset: -40,
-          tickValues: 5,
-          legendPosition: "middle",
-        }}
-        colors={{ scheme: "nivo" }}
-        pointSize={6}
-        activePointSize={6}
-        inactivePointSize={0}
-        pointColor={{ from: "serie.color", modifiers: [] }}
-        activePointBorderWidth={2}
-        useMesh={true}
-        onClick={(event) => {
-          setSkiTarget(event.serie.id === skiTarget ? null : event.serie.id);
-        }}
-        pointTooltip={CustomTooltip}
-        animate={false}
-      />
+          }}
+          axisTop={null}
+          axisRight={null}
+          axisBottom={{
+            orient: "bottom",
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: "week",
+            legendOffset: 36,
+            legendPosition: "middle",
+          }}
+          axisLeft={{
+            orient: "left",
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: "ranking",
+            legendOffset: -40,
+            tickValues: 5,
+            legendPosition: "middle",
+          }}
+          colors={{ scheme: "nivo" }}
+          pointSize={4}
+          activePointSize={6}
+          inactivePointSize={0}
+          pointColor={{ from: "serie.color", modifiers: [] }}
+          activePointBorderWidth={2}
+          isInteractive={true} //インタラクションを行うかどうか
+          useMesh={true} //点をアバウトに判定してくれる
+          // lineWidth={(serie) =>
+          //   highlightedLine ? (serie.id === highlightedLine ? 4 : 0.2) : 2
+          // }
+          // inactiveLineWidth={(serie) =>
+          //   highlightedLine ? (serie.id === highlightedLine ? 4 : 0.2) : 2
+          // }
+          // activeLineWidth={(serie) => (serie.id === highlightedLine ? 4 : 2)}
+          // inactiveOpacity={0.2}
+          // onClick={(event) => handleLineClick(event.serie)}
+
+          lineWidth={2}
+          inactiveLineWidth={2}
+          activeLineWidth={5}
+          inactiveOpacity={0.3}
+          onClick={(event) => {
+            console.log(event);
+            setSkiTarget(event.id === skiTarget ? null : event.id);
+          }}
+          pointTooltip={CustomTooltip}
+          //lineTooltip={CustomTooltip}
+          animate={true}
+        />
+      </div>
     </div>
   );
 };
