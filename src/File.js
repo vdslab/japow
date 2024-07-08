@@ -3,7 +3,14 @@ const require = createRequire(import.meta.url);
 
 export default function a() {
   const fs = require("fs");
-  const files = fs.readdirSync("../docker-python/data");
-  console.log(files);
-  return files;
+  try {
+    const files = fs.readdirSync("../docker-python/data");
+    console.log(files);
+  } catch (error) {
+    console.error("Error reading directory:", error);
+  }
+  // const files = fs.readdirSync("../docker-python/data");
+  // console.log(files);
+  console.log("adfa");
 }
+a();

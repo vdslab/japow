@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import JapanData from "./assets/Japan.json";
-import zahyou from "../docker-python/data/snowlev-2024043012.json";
+import zahyou from "../docker-python/data/snowlev-2023121612.json";
 // import sukizahyou from "./assets/ski_resorts_japan.json";
 import sukizahyou from "./assets/ski_resorts_japan.json";
 const ZoomableSVG = (props) => {
@@ -76,7 +76,7 @@ const MapDisplay = ({ skiTarget, setSkiTarget }) => {
         const coords = projection([d.longitude, d.latitude]);
         return coords ? coords[1] : null;
       })
-      .attr("r", 1)
+      .attr("r", 2)
       .attr("fill", "red")
       .on("click", (event, d) => {
         // クリックイベントのハンドラ
