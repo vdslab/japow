@@ -3,7 +3,6 @@ import * as d3 from "d3";
 import JapanData from "./assets/Japan.json";
 import zahyou from "../docker-python/data/snowlev-2024043012.json";
 // import sukizahyou from "./assets/ski_resorts_japan.json";
-import sukizahyou from "./assets/sukijou-zahyou.json";
 const ZoomableSVG = (props) => {
   const { children } = props;
 
@@ -38,7 +37,8 @@ const ZoomableSVG = (props) => {
   );
 };
 
-const MapDisplay = () => {
+const MapDisplay = ({ mapData }) => {
+  console.log(mapData);
   const svgRef = useRef(null);
   const width = 800;
   const height = 800;
@@ -89,10 +89,11 @@ const MapDisplay = () => {
       });
 
     // console.log(sukizahyou);
-    svg
-      .append("g")
+    // 新しいデータでサークル要素を作成
+    debugger;
+    svg.append("g")
       .selectAll("circle")
-      .data(sukizahyou)
+      .data(mapData)
       .enter()
       .append("circle")
       .attr("cx", (d) => {
@@ -106,9 +107,11 @@ const MapDisplay = () => {
       .attr("r", 1.5)
       .attr("fill", "#00ffff")
       .on("click", (event, d) => {
-        console.log("Cliked skijou-data;", d);
+        console.log("Clicked ski area data:", d);
       });
-  }, []);
+
+      
+  }, [mapData]);
 
   return (
     <>
