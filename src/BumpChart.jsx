@@ -6,7 +6,7 @@ import { rank } from "./MakeRank.js";
 import { avgRank } from "./AverageRank";
 
 const CustomTooltip = ({ point }) => {
-  console.log("Point:", point);
+  // console.log("Point:", point);
   return (
     <div
       style={{
@@ -32,58 +32,33 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
   const scoreSortedData = rank(sort(skiData));
   const top50 = avgRank(scoreSortedData).slice(0, 50);
   const top50Names = top50.map((item) => item.name);
-  console.log(top50Names);
 
   const filterSkiResorts = (data, top50Names) => {
-    console.log(data)
-    // return data.map((monthData) => ({
-    //   return(
-    //     monthData.weeks.map((weekData) => ({
-    //       week: weekData.week,
-    //       value: weekData.value.filter((skiResort) =>
-    //         top50Names.includes(skiResort.name)
-    //       ),
-    //     }))
-
-    // }));
-    return data.map((monthData) => {
+    return data.flatMap((monthData) => {
       return monthData.weeks.map((weekData) => {
-        return ({
-          week: weekData.week,
+        return {
+          week: `${monthData.month} ${weekData.week}`,
           value: weekData.values.filter((skiResort) =>
             top50Names.includes(skiResort.name)
           ),
-        });
-      })
+        };
+      });
     });
   };
 
-  // const filterSkiResorts = (data, top50Names) => {
-  //   console.log(data)
-  //   return data.map((monthData) => ({
-  //     week: weekData.week,
-  //     value: weekData.value.filter((skiResort) =>
-  //       top50Names.includes(skiResort.name)
-  //     ),
-  //   }));
-  // };
-
   const filteredSkiResorts = filterSkiResorts(scoreSortedData, top50Names);
-  console.log(filteredSkiResorts);
 
   useEffect(() => {
     const transformData = (data) => {
       const transformedData = [];
-      console.log(data)
       data.forEach((weekData) => {
-        console.log(weekData)
-        weekData.forEach((skiResort) => {
+        weekData.value.forEach((skiResort) => {
           const existingResort = transformedData.find(
             (resort) => resort.id === skiResort.name
           );
           const point = {
             x: weekData.week,
-            y: skiResort.value.rank,
+            y: skiResort.rank,
           };
           if (existingResort) {
             existingResort.data.push(point);
@@ -97,7 +72,6 @@ const BumpChart = ({ skiTarget, setSkiTarget }) => {
 
     setBumpData(transformData(filteredSkiResorts));
   }, []);
-  console.log(bumpData)
 
   return (
     <div style={{ height: 1500 }}>

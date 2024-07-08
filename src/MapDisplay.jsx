@@ -111,7 +111,7 @@ const MapDisplay = ({ skiTarget, setSkiTarget }) => {
         setSkiTarget(d.name);
       });
 
-    console.log(skiTarget);
+    //console.log(skiTarget);
   }, [skiTarget]);
 
   return (
