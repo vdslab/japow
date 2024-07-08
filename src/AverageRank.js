@@ -18,6 +18,5 @@ export const avgRank = (SortedData, start, end) => {
     averageRanks.push({ name, avgRank });
   }
   averageRanks.sort((a, b) => a.avgRank - b.avgRank);
-  console.log(averageRanks);
   return averageRanks;
 };
