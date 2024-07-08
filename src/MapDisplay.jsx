@@ -3,7 +3,6 @@ import * as d3 from "d3";
 import JapanData from "./assets/Japan.json";
 import zahyou from "../docker-python/data/snowlev-2024043012.json";
 // import sukizahyou from "./assets/ski_resorts_japan.json";
-import sukizahyou from "./assets/ski_resorts_japan.json";
 const ZoomableSVG = (props) => {
   const { children } = props;
 
@@ -34,7 +33,7 @@ const ZoomableSVG = (props) => {
   );
 };
 
-const MapDisplay = ({ skiTarget, setSkiTarget }) => {
+const MapDisplay = ({ skiTarget, setSkiTarget, mapData }) => {
   const svgRef = useRef(null);
   const width = 800;
   const height = 800;
@@ -51,6 +50,9 @@ const MapDisplay = ({ skiTarget, setSkiTarget }) => {
     const path = d3.geoPath().projection(projection);
 
     svg = d3.select(svgRef.current).attr("width", width).attr("height", height);
+
+    // 既存の要素を全て削除
+    svg.selectAll("*").remove();
 
     svg
       .selectAll("path")
@@ -87,7 +89,7 @@ const MapDisplay = ({ skiTarget, setSkiTarget }) => {
     svg
       .append("g")
       .selectAll("circle")
-      .data(sukizahyou)
+      .data(mapData)
       .enter()
       .append("circle")
       .attr("cx", (d) => {
@@ -112,7 +114,7 @@ const MapDisplay = ({ skiTarget, setSkiTarget }) => {
       });
 
     //console.log(skiTarget);
-  }, [skiTarget]);
+  }, [skiTarget, mapData]);
 
   return (
     <>
