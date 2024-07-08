@@ -19,9 +19,10 @@ function App() {
     let snowFilteredData = [...snowQualityMap];
     let mapFilteredData = [...sukijouZahyou];
     // snowFilteredData = filter.pref !== "" && snowFilterBypref(snowData, filter.pref);
-    mapFilteredData = filter.pref !== "" && mapFilterBypref(mapFilteredData, filter.pref);
+    mapFilteredData = filter.pref !== "" ? mapFilterBypref(mapFilteredData, filter.pref) : mapFilteredData;
 
     setsnowData(snowFilteredData);
+    console.log(mapFilteredData);
     setMapData(mapFilteredData);
   }, [filter]);
   return (

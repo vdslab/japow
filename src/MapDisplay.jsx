@@ -56,6 +56,9 @@ const MapDisplay = ({ mapData }) => {
 
     svg = d3.select(svgRef.current).attr("width", width).attr("height", height);
 
+    // 既存の要素を全て削除
+    svg.selectAll("*").remove();
+
     svg
       .selectAll("path")
       .data(JapanData.features)
@@ -90,7 +93,6 @@ const MapDisplay = ({ mapData }) => {
 
     // console.log(sukizahyou);
     // 新しいデータでサークル要素を作成
-    debugger;
     svg.append("g")
       .selectAll("circle")
       .data(mapData)
