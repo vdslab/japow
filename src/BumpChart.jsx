@@ -83,11 +83,11 @@ const BumpChart = ({ skiTarget, setSkiTarget, skiData }) => {
         <ResponsiveBump
           data={bumpData}
           height={1500}
-          width={1000}
+          width={1100}
           xPadding={0.8}
           xOuterPadding={0}
           yOuterPadding={0}
-          margin={{ top: 50, right: 120, bottom: 50, left: 60 }}
+          margin={{ top: 200, right: 200, bottom: 50, left: 60 }}
           xScale={{ type: "point" }}
           yScale={{
             type: "linear",
@@ -152,7 +152,7 @@ const BumpChart = ({ skiTarget, setSkiTarget, skiData }) => {
           lineWidth={3}
           inactiveLineWidth={2}
           // activeLineWidth={5}
-          inactiveOpacity={0.3}
+          inactiveOpacity={0.1}
           onClick={(event) => {
             console.log(event);
             setSkiTarget(
