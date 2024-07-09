@@ -10,7 +10,7 @@ import { mapFilterBypref, snowFilterBypref } from "./filtering";
 function App() {
   const [skiTarget, setSkiTarget] = useState(null);
   //各日付の雪質データ
-  const [snowData, setsnowData] = useState([...snowQualityMap]);
+  const [snowData, setSnowData] = useState([...snowQualityMap]);
   // マップに描画するデータ
   const [mapData, setMapData] = useState([...sukijouZahyou]);
   const [filter, setFilter] = useState({ pref: "", sq: "" });
@@ -18,15 +18,16 @@ function App() {
   useEffect(() => {
     let snowFilteredData = [...snowQualityMap];
     let mapFilteredData = [...sukijouZahyou];
-    // snowFilteredData = filter.pref !== "" && snowFilterBypref(snowData, filter.pref);
-    mapFilteredData =
-      filter.pref !== ""
-        ? mapFilterBypref(mapFilteredData, filter.pref)
-        : mapFilteredData;
 
-    setsnowData(snowFilteredData);
-    console.log(mapFilteredData);
-    setMapData(mapFilteredData);
+    if (filter.pref !== "") {
+      console.log(snowQualityMap);
+      snowFilteredData = snowFilterBypref(snowQualityMap, filter.pref);
+      console.log(snowFilteredData);
+      mapFilteredData = mapFilterBypref(sukijouZahyou, filter.pref);
+    }
+
+    setSnowData([...snowFilteredData]);
+    setMapData([...mapFilteredData]);
   }, [filter]);
   return (
     <>
