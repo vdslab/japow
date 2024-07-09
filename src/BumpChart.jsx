@@ -72,6 +72,8 @@ const BumpChart = ({ skiTarget, setSkiTarget, skiData }) => {
     setBumpData(transformData(filteredSkiResorts));
   }, [skiData]);
 
+  // console.log(skiTarget);
+
   const handleLineClick = (serie) => {
     setHighlightedLine(serie.id === highlightedLine ? null : serie.id);
   };
@@ -81,11 +83,11 @@ const BumpChart = ({ skiTarget, setSkiTarget, skiData }) => {
         <ResponsiveBump
           data={bumpData}
           height={1500}
-          width={1000}
+          width={1100}
           xPadding={0.8}
           xOuterPadding={0}
           yOuterPadding={0}
-          margin={{ top: 50, right: 120, bottom: 50, left: 60 }}
+          margin={{ top: 200, right: 200, bottom: 50, left: 60 }}
           xScale={{ type: "point" }}
           yScale={{
             type: "linear",
@@ -128,30 +130,34 @@ const BumpChart = ({ skiTarget, setSkiTarget, skiData }) => {
             legendPosition: "middle",
           }}
           colors={{ scheme: "nivo" }}
-          pointSize={4}
+          pointSize={5}
           activePointSize={6}
-          inactivePointSize={0}
+          inactivePointSize={2}
           pointColor={{ from: "serie.color", modifiers: [] }}
           activePointBorderWidth={2}
           isInteractive={true} //インタラクションを行うかどうか
           useMesh={true} //点をアバウトに判定してくれる
-          // lineWidth={(serie) =>
-          //   highlightedLine ? (serie.id === highlightedLine ? 4 : 0.2) : 2
-          // }
-          // inactiveLineWidth={(serie) =>
-          //   highlightedLine ? (serie.id === highlightedLine ? 4 : 0.2) : 2
-          // }
-          // activeLineWidth={(serie) => (serie.id === highlightedLine ? 4 : 2)}
+          // lineWidth={(serie) => {
+          //   //console.log(serie);
+          //   highlightedLine ? (serie.id === highlightedLine ? 4 : 0.2) : 2;
+          // }}
+
+          activeLineWidth={(serie) => {
+            console.log(serie);
+            serie.id === highlightedLine ? 4 : 2;
+          }}
           // inactiveOpacity={0.2}
           // onClick={(event) => handleLineClick(event.serie)}
 
-          lineWidth={2}
+          lineWidth={3}
           inactiveLineWidth={2}
-          activeLineWidth={5}
-          inactiveOpacity={0.3}
+          // activeLineWidth={5}
+          inactiveOpacity={0.1}
           onClick={(event) => {
             console.log(event);
-            setSkiTarget(event.id === skiTarget ? null : event.id);
+            setSkiTarget(
+              event.serie.data.id === skiTarget ? null : event.serie.data.id
+            );
           }}
           pointTooltip={CustomTooltip}
           //lineTooltip={CustomTooltip}
