@@ -87,7 +87,7 @@ const BumpChart = ({ skiTarget, setSkiTarget, skiData }) => {
           xPadding={0.8}
           xOuterPadding={0}
           yOuterPadding={0}
-          margin={{ top: 200, right: 200, bottom: 50, left: 60 }}
+          margin={{ top: 50, right: 200, bottom: 50, left: 60 }}
           xScale={{ type: "point" }}
           yScale={{
             type: "linear",
