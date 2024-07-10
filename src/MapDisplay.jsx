@@ -117,11 +117,9 @@ const MapDisplay = ({ skiTarget, setSkiTarget, mapData }) => {
   }, [skiTarget, mapData]);
 
   return (
-    <>
-      <ZoomableSVG>
-        <svg ref={svgRef} viewBox={`0 0 ${width / 2} ${height * 2}`}></svg>
-      </ZoomableSVG>
-    </>
+    <ZoomableSVG>
+      <svg ref={svgRef} viewBox={`0 0 ${width / 2} ${height * 2}`}></svg>
+    </ZoomableSVG>
   );
 };
 
