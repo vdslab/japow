@@ -1,0 +1,11 @@
+version: "3.5"
+
+services:
+  eccodes:
+    build:
+      context: ./eccodes
+    volumes:
+      - ./grib2:/grib2
+      - ./src:/src
+      - ./data:/data
+    command:  python /src/snow.py 
