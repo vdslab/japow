@@ -100,13 +100,13 @@ const MapDisplay = ({ skiTarget, setSkiTarget, mapData }) => {
         const coords = projection([d.longitude, d.latitude]);
         return coords ? coords[1] : null;
       })
-      .attr("r", 1.5)
+      .attr("r", 3)
       .attr("fill", (d) => {
         return !skiTarget
           ? "#00ffff"
           : skiTarget === d.name
-          ? "#00ffff"
-          : "rgb(0,0,0)";
+            ? "#00ffff"
+            : "rgb(0,0,0)";
       })
       .on("click", (event, d) => {
         console.log("Cliked skijou-data;", d);
