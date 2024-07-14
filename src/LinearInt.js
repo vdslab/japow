@@ -4,13 +4,12 @@ const fs = require("fs");
 const skiPoint = require("./assets/ski_resorts_japan.json");
 const path = require("path");
 const fileNamePrefix = `calculatedData`;
+const gridDirectory = "../docker-python/data";
 
 function getFilesFromDirectory(directory) {
   const files = fs.readdirSync(directory);
-
-  return files;
+  return files.filter((file) => file.endsWith(".json"));
 }
-const gridDirectory = "../docker-python/data";
 
 // "region": "山形",
 // "name": "蔵王温泉スキー場",
@@ -103,7 +102,6 @@ const bilinearInt = (skiPoint) => {
   let dataResult = [];
 
   if (skiPoint.surroundingPoints.length === 4) {
-    debugger;
     const [p00, p10, p01, p11] = skiPoint.surroundingPoints;
 
     const x0 = p00.latitude,
@@ -250,7 +248,6 @@ files.forEach((file) => {
   const xSorted = grid.slice().sort((a, b) => a.latitude - b.latitude);
   const ySorted = grid.slice().sort((a, b) => a.longitude - b.longitude);
   const mergedData = dataMerge(grid, xSorted, ySorted);
-  //console.log(mergedData);
   const outputFileName = `${fileNamePrefix}_${path.parse(file).name}`;
-  //makeJsonFile(mergedData, outputFileName);
+  makeJsonFile(mergedData, outputFileName);
 });
