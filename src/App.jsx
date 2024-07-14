@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import BumpChart from "./BumpChart";
+//import BumpChart from "./BumpChart";
+import NewBumpChart from "./newBumpChart";
 import Filter from "./Filter";
 import MapDisplay from "./MapDisplay";
 import BarChart from "./BarChart";
@@ -51,16 +52,15 @@ function App() {
         setSkiTarget={setSkiTarget}
       ></MapDisplay>
 
-      <BumpChart
+      {/* <BumpChart
         skiTarget={skiTarget}
         setSkiTarget={setSkiTarget}
         skiData={snowData}
-      ></BumpChart>
+      ></BumpChart> */}
 
-      <BarChart
-        skiTarget={skiTarget}
-        skiData={snowData}
-      ></BarChart>
+      <NewBumpChart data={snowData}></NewBumpChart>
+
+      <BarChart skiTarget={skiTarget} skiData={snowData}></BarChart>
     </>
   );
 }

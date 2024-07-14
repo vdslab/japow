@@ -150,6 +150,7 @@ const bilinearInt = (skiPoint) => {
       values: dataResult,
     };
   } else {
+    console.log(skiPoint.surroundingPoints.length);
     return {
       ...skiPoint,
       values: null,
@@ -249,5 +250,5 @@ files.forEach((file) => {
 
   const mergedData = dataMerge(grid, xSorted, ySorted);
   const outputFileName = `${fileNamePrefix}_${path.parse(file).name}`;
-  makeJsonFile(mergedData, outputFileName);
+  //makeJsonFile(mergedData, outputFileName);
 });
