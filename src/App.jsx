@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import BumpChart from "./BumpChart";
 import Filter from "./Filter";
 import MapDisplay from "./MapDisplay";
+import BarChart from "./BarChart";
 import snowQualityMap from "./assets/snowQualityMap.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
 import { Box, Stack } from "@mui/material";
@@ -55,6 +56,11 @@ function App() {
         setSkiTarget={setSkiTarget}
         skiData={snowData}
       ></BumpChart>
+
+      <BarChart
+        skiTarget={skiTarget}
+        skiData={snowData}
+      ></BarChart>
     </>
   );
 }
