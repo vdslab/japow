@@ -15,6 +15,7 @@ const NewBumpChart = ({ data, width = 1200, height = 3000 }) => {
           }
 
           transformed[value.name].push({
+            name: value.name,
             week: month.month + "/" + week.week,
             snowScore: value.rank,
           });
@@ -36,6 +37,7 @@ const NewBumpChart = ({ data, width = 1200, height = 3000 }) => {
   const svgRef = useRef();
 
   useEffect(() => {
+    console.log(data);
     const scoreSortedData = rank(sort(data));
     const top50 = avgRank(scoreSortedData).slice(0, 50);
     const top50Names = top50.map((item) => item.name);
@@ -95,7 +97,10 @@ const NewBumpChart = ({ data, width = 1200, height = 3000 }) => {
         .attr("cx", (d) => x(d.week))
         .attr("cy", (d) => y(d.snowScore))
         .attr("r", 2)
-        .attr("fill", colorValue);
+        .attr("fill", colorValue)
+        .on("mouseover", (e) => {
+          console.log(e.target.__data__);
+        });
     });
 
     svg
