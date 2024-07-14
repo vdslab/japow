@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import JapanData from "./assets/Japan.json";
-import zahyou from "../docker-python/data/snowlev-2023121612.json";
+import zahyou from "../docker-python/data/anl_data-2023121612.json";
 // import sukizahyou from "./assets/ski_resorts_japan.json";
 const ZoomableSVG = (props) => {
   const { children } = props;
@@ -105,8 +105,8 @@ const MapDisplay = ({ skiTarget, setSkiTarget, mapData }) => {
         return !skiTarget
           ? "#00ffff"
           : skiTarget === d.name
-            ? "#00ffff"
-            : "rgb(0,0,0)";
+          ? "#00ffff"
+          : "rgb(0,0,0)";
       })
       .on("click", (event, d) => {
         console.log("Cliked skijou-data;", d);
