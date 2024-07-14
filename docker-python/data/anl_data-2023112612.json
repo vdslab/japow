@@ -588,6 +588,48 @@
     ]
 },
 {
+    "latitude": 44.01661935041734,
+    "longitude": 145.125,
+    "values": [
+        {
+            "name": "snowlayers",
+            "data_value": 0.0
+        },
+        {
+            "name": "iceT",
+            "data_value": 270.8359375
+        },
+        {
+            "name": "snowMassDensity",
+            "data_value": 144.6875
+        },
+        {
+            "name": "WaterContent",
+            "data_value": 0.0
+        },
+        {
+            "name": "iceContent",
+            "data_value": 1.376953125
+        },
+        {
+            "name": "airT",
+            "data_value": 274.5761199951172
+        },
+        {
+            "name": "dewPointDiff",
+            "data_value": 7.756347656249982
+        },
+        {
+            "name": "specificHumidity",
+            "data_value": 0.0023218901591462865
+        },
+        {
+            "name": "relativeHumidity",
+            "data_value": 54.78390448093424
+        }
+    ]
+},
+{
     "latitude": 43.64200995865232,
     "longitude": 141.75,
     "values": [
@@ -966,6 +1008,48 @@
     ]
 },
 {
+    "latitude": 43.64200995865232,
+    "longitude": 145.125,
+    "values": [
+        {
+            "name": "snowlayers",
+            "data_value": -2.0
+        },
+        {
+            "name": "iceT",
+            "data_value": 0.0
+        },
+        {
+            "name": "snowMassDensity",
+            "data_value": 0.0
+        },
+        {
+            "name": "WaterContent",
+            "data_value": 0.0
+        },
+        {
+            "name": "iceContent",
+            "data_value": 0.0
+        },
+        {
+            "name": "airT",
+            "data_value": 274.54916687011723
+        },
+        {
+            "name": "dewPointDiff",
+            "data_value": 8.482519531249979
+        },
+        {
+            "name": "specificHumidity",
+            "data_value": 0.0021897108988923825
+        },
+        {
+            "name": "relativeHumidity",
+            "data_value": 51.465349793434264
+        }
+    ]
+},
+{
     "latitude": 43.2674005620574,
     "longitude": 141.75,
     "values": [
@@ -1340,6 +1424,48 @@
         {
             "name": "relativeHumidity",
             "data_value": 48.86320135593429
+        }
+    ]
+},
+{
+    "latitude": 43.2674005620574,
+    "longitude": 145.125,
+    "values": [
+        {
+            "name": "snowlayers",
+            "data_value": -2.0
+        },
+        {
+            "name": "iceT",
+            "data_value": 0.0
+        },
+        {
+            "name": "snowMassDensity",
+            "data_value": 0.0
+        },
+        {
+            "name": "WaterContent",
+            "data_value": 0.0
+        },
+        {
+            "name": "iceContent",
+            "data_value": 0.0
+        },
+        {
+            "name": "airT",
+            "data_value": 275.57065124511723
+        },
+        {
+            "name": "dewPointDiff",
+            "data_value": 9.377832031249973
+        },
+        {
+            "name": "specificHumidity",
+            "data_value": 0.0021927626567048823
+        },
+        {
+            "name": "relativeHumidity",
+            "data_value": 48.40617010593427
         }
     ]
 },
