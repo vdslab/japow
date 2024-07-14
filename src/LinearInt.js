@@ -248,6 +248,7 @@ files.forEach((file) => {
   const xSorted = grid.slice().sort((a, b) => a.latitude - b.latitude);
   const ySorted = grid.slice().sort((a, b) => a.longitude - b.longitude);
   const mergedData = dataMerge(grid, xSorted, ySorted);
+  console.log(mergedData);
   const outputFileName = `${fileNamePrefix}_${path.parse(file).name}`;
-  makeJsonFile(mergedData, outputFileName);
+  //makeJsonFile(mergedData, outputFileName);
 });
