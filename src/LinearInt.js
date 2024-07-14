@@ -7,6 +7,7 @@ const fileNamePrefix = `calculatedData`;
 
 function getFilesFromDirectory(directory) {
   const files = fs.readdirSync(directory);
+
   return files;
 }
 const gridDirectory = "../docker-python/data";
@@ -35,7 +36,7 @@ const findPoints = (skiPoint, grid, xSorted, ySorted, nearest) => {
       name: skiPoint.name,
       latitude: skiPoint.latitude,
       longitude: skiPoint.longitude,
-      skiid: skiPoint.skiid,
+      skiid: skiPoint.skiID,
       surroundingPoints: FindNearPoint(skiPoint, nearest, xSorted),
     };
     points.values = points.surroundingPoints[0].values;
@@ -71,7 +72,7 @@ const findPoints = (skiPoint, grid, xSorted, ySorted, nearest) => {
       name: skiPoint.name,
       latitude: skiPoint.latitude,
       longitude: skiPoint.longitude,
-      skiid: skiPoint.skiid,
+      skiid: skiPoint.skiID,
       surroundingPoints: [
         grid.find(
           (p) => p.latitude === x0.latitude && p.longitude === y0.longitude
@@ -91,6 +92,7 @@ const findPoints = (skiPoint, grid, xSorted, ySorted, nearest) => {
     if (points.surroundingPoints.includes(undefined)) {
       points.surroundingPoints = FindNearPoint(skiPoint, nearest, xSorted);
     }
+
     return points;
   }
 };
@@ -98,8 +100,10 @@ const findPoints = (skiPoint, grid, xSorted, ySorted, nearest) => {
 const bilinearInt = (skiPoint) => {
   const x = skiPoint.latitude;
   const y = skiPoint.longitude;
-  var dataResult = [];
+  let dataResult = [];
+
   if (skiPoint.surroundingPoints.length === 4) {
+    debugger;
     const [p00, p10, p01, p11] = skiPoint.surroundingPoints;
 
     const x0 = p00.latitude,
@@ -114,8 +118,7 @@ const bilinearInt = (skiPoint) => {
       const f11 = p11.values[i].data_value;
 
       const result = {
-        message_number: p00.values[i].message_number,
-        short_name: p00.values[i].short_name,
+        name: p00.values[i].name,
         data_value:
           (f00 * (x1 - x) * (y1 - y) +
             f10 * (x - x0) * (y1 - y) +
@@ -136,8 +139,7 @@ const bilinearInt = (skiPoint) => {
       const f0 = p0.values[i].data_value;
       const f1 = p1.values[i].data_value;
       const result = {
-        message_number: p1.values[i].message_number,
-        short_name: p1.values[i].short_name,
+        name: p1.values[i].name,
         data_value:
           (f0 * (p1.latitude - x) + f1 * (x - p0.latitude)) /
           (p1.latitude - p0.latitude),
@@ -150,7 +152,6 @@ const bilinearInt = (skiPoint) => {
       values: dataResult,
     };
   } else {
-    console.log(skiPoint.surroundingPoints.length);
     return {
       ...skiPoint,
       values: null,
@@ -222,7 +223,6 @@ const makeJsonFile = (data, outputFileName) => {
 const dataMerge = (grid, xSorted, ySorted) => {
   const nearest = false;
   const bilinearedPoint = [];
-
   skiPoint.map((point) => {
     const surroundingPoints = findPoints(
       point,
@@ -231,6 +231,7 @@ const dataMerge = (grid, xSorted, ySorted) => {
       ySorted,
       nearest
     );
+
     if (nearest) {
       bilinearedPoint.push(surroundingPoints);
     } else {
@@ -243,12 +244,13 @@ const dataMerge = (grid, xSorted, ySorted) => {
 };
 
 const files = getFilesFromDirectory(gridDirectory);
+
 files.forEach((file) => {
   const grid = require(path.join(gridDirectory, file));
   const xSorted = grid.slice().sort((a, b) => a.latitude - b.latitude);
   const ySorted = grid.slice().sort((a, b) => a.longitude - b.longitude);
-
   const mergedData = dataMerge(grid, xSorted, ySorted);
+  //console.log(mergedData);
   const outputFileName = `${fileNamePrefix}_${path.parse(file).name}`;
   //makeJsonFile(mergedData, outputFileName);
 });
