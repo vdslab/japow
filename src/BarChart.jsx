@@ -1,5 +1,5 @@
 // データのもらい方はBumpChartをみならう
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import {
   LineChart,
   Line,
@@ -10,24 +10,24 @@ import {
   Legend,
   ResponsiveContainer,
   Bar,
-  BarChart as BarC
+  BarChart as BarC,
 } from "recharts";
-import { snowFilterBySkiTarget } from "./filtering.js"
+import { snowFilterBySkiTarget } from "./filtering.js";
 
-const BarChart = ({ skiTarget, skiData }) => {
+const BarChart = ({ skiTargetID, skiData }) => {
   const width = 800;
   const height = 400;
 
-  if (skiTarget) {
-    const pastData = snowFilterBySkiTarget(skiTarget, skiData).map((item) => {
+  if (skiTargetID) {
+    const pastData = snowFilterBySkiTarget(skiTargetID, skiData).map((item) => {
       let newItem = {};
       newItem.name = item.name;
       newItem.value = item.values[0].snowScore;
       return newItem;
-    })
-    console.log(pastData)
+    });
+    console.log(pastData);
     // console.log(skiData);
-    // console.log(snowFilterBySkiTarget(skiTarget, skiData))
+    // console.log(snowFilterBySkiTarget(skiTargetID, skiData))
 
     return (
       <div>
@@ -39,13 +39,10 @@ const BarChart = ({ skiTarget, skiData }) => {
           <Bar dataKey="value" fill="#8884d8" />
         </BarC>
       </div>
-    )
+    );
   } else {
-    console.log("Fuck")
-    return (
-      <div></div>
-    )
+    return <div></div>;
   }
-}
+};
 
 export default BarChart;

@@ -33,7 +33,7 @@ const ZoomableSVG = (props) => {
   );
 };
 
-const MapDisplay = ({ skiTarget, setSkiTarget, mapData }) => {
+const MapDisplay = ({ skiTargetID, setSkiTargetID, mapData }) => {
   const svgRef = useRef(null);
   const width = 800;
   const height = 800;
@@ -102,20 +102,20 @@ const MapDisplay = ({ skiTarget, setSkiTarget, mapData }) => {
       })
       .attr("r", 3)
       .attr("fill", (d) => {
-        return !skiTarget
+        return !skiTargetID
           ? "#00ffff"
-          : skiTarget === d.name
+          : skiTargetID === d.skiID
           ? "#00ffff"
           : "rgb(0,0,0)";
       })
       .on("click", (event, d) => {
         console.log("Cliked skijou-data;", d);
-        setSkiTarget(d.name);
+        setSkiTargetID(d.skiID);
       });
 
-    //console.log(skiTarget);
-  }, [skiTarget, mapData]);
-
+    //console.log(skiTargetID);
+  }, [skiTargetID, mapData]);
+  console.log(skiTargetID);
   return (
     <ZoomableSVG>
       <svg ref={svgRef} viewBox={`0 0 ${width / 2} ${height * 2}`}></svg>

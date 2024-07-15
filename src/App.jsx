@@ -4,13 +4,13 @@ import NewBumpChart from "./newBumpChart";
 import Filter from "./Filter";
 import MapDisplay from "./MapDisplay";
 import BarChart from "./BarChart";
-import snowQualityMap from "./assets/snowQualityMap.json";
+import snowQualityMap from "./assets/snowQualityMap2324.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
 import { Box, Stack } from "@mui/material";
 import { mapFilterBypref, snowFilterBypref } from "./filtering";
 
 function App() {
-  const [skiTarget, setSkiTarget] = useState("標津町営金山スキー場");
+  const [skiTargetID, setSkiTargetID] = useState(null);
   //各日付の雪質データ
   const [snowData, setSnowData] = useState([...snowQualityMap]);
   // マップに描画するデータ
@@ -48,19 +48,23 @@ function App() {
       </Box>
       <MapDisplay
         mapData={mapData}
-        skiTarget={skiTarget}
-        setSkiTarget={setSkiTarget}
+        skiTargetID={skiTargetID}
+        setSkiTargetID={setSkiTargetID}
       ></MapDisplay>
 
       {/* <BumpChart
-        skiTarget={skiTarget}
-        setSkiTarget={setSkiTarget}
+        skiTargetID={skiTargetID}
+        setSkiTargetID={setSkiTargetID}
         skiData={snowData}
       ></BumpChart> */}
 
-      <NewBumpChart data={snowData}></NewBumpChart>
+      <NewBumpChart
+        data={snowData}
+        skiTargetID={skiTargetID}
+        setSkiTargetID={setSkiTargetID}
+      ></NewBumpChart>
 
-      {/* <BarChart skiTarget={skiTarget} skiData={snowData}></BarChart> */}
+      <BarChart skiTargetID={skiTargetID} skiData={snowData}></BarChart>
     </>
   );
 }

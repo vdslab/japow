@@ -1,23 +1,24 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
+import d3Tip from "d3-tip";
 import { sort } from "./SortData.js";
 import { rank } from "./MakeRank.js";
 import { avgRank } from "./AverageRank";
 
-const NewBumpChart = ({ data, width = 1200, height = 3000 }) => {
+const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   const transformData = (data) => {
     const transformed = [];
     data.forEach((month) => {
       month.weeks.forEach((week) => {
-        week.values.forEach((value) => {
+        week.weekValues.forEach((value) => {
           if (!transformed[value.name]) {
             transformed[value.name] = [];
           }
-
           transformed[value.name].push({
             name: value.name,
             week: month.month + "/" + week.week,
-            snowScore: value.rank,
+            rank: value.rank,
+            skiID: value.skiID,
           });
         });
       });
@@ -26,33 +27,95 @@ const NewBumpChart = ({ data, width = 1200, height = 3000 }) => {
   };
 
   const getSkiResortData = (data, names) => {
-    return names.reduce((acc, name) => {
+    // 名前に一致するデータを抽出し、同時に週ごとにデータを集める
+    const weekData = names.reduce((acc, name) => {
+      if (data[name]) {
+        data[name].forEach((entry) => {
+          if (!acc[entry.week]) {
+            acc[entry.week] = [];
+          }
+          acc[entry.week].push(entry);
+        });
+      }
+      return acc;
+    }, []);
+
+    // 各週のデータをソートし、相対的な順位を計算して追加
+    Object.values(weekData).forEach((weekEntries) => {
+      weekEntries.sort((a, b) => a.rank - b.rank);
+      weekEntries.forEach((entry, index) => {
+        entry.relativeRank = index + 1;
+      });
+    });
+
+    // 4. 新しいデータを格納
+    const newData = names.reduce((acc, name) => {
       if (data[name]) {
         acc[name] = data[name];
       }
       return acc;
-    }, {});
+    }, []);
+
+    return newData;
   };
 
   const svgRef = useRef();
 
+  const tip = d3Tip()
+    .attr("class", "d3-tip")
+    .offset([-10, 0])
+    .html((event, d) => {
+      return `<strong>Name:</strong> <span style='color:black'>${d.name}</span><br>
+              <strong>Week:</strong> <span style='color:black'>${d.week}</span><br>
+              <strong>Rank</strong> <span style='color:black'>${d.rank}</span><br>
+              <strong>相対的なRank:</strong> <span style='color:black'>${d.relativeRank}</span>`;
+    })
+    .style("background", "white")
+    .style("color", "black")
+    .style("padding", "5px")
+    .style("border", "1px solid black")
+    .style("border-radius", "3px")
+    .offset((event) => {
+      const { clientX, clientY, view } = event;
+
+      const { innerWidth, innerHeight } = view;
+
+      const tipWidth = 200; // 予測されるツールチップの幅
+      const tipHeight = 100; // 予測されるツールチップの高さ
+
+      let offsetX = 10;
+      let offsetY = -10;
+
+      // 右端に近い場合、左に表示
+      if (clientX + tipWidth > innerWidth) {
+        offsetX = -tipWidth - 10;
+      }
+
+      // 上端に近い場合、下に表示
+      if (clientY - tipHeight < 0) {
+        offsetY = 10;
+      }
+
+      return [offsetY, offsetX];
+    });
+
   useEffect(() => {
     console.log(data);
     const scoreSortedData = rank(sort(data));
+    console.log(scoreSortedData);
     const top50 = avgRank(scoreSortedData).slice(0, 50);
     const top50Names = top50.map((item) => item.name);
+
     const transformedData = getSkiResortData(
       transformData(scoreSortedData),
       top50Names
     );
 
-    console.log(transformedData);
-    console.log(top50Names);
     const svg = d3.select(svgRef.current);
+    svg.selectAll("*").remove();
     const width = 1000;
-    const height = 2000;
+    const height = 400;
     const margin = { top: 20, right: 30, bottom: 30, left: 40 };
-
     svg.attr("viewBox", [0, 0, width, height]);
 
     const x = d3
@@ -64,7 +127,7 @@ const NewBumpChart = ({ data, width = 1200, height = 3000 }) => {
       .scaleLinear()
       .domain([
         0,
-        d3.max(Object.values(transformedData).flat(), (d) => d.snowScore),
+        d3.max(Object.values(transformedData).flat(), (d) => d.relativeRank),
       ])
       .nice()
       .range([margin.top, height - margin.bottom]);
@@ -75,46 +138,7 @@ const NewBumpChart = ({ data, width = 1200, height = 3000 }) => {
       .line()
       .curve(d3.curveBumpX)
       .x((d) => x(d.week))
-      .y((d) => y(d.snowScore));
-
-    Object.keys(transformedData).forEach((name) => {
-      const colorValue = color(name);
-      svg
-        .append("g")
-        .append("path")
-        .datum(transformedData[name])
-        .attr("fill", "none")
-        .attr("stroke", colorValue)
-        .attr("stroke-width", 2)
-        .attr("d", line);
-
-      svg
-        .append("g")
-        .selectAll("circle")
-        .data(transformedData[name])
-        .enter()
-        .append("circle")
-        .attr("cx", (d) => x(d.week))
-        .attr("cy", (d) => y(d.snowScore))
-        .attr("r", 2)
-        .attr("fill", colorValue)
-        .on("mouseover", (e) => {
-          console.log(e.target.__data__);
-        });
-    });
-
-    svg
-      .append("g")
-      .attr("transform", `translate(0,${height - margin.bottom})`)
-      .call(d3.axisBottom(x).tickSizeOuter(0))
-      .selectAll("text")
-      .attr("transform", "rotate(-45)")
-      .style("text-anchor", "end");
-
-    svg
-      .append("g")
-      .attr("transform", `translate(${margin.left},0)`)
-      .call(d3.axisLeft(y));
+      .y((d) => y(d.relativeRank));
 
     //縦線
     svg
@@ -130,9 +154,89 @@ const NewBumpChart = ({ data, width = 1200, height = 3000 }) => {
       .selectAll("line")
       .style("stroke", "lightgray")
       .style("stroke-opacity", 0.7);
-  }, [data]);
 
-  return <svg ref={svgRef} width={width} height={height}></svg>;
+    d3.select("svg").call(tip);
+
+    svg
+      .append("g")
+      .attr("transform", `translate(0,${height - margin.bottom})`)
+      .call(d3.axisBottom(x).tickSizeOuter(0))
+      .selectAll("text")
+      .attr("transform", "rotate(-45)")
+      .style("text-anchor", "end");
+
+    svg
+      .append("g")
+      .attr("transform", `translate(${margin.left},0)`)
+      .call(d3.axisLeft(y));
+    Object.keys(transformedData).forEach((name, skiID) => {
+      const colorValue = color(name);
+      svg
+        .append("g")
+        .append("path")
+        .datum(transformedData[name])
+        .attr("fill", "none")
+        .attr("stroke", colorValue)
+        .attr(
+          "stroke-width",
+          !skiTargetID
+            ? 2
+            : skiTargetID === transformedData[name][0].skiID
+            ? 4
+            : 1
+        )
+        .style(
+          "opacity",
+          !skiTargetID
+            ? 0.8
+            : skiTargetID === transformedData[name][0].skiID
+            ? 0.8
+            : 0.3
+        )
+        .attr("d", line)
+        .on("click", () => {
+          tip.remove();
+          setSkiTargetID(
+            transformedData[name][0].skiID === skiTargetID
+              ? null
+              : transformedData[name][0].skiID
+          );
+        });
+
+      svg
+        .append("g")
+        .selectAll("circle")
+        .data(transformedData[name])
+        .enter()
+        .append("circle")
+        .attr("cx", (d) => x(d.week))
+        .attr("cy", (d) => y(d.relativeRank))
+        .attr("r", 3)
+        .attr("fill", colorValue)
+        .style(
+          "opacity",
+          !skiTargetID
+            ? 0.8
+            : skiTargetID === transformedData[name][0].skiID
+            ? 0.8
+            : 0.3
+        )
+        .on("mouseenter", tip.show)
+        .on("mouseout", tip.hide)
+        .on("click", () => {
+          tip.hide();
+          console.log(transformedData[name], transformedData[name][0].skiID);
+          setSkiTargetID(
+            transformedData[name][0].skiID === skiTargetID
+              ? null
+              : transformedData[name][0].skiID
+          );
+        });
+    });
+  }, [data, skiTargetID]);
+
+  console.log(skiTargetID);
+  return <svg ref={svgRef} width={1200} height={1000}></svg>;
 };
 
 export default NewBumpChart;
