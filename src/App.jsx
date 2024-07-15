@@ -7,7 +7,7 @@ import BarChart from "./BarChart";
 import snowQualityMap from "./assets/snowQualityMap2324.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
 import { Box, Stack } from "@mui/material";
-import { mapFilterBypref, snowFilterBypref } from "./filtering";
+import { mapFilterBypref, snowFilterBypref, snowFilterByPeriod } from "./filtering";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState(null);
@@ -15,17 +15,20 @@ function App() {
   const [snowData, setSnowData] = useState([...snowQualityMap]);
   // マップに描画するデータ
   const [mapData, setMapData] = useState([...sukijouZahyou]);
-  const [filter, setFilter] = useState({ pref: "", sq: "" });
+  const [filter, setFilter] = useState({ "pref": "", "period":"", "sq": "" });
 
   useEffect(() => {
     let snowFilteredData = [...snowQualityMap];
     let mapFilteredData = [...sukijouZahyou];
 
     if (filter.pref !== "") {
-      console.log(snowQualityMap);
-      snowFilteredData = snowFilterBypref(snowQualityMap, filter.pref);
+      snowFilteredData = snowFilterBypref(snowFilteredData, filter.pref);
+      mapFilteredData = mapFilterBypref(mapFilteredData, filter.pref);
+    }
+
+    if (filter.period != "") {
+      snowFilteredData = snowFilterByPeriod(snowFilteredData, filter.period);
       console.log(snowFilteredData);
-      mapFilteredData = mapFilterBypref(sukijouZahyou, filter.pref);
     }
 
     setSnowData([...snowFilteredData]);
