@@ -12,7 +12,7 @@ export const avgRank = (SortedData, start, end) => {
         rankSums[name] += rank;
         rankCounts[name] += 1;
       });
-    })
+    });
   });
   const averageRanks = [];
   for (const name in rankSums) {
