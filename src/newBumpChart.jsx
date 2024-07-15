@@ -5,20 +5,20 @@ import { sort } from "./SortData.js";
 import { rank } from "./MakeRank.js";
 import { avgRank } from "./AverageRank";
 
-const NewBumpChart = ({ data, skiTarget, setSkiTarget }) => {
+const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   const transformData = (data) => {
     const transformed = [];
     data.forEach((month) => {
       month.weeks.forEach((week) => {
-        week.values.forEach((value) => {
+        week.weekValues.forEach((value) => {
           if (!transformed[value.name]) {
             transformed[value.name] = [];
           }
-
           transformed[value.name].push({
             name: value.name,
             week: month.month + "/" + week.week,
             rank: value.rank,
+            skiID: value.skiID,
           });
         });
       });
@@ -38,7 +38,7 @@ const NewBumpChart = ({ data, skiTarget, setSkiTarget }) => {
         });
       }
       return acc;
-    }, {});
+    }, []);
 
     // 各週のデータをソートし、相対的な順位を計算して追加
     Object.values(weekData).forEach((weekEntries) => {
@@ -48,14 +48,13 @@ const NewBumpChart = ({ data, skiTarget, setSkiTarget }) => {
       });
     });
 
-    console.log(weekData);
     // 4. 新しいデータを格納
     const newData = names.reduce((acc, name) => {
       if (data[name]) {
         acc[name] = data[name];
       }
       return acc;
-    }, {});
+    }, []);
 
     return newData;
   };
@@ -78,9 +77,9 @@ const NewBumpChart = ({ data, skiTarget, setSkiTarget }) => {
     .style("border-radius", "3px")
     .offset((event) => {
       const { clientX, clientY, view } = event;
-      console.log(event);
+
       const { innerWidth, innerHeight } = view;
-      console.log(innerWidth);
+
       const tipWidth = 200; // 予測されるツールチップの幅
       const tipHeight = 100; // 予測されるツールチップの高さ
 
@@ -101,19 +100,22 @@ const NewBumpChart = ({ data, skiTarget, setSkiTarget }) => {
     });
 
   useEffect(() => {
+    console.log(data);
     const scoreSortedData = rank(sort(data));
+    console.log(scoreSortedData);
     const top50 = avgRank(scoreSortedData).slice(0, 50);
     const top50Names = top50.map((item) => item.name);
+
     const transformedData = getSkiResortData(
       transformData(scoreSortedData),
       top50Names
     );
 
     const svg = d3.select(svgRef.current);
+    svg.selectAll("*").remove();
     const width = 1000;
     const height = 400;
     const margin = { top: 20, right: 30, bottom: 30, left: 40 };
-    svg.selectAll("*").remove();
     svg.attr("viewBox", [0, 0, width, height]);
 
     const x = d3
@@ -167,7 +169,7 @@ const NewBumpChart = ({ data, skiTarget, setSkiTarget }) => {
       .append("g")
       .attr("transform", `translate(${margin.left},0)`)
       .call(d3.axisLeft(y));
-    Object.keys(transformedData).forEach((name) => {
+    Object.keys(transformedData).forEach((name, skiID) => {
       const colorValue = color(name);
       svg
         .append("g")
@@ -175,12 +177,30 @@ const NewBumpChart = ({ data, skiTarget, setSkiTarget }) => {
         .datum(transformedData[name])
         .attr("fill", "none")
         .attr("stroke", colorValue)
-        .attr("stroke-width", !skiTarget ? 2 : skiTarget === name ? 4 : 1)
-        .style("opacity", !skiTarget ? 1 : skiTarget === name ? 1 : 0.3)
+        .attr(
+          "stroke-width",
+          !skiTargetID
+            ? 2
+            : skiTargetID === transformedData[name][0].skiID
+            ? 4
+            : 1
+        )
+        .style(
+          "opacity",
+          !skiTargetID
+            ? 0.8
+            : skiTargetID === transformedData[name][0].skiID
+            ? 0.8
+            : 0.3
+        )
         .attr("d", line)
         .on("click", () => {
           tip.remove();
-          setSkiTarget(name === skiTarget ? null : name);
+          setSkiTargetID(
+            transformedData[name][0].skiID === skiTargetID
+              ? null
+              : transformedData[name][0].skiID
+          );
         });
 
       svg
@@ -193,16 +213,29 @@ const NewBumpChart = ({ data, skiTarget, setSkiTarget }) => {
         .attr("cy", (d) => y(d.relativeRank))
         .attr("r", 3)
         .attr("fill", colorValue)
-        .style("opacity", !skiTarget ? 1 : skiTarget === name ? 1 : 0.3)
+        .style(
+          "opacity",
+          !skiTargetID
+            ? 0.8
+            : skiTargetID === transformedData[name][0].skiID
+            ? 0.8
+            : 0.3
+        )
         .on("mouseenter", tip.show)
         .on("mouseout", tip.hide)
         .on("click", () => {
           tip.hide();
-          setSkiTarget(name === skiTarget ? null : name);
+          console.log(transformedData[name], transformedData[name][0].skiID);
+          setSkiTargetID(
+            transformedData[name][0].skiID === skiTargetID
+              ? null
+              : transformedData[name][0].skiID
+          );
         });
     });
-  }, [data, skiTarget]);
+  }, [data, skiTargetID]);
 
+  console.log(skiTargetID);
   return <svg ref={svgRef} width={1200} height={1000}></svg>;
 };
 
