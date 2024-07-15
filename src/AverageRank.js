@@ -3,7 +3,7 @@ export const avgRank = (SortedData, start, end) => {
   const rankCounts = {};
   SortedData.forEach((monthData) => {
     monthData.weeks.forEach((weekData) => {
-      weekData.values.forEach((skiResort) => {
+      weekData.weekValues.forEach((skiResort) => {
         const { name, rank } = skiResort;
         if (!rankSums[name]) {
           rankSums[name] = 0;
