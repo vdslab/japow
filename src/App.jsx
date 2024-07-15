@@ -10,7 +10,7 @@ import { Box, Stack } from "@mui/material";
 import { mapFilterBypref, snowFilterBypref } from "./filtering";
 
 function App() {
-  const [skiTarget, setSkiTarget] = useState("標津町営金山スキー場");
+  const [skiTarget, setSkiTarget] = useState(null);
   //各日付の雪質データ
   const [snowData, setSnowData] = useState([...snowQualityMap]);
   // マップに描画するデータ
@@ -58,7 +58,11 @@ function App() {
         skiData={snowData}
       ></BumpChart> */}
 
-      <NewBumpChart data={snowData}></NewBumpChart>
+      <NewBumpChart
+        data={snowData}
+        skiTarget={skiTarget}
+        setSkiTarget={setSkiTarget}
+      ></NewBumpChart>
 
       {/* <BarChart skiTarget={skiTarget} skiData={snowData}></BarChart> */}
     </>
