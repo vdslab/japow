@@ -31,8 +31,18 @@ const BarChart = ({ skiTargetID, skiData }) => {
 
     return (
       <div>
-        <BarC width={width} height={height} data={pastData}>
-          <XAxis dataKey="skiID" />
+        <BarC
+          width={width}
+          height={height}
+          data={pastData}
+          margin={{
+            top: 5,
+            bottom: 5,
+            right: 5,
+            left: 5
+          }}
+        >
+          <XAxis dataKey="name" />
           <YAxis dataKey="value" />
           <Tooltip />
           <Legend />
