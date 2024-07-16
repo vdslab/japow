@@ -113,7 +113,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     svg.selectAll("*").remove();
     const width = 800;
     const height = 500;
-    const margin = { top: 20, right: 30, bottom: 30, left: 50 };
+    const margin = { top: 10, right: 30, bottom: 30, left: 50 };
     svg.attr("viewBox", [0, 0, width, height]);
 
     const x = d3

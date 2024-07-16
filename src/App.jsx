@@ -6,8 +6,12 @@ import MapDisplay from "./MapDisplay";
 import BarChart from "./BarChart";
 import snowQualityMap from "./assets/snowQualityMap2324.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
-import { Box, Stack } from "@mui/material";
-import { mapFilterBypref, snowFilterBypref, snowFilterByPeriod } from "./filtering";
+import { Box, Stack, Grid } from "@mui/material";
+import {
+  mapFilterBypref,
+  snowFilterBypref,
+  snowFilterByPeriod,
+} from "./filtering";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState(null);
@@ -15,7 +19,7 @@ function App() {
   const [snowData, setSnowData] = useState([...snowQualityMap]);
   // マップに描画するデータ
   const [mapData, setMapData] = useState([...sukijouZahyou]);
-  const [filter, setFilter] = useState({ "pref": "", "period":"", "sq": "" });
+  const [filter, setFilter] = useState({ pref: "", period: "", sq: "" });
 
   useEffect(() => {
     let snowFilteredData = [...snowQualityMap];
@@ -49,25 +53,30 @@ function App() {
         <h1>JAPOW!</h1>
         <Filter filter={filter} setFilter={setFilter}></Filter>
       </Box>
-      <MapDisplay
-        mapData={mapData}
-        skiTargetID={skiTargetID}
-        setSkiTargetID={setSkiTargetID}
-      ></MapDisplay>
-
-      {/* <BumpChart
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
+          <MapDisplay
+            mapData={mapData}
+            skiTargetID={skiTargetID}
+            setSkiTargetID={setSkiTargetID}
+          ></MapDisplay>
+        </Grid>
+        {/* <BumpChart
         skiTargetID={skiTargetID}
         setSkiTargetID={setSkiTargetID}
         skiData={snowData}
       ></BumpChart> */}
 
-      <NewBumpChart
-        data={snowData}
-        skiTargetID={skiTargetID}
-        setSkiTargetID={setSkiTargetID}
-      ></NewBumpChart>
+        <Grid item xs={6}>
+          <NewBumpChart
+            data={snowData}
+            skiTargetID={skiTargetID}
+            setSkiTargetID={setSkiTargetID}
+          ></NewBumpChart>
 
-      <BarChart skiTargetID={skiTargetID} skiData={snowData}></BarChart>
+          <BarChart skiTargetID={skiTargetID} skiData={snowData}></BarChart>
+        </Grid>
+      </Grid>
     </>
   );
 }
