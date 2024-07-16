@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
+import d3Tip from "d3-tip";
 import JapanData from "./assets/Japan.json";
 import zahyou from "../docker-python/data/anl_data-2023121612.json";
 // import sukizahyou from "./assets/ski_resorts_japan.json";
@@ -33,7 +34,7 @@ const ZoomableSVG = (props) => {
   );
 };
 
-const MapDisplay = ({ skiTarget, setSkiTarget, mapData }) => {
+const MapDisplay = ({ skiTargetID, setSkiTargetID, mapData }) => {
   const svgRef = useRef(null);
   const width = 800;
   const height = 800;
@@ -86,6 +87,20 @@ const MapDisplay = ({ skiTarget, setSkiTarget, mapData }) => {
         // d3.select(event.currentTarget).attr("fill", "blue");
       });
 
+    const tip = d3Tip()
+      .attr("class", "d3-tip")
+      .offset([-10, 0])
+      .html((event, d) => {
+        return `<strong>Name:</strong> <span style='color:black'>${d.name}</span><br>
+                `;
+      })
+      .style("background", "white")
+      .style("color", "black")
+      .style("padding", "5px")
+      .style("border", "1px solid black")
+      .style("border-radius", "3px");
+
+    d3.select("svg").call(tip);
     svg
       .append("g")
       .selectAll("circle")
@@ -102,20 +117,22 @@ const MapDisplay = ({ skiTarget, setSkiTarget, mapData }) => {
       })
       .attr("r", 3)
       .attr("fill", (d) => {
-        return !skiTarget
+        return !skiTargetID
           ? "#00ffff"
-          : skiTarget === d.name
+          : skiTargetID === d.skiID
           ? "#00ffff"
           : "rgb(0,0,0)";
       })
+      .on("mouseenter", tip.show)
+      .on("mouseout", tip.hide)
       .on("click", (event, d) => {
         console.log("Cliked skijou-data;", d);
-        setSkiTarget(d.name);
+        setSkiTargetID(d.skiID);
       });
 
-    //console.log(skiTarget);
-  }, [skiTarget, mapData]);
-
+    //console.log(skiTargetID);
+  }, [skiTargetID, mapData]);
+  console.log(skiTargetID);
   return (
     <ZoomableSVG>
       <svg ref={svgRef} viewBox={`0 0 ${width / 2} ${height * 2}`}></svg>

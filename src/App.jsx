@@ -4,28 +4,31 @@ import NewBumpChart from "./newBumpChart";
 import Filter from "./Filter";
 import MapDisplay from "./MapDisplay";
 import BarChart from "./BarChart";
-import snowQualityMap from "./assets/snowQualityMap.json";
+import snowQualityMap from "./assets/snowQualityMap2324.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
 import { Box, Stack } from "@mui/material";
-import { mapFilterBypref, snowFilterBypref } from "./filtering";
+import { mapFilterBypref, snowFilterBypref, snowFilterByPeriod } from "./filtering";
 
 function App() {
-  const [skiTarget, setSkiTarget] = useState(null);
+  const [skiTargetID, setSkiTargetID] = useState(null);
   //各日付の雪質データ
   const [snowData, setSnowData] = useState([...snowQualityMap]);
   // マップに描画するデータ
   const [mapData, setMapData] = useState([...sukijouZahyou]);
-  const [filter, setFilter] = useState({ pref: "", sq: "" });
+  const [filter, setFilter] = useState({ "pref": "", "period":"", "sq": "" });
 
   useEffect(() => {
     let snowFilteredData = [...snowQualityMap];
     let mapFilteredData = [...sukijouZahyou];
 
     if (filter.pref !== "") {
-      console.log(snowQualityMap);
-      snowFilteredData = snowFilterBypref(snowQualityMap, filter.pref);
+      snowFilteredData = snowFilterBypref(snowFilteredData, filter.pref);
+      mapFilteredData = mapFilterBypref(mapFilteredData, filter.pref);
+    }
+
+    if (filter.period != "") {
+      snowFilteredData = snowFilterByPeriod(snowFilteredData, filter.period);
       console.log(snowFilteredData);
-      mapFilteredData = mapFilterBypref(sukijouZahyou, filter.pref);
     }
 
     setSnowData([...snowFilteredData]);
@@ -48,23 +51,23 @@ function App() {
       </Box>
       <MapDisplay
         mapData={mapData}
-        skiTarget={skiTarget}
-        setSkiTarget={setSkiTarget}
+        skiTargetID={skiTargetID}
+        setSkiTargetID={setSkiTargetID}
       ></MapDisplay>
 
       {/* <BumpChart
-        skiTarget={skiTarget}
-        setSkiTarget={setSkiTarget}
+        skiTargetID={skiTargetID}
+        setSkiTargetID={setSkiTargetID}
         skiData={snowData}
       ></BumpChart> */}
 
       <NewBumpChart
         data={snowData}
-        skiTarget={skiTarget}
-        setSkiTarget={setSkiTarget}
+        skiTargetID={skiTargetID}
+        setSkiTargetID={setSkiTargetID}
       ></NewBumpChart>
 
-      {/* <BarChart skiTarget={skiTarget} skiData={snowData}></BarChart> */}
+      <BarChart skiTargetID={skiTargetID} skiData={snowData}></BarChart>
     </>
   );
 }
