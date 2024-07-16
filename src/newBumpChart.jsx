@@ -27,7 +27,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   };
 
   const getSkiResortData = (data, names) => {
-    // 名前に一致するデータを抽出し、同時に週ごとにデータを集める
+    // 週ごとにデータをわける
     const weekData = names.reduce((acc, name) => {
       if (data[name]) {
         data[name].forEach((entry) => {
@@ -40,15 +40,13 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       return acc;
     }, []);
 
-    // 各週のデータをソートし、相対的な順位を計算して追加
+    // それに相対的なrankをつける
     Object.values(weekData).forEach((weekEntries) => {
       weekEntries.sort((a, b) => a.rank - b.rank);
       weekEntries.forEach((entry, index) => {
         entry.relativeRank = index + 1;
       });
     });
-
-    // 4. 新しいデータを格納
     const newData = names.reduce((acc, name) => {
       if (data[name]) {
         acc[name] = data[name];
@@ -67,7 +65,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     .html((event, d) => {
       return `<strong>Name:</strong> <span style='color:black'>${d.name}</span><br>
               <strong>Week:</strong> <span style='color:black'>${d.week}</span><br>
-              <strong>Rank</strong> <span style='color:black'>${d.rank}</span><br>
+              <strong>Rank:</strong> <span style='color:black'>${d.rank}</span><br>
               <strong>相対的なRank:</strong> <span style='color:black'>${d.relativeRank}</span>`;
     })
     .style("background", "white")
@@ -80,8 +78,8 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
 
       const { innerWidth, innerHeight } = view;
 
-      const tipWidth = 200; // 予測されるツールチップの幅
-      const tipHeight = 100; // 予測されるツールチップの高さ
+      const tipWidth = 200;
+      const tipHeight = 100;
 
       let offsetX = 10;
       let offsetY = -10;
@@ -113,9 +111,9 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
 
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
-    const width = 1000;
-    const height = 400;
-    const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+    const width = 800;
+    const height = 500;
+    const margin = { top: 20, right: 30, bottom: 30, left: 50 };
     svg.attr("viewBox", [0, 0, width, height]);
 
     const x = d3
@@ -169,6 +167,23 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       .append("g")
       .attr("transform", `translate(${margin.left},0)`)
       .call(d3.axisLeft(y));
+
+    svg
+      .append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", width / 2)
+      .attr("y", height + margin.bottom + 20)
+      .text("Week");
+    svg
+      .append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("x", -height / 2)
+      .attr("y", 1)
+      .attr("dy", ".75em")
+      .attr("transform", "rotate(-90)")
+      .text("Rank");
     Object.keys(transformedData).forEach((name, skiID) => {
       const colorValue = color(name);
       svg
@@ -236,7 +251,11 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   }, [data, skiTargetID]);
 
   console.log(skiTargetID);
-  return <svg ref={svgRef} width={1200} height={1000}></svg>;
+  return (
+    <div style={{ overflow: "auto" }}>
+      <svg ref={svgRef} width={900} height={700}></svg>
+    </div>
+  );
 };
 
 export default NewBumpChart;
