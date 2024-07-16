@@ -25,19 +25,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.1182098388672
+            "data_value": 277.16978454589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.541015625
+            "data_value": 12.3974609375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.004885376665924923
+            "data_value": 0.001902122276078444
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.6742453277111
+            "data_value": 38.126174569129944
         }
     ]
 },
@@ -67,19 +67,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.0384572347005
+            "data_value": 276.3152923583985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9371744791666804
+            "data_value": 10.680338541666705
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005088429822459749
+            "data_value": 0.002059081173986969
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.59188855687768
+            "data_value": 43.765823006629816
         }
     ]
 },
@@ -109,19 +109,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.9125457763672
+            "data_value": 275.74615173339845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3005859374999933
+            "data_value": 9.881347656249982
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005345381472443484
+            "data_value": 0.002127284782181961
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.25822970271115
+            "data_value": 46.42090113163
         }
     ]
 },
@@ -151,19 +151,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.2764129638672
+            "data_value": 275.27330017089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.03515625
+            "data_value": 9.2001953125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005601586077546017
+            "data_value": 0.0021710584333050065
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.9808859527111
+            "data_value": 48.880080819129944
         }
     ]
 },
@@ -193,19 +193,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.9951629638672
+            "data_value": 275.7072845458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.6023437500000113
+            "data_value": 8.471093749999987
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005315531466339965
+            "data_value": 0.0024151513745891834
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.36076876521103
+            "data_value": 52.318752694129984
         }
     ]
 },
@@ -235,19 +235,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.5752410888672
+            "data_value": 274.49790954589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.048828125
+            "data_value": 7.947265625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005414665911530392
+            "data_value": 0.002298850791703444
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.6449484527111
+            "data_value": 53.841018319129944
         }
     ]
 },
@@ -277,19 +277,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.2238739013672
+            "data_value": 275.3522064208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.1576171875000225
+            "data_value": 8.949218749999975
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005992735598420025
+            "data_value": 0.0022529313733684843
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.25764376521097
+            "data_value": 50.01953394413004
         }
     ]
 },
@@ -319,19 +319,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.3361785888672
+            "data_value": 277.03619079589845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4656249999999973
+            "data_value": 9.059179687500011
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005424393389557735
+            "data_value": 0.002535457389603836
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.23674532771112
+            "data_value": 50.6574245691299
         }
     ]
 },
@@ -341,7 +341,7 @@
     "values": [
         {
             "name": "snowlayers",
-            "data_value": -1.0
+            "data_value": -1.1000000000000227
         },
         {
             "name": "iceT",
@@ -361,19 +361,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.52797546386716
+            "data_value": 275.5078704833984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.6601562500000009
+            "data_value": 8.074511718749966
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005493200991486449
+            "data_value": 0.0024538228681194596
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.0330343902111
+            "data_value": 53.98691675663008
         }
     ]
 },
@@ -383,7 +383,7 @@
     "values": [
         {
             "name": "snowlayers",
-            "data_value": -1.0
+            "data_value": -2.0
         },
         {
             "name": "iceT",
@@ -403,19 +403,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.5244598388672
+            "data_value": 273.87486267089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.6953125
+            "data_value": 6.6796875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005590618822907345
+            "data_value": 0.0024538228681194596
         },
         {
             "name": "relativeHumidity",
-            "data_value": 88.8168234527111
+            "data_value": 59.483596444129944
         }
     ]
 },
@@ -425,7 +425,7 @@
     "values": [
         {
             "name": "snowlayers",
-            "data_value": -1.0
+            "data_value": -2.0
         },
         {
             "name": "iceT",
@@ -445,19 +445,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.59828796386716
+            "data_value": 272.8852142333985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.6759765625000005
+            "data_value": 5.7383789062500234
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0057279479244698416
+            "data_value": 0.002487725990067701
         },
         {
             "name": "relativeHumidity",
-            "data_value": 88.94162814021111
+            "data_value": 63.688283944129836
         }
     ]
 },
@@ -467,7 +467,7 @@
     "values": [
         {
             "name": "snowlayers",
-            "data_value": -1.0
+            "data_value": -2.0
         },
         {
             "name": "iceT",
@@ -487,19 +487,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.2174285888672
+            "data_value": 273.7252532958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.2175781249999935
+            "data_value": 6.440820312500012
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006118572924469851
+            "data_value": 0.0024907300641643813
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.86955782771113
+            "data_value": 60.608596444129894
         }
     ]
 },
@@ -509,7 +509,7 @@
     "values": [
         {
             "name": "snowlayers",
-            "data_value": -1.0
+            "data_value": -1.3000000000000114
         },
         {
             "name": "iceT",
@@ -529,19 +529,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.5656707763672
+            "data_value": 275.5883392333984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.1240234374999996
+            "data_value": 7.825195312499981
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00614966270718469
+            "data_value": 0.002525586860429029
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.4722922027111
+            "data_value": 55.223830819130015
         }
     ]
 },
@@ -571,19 +571,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.1678192138672
+            "data_value": 277.21665954589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.238281250000004
+            "data_value": 9.91171875000006
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005839813921784288
+            "data_value": 0.0023918340375530477
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.72463595271108
+            "data_value": 47.50234644412972
         }
     ]
 },
@@ -613,19 +613,19 @@
         },
         {
             "name": "airT",
-            "data_value": 277.0643035888672
+            "data_value": 278.28619079589845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.0736328125000028
+            "data_value": 9.299414062499983
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.004740275118683712
+            "data_value": 0.0027570913007366553
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.64104220271109
+            "data_value": 50.37226831913002
         }
     ]
 },
@@ -655,19 +655,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.5314910888672
+            "data_value": 276.4537689208985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3851562499999994
+            "data_value": 8.09453125000002
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0055604827145089054
+            "data_value": 0.0026309201886761
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.7574484527111
+            "data_value": 54.533987069129864
         }
     ]
 },
@@ -697,19 +697,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.77289733886715
+            "data_value": 274.7279876708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4191406249999985
+            "data_value": 6.482910156249962
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005723274920319455
+            "data_value": 0.002643270271073562
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.55901095271112
+            "data_value": 61.07109644413012
         }
     ]
 },
@@ -739,19 +739,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.3721160888672
+            "data_value": 273.01939392089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.359375
+            "data_value": 4.9580078125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005749882433747189
+            "data_value": 0.0026788900067913346
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.9105734527111
+            "data_value": 68.02851831912994
         }
     ]
 },
@@ -761,7 +761,7 @@
     "values": [
         {
             "name": "snowlayers",
-            "data_value": -1.0
+            "data_value": -1.8999999999999773
         },
         {
             "name": "iceT",
@@ -781,19 +781,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.7762176513672
+            "data_value": 271.61841735839846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.282031250000002
+            "data_value": 4.572167968750009
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0057134043911446514
+            "data_value": 0.00253726937080501
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.37639376521109
+            "data_value": 69.38730738162991
         }
     ]
 },
@@ -803,7 +803,7 @@
     "values": [
         {
             "name": "snowlayers",
-            "data_value": -1.0
+            "data_value": -1.1999999999999886
         },
         {
             "name": "iceT",
@@ -823,19 +823,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.1037567138672
+            "data_value": 272.2330657958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3140625000000006
+            "data_value": 5.395703125000012
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005801285479401487
+            "data_value": 0.002478046195756178
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.1844015777111
+            "data_value": 65.13047144412988
         }
     ]
 },
@@ -865,19 +865,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.4988739013672
+            "data_value": 273.8024017333984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.434960937499998
+            "data_value": 6.21455078124999
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005753840182160276
+            "data_value": 0.0025656411817180907
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.44123751521111
+            "data_value": 61.81094019412998
         }
     ]
 },
@@ -907,19 +907,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.2650848388672
+            "data_value": 275.0709564208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.2867187499999926
+            "data_value": 7.01230468750002
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0056012046078194495
+            "data_value": 0.0026107022931682877
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.37580782771116
+            "data_value": 58.662112069129854
         }
     ]
 },
@@ -949,19 +949,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.6406707763672
+            "data_value": 275.79478454589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.06640625
+            "data_value": 7.42822265625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005393685076569454
+            "data_value": 0.002652425544511061
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.7572531402111
+            "data_value": 57.096877694129944
         }
     ]
 },
@@ -991,19 +991,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.1342254638672
+            "data_value": 276.5693939208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9695312500000004
+            "data_value": 8.329296874999951
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005204476092194458
+            "data_value": 0.0026090810468304016
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.3636984527111
+            "data_value": 53.64101831913013
         }
     ]
 },
@@ -1033,19 +1033,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.0182098388672
+            "data_value": 278.18365173339845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.0755859375000045
+            "data_value": 9.110644531249982
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005075300906037227
+            "data_value": 0.002788753288041346
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.67346407771107
+            "data_value": 51.03359644413003
         }
     ]
 },
@@ -1075,19 +1075,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.9014129638672
+            "data_value": 276.71314392089846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3257812500000026
+            "data_value": 7.544531250000026
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005741585467194452
+            "data_value": 0.0028150746991741477
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.15393282771109
+            "data_value": 57.22851831912983
         }
     ]
 },
@@ -1117,19 +1117,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.9240692138672
+            "data_value": 274.3443939208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.1347656249999996
+            "data_value": 5.557714843749971
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00594505188259973
+            "data_value": 0.0027844140699016862
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.3734640777111
+            "data_value": 65.59043238163008
         }
     ]
 },
@@ -1159,19 +1159,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.7764129638672
+            "data_value": 272.91001892089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.1171875
+            "data_value": 4.4248046875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006049336169098751
+            "data_value": 0.0027899930646526627
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.4789328277111
+            "data_value": 70.99922144412994
         }
     ]
 },
@@ -1201,19 +1201,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.09633483886716
+            "data_value": 272.8854095458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.0029296875000029
+            "data_value": 4.896777343749988
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006286658022736441
+            "data_value": 0.002700299995194657
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.2295187652111
+            "data_value": 68.29746363163001
         }
     ]
 },
@@ -1243,19 +1243,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.3475067138672
+            "data_value": 273.80298767089846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.216796875000003
+            "data_value": 5.946875000000014
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006206215594147578
+            "data_value": 0.002628154533158521
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.87229220271108
+            "data_value": 63.228518319129876
         }
     ]
 },
@@ -1285,19 +1285,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.9037567138672
+            "data_value": 274.9709564208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.0232421875000042
+            "data_value": 6.6590820312499925
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005987919543122192
+            "data_value": 0.002676696555863599
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.09944064021109
+            "data_value": 60.30547144412997
         }
     ]
 },
@@ -1327,19 +1327,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.26039733886716
+            "data_value": 275.9752532958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.7519531249999938
+            "data_value": 7.369531250000019
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005767048571442496
+            "data_value": 0.002709312217484694
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.84143282771115
+            "data_value": 57.50586206912986
         }
     ]
 },
@@ -1369,19 +1369,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.0586395263672
+            "data_value": 276.90513610839844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.76171875
+            "data_value": 8.01708984375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005631149981354611
+            "data_value": 0.002747316138993483
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.7679953277111
+            "data_value": 55.066604256629944
         }
     ]
 },
@@ -1411,19 +1411,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.2373504638672
+            "data_value": 278.0225189208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8339843750000027
+            "data_value": 9.263476562499946
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005618656847809687
+            "data_value": 0.0026939580609905583
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.29846407771109
+            "data_value": 50.54687769413014
         }
     ]
 },
@@ -1453,19 +1453,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.2771942138672
+            "data_value": 279.58287048339844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.815234375000002
+            "data_value": 9.87929687499997
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005597485277985467
+            "data_value": 0.002911968009721035
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.42619845271109
+            "data_value": 48.79082300663007
         }
     ]
 },
@@ -1495,19 +1495,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.43774108886714
+            "data_value": 278.32955017089836
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3421874999999879
+            "data_value": 7.395117187499995
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005496205065583124
+            "data_value": 0.0032177159955608494
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.04143282771119
+            "data_value": 58.46211206912993
         }
     ]
 },
@@ -1537,19 +1537,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.6885223388672
+            "data_value": 276.15415954589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9736328125
+            "data_value": 6.44677734375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005433739397858517
+            "data_value": 0.0029564092328655533
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.3695578277111
+            "data_value": 62.133987069129944
         }
     ]
 },
@@ -1579,19 +1579,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.7127410888672
+            "data_value": 275.6373626708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.941796874999993
+            "data_value": 5.613281249999998
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0054908644894112475
+            "data_value": 0.003050822990189768
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.57815157771115
+            "data_value": 65.95117456912995
         }
     ]
 },
@@ -1621,19 +1621,19 @@
         },
         {
             "name": "airT",
-            "data_value": 279.7275848388672
+            "data_value": 276.41431579589846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3466796875000084
+            "data_value": 6.110449218750017
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005690849993561646
+            "data_value": 0.0030961702039348873
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.04221407771105
+            "data_value": 63.872268319129866
         }
     ]
 },
@@ -1663,19 +1663,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.9893035888672
+            "data_value": 276.6889251708985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.7503906250000063
+            "data_value": 6.898437500000015
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006008137438629995
+            "data_value": 0.00295431114936946
         },
         {
             "name": "relativeHumidity",
-            "data_value": 88.58791720271107
+            "data_value": 60.13594019412988
         }
     ]
 },
@@ -1705,19 +1705,19 @@
         },
         {
             "name": "airT",
-            "data_value": 281.22524108886716
+            "data_value": 275.00650329589837
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.2718749999999903
+            "data_value": 5.675488281249967
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006419600222443481
+            "data_value": 0.002897186057816725
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.57405001521117
+            "data_value": 65.3474636316301
         }
     ]
 },
@@ -1747,19 +1747,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.7471160888672
+            "data_value": 273.30845642089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.888671875
+            "data_value": 4.3720703125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006559075091217892
+            "data_value": 0.0028877446820843033
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.9945578277111
+            "data_value": 71.54023706912994
         }
     ]
 },
@@ -1789,19 +1789,19 @@
         },
         {
             "name": "airT",
-            "data_value": 281.3693817138672
+            "data_value": 274.4914642333984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.043359374999996
+            "data_value": 6.128124999999955
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006735886309479606
+            "data_value": 0.0027392575910198543
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.02424532771113
+            "data_value": 62.74062769413017
         }
     ]
 },
@@ -1831,19 +1831,19 @@
         },
         {
             "name": "airT",
-            "data_value": 281.9182098388672
+            "data_value": 276.5854095458985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3261718750000036
+            "data_value": 8.260742187500028
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00667046425137414
+            "data_value": 0.0026521871259319587
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.27580782771108
+            "data_value": 53.93945581912983
         }
     ]
 },
@@ -1873,19 +1873,19 @@
         },
         {
             "name": "airT",
-            "data_value": 281.3244598388672
+            "data_value": 278.2490814208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8593750000000087
+            "data_value": 9.145019531249993
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006486977312897582
+            "data_value": 0.0027710626294719966
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.23303439021105
+            "data_value": 50.97461206912996
         }
     ]
 },
@@ -1915,19 +1915,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.1361785888672
+            "data_value": 278.6977142333985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.9990234375000029
+            "data_value": 7.1028320312500055
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005494250033234495
+            "data_value": 0.00336830117012142
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.99787814021109
+            "data_value": 59.96465113162993
         }
     ]
 },
@@ -1957,19 +1957,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.1502410888672
+            "data_value": 276.7893157958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.92109375
+            "data_value": 6.320312499999977
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005570496294831177
+            "data_value": 0.003102512138138988
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.47072970271111
+            "data_value": 62.96875269413004
         }
     ]
 },
@@ -1999,19 +1999,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.4365692138672
+            "data_value": 276.05650329589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.9560546875
+            "data_value": 5.9873046875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0056955229977120325
+            "data_value": 0.003019828574906569
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.2826437652111
+            "data_value": 64.24336206912994
         }
     ]
 },
@@ -2041,19 +2041,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.84242858886716
+            "data_value": 276.5072845458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.9652343750000014
+            "data_value": 6.391796874999981
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005857170794342886
+            "data_value": 0.0030309865644085193
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.2601828277111
+            "data_value": 62.470315194130016
         }
     ]
 },
@@ -2083,19 +2083,19 @@
         },
         {
             "name": "airT",
-            "data_value": 281.67856140136723
+            "data_value": 278.28150329589846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.117578125000007
+            "data_value": 6.387109374999982
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006096638415192504
+            "data_value": 0.003480024116288419
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.44397189021106
+            "data_value": 63.11308863163004
         }
     ]
 },
@@ -2125,19 +2125,19 @@
         },
         {
             "name": "airT",
-            "data_value": 283.06391296386715
+            "data_value": 278.09712829589836
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.0355468749999885
+            "data_value": 7.613183593749998
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007237137530182736
+            "data_value": 0.003104276435624332
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.15490939021117
+            "data_value": 57.44570581912993
         }
     ]
 },
@@ -2167,19 +2167,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.1357879638672
+            "data_value": 275.89634704589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.58203125
+            "data_value": 7.5419921875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007219971392487423
+            "data_value": 0.0026970098188030533
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.0219015777111
+            "data_value": 56.630080819129944
         }
     ]
 },
@@ -2209,19 +2209,19 @@
         },
         {
             "name": "airT",
-            "data_value": 281.78774108886716
+            "data_value": 276.11255798339846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.5152343750000017
+            "data_value": 8.115917968749985
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007125986788605589
+            "data_value": 0.0026347825696575473
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.4578390777111
+            "data_value": 54.155080819130006
         }
     ]
 },
@@ -2251,19 +2251,19 @@
         },
         {
             "name": "airT",
-            "data_value": 281.7193817138672
+            "data_value": 278.3365814208985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.6890625000000026
+            "data_value": 9.896093750000023
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00685538170132531
+            "data_value": 0.002670593040238601
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.3203390777111
+            "data_value": 48.10820581912986
         }
     ]
 },
@@ -2293,19 +2293,19 @@
         },
         {
             "name": "airT",
-            "data_value": 281.2375457763672
+            "data_value": 278.85279235839846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.653710937499991
+            "data_value": 7.6193359374999865
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0052976500729073495
+            "data_value": 0.003304548042069669
         },
         {
             "name": "relativeHumidity",
-            "data_value": 77.62697970271115
+            "data_value": 57.63457300663002
         }
     ]
 },
@@ -2335,19 +2335,19 @@
         },
         {
             "name": "airT",
-            "data_value": 281.6119598388672
+            "data_value": 277.42955017089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.813671874999997
+            "data_value": 7.947460937499999
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0054066550472725875
+            "data_value": 0.0028692434003460194
         },
         {
             "name": "relativeHumidity",
-            "data_value": 76.80549532771113
+            "data_value": 55.65000269412994
         }
     ]
 },
@@ -2377,19 +2377,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.0543426513672
+            "data_value": 280.3574798583985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.13574218750000866
+            "data_value": 11.252832031249875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007213772509430781
+            "data_value": 0.0028197953870403975
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.97990939021105
+            "data_value": 44.290041756630444
         }
     ]
 },
@@ -2419,19 +2419,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.8404754638672
+            "data_value": 279.32876892089837
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.1882812499999718
+            "data_value": 7.4238281250000675
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006128491137360483
+            "data_value": 0.003488845603715132
         },
         {
             "name": "relativeHumidity",
-            "data_value": 80.45705782771125
+            "data_value": 58.905471444129624
         }
     ]
 },
@@ -2461,19 +2461,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.6494598388672
+            "data_value": 282.0752532958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.3656249999999717
+            "data_value": 6.26347656250004
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007285774920319473
+            "data_value": 0.0045778463056194325
         },
         {
             "name": "relativeHumidity",
-            "data_value": 85.31135470271127
+            "data_value": 64.78008081912975
         }
     ]
 },
@@ -2503,19 +2503,19 @@
         },
         {
             "name": "airT",
-            "data_value": 278.2287567138672
+            "data_value": 277.3404876708985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.5933593749999817
+            "data_value": 2.1757812500000027
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.004813660357331187
+            "data_value": 0.004908485191117515
         },
         {
             "name": "relativeHumidity",
-            "data_value": 77.49338595271121
+            "data_value": 85.66094019412994
         }
     ]
 },
@@ -2545,19 +2545,19 @@
         },
         {
             "name": "airT",
-            "data_value": 280.90883483886716
+            "data_value": 280.0606048583984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.2591796875000005
+            "data_value": 2.601464843749994
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005697334978913194
+            "data_value": 0.005529136436234686
         },
         {
             "name": "relativeHumidity",
-            "data_value": 79.7383078277111
+            "data_value": 83.41855738162997
         }
     ]
 },
@@ -2587,19 +2587,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.7955535888672
+            "data_value": 282.0779876708985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 4.9214843750000625
+            "data_value": 3.3306640625000217
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005550564501618267
+            "data_value": 0.005798644798051103
         },
         {
             "name": "relativeHumidity",
-            "data_value": 71.59026095271079
+            "data_value": 79.55781519412983
         }
     ]
 },
@@ -2629,19 +2629,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.36977233886716
+            "data_value": 282.13599548339846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.1927734375000125
+            "data_value": 4.158691406250011
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007235420916413198
+            "data_value": 0.0053154180219280615
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.27776095271103
+            "data_value": 75.1001980066299
         }
     ]
 },
@@ -2671,19 +2671,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.3615692138672
+            "data_value": 280.1947845458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.6613281249999925
+            "data_value": 2.7767578124999583
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00759075996670618
+            "data_value": 0.005167789237748368
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.37619845271115
+            "data_value": 82.56445581913017
         }
     ]
 },
@@ -2713,19 +2713,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.7451629638672
+            "data_value": 279.68052673339844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.474609375
+            "data_value": 2.15576171875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007961214754914181
+            "data_value": 0.005252856986771803
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.5199484527111
+            "data_value": 86.00801050662994
         }
     ]
 },
@@ -2755,19 +2755,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.5232879638672
+            "data_value": 280.75455017089837
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.2050781250000122
+            "data_value": 2.983593749999959
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008517445299958109
+            "data_value": 0.005326289909135083
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.21135470271102
+            "data_value": 81.44062769413017
         }
     ]
 },
@@ -2797,19 +2797,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.0400848388672
+            "data_value": 283.05669860839845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.0585937500000067
+            "data_value": 4.366406250000011
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008781374667023547
+            "data_value": 0.005614251868973961
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.13889376521107
+            "data_value": 74.18496363162988
         }
     ]
 },
@@ -2839,19 +2839,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.1885223388672
+            "data_value": 282.78931579589846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.289453125000007
+            "data_value": 3.7173828125000106
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.005979431841706173
+            "data_value": 0.005959625022660477
         },
         {
             "name": "relativeHumidity",
-            "data_value": 79.76565157771107
+            "data_value": 77.53125269412989
         }
     ]
 },
@@ -2881,19 +2881,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.9322723388672
+            "data_value": 282.5941986083985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.8279296875000064
+            "data_value": 2.627343750000016
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007698191378449334
+            "data_value": 0.006103153007279624
         },
         {
             "name": "relativeHumidity",
-            "data_value": 88.42678439021107
+            "data_value": 83.63672144412986
         }
     ]
 },
@@ -2923,19 +2923,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.5596160888672
+            "data_value": 280.22525329589837
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4582031249999925
+            "data_value": 1.0541015624999566
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007846821520661254
+            "data_value": 0.00588113762642024
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.61174532771115
+            "data_value": 93.13008081913021
         }
     ]
 },
@@ -2965,19 +2965,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.6201629638672
+            "data_value": 279.14146423339844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.302734375
+            "data_value": 0.32421875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008112610552643673
+            "data_value": 0.005844135062943678
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.5590109527111
+            "data_value": 97.70039331912994
         }
     ]
 },
@@ -3007,19 +3007,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.58070983886716
+            "data_value": 279.4545501708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3183593749999978
+            "data_value": 0.6318359374999845
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008686817858551856
+            "data_value": 0.0058698842694866445
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.51877657771111
+            "data_value": 95.67226831913004
         }
     ]
 },
@@ -3049,19 +3049,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.7719207763672
+            "data_value": 280.9399017333985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.0154296874999864
+            "data_value": 1.6636718750000234
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009476889345978644
+            "data_value": 0.005985183494340164
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.47112032771119
+            "data_value": 89.3271511316298
         }
     ]
 },
@@ -3091,19 +3091,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.7408660888672
+            "data_value": 283.5424407958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.2507812499999955
+            "data_value": 3.487109374999979
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009779442522858532
+            "data_value": 0.006209296958695623
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.21526095271113
+            "data_value": 78.97617456913005
         }
     ]
 },
@@ -3133,19 +3133,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.5603973388672
+            "data_value": 284.20923767089846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.8958984375000068
+            "data_value": 2.79814453125001
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007960308764313593
+            "data_value": 0.006715030448685875
         },
         {
             "name": "relativeHumidity",
-            "data_value": 88.07268282771106
+            "data_value": 82.79043238162988
         }
     ]
 },
@@ -3175,19 +3175,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.9158660888672
+            "data_value": 281.37212829589834
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4042968749999882
+            "data_value": 1.0746093749999448
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008061875079010862
+            "data_value": 0.0063568303754436735
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.97190157771118
+            "data_value": 93.18789331913028
         }
     ]
 },
@@ -3217,19 +3217,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.5596160888672
+            "data_value": 279.53013610839844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.080078125
+            "data_value": 0.0537109375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008264006350373165
+            "data_value": 0.006167669074784499
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.9379172027111
+            "data_value": 99.54707300662994
         }
     ]
 },
@@ -3259,19 +3259,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.22133483886716
+            "data_value": 279.11939392089846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.1847656249999874
+            "data_value": 0.09999999999999454
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00871104118618858
+            "data_value": 0.006062812583695631
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.33987032771118
+            "data_value": 99.23359644412999
         }
     ]
 },
@@ -3301,19 +3301,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.7260223388672
+            "data_value": 279.83013610839845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.574414062500002
+            "data_value": 0.6071289062500138
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009349049303864385
+            "data_value": 0.006127042548905595
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.04826876521109
+            "data_value": 95.89668238162986
         }
     ]
 },
@@ -3343,19 +3343,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.89906921386716
+            "data_value": 282.1670501708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.6234375000000048
+            "data_value": 1.8833984374999755
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009872807238434688
+            "data_value": 0.006475848930131166
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.84065157771109
+            "data_value": 88.06094019413008
         }
     ]
 },
@@ -3385,19 +3385,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.6404754638672
+            "data_value": 283.57564392089836
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4343749999999877
+            "data_value": 0.8777343749999724
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008395184252594851
+            "data_value": 0.0074630925824749
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.83049532771118
+            "data_value": 94.28203394413012
         }
     ]
 },
@@ -3427,19 +3427,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.6934051513672
+            "data_value": 281.28306579589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.201171875
+            "data_value": 0.30029296875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008740128252838986
+            "data_value": 0.006764907615433913
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.2347922027111
+            "data_value": 97.87519800662994
         }
     ]
 },
@@ -3469,19 +3469,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.52289733886715
+            "data_value": 280.36626892089845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.6679687499999725
+            "data_value": 0.19082031250000098
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009083737109040152
+            "data_value": 0.006490344779740557
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.55549532771127
+            "data_value": 98.60742456912993
         }
     ]
 },
@@ -3511,19 +3511,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.8734832763672
+            "data_value": 280.31939392089845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.5609375000000063
+            "data_value": 0.4706054687500116
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009386290285920045
+            "data_value": 0.006358308570634107
         },
         {
             "name": "relativeHumidity",
-            "data_value": 84.48947970271107
+            "data_value": 96.78398706912986
         }
     ]
 },
@@ -3553,19 +3553,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.95844421386715
+            "data_value": 282.0158782958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.7312500000000126
+            "data_value": 1.447851562499985
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009843243334626085
+            "data_value": 0.006618327873002252
         },
         {
             "name": "relativeHumidity",
-            "data_value": 83.67346407771103
+            "data_value": 90.61797144413003
         }
     ]
 },
@@ -3595,19 +3595,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.7662567138672
+            "data_value": 285.7135345458985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4035156250000078
+            "data_value": 1.828613281250019
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008415974352692498
+            "data_value": 0.008002776878129232
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.03303439021106
+            "data_value": 88.61152613162983
         }
     ]
 },
@@ -3637,19 +3637,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.9162567138672
+            "data_value": 283.6088470458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.1937499999999999
+            "data_value": 0.8251953124999809
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008757866595124151
+            "data_value": 0.007546729820023745
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.2945578277111
+            "data_value": 94.54883081913006
         }
     ]
 },
@@ -3679,19 +3679,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.7480926513672
+            "data_value": 282.58189392089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4697265625
+            "data_value": 0.59375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009185970995758908
+            "data_value": 0.0072238633802044205
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.6908468902111
+            "data_value": 95.95820581912994
         }
     ]
 },
@@ -3721,19 +3721,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.19867858886715
+            "data_value": 282.3854095458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.416015624999962
+            "data_value": 0.8822265624999895
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009512604449128045
+            "data_value": 0.0069997975995647775
         },
         {
             "name": "relativeHumidity",
-            "data_value": 85.44729220271131
+            "data_value": 94.10351831913
         }
     ]
 },
@@ -3763,19 +3763,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.50942077636716
+            "data_value": 282.6654876708985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.065234374999987
+            "data_value": 1.4081054687500094
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00989126083645716
+            "data_value": 0.0068438718488323495
         },
         {
             "name": "relativeHumidity",
-            "data_value": 81.93928439021117
+            "data_value": 90.83574488162989
         }
     ]
 },
@@ -3805,19 +3805,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.7225067138672
+            "data_value": 284.0342376708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.9992187500000138
+            "data_value": 2.1933593749999885
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010633553240631949
+            "data_value": 0.007058925407181945
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.83010470271103
+            "data_value": 86.23984644413001
         }
     ]
 },
@@ -3847,19 +3847,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.1187957763672
+            "data_value": 285.29966735839844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8708984375000012
+            "data_value": 1.4138671875000142
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00905846473965539
+            "data_value": 0.008126230018388025
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.2967062652111
+            "data_value": 91.01504175662987
         }
     ]
 },
@@ -3889,19 +3889,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.81430358886723
+            "data_value": 283.7358001708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.2148437500000142
+            "data_value": 1.0083984374999988
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009393490527008918
+            "data_value": 0.007604808585892888
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.23596407771102
+            "data_value": 93.34414331912996
         }
     ]
 },
@@ -3931,19 +3931,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.5664520263672
+            "data_value": 283.80650329589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.62109375
+            "data_value": 1.5595703125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009591759417389767
+            "data_value": 0.007344980018388014
         },
         {
             "name": "relativeHumidity",
-            "data_value": 84.4769797027111
+            "data_value": 90.01582300662994
         }
     ]
 },
@@ -3973,19 +3973,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.50219421386714
+            "data_value": 284.73033142089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 4.1515624999999785
+            "data_value": 2.689257812499968
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009736241076325307
+            "data_value": 0.007154960410844073
         },
         {
             "name": "relativeHumidity",
-            "data_value": 76.46877657771121
+            "data_value": 83.50781519413012
         }
     ]
 },
@@ -4015,19 +4015,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.16078796386716
+            "data_value": 286.0299407958985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.9083984374999696
+            "data_value": 3.4506835937499973
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010206450198029427
+            "data_value": 0.007336921470414393
         },
         {
             "name": "relativeHumidity",
-            "data_value": 77.98869845271126
+            "data_value": 79.39394800662997
         }
     ]
 },
@@ -4057,19 +4057,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.3439910888672
+            "data_value": 282.17290954589845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.739453124999998
+            "data_value": 2.5388671875000113
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006244934771393677
+            "data_value": 0.006163425224076493
         },
         {
             "name": "relativeHumidity",
-            "data_value": 82.85979220271112
+            "data_value": 84.03086206912988
         }
     ]
 },
@@ -4099,19 +4099,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.5646942138672
+            "data_value": 286.04947204589837
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.5261718749999956
+            "data_value": 2.1398437499999785
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009514130328034302
+            "data_value": 0.008111209647904606
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.46057345271113
+            "data_value": 86.81484644413005
         }
     ]
 },
@@ -4141,19 +4141,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.5527801513672
+            "data_value": 283.51587829589846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.7513671874999951
+            "data_value": 1.0641601562500114
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00961064216885461
+            "data_value": 0.007540054099808919
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.05256564021113
+            "data_value": 93.05078394412988
         }
     ]
 },
@@ -4183,19 +4183,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.80375671386724
+            "data_value": 282.87720642089846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.8500000000000367
+            "data_value": 1.056250000000011
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009743679735993287
+            "data_value": 0.007245368736039377
         },
         {
             "name": "relativeHumidity",
-            "data_value": 88.64416720271089
+            "data_value": 93.02383081912987
         }
     ]
 },
@@ -4225,19 +4225,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.1309051513672
+            "data_value": 284.04185485839844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 4.046875
+            "data_value": 2.56396484375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009662092898224728
+            "data_value": 0.0069568345716106705
         },
         {
             "name": "relativeHumidity",
-            "data_value": 77.3168234527111
+            "data_value": 84.40449488162994
         }
     ]
 },
@@ -4267,19 +4267,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.6174285888672
+            "data_value": 285.9565032958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 4.601562500000057
+            "data_value": 4.826757812499946
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010074700091217859
+            "data_value": 0.0066457936933147785
         },
         {
             "name": "relativeHumidity",
-            "data_value": 74.60276095271082
+            "data_value": 72.5531276941302
         }
     ]
 },
@@ -4309,19 +4309,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.05727233886716
+            "data_value": 287.6920501708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.6275390624999817
+            "data_value": 6.021777343749991
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010889233324860468
+            "data_value": 0.0068251798322308006
         },
         {
             "name": "relativeHumidity",
-            "data_value": 84.5367453277112
+            "data_value": 67.01426050662998
         }
     ]
 },
@@ -4351,19 +4351,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.2287567138672
+            "data_value": 281.2268157958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.3789062499999964
+            "data_value": 2.068945312499988
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006432808611725703
+            "data_value": 0.0060386846234905525
         },
         {
             "name": "relativeHumidity",
-            "data_value": 84.93362032771113
+            "data_value": 86.71406519413001
         }
     ]
 },
@@ -4393,19 +4393,19 @@
         },
         {
             "name": "airT",
-            "data_value": 283.36599629720047
+            "data_value": 282.95311787923174
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.0161458333333124
+            "data_value": 3.3261067708333107
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0065429897844145055
+            "data_value": 0.006133734163692374
         },
         {
             "name": "relativeHumidity",
-            "data_value": 81.6000265777112
+            "data_value": 79.85469019413006
         }
     ]
 },
@@ -4435,19 +4435,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.6771942138672
+            "data_value": 284.8158782958985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.424218749999995
+            "data_value": 3.707617187500022
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010383499834870238
+            "data_value": 0.006759376304398763
         },
         {
             "name": "relativeHumidity",
-            "data_value": 97.11838595271114
+            "data_value": 77.99765894412982
         }
     ]
 },
@@ -4477,19 +4477,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.5074025472005
+            "data_value": 281.69504496256513
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9356770833333243
+            "data_value": 2.135091145833334
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010216034624909298
+            "data_value": 0.006245981630733395
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.97333386937783
+            "data_value": 86.32005477746327
         }
     ]
 },
@@ -4519,19 +4519,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.41599629720054
+            "data_value": 281.0613210042318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.0964843749999926
+            "data_value": 2.182942708333326
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01007880089077844
+            "data_value": 0.005972817517370762
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.18791720271115
+            "data_value": 86.02461206912999
         }
     ]
 },
@@ -4561,19 +4561,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.4248504638672
+            "data_value": 283.04283142089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.939453125
+            "data_value": 3.978515625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00992792961392297
+            "data_value": 0.005891818778763991
         },
         {
             "name": "relativeHumidity",
-            "data_value": 77.4808859527111
+            "data_value": 76.15351831912994
         }
     ]
 },
@@ -4603,19 +4603,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.8502410888672
+            "data_value": 280.78423767089845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.932812500000013
+            "data_value": 1.9927734375000028
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006508530352448361
+            "data_value": 0.00592643715644954
         },
         {
             "name": "relativeHumidity",
-            "data_value": 81.86643282771104
+            "data_value": 87.09258081912992
         }
     ]
 },
@@ -4645,19 +4645,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.11274108886715
+            "data_value": 280.5113210042318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.0773437499999954
+            "data_value": 2.021940104166654
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006577067746654087
+            "data_value": 0.005818862693558911
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.7135682443778
+            "data_value": 86.97513290246336
         }
     ]
 },
@@ -4687,19 +4687,19 @@
         },
         {
             "name": "airT",
-            "data_value": 283.9027150472005
+            "data_value": 283.26874287923175
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.7132812499999925
+            "data_value": 3.7479166666666535
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0069013805925199736
+            "data_value": 0.0060648152997600825
         },
         {
             "name": "relativeHumidity",
-            "data_value": 83.24351616104448
+            "data_value": 77.55390894413
         }
     ]
 },
@@ -4729,19 +4729,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.5758921305339
+            "data_value": 285.36665954589853
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.19166666666666066
+            "data_value": 6.079687500000039
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011050181760325966
+            "data_value": 0.005894616223425455
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.59416720271115
+            "data_value": 66.48984644412977
         }
     ]
 },
@@ -4771,19 +4771,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.30531921386716
+            "data_value": 281.90259704589846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.605859374999993
+            "data_value": 3.81679687500002
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010873116228913208
+            "data_value": 0.00557252861763118
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.00549532771115
+            "data_value": 76.94609644412984
         }
     ]
 },
@@ -4813,19 +4813,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.16990254720054
+            "data_value": 279.8359303792318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.2975260416666554
+            "data_value": 2.3514322916666694
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010507858965729613
+            "data_value": 0.005447533703894199
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.82138074437783
+            "data_value": 84.85078394412993
         }
     ]
 },
@@ -4855,19 +4855,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.95961608886716
+            "data_value": 279.65350850423175
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.5454427083333355
+            "data_value": 2.17936197916666
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010197819445465937
+            "data_value": 0.005441907025427402
         },
         {
             "name": "relativeHumidity",
-            "data_value": 84.66890678604443
+            "data_value": 85.90833602746332
         }
     ]
 },
@@ -4897,19 +4897,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.4463348388672
+            "data_value": 281.88658142089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.005859375
+            "data_value": 3.8701171875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010665119860505001
+            "data_value": 0.005525131004105788
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.7386984527111
+            "data_value": 76.54219019412994
         }
     ]
 },
@@ -4939,19 +4939,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.20102233886723
+            "data_value": 280.95220642089845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.8421875000000263
+            "data_value": 2.3359375000000058
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006664074633454219
+            "data_value": 0.005812377708207352
         },
         {
             "name": "relativeHumidity",
-            "data_value": 77.22307345271096
+            "data_value": 85.0652370691299
         }
     ]
 },
@@ -4981,19 +4981,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.3109181722005
+            "data_value": 280.21678975423174
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.9828125000000014
+            "data_value": 2.0066406249999957
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006757026090159948
+            "data_value": 0.005743331687699535
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.2746359527111
+            "data_value": 86.96705998579664
         }
     ]
 },
@@ -5023,19 +5023,19 @@
         },
         {
             "name": "airT",
-            "data_value": 282.7731577555338
+            "data_value": 281.8531178792318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.899348958333329
+            "data_value": 2.633528645833326
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006915018135244581
+            "data_value": 0.006081282076290028
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.8385682443778
+            "data_value": 83.46810165246332
         }
     ]
 },
@@ -5065,19 +5065,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.6143035888672
+            "data_value": 289.31431579589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.7259114583333073
+            "data_value": 4.23730468750005
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00978392479214564
+            "data_value": 0.008604227480342718
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.35067761937792
+            "data_value": 76.00638290246302
         }
     ]
 },
@@ -5107,19 +5107,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.4268035888672
+            "data_value": 282.53632100423187
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.07552083333332904
+            "data_value": 2.659505208333338
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011250357999339638
+            "data_value": 0.0062766263654339335
         },
         {
             "name": "relativeHumidity",
-            "data_value": 99.41382866104446
+            "data_value": 83.34492456912993
         }
     ]
 },
@@ -5149,19 +5149,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.8947723388672
+            "data_value": 279.8128835042318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.3234374999999945
+            "data_value": 2.365234375000008
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01104175763719772
+            "data_value": 0.005457292971065428
         },
         {
             "name": "relativeHumidity",
-            "data_value": 97.75184949437781
+            "data_value": 84.77721623579657
         }
     ]
 },
@@ -5191,19 +5191,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.3611785888672
+            "data_value": 278.6654876708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.7195312499999926
+            "data_value": 2.1244140624999925
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010609711382721798
+            "data_value": 0.005225677268754225
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.28518282771115
+            "data_value": 86.11484644413
         }
     ]
 },
@@ -5233,19 +5233,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.2116994222005
+            "data_value": 279.3209564208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4018229166666574
+            "data_value": 2.694075520833332
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010640737587148882
+            "data_value": 0.0052127072980511
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.19820366104449
+            "data_value": 82.77135686079662
         }
     ]
 },
@@ -5275,19 +5275,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.3643035888672
+            "data_value": 280.06444600423174
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.3713541666666718
+            "data_value": 2.949088541666663
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010570992205475704
+            "data_value": 0.00529361066922623
         },
         {
             "name": "relativeHumidity",
-            "data_value": 85.69559949437775
+            "data_value": 81.3977891524633
         }
     ]
 },
@@ -5317,19 +5317,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.8174285888672
+            "data_value": 281.87095642089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.0625
+            "data_value": 3.876953125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010902107928131954
+            "data_value": 0.005523700492631178
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.2133078277111
+            "data_value": 76.50508081912994
         }
     ]
 },
@@ -5359,19 +5359,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.9963348388672
+            "data_value": 281.4049407958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.449609375000006
+            "data_value": 2.475781249999991
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007625282976960089
+            "data_value": 0.005850810783158526
         },
         {
             "name": "relativeHumidity",
-            "data_value": 79.41408907771108
+            "data_value": 84.29765894412999
         }
     ]
 },
@@ -5401,19 +5401,19 @@
         },
         {
             "name": "airT",
-            "data_value": 283.9286265055339
+            "data_value": 281.2710866292318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.907942708333341
+            "data_value": 3.006640625000006
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006950526608958778
+            "data_value": 0.005654671765417635
         },
         {
             "name": "relativeHumidity",
-            "data_value": 82.12138074437773
+            "data_value": 81.22213811079658
         }
     ]
 },
@@ -5443,19 +5443,19 @@
         },
         {
             "name": "airT",
-            "data_value": 283.1045379638672
+            "data_value": 281.36574808756507
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.016796875
+            "data_value": 2.394140624999997
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.006978437477285598
+            "data_value": 0.005941409843217112
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.14859428604444
+            "data_value": 84.76901311079662
         }
     ]
 },
@@ -5485,19 +5485,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.5537567138672
+            "data_value": 284.49205017089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.005859375
+            "data_value": 3.16796875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007502258990143673
+            "data_value": 0.00680257775093196
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.3363547027111
+            "data_value": 80.72578394412994
         }
     ]
 },
@@ -5527,19 +5527,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.0355275472005
+            "data_value": 286.9080657958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.074218749999978
+            "data_value": 2.015299479166718
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010550361051097462
+            "data_value": 0.008587379234086194
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.20875053604458
+            "data_value": 87.67630477746297
         }
     ]
 },
@@ -5569,19 +5569,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.4624806722005
+            "data_value": 283.949732462565
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.273437499999993
+            "data_value": 2.1742838541667346
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01056584236416711
+            "data_value": 0.00736089048489998
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.07385470271115
+            "data_value": 86.47591415246286
         }
     ]
 },
@@ -5611,19 +5611,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.2163869222005
+            "data_value": 280.6001230875652
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.11666666666666858
+            "data_value": 2.461848958333385
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01072872993740929
+            "data_value": 0.005747368908972337
         },
         {
             "name": "relativeHumidity",
-            "data_value": 99.07463595271109
+            "data_value": 84.51080998579631
         }
     ]
 },
@@ -5653,19 +5653,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.32680358886716
+            "data_value": 278.3826751708985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.0851562499999996
+            "data_value": 1.1671875000000145
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010967911455963982
+            "data_value": 0.0054502675702679
         },
         {
             "name": "relativeHumidity",
-            "data_value": 99.27541720271111
+            "data_value": 92.11679956912985
         }
     ]
 },
@@ -5695,19 +5695,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.07849629720056
+            "data_value": 277.41001892089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.08398437500000067
+            "data_value": 0.7835286458333333
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010969024075999798
+            "data_value": 0.005313733197302406
         },
         {
             "name": "relativeHumidity",
-            "data_value": 99.28296928604443
+            "data_value": 94.57278915246327
         }
     ]
 },
@@ -5737,19 +5737,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.5152150472005
+            "data_value": 277.0201751708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.1313802083333293
+            "data_value": 0.9301432291666585
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010712485684886516
+            "data_value": 0.005199419435909171
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.98947970271114
+            "data_value": 93.59596623579667
         }
     ]
 },
@@ -5779,19 +5779,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.8240692138672
+            "data_value": 278.1838470458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.5007812499999901
+            "data_value": 1.5964843749999846
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01060294029507531
+            "data_value": 0.005351848380814769
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.66252657771116
+            "data_value": 89.41211206913003
         }
     ]
 },
@@ -5821,19 +5821,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.66651713053386
+            "data_value": 280.40650329589846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.220833333333332
+            "data_value": 2.624218750000003
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01099509117398156
+            "data_value": 0.00560520785754003
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.25445366104445
+            "data_value": 83.3037787357966
         }
     ]
 },
@@ -5863,19 +5863,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.84633483886716
+            "data_value": 281.27147725423174
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3343750000000014
+            "data_value": 2.393880208333327
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011393218411937293
+            "data_value": 0.005846551037878574
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.64130261937777
+            "data_value": 84.78567977746332
         }
     ]
 },
@@ -5905,19 +5905,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.7041473388672
+            "data_value": 283.21470642089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.95703125
+            "data_value": 4.0390625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011412800524567501
+            "data_value": 0.00588705040718196
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.8871359527111
+            "data_value": 75.86250269412994
         }
     ]
 },
@@ -5947,19 +5947,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.4228973388672
+            "data_value": 282.24126892089845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 4.003515625
+            "data_value": 3.1468749999999703
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008520878527497203
+            "data_value": 0.005832786338578452
         },
         {
             "name": "relativeHumidity",
-            "data_value": 76.8558859527111
+            "data_value": 80.7343776941301
         }
     ]
 },
@@ -5989,19 +5989,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.38018900553385
+            "data_value": 282.8313730875651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.7894531250000103
+            "data_value": 5.170442708333336
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007546032641266722
+            "data_value": 0.005287284629594069
         },
         {
             "name": "relativeHumidity",
-            "data_value": 77.70119845271105
+            "data_value": 70.04922144412993
         }
     ]
 },
@@ -6031,19 +6031,19 @@
         },
         {
             "name": "airT",
-            "data_value": 284.7165171305339
+            "data_value": 282.5188730875651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.6033854166666672
+            "data_value": 4.789518229166671
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007333522214427526
+            "data_value": 0.00534148511990982
         },
         {
             "name": "relativeHumidity",
-            "data_value": 83.90445366104444
+            "data_value": 71.88620061079659
         }
     ]
 },
@@ -6073,19 +6073,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.2178192138672
+            "data_value": 284.58970642089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.4921875
+            "data_value": 3.8525390625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007534683916901486
+            "data_value": 0.00648214318061946
         },
         {
             "name": "relativeHumidity",
-            "data_value": 84.5844015777111
+            "data_value": 77.05781519412994
         }
     ]
 },
@@ -6115,19 +6115,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.63682963053384
+            "data_value": 284.97889912923165
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.013281249999992
+            "data_value": 1.1442057291666854
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010462464068268675
+            "data_value": 0.008156668123653253
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.51890678604448
+            "data_value": 92.53867456912982
         }
     ]
 },
@@ -6157,19 +6157,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.9587046305338
+            "data_value": 281.3038991292317
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.7682291666666637
+            "data_value": 1.0569661458333215
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010497432126536902
+            "data_value": 0.006484686312129859
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.98218803604446
+            "data_value": 92.97252873579669
         }
     ]
 },
@@ -6199,19 +6199,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.07875671386716
+            "data_value": 279.5416595458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.6757812499999984
+            "data_value": 1.951367187500042
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010386074755524529
+            "data_value": 0.00561878182197686
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.5316672027111
+            "data_value": 87.36367456912969
         }
     ]
 },
@@ -6241,19 +6241,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.6818817138672
+            "data_value": 278.10155537923174
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8234375000000087
+            "data_value": 2.3797526041666512
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010338836087718545
+            "data_value": 0.005066095766475571
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.60536511937772
+            "data_value": 84.51888290246336
         }
     ]
 },
@@ -6283,19 +6283,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.2196421305338
+            "data_value": 276.8236907958985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.0631510416666616
+            "data_value": 1.8784505208333466
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010625001960928164
+            "data_value": 0.004824657218705402
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.14703178604447
+            "data_value": 87.4665391524632
         }
     ]
 },
@@ -6325,19 +6325,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.03266296386715
+            "data_value": 276.8619720458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9980468750000093
+            "data_value": 1.5341796875000044
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01113966820034874
+            "data_value": 0.004909915702592105
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.57385470271105
+            "data_value": 89.63476831912992
         }
     ]
 },
@@ -6367,19 +6367,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.5055796305339
+            "data_value": 278.28046162923175
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.7382812500000008
+            "data_value": 1.516276041666661
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011491796547109818
+            "data_value": 0.0053472707440960126
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.17489636937776
+            "data_value": 89.85534123579664
         }
     ]
 },
@@ -6409,19 +6409,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.0456837972005
+            "data_value": 279.99061787923176
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.7624999999999971
+            "data_value": 1.8221354166666606
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011638916704987417
+            "data_value": 0.005776487764766589
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.04755261937778
+            "data_value": 88.07565373579665
         }
     ]
 },
@@ -6451,19 +6451,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.1701629638672
+            "data_value": 281.6256439208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9796874999999957
+            "data_value": 2.4650390624999803
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012042416308258901
+            "data_value": 0.006036491172562821
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.76565157771113
+            "data_value": 84.46992456913006
         }
     ]
 },
@@ -6493,19 +6493,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.4646942138672
+            "data_value": 283.0347585042318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.2411458333333356
+            "data_value": 3.7335286458333403
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012542904589508906
+            "data_value": 0.005940233644893545
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.26643282771109
+            "data_value": 77.4660183191299
         }
     ]
 },
@@ -6535,19 +6535,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.5739390055339
+            "data_value": 283.41444600423176
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9533854166666682
+            "data_value": 3.2114583333333178
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01266239998135461
+            "data_value": 0.006221949037959956
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.96734428604442
+            "data_value": 80.52799748579669
         }
     ]
 },
@@ -6577,19 +6577,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.6103973388672
+            "data_value": 285.91001892089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.57421875
+            "data_value": 7.087890625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012946785662506954
+            "data_value": 0.005630035178910475
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.2386984527111
+            "data_value": 61.899612069129944
         }
     ]
 },
@@ -6619,19 +6619,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.1568817138672
+            "data_value": 282.3971282958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.7640624999999996
+            "data_value": 4.277539062499974
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00972308037075892
+            "data_value": 0.0054550359418499336
         },
         {
             "name": "relativeHumidity",
-            "data_value": 83.48908907771111
+            "data_value": 74.61523706913007
         }
     ]
 },
@@ -6661,19 +6661,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.55974629720055
+            "data_value": 283.30259704589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.763802083333335
+            "data_value": 6.117773437499998
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00872000572476282
+            "data_value": 0.005092639701615554
         },
         {
             "name": "relativeHumidity",
-            "data_value": 83.31434949437777
+            "data_value": 65.63242456912995
         }
     ]
 },
@@ -6703,19 +6703,19 @@
         },
         {
             "name": "airT",
-            "data_value": 285.8943817138672
+            "data_value": 283.2996022542318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.6294270833333315
+            "data_value": 6.312109375000002
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007886971209381956
+            "data_value": 0.005043271161169586
         },
         {
             "name": "relativeHumidity",
-            "data_value": 83.88479220271111
+            "data_value": 64.7389349857966
         }
     ]
 },
@@ -6745,19 +6745,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.2061004638672
+            "data_value": 285.74595642089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.046875
+            "data_value": 5.869140625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.007732094500397579
+            "data_value": 0.006087798850785475
         },
         {
             "name": "relativeHumidity",
-            "data_value": 81.6097922027111
+            "data_value": 67.30195581912994
         }
     ]
 },
@@ -6787,19 +6787,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.5967254638672
+            "data_value": 285.78580017089837
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8867187499999916
+            "data_value": 3.0876953124999775
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010531700823639766
+            "data_value": 0.007476825492631151
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.29182345271116
+            "data_value": 81.49492456913005
         }
     ]
 },
@@ -6829,19 +6829,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.2840952555338
+            "data_value": 280.42316996256505
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.6365885416666646
+            "data_value": 1.034505208333299
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010235934628978302
+            "data_value": 0.006178747591426734
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.77906303604445
+            "data_value": 93.34414331913015
         }
     ]
 },
@@ -6871,19 +6871,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.5648244222005
+            "data_value": 277.80389912923175
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8053385416666725
+            "data_value": 0.8470052083333451
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010046662066315546
+            "data_value": 0.0054168889691936645
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.71395886937773
+            "data_value": 94.16784123579653
         }
     ]
 },
@@ -6913,19 +6913,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.3510223388672
+            "data_value": 276.45494079589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.146093750000009
+            "data_value": 1.4783203125000162
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009996308062409297
+            "data_value": 0.0048533628156292126
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.61291720271105
+            "data_value": 89.97695581912984
         }
     ]
 },
@@ -6955,19 +6955,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.6577931722005
+            "data_value": 275.84296162923175
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4734375000000084
+            "data_value": 1.950846354166676
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010154808733796025
+            "data_value": 0.004559631126176096
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.64729220271106
+            "data_value": 86.91107040246321
         }
     ]
 },
@@ -6997,19 +6997,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.4699025472005
+            "data_value": 276.2203053792317
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.6265624999999997
+            "data_value": 2.2862630208333234
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01059429364793988
+            "data_value": 0.004565416750362294
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.78414116104445
+            "data_value": 84.87031519413
         }
     ]
 },
@@ -7039,19 +7039,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.5967254638672
+            "data_value": 277.6424407958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3460937500000163
+            "data_value": 2.779492187499983
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011408222887848724
+            "data_value": 0.004788894431840155
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.52424532771101
+            "data_value": 82.10390894413004
         }
     ]
 },
@@ -7081,19 +7081,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.04203796386713
+            "data_value": 280.1574147542317
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8483072916666705
+            "data_value": 3.361653645833326
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012477101061676855
+            "data_value": 0.005310554282914364
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.54859428604442
+            "data_value": 79.07864852746332
         }
     ]
 },
@@ -7123,19 +7123,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.9016733805338
+            "data_value": 283.31106058756507
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.1764322916666403
+            "data_value": 4.38977864583329
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013134119087393025
+            "data_value": 0.005868199444861
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.79000053604459
+            "data_value": 74.34245061079682
         }
     ]
 },
@@ -7165,19 +7165,19 @@
         },
         {
             "name": "airT",
-            "data_value": 293.62563171386716
+            "data_value": 285.49009704589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.62773437499999
+            "data_value": 6.3914062500000055
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012914837572907348
+            "data_value": 0.005739326255570629
         },
         {
             "name": "relativeHumidity",
-            "data_value": 84.70549532771116
+            "data_value": 64.86797144412992
         }
     ]
 },
@@ -7207,19 +7207,19 @@
         },
         {
             "name": "airT",
-            "data_value": 294.0412567138672
+            "data_value": 285.46327412923176
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.074869791666681
+            "data_value": 5.757421875000014
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012762503995433381
+            "data_value": 0.005928026613643545
         },
         {
             "name": "relativeHumidity",
-            "data_value": 82.45393282771103
+            "data_value": 67.81875269412988
         }
     ]
 },
@@ -7249,19 +7249,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.95570983886716
+            "data_value": 284.8951751708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.369010416666668
+            "data_value": 3.9557291666666807
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013295162890290159
+            "data_value": 0.006508623537471659
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.60601616104444
+            "data_value": 76.67604436079652
         }
     ]
 },
@@ -7291,19 +7291,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.2365692138672
+            "data_value": 283.4889251708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.5890624999999954
+            "data_value": 6.809960937499988
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010627735827301888
+            "data_value": 0.0049612233808147745
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.12072970271113
+            "data_value": 62.57265894412999
         }
     ]
 },
@@ -7333,19 +7333,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.2115692138672
+            "data_value": 283.8347585042318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.9307291666666653
+            "data_value": 7.558919270833338
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009629556709463343
+            "data_value": 0.0047771006594606044
         },
         {
             "name": "relativeHumidity",
-            "data_value": 88.07255261937779
+            "data_value": 59.407554777463254
         }
     ]
 },
@@ -7375,19 +7375,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.6005015055338
+            "data_value": 283.8178314208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.118880208333332
+            "data_value": 7.023567708333332
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008542558723623491
+            "data_value": 0.0049641479820517476
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.85302136937779
+            "data_value": 61.68802352746328
         }
     ]
 },
@@ -7417,19 +7417,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.6533660888672
+            "data_value": 286.51939392089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.525390625
+            "data_value": 7.23046875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.008239926073883908
+            "data_value": 0.005835551994096022
         },
         {
             "name": "relativeHumidity",
-            "data_value": 84.5433859527111
+            "data_value": 61.432815194129944
         }
     ]
 },
@@ -7459,19 +7459,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.0693817138672
+            "data_value": 284.00923767089836
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.7234374999999988
+            "data_value": 1.3867187500000104
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010409535143708123
+            "data_value": 0.007594222800980743
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.25940157771112
+            "data_value": 90.99414331912988
         }
     ]
 },
@@ -7501,19 +7501,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.8025848388672
+            "data_value": 280.6666595458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.038281250000007
+            "data_value": 1.2654296874999937
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01030186531338586
+            "data_value": 0.006170196311722962
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.3282817860444
+            "data_value": 91.60000269412998
         }
     ]
 },
@@ -7543,19 +7543,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.1130015055339
+            "data_value": 279.60337829589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4049479166666736
+            "data_value": 1.7021484375000155
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010483762794668419
+            "data_value": 0.005667546368689113
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.13583386937773
+            "data_value": 88.80000269412984
         }
     ]
 },
@@ -7585,19 +7585,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.12172546386716
+            "data_value": 278.5549407958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.498046874999999
+            "data_value": 2.0775390625000036
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010670746538971801
+            "data_value": 0.005248374717484683
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.57776095271112
+            "data_value": 86.37070581912992
         }
     ]
 },
@@ -7627,19 +7627,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.4907358805338
+            "data_value": 277.0890553792317
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4660156249999994
+            "data_value": 2.2580078125000056
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010566796038483508
+            "data_value": 0.004807522870153952
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.73583386937777
+            "data_value": 85.12357040246324
         }
     ]
 },
@@ -7669,19 +7669,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.82537129720055
+            "data_value": 276.2578053792318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3930989583333369
+            "data_value": 2.430273437499996
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010381433540518025
+            "data_value": 0.004564304130326492
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.13687553604441
+            "data_value": 83.98789331912997
         }
     ]
 },
@@ -7711,19 +7711,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.1795379638671
+            "data_value": 277.0525970458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.0503906250000155
+            "data_value": 3.0501953124999694
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010832775805329192
+            "data_value": 0.0045992086103069565
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.23244845271101
+            "data_value": 80.5066433191301
         }
     ]
 },
@@ -7753,19 +7753,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.94828796386713
+            "data_value": 279.486841837565
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.5996093750000024
+            "data_value": 4.0602213541666545
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012087525103424894
+            "data_value": 0.004923044619014629
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.03882866104442
+            "data_value": 75.16133081913
         }
     ]
 },
@@ -7795,19 +7795,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.40141296386713
+            "data_value": 282.77095642089836
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9230468749999767
+            "data_value": 4.925195312499975
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01313567675544315
+            "data_value": 0.0055368294090536955
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.2502869943779
+            "data_value": 71.36445581913006
         }
     ]
 },
@@ -7837,19 +7837,19 @@
         },
         {
             "name": "airT",
-            "data_value": 293.48500671386716
+            "data_value": 285.8471282958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.212109374999991
+            "data_value": 5.965625000000012
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013224400256012816
+            "data_value": 0.0061066816022503105
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.93987032771115
+            "data_value": 66.89297144412988
         }
     ]
 },
@@ -7879,19 +7879,19 @@
         },
         {
             "name": "airT",
-            "data_value": 294.0498504638672
+            "data_value": 286.4499928792318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.6160156250000144
+            "data_value": 4.654817708333362
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01314626254035526
+            "data_value": 0.0068500389427451035
         },
         {
             "name": "relativeHumidity",
-            "data_value": 84.8690369943777
+            "data_value": 73.54505477746312
         }
     ]
 },
@@ -7921,19 +7921,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.67198588053384
+            "data_value": 284.94712829589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9635416666666685
+            "data_value": 1.503580729166659
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013404803647532996
+            "data_value": 0.007668291506221673
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.94520886937777
+            "data_value": 90.41315373579666
         }
     ]
 },
@@ -7963,19 +7963,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.2217254638672
+            "data_value": 287.10728454589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.5078125
+            "data_value": 3.3720703125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01340836403164758
+            "data_value": 0.007818717735062819
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.6449484527111
+            "data_value": 79.96601831912994
         }
     ]
 },
@@ -8005,19 +8005,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.8033660888672
+            "data_value": 284.34087829589845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.543749999999997
+            "data_value": 7.9078124999999995
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010945404742096808
+            "data_value": 0.004826659934769848
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.42033907771112
+            "data_value": 58.07304956912994
         }
     ]
 },
@@ -8047,19 +8047,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.8900848388672
+            "data_value": 285.0669199625651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.7872395833333312
+            "data_value": 7.699348958333346
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010060077085033004
+            "data_value": 0.005124778526078435
         },
         {
             "name": "relativeHumidity",
-            "data_value": 88.94768282771112
+            "data_value": 59.151174569129886
         }
     ]
 },
@@ -8089,19 +8089,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.6794077555339
+            "data_value": 286.59569600423174
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.0631510416666647
+            "data_value": 6.172981770833339
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009118609799876746
+            "data_value": 0.006348692354610335
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.26278699437778
+            "data_value": 66.09935165246324
         }
     ]
 },
@@ -8131,19 +8131,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.3864390055339
+            "data_value": 285.2661387125651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.7246093750000014
+            "data_value": 0.30696614583333715
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009853543017243286
+            "data_value": 0.008662560559362957
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.23479220271109
+            "data_value": 97.85338811079659
         }
     ]
 },
@@ -8173,19 +8173,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.08904317220055
+            "data_value": 284.63202412923175
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.6811197916666663
+            "data_value": 0.19628906249999867
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009753407214020626
+            "data_value": 0.008417529838334301
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.49859428604444
+            "data_value": 98.56432561079662
         }
     ]
 },
@@ -8215,19 +8215,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.0291473388672
+            "data_value": 284.70806579589845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.6765625000000014
+            "data_value": 0.2576171875000002
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.00975073692593469
+            "data_value": 0.008453960197221024
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.5261984527111
+            "data_value": 98.16250269412994
         }
     ]
 },
@@ -8257,19 +8257,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.75050150553386
+            "data_value": 284.2421803792318
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.5692708333333338
+            "data_value": 0.2602213541666658
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009696822537913855
+            "data_value": 0.008240464306921543
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.1863547027111
+            "data_value": 98.14661727746328
         }
     ]
 },
@@ -8299,19 +8299,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.6857879638672
+            "data_value": 284.11835225423175
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.5160156249999998
+            "data_value": 0.37148437499999926
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009705723498200312
+            "data_value": 0.008124783612341464
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.53036511937778
+            "data_value": 97.42135686079662
         }
     ]
 },
@@ -8341,19 +8341,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.2490692138672
+            "data_value": 284.68345642089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.576171875
+            "data_value": 0.5546875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009946049425934689
+            "data_value": 0.008264083640824538
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.1566672027111
+            "data_value": 96.24922144412994
         }
     ]
 },
@@ -8383,19 +8383,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.5972462972005
+            "data_value": 285.22303975423176
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.5014322916666664
+            "data_value": 1.055078125000002
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010164122952952919
+            "data_value": 0.008235600567907871
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.62697970271111
+            "data_value": 93.11927352746326
         }
     ]
 },
@@ -8425,19 +8425,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.68982442220056
+            "data_value": 284.87225850423175
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.6010416666666676
+            "data_value": 1.617252604166671
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.0101978830237537
+            "data_value": 0.00777526197537857
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.01226616104444
+            "data_value": 89.67617456912993
         }
     ]
 },
@@ -8467,19 +8467,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.47055358886723
+            "data_value": 284.7045501708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.5046875000000126
+            "data_value": 3.0068359375000187
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010154141161774531
+            "data_value": 0.007024593131791324
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.60783907771103
+            "data_value": 81.71054956912984
         }
     ]
 },
@@ -8509,19 +8509,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.1355275472005
+            "data_value": 284.9540293375651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.9697916666666924
+            "data_value": 3.305338541666666
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010249858273997842
+            "data_value": 0.006965052065303706
         },
         {
             "name": "relativeHumidity",
-            "data_value": 82.6028911610443
+            "data_value": 80.03776311079662
         }
     ]
 },
@@ -8551,19 +8551,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.33630879720056
+            "data_value": 284.14048767089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.5742187500000044
+            "data_value": 2.871093749999988
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010676405006582486
+            "data_value": 0.006796060976436511
         },
         {
             "name": "relativeHumidity",
-            "data_value": 79.47632866104442
+            "data_value": 82.34817977746334
         }
     ]
 },
@@ -8593,19 +8593,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.74320983886713
+            "data_value": 281.9326751708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.462109374999955
+            "data_value": 2.628710937499999
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011319340441559706
+            "data_value": 0.006097240226517874
         },
         {
             "name": "relativeHumidity",
-            "data_value": 85.47307345271135
+            "data_value": 83.44687769412995
         }
     ]
 },
@@ -8635,19 +8635,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.96977233886713
+            "data_value": 279.3894460042317
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.3376302083333167
+            "data_value": 2.5453776041666636
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011319213284984152
+            "data_value": 0.005350640393347306
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.60458386937786
+            "data_value": 83.64948186079661
         }
     ]
 },
@@ -8677,19 +8677,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.54880879720054
+            "data_value": 278.05507100423176
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.1088541666666631
+            "data_value": 2.6738932291666564
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010807185544505667
+            "data_value": 0.0049707919131227185
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.88062553604446
+            "data_value": 82.73984644413001
         }
     ]
 },
@@ -8719,19 +8719,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.63735046386716
+            "data_value": 278.8037689208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.163281250000001
+            "data_value": 3.866601562499944
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01080922004971397
+            "data_value": 0.004803771751176105
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.5574484527111
+            "data_value": 76.35937769413023
         }
     ]
 },
@@ -8761,19 +8761,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.27445983886713
+            "data_value": 280.82733662923175
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8489583333333498
+            "data_value": 4.903320312500025
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011919678423737385
+            "data_value": 0.005008716361771784
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.52645886937766
+            "data_value": 71.03307561079647
         }
     ]
 },
@@ -8803,19 +8803,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.3950327555338
+            "data_value": 283.42837829589837
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.4778645833333215
+            "data_value": 4.72675781249996
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013384522173737418
+            "data_value": 0.005826714612097315
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.86057345271118
+            "data_value": 72.62604436079678
         }
     ]
 },
@@ -8845,19 +8845,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.9064910888672
+            "data_value": 287.5834564208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.1027343749999972
+            "data_value": 5.476367187500067
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013664139483307736
+            "data_value": 0.007317180412064712
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.13947970271113
+            "data_value": 70.20117456912959
         }
     ]
 },
@@ -8887,19 +8887,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.43878275553385
+            "data_value": 288.5580657958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.6494791666666673
+            "data_value": 2.722786458333337
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013486279223297967
+            "data_value": 0.009017200248490545
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.80718803604444
+            "data_value": 83.65482040246326
         }
     ]
 },
@@ -8929,19 +8929,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.1490692138672
+            "data_value": 286.1428314208984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.622265624999996
+            "data_value": 7.777343750000022
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010957993243073371
+            "data_value": 0.005462474601517883
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.98244845271113
+            "data_value": 59.12734644412985
         }
     ]
 },
@@ -8971,19 +8971,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.4201629638672
+            "data_value": 287.4337168375651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.9753906249999957
+            "data_value": 5.863411458333354
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010172292762930135
+            "data_value": 0.006832650281042613
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.91500053604446
+            "data_value": 67.7643256107965
         }
     ]
 },
@@ -9013,19 +9013,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.7525848388672
+            "data_value": 284.0783782958985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.5769531250000046
+            "data_value": 0.41308593750001565
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009745682452057739
+            "data_value": 0.008121413963090185
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.14182345271108
+            "data_value": 97.20234644412984
         }
     ]
 },
@@ -9055,19 +9055,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.4085744222005
+            "data_value": 282.39048767089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.5169270833333298
+            "data_value": 0.009114583333332815
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009667258634105261
+            "data_value": 0.007515449302445633
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.51799532771113
+            "data_value": 99.83190373579662
         }
     ]
 },
@@ -9097,19 +9097,19 @@
         },
         {
             "name": "airT",
-            "data_value": 286.7702931722005
+            "data_value": 282.5977793375651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.75729166666666
+            "data_value": 0.11041666666666194
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009719074938629998
+            "data_value": 0.007548891481807605
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.02945366104449
+            "data_value": 99.14830998579664
         }
     ]
 },
@@ -9139,19 +9139,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.5490692138672
+            "data_value": 283.58306579589845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.148828124999996
+            "data_value": 0.35058593749999933
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009865273211335079
+            "data_value": 0.007855624931107738
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.64299532771113
+            "data_value": 97.55508081912994
         }
     ]
 },
@@ -9181,19 +9181,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.9761525472005
+            "data_value": 284.1981699625651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4358072916666664
+            "data_value": 0.4568359374999966
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009911494626536902
+            "data_value": 0.008090928174109042
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.93934949437778
+            "data_value": 96.8766954024633
         }
     ]
 },
@@ -9223,19 +9223,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.1088348388672
+            "data_value": 284.65611267089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.4694010416666663
+            "data_value": 0.8158854166666683
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009966362688874141
+            "data_value": 0.008135814445267897
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.74781303604443
+            "data_value": 94.5885443607966
         }
     ]
 },
@@ -9265,19 +9265,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.4971160888672
+            "data_value": 284.57408142089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.560546875
+            "data_value": 0.439453125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010103882525299923
+            "data_value": 0.00824930168892024
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.2465109527111
+            "data_value": 96.98750269412994
         }
     ]
 },
@@ -9307,19 +9307,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.7049285888672
+            "data_value": 284.5485605875651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.5240885416666665
+            "data_value": 0.7247395833333344
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01022671577725305
+            "data_value": 0.008048585034460605
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.4652609527111
+            "data_value": 95.16458602746327
         }
     ]
 },
@@ -9349,19 +9349,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.7333140055338
+            "data_value": 284.6838470458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.739843750000002
+            "data_value": 1.041341145833336
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010150358253652786
+            "data_value": 0.00798672336046972
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.21304741104443
+            "data_value": 93.18086206912992
         }
     ]
 },
@@ -9391,19 +9391,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.4369598388672
+            "data_value": 285.14869079589846
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.268750000000007
+            "data_value": 1.2408203125000024
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010257424090241331
+            "data_value": 0.008120174186478837
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.26955782771107
+            "data_value": 91.97383081912993
         }
     ]
 },
@@ -9433,19 +9433,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.2723765055339
+            "data_value": 286.9583262125651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.736067708333361
+            "data_value": 4.463997395833399
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010367891365225056
+            "data_value": 0.00729829766059991
         },
         {
             "name": "relativeHumidity",
-            "data_value": 78.75471407771096
+            "data_value": 74.93255477746293
         }
     ]
 },
@@ -9475,19 +9475,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.5557098388672
+            "data_value": 287.33905537923175
         },
         {
             "name": "dewPointDiff",
-            "data_value": 4.102213541666663
+            "data_value": 6.0387369791666785
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010950268481110486
+            "data_value": 0.006677646415482732
         },
         {
             "name": "relativeHumidity",
-            "data_value": 76.98153699437779
+            "data_value": 66.86510686079656
         }
     ]
 },
@@ -9517,19 +9517,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.1268035888672
+            "data_value": 285.4393157958984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.6816406249999485
+            "data_value": 5.280859374999963
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011849678728913229
+            "data_value": 0.006264228599320622
         },
         {
             "name": "relativeHumidity",
-            "data_value": 84.45783907771137
+            "data_value": 70.1335964441301
         }
     ]
 },
@@ -9559,19 +9559,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.0486785888672
+            "data_value": 283.4820241292317
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.357682291666646
+            "data_value": 4.742447916666672
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012307124509349404
+            "data_value": 0.005811869081905253
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.60549532771122
+            "data_value": 72.29323186079658
         }
     ]
 },
@@ -9601,19 +9601,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.67589213053384
+            "data_value": 283.6406178792317
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9201822916666708
+            "data_value": 6.413151041666577
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012487146431143015
+            "data_value": 0.005284709708939788
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.13843803604442
+            "data_value": 64.78646102746367
         }
     ]
 },
@@ -9643,19 +9643,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.17328796386715
+            "data_value": 286.05962829589834
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9410156249999941
+            "data_value": 6.316015625000108
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012759007189606557
+            "data_value": 0.006448573844681875
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.03166720271115
+            "data_value": 65.97656519412942
         }
     ]
 },
@@ -9685,19 +9685,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.3023244222005
+            "data_value": 289.00637308756507
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8110677083333293
+            "data_value": 5.129882812500034
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013413927131826611
+            "data_value": 0.008110287762732041
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.83791720271113
+            "data_value": 71.49909123579644
         }
     ]
 },
@@ -9727,19 +9727,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.66820983886714
+            "data_value": 287.5994720458983
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.597656249999991
+            "data_value": 1.8923828124999813
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010093582842682722
+            "data_value": 0.009119338767777617
         },
         {
             "name": "relativeHumidity",
-            "data_value": 90.04533907771115
+            "data_value": 88.30156519413005
         }
     ]
 },
@@ -9769,19 +9769,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.56664733886714
+            "data_value": 284.9624928792317
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.2072916666666553
+            "data_value": 1.087955729166643
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009808179908926223
+            "data_value": 0.008178380108923489
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.29742241104451
+            "data_value": 92.95000269413009
         }
     ]
 },
@@ -9811,19 +9811,19 @@
         },
         {
             "name": "airT",
-            "data_value": 287.4827931722005
+            "data_value": 284.17955017089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.249218749999986
+            "data_value": 0.6026041666666706
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009811517769033645
+            "data_value": 0.008082694785844068
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.04221407771118
+            "data_value": 95.93320581912991
         }
     ]
 },
@@ -9853,19 +9853,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.1963348388672
+            "data_value": 284.34283142089845
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.7234374999999889
+            "data_value": 0.7566406249999867
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.009948719714020622
+            "data_value": 0.008070678489457353
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.27658907771117
+            "data_value": 94.97461206913003
         }
     ]
 },
@@ -9895,19 +9895,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.0068817138672
+            "data_value": 285.03892517089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.07552083333333
+            "data_value": 1.321614583333321
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010181765927806426
+            "data_value": 0.00808479286934016
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.30510470271112
+            "data_value": 91.49205998579669
         }
     ]
 },
@@ -9937,19 +9937,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.90453796386714
+            "data_value": 285.91835225423176
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.3960937499999884
+            "data_value": 1.698046875000003
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010451401446198359
+            "data_value": 0.00826656319404719
         },
         {
             "name": "relativeHumidity",
-            "data_value": 85.6095317860445
+            "data_value": 89.25898706912993
         }
     ]
 },
@@ -9979,19 +9979,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.8143035888672
+            "data_value": 286.5432220458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.9874999999999985
+            "data_value": 1.7041015624999911
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010539425585602656
+            "data_value": 0.008509845512162424
         },
         {
             "name": "relativeHumidity",
-            "data_value": 82.46916720271112
+            "data_value": 89.28984644412999
         }
     ]
 },
@@ -10021,19 +10021,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.05857442220054
+            "data_value": 288.1747324625651
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.0273437500000044
+            "data_value": 2.1677734375000086
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010614765856598748
+            "data_value": 0.009175001558711886
         },
         {
             "name": "relativeHumidity",
-            "data_value": 82.29625053604441
+            "data_value": 86.71823186079656
         }
     ]
 },
@@ -10063,19 +10063,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.2959442138672
+            "data_value": 288.74009704589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.078125
+            "data_value": 3.66796875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010724247668122189
+            "data_value": 0.008572120445023756
         },
         {
             "name": "relativeHumidity",
-            "data_value": 82.0414328277111
+            "data_value": 78.62812769412994
         }
     ]
 },
@@ -10105,19 +10105,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.0407358805339
+            "data_value": 286.3338470458984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.3726562499999972
+            "data_value": 2.2460937499999947
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011143482897614377
+            "data_value": 0.008101259645870109
         },
         {
             "name": "relativeHumidity",
-            "data_value": 85.83309949437778
+            "data_value": 86.13125269412998
         }
     ]
 },
@@ -10147,19 +10147,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.95948588053386
+            "data_value": 284.8061126708984
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.7010416666666612
+            "data_value": 2.1876953125000003
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011053996457591588
+            "data_value": 0.007476666546911772
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.5299744943778
+            "data_value": 86.29310165246326
         }
     ]
 },
@@ -10189,19 +10189,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.6975067138672
+            "data_value": 283.19126892089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.2226562499999947
+            "data_value": 1.6888671874999928
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01126107094082727
+            "data_value": 0.00696079232002375
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.30549532771113
+            "data_value": 89.14023706913
         }
     ]
 },
@@ -10231,19 +10231,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.3758921305339
+            "data_value": 285.7615814208985
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.3000000000000242
+            "data_value": 3.3292317708333696
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01150206444058313
+            "data_value": 0.007283960756709963
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.36070366104431
+            "data_value": 80.26719019412975
         }
     ]
 },
@@ -10273,19 +10273,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.4756317138672
+            "data_value": 288.67369079589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.974609375
+            "data_value": 3.8505859375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010305584643219845
+            "data_value": 0.008499164359818678
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.9125265777111
+            "data_value": 77.67890894412994
         }
     ]
 },
@@ -10315,19 +10315,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.8135223388672
+            "data_value": 285.99205017089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.73046875
+            "data_value": 1.4990234375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010197342608307736
+            "data_value": 0.008449573295365553
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.2679953277111
+            "data_value": 90.44844019412994
         }
     ]
 },
@@ -10357,19 +10357,19 @@
         },
         {
             "name": "airT",
-            "data_value": 288.9443817138672
+            "data_value": 285.32212829589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.97265625
+            "data_value": 1.3642578125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010208309862946408
+            "data_value": 0.00821878411079524
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.8851828277111
+            "data_value": 91.22187769412994
         }
     ]
 },
@@ -10399,19 +10399,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.6611785888672
+            "data_value": 286.98423767089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.49609375
+            "data_value": 3.1689453125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01022547600064172
+            "data_value": 0.008049030082474928
         },
         {
             "name": "relativeHumidity",
-            "data_value": 79.7855734527111
+            "data_value": 81.03828394412994
         }
     ]
 },
@@ -10441,19 +10441,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.6611785888672
+            "data_value": 288.48814392089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.556640625
+            "data_value": 4.9453125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010748566363190548
+            "data_value": 0.007813472526322585
         },
         {
             "name": "relativeHumidity",
-            "data_value": 79.6039328277111
+            "data_value": 72.19844019412994
         }
     ]
 },
@@ -10483,19 +10483,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.0967254638672
+            "data_value": 287.43345642089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.322265625
+            "data_value": 4.30859375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01206416008267297
+            "data_value": 0.00765706993843196
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.7797140777111
+            "data_value": 75.15742456912994
         }
     ]
 },
@@ -10525,19 +10525,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.0771942138672
+            "data_value": 287.81626892089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.27734375
+            "data_value": 3.7841796875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012036980364655392
+            "data_value": 0.008108157890092116
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.0394797027111
+            "data_value": 77.89375269412994
         }
     ]
 },
@@ -10567,19 +10567,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.6338348388672
+            "data_value": 285.05455017089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.849609375
+            "data_value": 1.7509765625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012173355791901486
+            "data_value": 0.007811565177689772
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.5609640777111
+            "data_value": 88.88203394412994
         }
     ]
 },
@@ -10609,19 +10609,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.3623504638672
+            "data_value": 282.15220642089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.439453125
+            "data_value": 0.8466796875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011865318987702267
+            "data_value": 0.007027644889603835
         },
         {
             "name": "relativeHumidity",
-            "data_value": 97.0375265777111
+            "data_value": 94.31758081912994
         }
     ]
 },
@@ -10651,19 +10651,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.7529754638672
+            "data_value": 282.47056579589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.224609375
+            "data_value": 1.09375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01228684303555383
+            "data_value": 0.0070309827497112565
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.3832297027111
+            "data_value": 92.75117456912994
         }
     ]
 },
@@ -10693,19 +10693,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.7158660888672
+            "data_value": 286.44712829589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.20703125
+            "data_value": 2.5009765625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013481320116852658
+            "data_value": 0.008088130729447585
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.4945578277111
+            "data_value": 84.66328394412994
         }
     ]
 },
@@ -10735,19 +10735,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.4131317138672
+            "data_value": 290.11900329589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.8828125
+            "data_value": 3.26171875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01024693367276086
+            "data_value": 0.009650249259721022
         },
         {
             "name": "relativeHumidity",
-            "data_value": 82.9847922027111
+            "data_value": 80.93867456912994
         }
     ]
 },
@@ -10777,19 +10777,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.8174285888672
+            "data_value": 288.10923767089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.912109375
+            "data_value": 5.099609375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012169064257477658
+            "data_value": 0.007598895805131178
         },
         {
             "name": "relativeHumidity",
-            "data_value": 88.4515890777111
+            "data_value": 71.38984644412994
         }
     ]
 },
@@ -10819,19 +10819,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.6416473388672
+            "data_value": 285.73423767089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.740234375
+            "data_value": 2.201171875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012385548327301876
+            "data_value": 0.008013267295609694
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.2152609527111
+            "data_value": 86.30390894412994
         }
     ]
 },
@@ -10861,19 +10861,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.0361785888672
+            "data_value": 285.24400329589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.353515625
+            "data_value": 1.7763671875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012335480425690548
+            "data_value": 0.008058089988480788
         },
         {
             "name": "relativeHumidity",
-            "data_value": 97.5765890777111
+            "data_value": 88.74922144412994
         }
     ]
 },
@@ -10903,19 +10903,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.7295379638672
+            "data_value": 283.51548767089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.166015625
+            "data_value": 1.025390625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012374104235505001
+            "data_value": 0.007624645011674147
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.7484640777111
+            "data_value": 93.22969019412994
         }
     ]
 },
@@ -10945,19 +10945,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.2881317138672
+            "data_value": 284.45689392089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.1796875
+            "data_value": 1.119140625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012667835924958126
+            "data_value": 0.0079837033918011
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.6527609527111
+            "data_value": 92.68672144412994
         }
     ]
 },
@@ -10987,19 +10987,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.7803192138672
+            "data_value": 289.99595642089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8671875
+            "data_value": 3.85546875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012888611529206173
+            "data_value": 0.009295482414017897
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.4867453277111
+            "data_value": 77.84492456912994
         }
     ]
 },
@@ -11029,19 +11029,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.3955535888672
+            "data_value": 284.68540954589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.271484375
+            "data_value": 1.65625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012464226458405392
+            "data_value": 0.007681388633500319
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.0922140777111
+            "data_value": 89.42304956912994
         }
     ]
 },
@@ -11071,19 +11071,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.7119598388672
+            "data_value": 282.17173767089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.150390625
+            "data_value": 0.9609375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012259663317536251
+            "data_value": 0.006922263877640944
         },
         {
             "name": "relativeHumidity",
-            "data_value": 98.8539328277111
+            "data_value": 93.58906519412994
         }
     ]
 },
@@ -11113,19 +11113,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.1416473388672
+            "data_value": 285.65220642089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.29296875
+            "data_value": 2.0283203125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013082684252594845
+            "data_value": 0.008009452598344069
         },
         {
             "name": "relativeHumidity",
-            "data_value": 97.9574484527111
+            "data_value": 87.29804956912994
         }
     ]
 },
@@ -11155,19 +11155,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.5068817138672
+            "data_value": 290.69517517089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.90234375
+            "data_value": 3.72265625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010332764361237423
+            "data_value": 0.009763736503373366
         },
         {
             "name": "relativeHumidity",
-            "data_value": 82.8969015777111
+            "data_value": 78.61836206912994
         }
     ]
 },
@@ -11197,19 +11197,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.4170379638672
+            "data_value": 288.99986267089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.876953125
+            "data_value": 2.9765625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010366142962311642
+            "data_value": 0.009239215629349928
         },
         {
             "name": "relativeHumidity",
-            "data_value": 83.0238547027111
+            "data_value": 82.32148706912994
         }
     ]
 },
@@ -11239,19 +11239,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.7978973388672
+            "data_value": 286.61900329589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.162109375
+            "data_value": 2.0400390625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010535420153473751
+            "data_value": 0.008477706687699538
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.8812765777111
+            "data_value": 87.30976831912994
         }
     ]
 },
@@ -11281,19 +11281,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.2725067138672
+            "data_value": 286.22447204589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.25390625
+            "data_value": 1.5322265625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010770977709626095
+            "data_value": 0.008514899986039381
         },
         {
             "name": "relativeHumidity",
-            "data_value": 86.4047140777111
+            "data_value": 90.26289331912994
         }
     ]
 },
@@ -11323,19 +11323,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.7021942138672
+            "data_value": 289.29869079589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.541015625
+            "data_value": 4.685546875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010692776415680783
+            "data_value": 0.00832845665718196
         },
         {
             "name": "relativeHumidity",
-            "data_value": 79.6898703277111
+            "data_value": 73.60273706912994
         }
     ]
 },
@@ -11365,19 +11365,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.4756317138672
+            "data_value": 285.56431579589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.787109375
+            "data_value": 1.869140625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012259186480378048
+            "data_value": 0.008128185050736647
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.9301047027111
+            "data_value": 88.22383081912994
         }
     ]
 },
@@ -11407,19 +11407,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.9287567138672
+            "data_value": 283.94322204589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.87109375
+            "data_value": 0.7568359375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012654961321686642
+            "data_value": 0.007916946189652663
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.4398703277111
+            "data_value": 94.94258081912994
         }
     ]
 },
@@ -11449,19 +11449,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.0420379638672
+            "data_value": 286.00181579589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.064453125
+            "data_value": 1.4052734375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01323765632901086
+            "data_value": 0.008580703513871413
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.3285422027111
+            "data_value": 91.01094019412994
         }
     ]
 },
@@ -11491,19 +11491,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.2646942138672
+            "data_value": 286.47837829589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.734375
+            "data_value": 1.4873046875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01367253181729211
+            "data_value": 0.008785743491898756
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.2933859527111
+            "data_value": 90.55000269412994
         }
     ]
 },
@@ -11533,19 +11533,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.3662567138672
+            "data_value": 287.81040954589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.02734375
+            "data_value": 1.8642578125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.014290989611481564
+            "data_value": 0.00929738976265071
         },
         {
             "name": "relativeHumidity",
-            "data_value": 99.6000265777111
+            "data_value": 88.42500269412994
         }
     ]
 },
@@ -11575,19 +11575,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.7334442138672
+            "data_value": 287.96861267089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.05078125
+            "data_value": 2.1845703125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013535679552887814
+            "data_value": 0.009076614158402663
         },
         {
             "name": "relativeHumidity",
-            "data_value": 99.4496359527111
+            "data_value": 86.59492456912994
         }
     ]
 },
@@ -11617,19 +11617,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.2666473388672
+            "data_value": 291.15806579589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.98828125
+            "data_value": 5.064453125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010769547198151486
+            "data_value": 0.009197253959428053
         },
         {
             "name": "relativeHumidity",
-            "data_value": 82.5160422027111
+            "data_value": 72.10273706912994
         }
     ]
 },
@@ -11659,19 +11659,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.9228973388672
+            "data_value": 290.56626892089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.673828125
+            "data_value": 5.8759765625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010782898638581173
+            "data_value": 0.008404273765336256
         },
         {
             "name": "relativeHumidity",
-            "data_value": 79.0453390777111
+            "data_value": 68.24531519412994
         }
     ]
 },
@@ -11701,19 +11701,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.7627410888672
+            "data_value": 289.32212829589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.6328125
+            "data_value": 6.193359375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.010777176592682736
+            "data_value": 0.007623214500199538
         },
         {
             "name": "relativeHumidity",
-            "data_value": 79.2250265777111
+            "data_value": 66.56953394412994
         }
     ]
 },
@@ -11743,19 +11743,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.8174285888672
+            "data_value": 285.48033142089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.173828125
+            "data_value": 2.259765625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011457146380280392
+            "data_value": 0.007883567588578444
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.5922140777111
+            "data_value": 85.93672144412994
         }
     ]
 },
@@ -11785,19 +11785,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.2822723388672
+            "data_value": 283.70884704589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.958984375
+            "data_value": 0.8408203125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011370838854645626
+            "data_value": 0.0077977369001018815
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.8500265777111
+            "data_value": 94.39570581912994
         }
     ]
 },
@@ -11827,19 +11827,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.0205535888672
+            "data_value": 287.17564392089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.01171875
+            "data_value": 1.2138671875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01156062004361047
+            "data_value": 0.00931884743476985
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.8246359527111
+            "data_value": 92.22578394412994
         }
     ]
 },
@@ -11869,19 +11869,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.4658660888672
+            "data_value": 287.24790954589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.771484375
+            "data_value": 1.7880859375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012084187243317501
+            "data_value": 0.00900747277046321
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.2133078277111
+            "data_value": 88.81758081912994
         }
     ]
 },
@@ -11911,19 +11911,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.8389129638672
+            "data_value": 288.14830017089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.923828125
+            "data_value": 1.853515625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013009728167389767
+            "data_value": 0.009473819511185866
         },
         {
             "name": "relativeHumidity",
-            "data_value": 88.4574484527111
+            "data_value": 88.50898706912994
         }
     ]
 },
@@ -11953,19 +11953,19 @@
         },
         {
             "name": "airT",
-            "data_value": 293.0010223388672
+            "data_value": 292.05259704589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 3.80859375
+            "data_value": 7.7314453125
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.011385620806549923
+            "data_value": 0.008148689048539381
         },
         {
             "name": "relativeHumidity",
-            "data_value": 78.5101828277111
+            "data_value": 60.655471444129944
         }
     ]
 },
@@ -11995,19 +11995,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.7139129638672
+            "data_value": 285.82017517089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8046875
+            "data_value": 2.0478515625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012505711291169064
+            "data_value": 0.008230705039750319
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.8363547027111
+            "data_value": 87.19453394412994
         }
     ]
 },
@@ -12037,19 +12037,19 @@
         },
         {
             "name": "airT",
-            "data_value": 289.8877410888672
+            "data_value": 283.96080017089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.51953125
+            "data_value": 0.833984375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012337864611481564
+            "data_value": 0.008047122733842116
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.5453390777111
+            "data_value": 94.45429956912994
         }
     ]
 },
@@ -12079,19 +12079,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.2959442138672
+            "data_value": 287.67173767089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.8203125
+            "data_value": 1.046875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01283472893032922
+            "data_value": 0.009836692588578444
         },
         {
             "name": "relativeHumidity",
-            "data_value": 94.7562765777111
+            "data_value": 93.26679956912994
         }
     ]
 },
@@ -12121,19 +12121,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.0166473388672
+            "data_value": 288.62681579589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.005859375
+            "data_value": 2.51171875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01306218025479211
+            "data_value": 0.009370345847855788
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.6683859527111
+            "data_value": 84.81953394412994
         }
     ]
 },
@@ -12163,19 +12163,19 @@
         },
         {
             "name": "airT",
-            "data_value": 290.7666473388672
+            "data_value": 285.61900329589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.67578125
+            "data_value": 0.6708984375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012786568377350704
+            "data_value": 0.008997459190140944
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.6117453277111
+            "data_value": 95.53242456912994
         }
     ]
 },
@@ -12205,19 +12205,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.2451629638672
+            "data_value": 286.09751892089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.66015625
+            "data_value": 0.18359375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013242424700592892
+            "data_value": 0.009619731681596022
         },
         {
             "name": "relativeHumidity",
-            "data_value": 95.7094015777111
+            "data_value": 98.64961206912994
         }
     ]
 },
@@ -12247,19 +12247,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.9053192138672
+            "data_value": 289.62681579589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.583984375
+            "data_value": 1.8818359375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.014228523943756954
+            "data_value": 0.010436076896439772
         },
         {
             "name": "relativeHumidity",
-            "data_value": 96.2035422027111
+            "data_value": 88.45429956912994
         }
     ]
 },
@@ -12289,19 +12289,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.7861785888672
+            "data_value": 288.74009704589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.015625
+            "data_value": 2.0107421875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.012905300829743283
+            "data_value": 0.009787101524125319
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.6019797027111
+            "data_value": 87.65156519412994
         }
     ]
 },
@@ -12331,19 +12331,19 @@
         },
         {
             "name": "airT",
-            "data_value": 291.5264129638672
+            "data_value": 286.81822204589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 0.9609375
+            "data_value": 0.6552734375
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.01303452369961633
+            "data_value": 0.00964071251655696
         },
         {
             "name": "relativeHumidity",
-            "data_value": 93.9222922027111
+            "data_value": 95.64961206912994
         }
     ]
 },
@@ -12373,19 +12373,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.9580535888672
+            "data_value": 288.80259704589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.296875
+            "data_value": 1.3212890625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013816059801911251
+            "data_value": 0.010387439506303053
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.0160422027111
+            "data_value": 91.67109644412994
         }
     ]
 },
@@ -12415,19 +12415,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.3545379638672
+            "data_value": 290.65611267089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.2421875
+            "data_value": 2.8544921875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013038815234040158
+            "data_value": 0.01037790276313899
         },
         {
             "name": "relativeHumidity",
-            "data_value": 92.3051047027111
+            "data_value": 83.16328394412994
         }
     ]
 },
@@ -12457,19 +12457,19 @@
         },
         {
             "name": "airT",
-            "data_value": 292.6084442138672
+            "data_value": 288.70494079589844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.404296875
+            "data_value": 1.1650390625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013266266558503048
+            "data_value": 0.01031209923530696
         },
         {
             "name": "relativeHumidity",
-            "data_value": 91.3754172027111
+            "data_value": 92.59492456912994
         }
     ]
 },
@@ -12499,19 +12499,19 @@
         },
         {
             "name": "airT",
-            "data_value": 293.9639129638672
+            "data_value": 290.64830017089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 2.09375
+            "data_value": 2.6357421875
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013722599718903439
+            "data_value": 0.010538596885453444
         },
         {
             "name": "relativeHumidity",
-            "data_value": 87.6097922027111
+            "data_value": 84.34883081912994
         }
     ]
 },
@@ -12541,19 +12541,19 @@
         },
         {
             "name": "airT",
-            "data_value": 293.2197723388672
+            "data_value": 292.45689392089844
         },
         {
             "name": "dewPointDiff",
-            "data_value": 1.671875
+            "data_value": 4.2666015625
         },
         {
             "name": "specificHumidity",
-            "data_value": 0.013341606829499142
+            "data_value": 0.010588664787064772
         },
         {
             "name": "relativeHumidity",
-            "data_value": 89.8949484527111
+            "data_value": 76.15547144412994
         }
     ]
 }
