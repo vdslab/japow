@@ -50,7 +50,6 @@ function App() {
           borderRadius: 1,
         }}
       >
-        <h1>JAPOW!</h1>
         <Filter filter={filter} setFilter={setFilter}></Filter>
       </Box>
       <Grid container spacing={2}>
@@ -75,6 +74,7 @@ function App() {
           ></NewBumpChart>
 
           <BarChart skiTargetID={skiTargetID} skiData={snowData}></BarChart>
+
         </Grid>
       </Grid>
     </>
