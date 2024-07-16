@@ -111,9 +111,9 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
 
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
-    const width = 800;
-    const height = 500;
     const margin = { top: 10, right: 30, bottom: 30, left: 50 };
+    const width = 900 - margin.right - margin.left;
+    const height = 500 - margin.top - margin.bottom;
     svg.attr("viewBox", [0, 0, width, height]);
 
     const x = d3
@@ -197,16 +197,16 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
           !skiTargetID
             ? 2
             : skiTargetID === transformedData[name][0].skiID
-            ? 4
-            : 1
+              ? 4
+              : 1
         )
         .style(
           "opacity",
           !skiTargetID
             ? 0.8
             : skiTargetID === transformedData[name][0].skiID
-            ? 0.8
-            : 0.3
+              ? 0.8
+              : 0.3
         )
         .attr("d", line)
         .on("click", () => {
@@ -233,8 +233,8 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
           !skiTargetID
             ? 0.8
             : skiTargetID === transformedData[name][0].skiID
-            ? 0.8
-            : 0.3
+              ? 0.8
+              : 0.3
         )
         .on("mouseenter", tip.show)
         .on("mouseout", tip.hide)
@@ -253,7 +253,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   console.log(skiTargetID);
   return (
     <div style={{ overflow: "auto" }}>
-      <svg ref={svgRef} width={900} height={700}></svg>
+      <svg ref={svgRef} width={900} height={500}></svg>
     </div>
   );
 };
