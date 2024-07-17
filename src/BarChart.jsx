@@ -32,7 +32,7 @@ const BarChart = ({ skiTargetID, skiData }) => {
     return (
       <div>
         <BarC width={width} height={height} data={pastData}>
-          <XAxis dataKey="skiID" />
+          <XAxis dataKey="name" />
           <YAxis dataKey="value" />
           <Tooltip />
           <Legend />
