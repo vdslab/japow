@@ -206,14 +206,16 @@ const FindNearPoint = (skiPoint, nearest, xSorted) => {
 
 const makeJsonFile = (data, outputFileName) => {
   const jsonData = data;
+  const outputFolderPath = "./data";
   const fileNameWithJson = `${outputFileName}.json`;
+  const outputPath = path.join(outputFolderPath, fileNameWithJson);
   const blobData = JSON.stringify(jsonData, null, 2);
 
-  fs.writeFile(fileNameWithJson, blobData, (err) => {
+  fs.writeFile(outputPath, blobData, (err) => {
     if (err) {
       console.error("Error writing file:", err);
     } else {
-      console.log("File has been saved:", fileNameWithJson);
+      console.log("File has been saved:", outputPath);
     }
   });
 };
@@ -248,7 +250,10 @@ files.forEach((file) => {
   const xSorted = grid.slice().sort((a, b) => a.latitude - b.latitude);
   const ySorted = grid.slice().sort((a, b) => a.longitude - b.longitude);
   const mergedData = dataMerge(grid, xSorted, ySorted);
-  console.log(mergedData);
+  const dataWithFourPoints = mergedData.filter(
+    (item) => item.surroundingPoints.length === 4
+  );
+  console.log(dataWithFourPoints);
   const outputFileName = `${fileNamePrefix}_${path.parse(file).name}`;
-  //makeJsonFile(mergedData, outputFileName);
+  //makeJsonFile(dataWithFourPoints, outputFileName);
 });
