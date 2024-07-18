@@ -25,7 +25,7 @@ const BarChart = ({ skiTargetID, skiData }) => {
       newItem.value = item.values[0].snowScore;
       return newItem;
     });
-    console.log(pastData);
+    // console.log(pastData);
     // console.log(skiData);
     // console.log(snowFilterBySkiTarget(skiTargetID, skiData))
 
