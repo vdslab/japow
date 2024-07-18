@@ -12,6 +12,7 @@ import {
   snowFilterBypref,
   snowFilterByPeriod,
 } from "./filtering";
+import Search from "./Search";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState(null);
@@ -51,6 +52,11 @@ function App() {
         }}
       >
         <Filter filter={filter} setFilter={setFilter}></Filter>
+        <Search
+          options={mapData}
+          skiTargetID={skiTargetID}
+          setSkiTargetID={setSkiTargetID}
+        ></Search>
       </Box>
       <Grid container spacing={2}>
         <Grid item xs={6}>
@@ -74,7 +80,6 @@ function App() {
           ></NewBumpChart>
 
           <BarChart skiTargetID={skiTargetID} skiData={snowData}></BarChart>
-
         </Grid>
       </Grid>
     </>

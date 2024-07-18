@@ -35,7 +35,7 @@ const findPoints = (skiPoint, grid, xSorted, ySorted, nearest) => {
       name: skiPoint.name,
       latitude: skiPoint.latitude,
       longitude: skiPoint.longitude,
-      skiid: skiPoint.skiID,
+      skiID: skiPoint.skiID,
       surroundingPoints: FindNearPoint(skiPoint, nearest, xSorted),
     };
     points.values = points.surroundingPoints[0].values;
@@ -71,7 +71,7 @@ const findPoints = (skiPoint, grid, xSorted, ySorted, nearest) => {
       name: skiPoint.name,
       latitude: skiPoint.latitude,
       longitude: skiPoint.longitude,
-      skiid: skiPoint.skiID,
+      skiID: skiPoint.skiID,
       surroundingPoints: [
         grid.find(
           (p) => p.latitude === x0.latitude && p.longitude === y0.longitude

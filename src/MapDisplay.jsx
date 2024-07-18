@@ -119,21 +119,18 @@ const MapDisplay = ({ skiTargetID, setSkiTargetID, mapData }) => {
         return !skiTargetID
           ? "#00ffff"
           : skiTargetID === d.skiID
-            ? "#00ffff"
-            : "rgb(0,0,0)";
+          ? "#00ffff"
+          : "rgb(0,0,0)";
       })
       .on("mouseenter", tip.show)
       .on("mouseout", tip.hide)
       .on("click", (event, d) => {
         tip.hide();
         console.log("Cliked skijou-data;", d);
-        tip.hide();
+
         setSkiTargetID(d.skiID);
       });
-
-    //console.log(skiTargetID);
   }, [skiTargetID, mapData]);
-  console.log(skiTargetID);
   return (
     <ZoomableSVG>
       <svg ref={svgRef} viewBox={`0 0 ${width / 2} ${height * 2}`}></svg>
