@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 //import BumpChart from "./BumpChart";
 import NewBumpChart from "./newBumpChart";
 import Filter from "./Filter";
-import MapDisplay from "./MapDisplay";
+import Map from "./Map";
 import BarChart from "./BarChart";
 import snowQualityMap from "./assets/snowQualityMap2324.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
@@ -54,11 +54,11 @@ function App() {
       </Box>
       <Grid container spacing={2}>
         <Grid item xs={6}>
-          <MapDisplay
+          <Map
             mapData={mapData}
             skiTargetID={skiTargetID}
             setSkiTargetID={setSkiTargetID}
-          ></MapDisplay>
+          ></Map>
         </Grid>
         {/* <BumpChart
         skiTargetID={skiTargetID}
