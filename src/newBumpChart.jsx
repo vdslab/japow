@@ -98,9 +98,8 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     });
 
   useEffect(() => {
-    console.log(data);
     const scoreSortedData = rank(sort(data));
-    console.log(scoreSortedData);
+
     const top50 = avgRank(scoreSortedData).slice(0, 50);
     const top50Names = top50.map((item) => item.name);
 
@@ -240,7 +239,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
         .on("mouseout", tip.hide)
         .on("click", () => {
           tip.hide();
-          console.log(transformedData[name], transformedData[name][0].skiID);
+          //console.log(transformedData[name], transformedData[name][0].skiID);
           setSkiTargetID(
             transformedData[name][0].skiID === skiTargetID
               ? null
@@ -250,7 +249,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     });
   }, [data, skiTargetID]);
 
-  console.log(skiTargetID);
+  //console.log(skiTargetID);
   return (
     <div style={{ overflow: "auto" }}>
       <svg ref={svgRef} width={900} height={500}></svg>
