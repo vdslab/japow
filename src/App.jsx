@@ -23,21 +23,22 @@ function App() {
   const [filter, setFilter] = useState({ pref: "", period: "", sq: "" });
 
   useEffect(() => {
-    let snowFilteredData = [...snowQualityMap];
-    let mapFilteredData = [...sukijouZahyou];
+
+    let snowFilteredData = JSON.parse(JSON.stringify(snowQualityMap));
+    let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
     if (filter.pref !== "") {
       snowFilteredData = snowFilterBypref(snowFilteredData, filter.pref);
       mapFilteredData = mapFilterBypref(mapFilteredData, filter.pref);
     }
 
-    if (filter.period != "") {
+    if (filter.period !== "") {
       snowFilteredData = snowFilterByPeriod(snowFilteredData, filter.period);
       //console.log(snowFilteredData);
     }
 
-    setSnowData([...snowFilteredData]);
-    setMapData([...mapFilteredData]);
+    setSnowData(snowFilteredData);
+    setMapData(mapFilteredData);
   }, [filter]);
   return (
     <>
