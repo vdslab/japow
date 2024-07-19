@@ -99,8 +99,8 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
 
   useEffect(() => {
     const scoreSortedData = rank(sort(data));
-    console.log(data);
-    console.log(scoreSortedData[0].monthValues.length);
+    //console.log(data);
+    //console.log(scoreSortedData[0].monthValues.length);
     if (scoreSortedData[0].monthValues.length === 0) {
       return;
     }

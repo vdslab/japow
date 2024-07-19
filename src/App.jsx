@@ -33,7 +33,7 @@ function App() {
 
     if (filter.period != "") {
       snowFilteredData = snowFilterByPeriod(snowFilteredData, filter.period);
-      console.log(snowFilteredData);
+      //console.log(snowFilteredData);
     }
 
     setSnowData([...snowFilteredData]);
@@ -67,9 +67,9 @@ function App() {
               setSkiTargetID={setSkiTargetID}
             />
           </Box>
-          <Box sx={{ height: "50%", overflow: "hidden" }}>
-            <BarChart skiTargetID={skiTargetID} skiData={snowData} />
-          </Box>
+          {/* <Box sx={{ height: "50%", overflow: "hidden" }}> */}
+          <BarChart skiTargetID={skiTargetID} skiData={snowData} />
+          {/* </Box> */}
         </Grid>
         {/* <BumpChart
         skiTargetID={skiTargetID}
