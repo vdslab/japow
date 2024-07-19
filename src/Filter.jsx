@@ -1,7 +1,12 @@
+import { useState } from "react";
 import prefData from "./assets/prefectures.json";
-import { Box } from "@mui/material";
+import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 const Filter = ({ filter, setFilter }) => {
+    const SELECT_ALL_REGION_NAME = "全選択";
+    const SELECT_ALL_PERION_NAME = "全期間"
     const months = ["11月", "12月", "1月", "2月", "3月", "4月"];
+    const [selectRegion, setSelectRegion] = useState(SELECT_ALL_REGION_NAME);
+    const [selectPeriod, setSelectPeriod] = useState(SELECT_ALL_PERION_NAME);
     return (
         <Box
             sx={{
@@ -14,37 +19,48 @@ const Filter = ({ filter, setFilter }) => {
                 gap: 2,
             }}
         >
-            <div>
-                <label htmlFor="pref">地域:</label>
-                <select id="pref"
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <InputLabel id="region-label">地域</InputLabel>
+                <Select
+                    labelId="region-label"
+                    id="region"
+                    value={selectRegion}
+                    label="地域"
+                    
                     onChange={(e) => {
-                        setFilter({ "pref": e.target.value, "period": filter.period, "sq": filter.sq });
+                        console.log(e)
+                        setSelectRegion(e.target.value);
+                        setFilter({ "pref": e.target.value !== SELECT_ALL_REGION_NAME ? e.target.value : "", "period": filter.period, "sq": filter.sq });
                     }}
                 >
-                    <option key="none" value=""
-                    >未選択</option>
+                    <MenuItem key="none" value={SELECT_ALL_REGION_NAME}>{SELECT_ALL_REGION_NAME}</MenuItem>
                     {prefData.map(({ prefCode, name }, index) => {
                         return (
-                            <option key={index} value={name}>{name}</option>
+                            <MenuItem key={index} value={name} name={"a"}>{name}</MenuItem>
                         )
                     })}
-                </select>
-            </div>
-            <div>
-                <label htmlFor="period">期間:</label>
-                <select id="period"
+                </Select>
+            </FormControl>
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <InputLabel id="period-label">期間</InputLabel>
+                <Select
+                    labelId="period-label"
+                    id="period"
+                    value={selectPeriod}
+                    label="期間"
                     onChange={(e) => {
-                        setFilter({ "pref": filter.pref, "period": e.target.value, "sq": filter.sq });
+                        setSelectPeriod(e.target.value)
+                        setFilter({ "pref": filter.pref, "period": e.target.value !== SELECT_ALL_PERION_NAME ? e.target.value : "", "sq": filter.sq });
                     }}
                 >
-                    <option key="all" value="">全期間</option>
+                    <MenuItem key="all" value={SELECT_ALL_PERION_NAME}>{SELECT_ALL_PERION_NAME}</MenuItem>
                     {months.map((item, index) => {
                         return (
-                            <option key={index} value={item}>{item}</option>
+                            <MenuItem key={index} value={item}>{item}</MenuItem>
                         )
                     })}
-                </select>
-            </div>
+                </Select>
+            </FormControl>
         </Box>
     )
 }
