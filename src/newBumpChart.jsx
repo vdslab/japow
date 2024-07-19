@@ -27,7 +27,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   };
 
   const getSkiResortData = (data, names) => {
-    // 名前に一致するデータを抽出し、同時に週ごとにデータを集める
+    // 週ごとにデータをわける
     const weekData = names.reduce((acc, name) => {
       if (data[name]) {
         data[name].forEach((entry) => {
@@ -40,15 +40,13 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       return acc;
     }, []);
 
-    // 各週のデータをソートし、相対的な順位を計算して追加
+    // それに相対的なrankをつける
     Object.values(weekData).forEach((weekEntries) => {
       weekEntries.sort((a, b) => a.rank - b.rank);
       weekEntries.forEach((entry, index) => {
         entry.relativeRank = index + 1;
       });
     });
-
-    // 4. 新しいデータを格納
     const newData = names.reduce((acc, name) => {
       if (data[name]) {
         acc[name] = data[name];
@@ -67,7 +65,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     .html((event, d) => {
       return `<strong>Name:</strong> <span style='color:black'>${d.name}</span><br>
               <strong>Week:</strong> <span style='color:black'>${d.week}</span><br>
-              <strong>Rank</strong> <span style='color:black'>${d.rank}</span><br>
+              <strong>Rank:</strong> <span style='color:black'>${d.rank}</span><br>
               <strong>相対的なRank:</strong> <span style='color:black'>${d.relativeRank}</span>`;
     })
     .style("background", "white")
@@ -80,8 +78,8 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
 
       const { innerWidth, innerHeight } = view;
 
-      const tipWidth = 200; // 予測されるツールチップの幅
-      const tipHeight = 100; // 予測されるツールチップの高さ
+      const tipWidth = 200;
+      const tipHeight = 100;
 
       let offsetX = 10;
       let offsetY = -10;
@@ -100,12 +98,19 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     });
 
   useEffect(() => {
-    console.log(data);
     const scoreSortedData = rank(sort(data));
-    console.log(scoreSortedData);
-    const top50 = avgRank(scoreSortedData).slice(0, 50);
+    console.log(data);
+    console.log(scoreSortedData[0].monthValues.length);
+    if (scoreSortedData[0].monthValues.length === 0) {
+      return;
+    }
+    let top50;
+    if (scoreSortedData[0].monthValues.length > 50) {
+      top50 = avgRank(scoreSortedData).slice(0, 50);
+    } else {
+      top50 = avgRank(scoreSortedData);
+    }
     const top50Names = top50.map((item) => item.name);
-
     const transformedData = getSkiResortData(
       transformData(scoreSortedData),
       top50Names
@@ -113,9 +118,9 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
 
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
-    const width = 1000;
-    const height = 400;
-    const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+    const margin = { top: 10, right: 30, bottom: 80, left: 50 };
+    const width = 900 - margin.right - margin.left;
+    const height = 500 - margin.top - margin.bottom;
     svg.attr("viewBox", [0, 0, width, height]);
 
     const x = d3
@@ -169,6 +174,23 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       .append("g")
       .attr("transform", `translate(${margin.left},0)`)
       .call(d3.axisLeft(y));
+
+    svg
+      .append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", width / 2)
+      .attr("y", height)
+      .text("Week");
+    svg
+      .append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("x", -height / 2)
+      .attr("y", 1)
+      .attr("dy", ".75em")
+      .attr("transform", "rotate(-90)")
+      .text("Rank");
     Object.keys(transformedData).forEach((name, skiID) => {
       const colorValue = color(name);
       svg
@@ -225,7 +247,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
         .on("mouseout", tip.hide)
         .on("click", () => {
           tip.hide();
-          console.log(transformedData[name], transformedData[name][0].skiID);
+          //console.log(transformedData[name], transformedData[name][0].skiID);
           setSkiTargetID(
             transformedData[name][0].skiID === skiTargetID
               ? null
@@ -235,8 +257,15 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     });
   }, [data, skiTargetID]);
 
-  console.log(skiTargetID);
-  return <svg ref={svgRef} width={1200} height={1000}></svg>;
+  if (data[0].monthValues.length === 0) {
+    return <div>選択している県にはスキー場がありません</div>;
+  }
+  //console.log(skiTargetID);
+  return (
+    <div style={{ overflow: "auto" }}>
+      <svg ref={svgRef} width={900} height={500}></svg>
+    </div>
+  );
 };
 
 export default NewBumpChart;

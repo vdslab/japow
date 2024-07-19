@@ -1,4 +1,3 @@
-// データのもらい方はBumpChartをみならう
 import React, { useEffect, useState } from "react";
 import {
   LineChart,
@@ -15,8 +14,8 @@ import {
 import { snowFilterBySkiTarget } from "./filtering.js";
 
 const BarChart = ({ skiTargetID, skiData }) => {
-  const width = 800;
-  const height = 400;
+  const width = 600;
+  const height = 250;
 
   if (skiTargetID) {
     const pastData = snowFilterBySkiTarget(skiTargetID, skiData).map((item) => {
@@ -30,9 +29,10 @@ const BarChart = ({ skiTargetID, skiData }) => {
     // console.log(snowFilterBySkiTarget(skiTargetID, skiData))
 
     return (
-      <div>
+      <div style={{ overflow: "auto" }}>
         <BarC width={width} height={height} data={pastData}>
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name" interval={0} />
+
           <YAxis dataKey="value" />
           <Tooltip />
           <Legend />

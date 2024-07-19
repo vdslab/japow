@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
+import d3Tip from "d3-tip";
 import JapanData from "./assets/Japan.json";
 import zahyou from "../docker-python/data/anl_data-2023121612.json";
 // import sukizahyou from "./assets/ski_resorts_japan.json";
@@ -38,6 +39,18 @@ const MapDisplay = ({ skiTargetID, setSkiTargetID, mapData }) => {
   const width = 800;
   const height = 800;
 
+  const tip = d3Tip()
+    .attr("class", "d3-tip")
+    .offset([-10, 0])
+    .html((event, d) => {
+      return `<strong>Name:</strong> <span style='color:black'>${d.name}</span><br>
+            `;
+    })
+    .style("background", "white")
+    .style("color", "black")
+    .style("padding", "5px")
+    .style("border", "1px solid black")
+    .style("border-radius", "3px");
   var svg;
 
   useEffect(() => {
@@ -86,6 +99,7 @@ const MapDisplay = ({ skiTargetID, setSkiTargetID, mapData }) => {
         // d3.select(event.currentTarget).attr("fill", "blue");
       });
 
+    d3.select("svg").call(tip);
     svg
       .append("g")
       .selectAll("circle")
@@ -108,14 +122,15 @@ const MapDisplay = ({ skiTargetID, setSkiTargetID, mapData }) => {
           ? "#00ffff"
           : "rgb(0,0,0)";
       })
+      .on("mouseenter", tip.show)
+      .on("mouseout", tip.hide)
       .on("click", (event, d) => {
+        tip.hide();
         console.log("Cliked skijou-data;", d);
+
         setSkiTargetID(d.skiID);
       });
-
-    //console.log(skiTargetID);
   }, [skiTargetID, mapData]);
-  console.log(skiTargetID);
   return (
     <ZoomableSVG>
       <svg ref={svgRef} viewBox={`0 0 ${width / 2} ${height * 2}`}></svg>
