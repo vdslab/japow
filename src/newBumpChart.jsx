@@ -99,10 +99,18 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
 
   useEffect(() => {
     const scoreSortedData = rank(sort(data));
-
-    const top50 = avgRank(scoreSortedData).slice(0, 50);
+    console.log(data);
+    console.log(scoreSortedData[0].monthValues.length);
+    if (scoreSortedData[0].monthValues.length === 0) {
+      return;
+    }
+    let top50;
+    if (scoreSortedData[0].monthValues.length > 50) {
+      top50 = avgRank(scoreSortedData).slice(0, 50);
+    } else {
+      top50 = avgRank(scoreSortedData);
+    }
     const top50Names = top50.map((item) => item.name);
-
     const transformedData = getSkiResortData(
       transformData(scoreSortedData),
       top50Names
@@ -249,6 +257,9 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     });
   }, [data, skiTargetID]);
 
+  if (data[0].monthValues.length === 0) {
+    return <div>選択している県にはスキー場がありません</div>;
+  }
   //console.log(skiTargetID);
   return (
     <div style={{ overflow: "auto" }}>

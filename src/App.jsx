@@ -46,7 +46,7 @@ function App() {
           display: "flex",
           alignItems: "center",
           p: 1,
-          m: 1,
+
           bgcolor: "background.paper",
           borderRadius: 1,
         }}
@@ -58,13 +58,18 @@ function App() {
           setSkiTargetID={setSkiTargetID}
         ></Search>
       </Box>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <Map
-            mapData={mapData}
-            skiTargetID={skiTargetID}
-            setSkiTargetID={setSkiTargetID}
-          ></Map>
+      <Grid container spacing={2} sx={{ height: "calc(100vh - 64px)" }}>
+        <Grid item xs={6} sx={{ height: "100%" }}>
+          <Box sx={{ height: "50%", overflow: "hidden" }}>
+            <Map
+              mapData={mapData}
+              skiTargetID={skiTargetID}
+              setSkiTargetID={setSkiTargetID}
+            />
+          </Box>
+          <Box sx={{ height: "50%", overflow: "hidden" }}>
+            <BarChart skiTargetID={skiTargetID} skiData={snowData} />
+          </Box>
         </Grid>
         {/* <BumpChart
         skiTargetID={skiTargetID}
@@ -78,8 +83,6 @@ function App() {
             skiTargetID={skiTargetID}
             setSkiTargetID={setSkiTargetID}
           ></NewBumpChart>
-
-          <BarChart skiTargetID={skiTargetID} skiData={snowData}></BarChart>
         </Grid>
       </Grid>
     </>
