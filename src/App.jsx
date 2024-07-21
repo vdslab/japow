@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 //import BumpChart from "./BumpChart";
-import NewBumpChart from "./newBumpChart";
-import Filter from "./Filter";
-import Map from "./Map";
-import BarChart from "./BarChart";
+import NewBumpChart from "./components/newBumpChart";
+import Filter from "./components/Filter";
+import Map from "./components/Map";
+import BarChart from "./components/BarChart";
 import snowQualityMap from "./assets/snowQualityMap2324.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
 import { Box, Stack, Grid } from "@mui/material";
@@ -11,8 +11,8 @@ import {
   mapFilterBypref,
   snowFilterBypref,
   snowFilterByPeriod,
-} from "./filtering";
-import Search from "./Search";
+} from "./functions/filtering";
+import Search from "./components/Search";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState(null);

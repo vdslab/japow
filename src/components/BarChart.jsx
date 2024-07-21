@@ -11,7 +11,7 @@ import {
   Bar,
   BarChart as BarC,
 } from "recharts";
-import { snowFilterBySkiTarget } from "./filtering.js";
+import { snowFilterBySkiTarget } from "../functions/filtering.js";
 
 const BarChart = ({ skiTargetID, skiData }) => {
   const width = 600;

@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 import d3Tip from "d3-tip";
-import { sort } from "./SortData.js";
-import { rank } from "./MakeRank.js";
-import { avgRank } from "./AverageRank";
+import { sort } from "../functions/SortData.js";
+import { rank } from "../functions/MakeRank.js";
+import { avgRank } from "../functions/AverageRank.js";
 
 const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   const transformData = (data) => {

@@ -1,10 +1,10 @@
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const fs = require("fs");
-const skiPoint = require("./assets/ski_resorts_japan.json");
+const skiPoint = require("../assets/ski_resorts_japan.json");
 const path = require("path");
 const fileNamePrefix = `calculatedData`;
-const gridDirectory = "../docker-python/data";
+const gridDirectory = "../../docker-python/data";
 
 function getFilesFromDirectory(directory) {
   const files = fs.readdirSync(directory);

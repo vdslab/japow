@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
-import geoJson from "./assets/Japan.json";
-import volcanoData from "./assets/volcano.json";
-import prefData from "./assets/prefectures.json";
+import geoJson from "../assets/Japan.json";
+import volcanoData from "../assets/volcano.json";
+import prefData from "../assets/prefectures.json";
 import snowData from "./assets/snowlev-2023020212.json";
 
 export const ContourDisplay = () => {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import prefData from "./assets/prefectures.json";
+import prefData from "../assets/prefectures.json";
 import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 const Filter = ({ filter, setFilter }) => {
     const SELECT_ALL_REGION_NAME = "全選択";

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { ResponsiveBump } from "@nivo/bump";
-import { sort } from "./SortData.js";
-import { rank } from "./MakeRank.js";
-import { avgRank } from "./AverageRank";
+import { sort } from "../SortData.js";
+import { rank } from "../MakeRank.js";
+import { avgRank } from "../functions/AverageRank.js";
 
 const CustomTooltip = ({ serie, point }) => {
   return (

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import d3Tip from "d3-tip";
-import JapanData from "./assets/Japan.json";
-import zahyou from "../docker-python/data/anl_data-2023121612.json";
+import JapanData from "../assets/Japan.json";
+import zahyou from "../../docker-python/data/anl_data-2023121612.json";
 // import sukizahyou from "./assets/ski_resorts_japan.json";
 const ZoomableSVG = (props) => {
   const { children } = props;

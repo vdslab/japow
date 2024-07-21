@@ -1,9 +1,9 @@
 import { MapContainer, TileLayer, Circle, Popup, GeoJSON, Marker, useMapEvent } from "react-leaflet";
 import { useState, useEffect, useContext, useRef } from "react";
 import "leaflet/dist/leaflet.css";
-import "./styles/Map.css";
-import data from "./assets/ski_resorts_japan.json";
-import geojson from "./assets/Japan.json"
+import "../styles/Map.css";
+import data from "../assets/ski_resorts_japan.json";
+import geojson from "../assets/Japan.json"
 function Map({ mapData, skiTargetID, setSkiTargetID }) {
 
     const DEFAULT_ZOOM = 5;
