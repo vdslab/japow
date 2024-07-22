@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 import d3Tip from "d3-tip";
-import { sort } from "./SortData.js";
-import { rank } from "./MakeRank.js";
 import { avgRank } from "./AverageRank";
 
 const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
@@ -98,13 +96,16 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     });
 
   useEffect(() => {
-    const scoreSortedData = rank(sort(data));
-    //console.log(data);
+    const scoreSortedData = data;
+    const svg = d3.select(svgRef.current);
+    svg.selectAll("*").remove();
+    let top50;
+    const a = 50;
+    console.log();
     //console.log(scoreSortedData[0].monthValues.length);
     if (scoreSortedData[0].monthValues.length === 0) {
       return;
     }
-    let top50;
     if (scoreSortedData[0].monthValues.length > 50) {
       top50 = avgRank(scoreSortedData).slice(0, 50);
     } else {
@@ -116,9 +117,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       top50Names
     );
 
-    const svg = d3.select(svgRef.current);
-    svg.selectAll("*").remove();
-    const margin = { top: 10, right: 30, bottom: 80, left: 50 };
+    const margin = { top: 10, right: 30, bottom: 120, left: 50 };
     const width = 900 - margin.right - margin.left;
     const height = 500 - margin.top - margin.bottom;
     svg.attr("viewBox", [0, 0, width, height]);
@@ -131,7 +130,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     const y = d3
       .scaleLinear()
       .domain([
-        0,
+        1,
         d3.max(Object.values(transformedData).flat(), (d) => d.relativeRank),
       ])
       .nice()
@@ -149,11 +148,11 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     svg
       .append("g")
       .attr("class", "grid")
-      .attr("transform", `translate(0,${height - margin.bottom})`)
+      .attr("transform", `translate(0,${height - margin.bottom + 10})`)
       .call(
         d3
           .axisBottom(x)
-          .tickSize(-height + margin.top + margin.bottom)
+          .tickSize(-height + margin.top + margin.bottom - 15)
           .tickFormat("")
       )
       .selectAll("line")
@@ -164,16 +163,37 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
 
     svg
       .append("g")
-      .attr("transform", `translate(0,${height - margin.bottom})`)
+      .attr("transform", `translate(0,${height - margin.bottom + 10})`)
       .call(d3.axisBottom(x).tickSizeOuter(0))
       .selectAll("text")
       .attr("transform", "rotate(-45)")
       .style("text-anchor", "end");
 
+    const maxRank = d3.max(
+      Object.values(transformedData).flat(),
+      (d) => d.relativeRank
+    );
+    // Y軸の目盛を1, 5, 10, 15, 20...のように設定
+    const yTicks = [];
+    const step = 5; // 一度に増加する目盛の間隔
+
+    // 最初に1を追加
+    if (maxRank >= 1) yTicks.push(1);
+
+    // 目盛を5単位で追加
+    for (let i = step; i <= maxRank; i += step) {
+      yTicks.push(i);
+    }
+
+    // 最大値を最後に追加
+    if (yTicks[yTicks.length - 1] !== maxRank) {
+      yTicks.push(maxRank);
+    }
+    //console.log(yTicks);
     svg
       .append("g")
       .attr("transform", `translate(${margin.left},0)`)
-      .call(d3.axisLeft(y));
+      .call(d3.axisLeft(y).tickValues(yTicks).tickFormat(d3.format("d")));
 
     svg
       .append("text")
@@ -186,11 +206,12 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       .append("text")
       .attr("class", "y label")
       .attr("text-anchor", "end")
-      .attr("x", -height / 2)
+      .attr("x", -height / 2 + 50)
       .attr("y", 1)
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
       .text("Rank");
+
     Object.keys(transformedData).forEach((name, skiID) => {
       const colorValue = color(name);
       svg
@@ -246,6 +267,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
         .on("mouseenter", tip.show)
         .on("mouseout", tip.hide)
         .on("click", () => {
+          console.log(transformedData[name]);
           tip.hide();
           //console.log(transformedData[name], transformedData[name][0].skiID);
           setSkiTargetID(

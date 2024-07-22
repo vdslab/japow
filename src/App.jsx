@@ -13,6 +13,8 @@ import {
   snowFilterByPeriod,
 } from "./filtering";
 import Search from "./Search";
+import { sort } from "./SortData.js";
+import { rank } from "./MakeRank.js";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState(null);
@@ -23,7 +25,10 @@ function App() {
   const [filter, setFilter] = useState({ pref: "", period: "", sq: "" });
 
   useEffect(() => {
+    setSnowData(rank(sort(snowData)));
+  }, []);
 
+  useEffect(() => {
     let snowFilteredData = JSON.parse(JSON.stringify(snowQualityMap));
     let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
