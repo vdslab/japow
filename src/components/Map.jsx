@@ -1,9 +1,11 @@
-import { MapContainer, TileLayer, Circle, Popup, GeoJSON, Marker, useMapEvent } from "react-leaflet";
+import { MapContainer, TileLayer, Circle, Popup, GeoJSON, Marker, useMapEvent, Tooltip } from "react-leaflet";
 import { useState, useEffect, useContext, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import "../styles/Map.css";
+import pinIcon from "../assets/images/pin-icon.svg"
 import data from "../assets/ski_resorts_japan.json";
 import geojson from "../assets/Japan.json"
+import { icon } from "leaflet";
 function Map({ mapData, skiTargetID, setSkiTargetID }) {
 
     const DEFAULT_ZOOM = 5;
@@ -14,6 +16,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
         [30.0, 120.0], // 南端の座標
         [50.0, 155.0], // 北端の座標
     ];
+
     // GeoJSONスタイルオブジェクト
     const geoJSONStyle = {
         // 塗りつぶしの色（半透明の青色）
@@ -28,16 +31,42 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
         opacity: 1,
     };
 
+    const markerIcon = new icon({
+        iconUrl: pinIcon,
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -30],
+        tooltipAnchor: [0, -24]
+    })
+
 
     const PopupEventHandler = () => {
-        useMapEvent('popupclose', () => {
-            setSkiTargetID(null)
+        useMapEvent('popupclose', (e) => {
+            console.log(e)
+            console.log(markerRef.current);
+            markerRef.current && console.log(markerRef.current._popup === e.popup);
+
+            // setSkiTargetID(null)
         });
 
         return null;
     };
-    const markerRef = useRef();
 
+    const handleCircleClick = (item) => {
+        setSkiTargetID(item.skiID);
+        setToolTips((prev) => ({
+            ...prev,
+            [item.skiID]: true
+        }));
+    };
+
+    const handleTooltipClose = (skiID) => {
+        setSkiTargetID(null);
+    };
+
+    const markerRef = useRef();
+    const [toolTips, setToolTips] = useState({})
+    const [hoverCircle, setHoverCircle] = useState(null);
     useEffect(() => {
         if (markerRef.current) {
             setTimeout(() => {
@@ -65,30 +94,53 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                 data={geojson}
                 style={geoJSONStyle}
             />
-            <PopupEventHandler />
+            {/* <PopupEventHandler /> */}
             {mapData.map((item) => (
                 item.skiID === skiTargetID ? (
                     <Marker
                         position={[item.latitude, item.longitude]}
+                        icon={markerIcon}
                         key={item.skiID}
                         ref={markerRef}
                     >
-                        <Popup key={item.id}>
-                            {item.name}<br />
-                            {item.region}
-                        </Popup>
+                        <Tooltip
+                        opacity={1}
+                            permanent
+                            direction="top"
+                            key={item.id}
+                            className="custom-tooltip leaflet-popup-content-wrapper"
+                        >
+                            <div>
+                                {item.name}<br />
+                                {item.region}
+                                <button
+                                    className="close-button"
+                                    onClick={() => handleTooltipClose(item.skiID)}
+                                >
+                                    &times;
+                                </button>
+                            </div>
+                        </Tooltip>
                     </Marker>
                 ) : (
                     <Circle
                         center={[item.latitude, item.longitude]}
                         key={item.id}
-                        radius={200}
+                        radius={hoverCircle === item.skiID ? 5000 : 200}
                         fillColor="blue"
                         color="blue"
                         eventHandlers={{
-                            click: () => {
+                            click: (e) => {
                                 setSkiTargetID(item.skiID);
                             },
+                            mouseover: (e) => {
+                                setHoverCircle(item.skiID);
+                                e.target.openPopup();
+                            },
+                            mouseout: (e) => {
+                                setHoverCircle(null);
+                                e.target.closePopup();
+                            }
                         }}
                     >
                         <Popup key={item.id}>
