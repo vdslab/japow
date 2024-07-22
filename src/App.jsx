@@ -11,10 +11,10 @@ import {
   mapFilterBypref,
   snowFilterBypref,
   snowFilterByPeriod,
-} from "./filtering";
-import Search from "./Search";
-import { sort } from "./SortData.js";
-import { rank } from "./MakeRank.js";
+} from "./functions/filtering";
+import Search from "./components/Search";
+import { sort } from "./functions/SortData";
+import { rank } from "./functions/MakeRank";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState(null);
