@@ -3,27 +3,44 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
+import options from "../assets/ski_resorts_japan.json";
 import { InputAdornment } from "@mui/material";
 
-const Search = ({ options, skiTargetID, setSkiTargetID }) => {
+const Search = ({ skiTargetID, setSkiTargetID }) => {
   const [filteredOptions, setFilteredOptions] = useState(options);
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  useEffect(() => {
+    const selected = skiTargetID
+      ? options.filter((option) => skiTargetID.includes(option.skiID))
+      : [];
+    setSelectedOptions(selected);
+    setSearchInput(selected.map((option) => option.skiID));
+  }, [skiTargetID]);
 
   const handleSearchClick = () => {
     setSkiTargetID(searchInput);
   };
 
+  console.log(skiTargetID);
   return (
     <div>
       <Autocomplete
+        multiple
         options={filteredOptions}
         sx={{ width: 500 }}
         getOptionLabel={(option) => (option && option.name) || ""}
+        value={selectedOptions}
         onInputChange={(event, newInputValue) => {}}
-        onChange={(event, newValue) => {
-          if (newValue) {
-            setSearchInput(newValue.skiID);
-            setSkiTargetID(newValue.skiID);
+        onChange={(event, newValues) => {
+          if (newValues) {
+            const newIDs = newValues.map((value) => value.skiID);
+            setSearchInput(newIDs);
+            setSkiTargetID(newIDs);
+          } else {
+            setSearchInput([]);
+            setSkiTargetID([]);
           }
         }}
         renderInput={(params) => (
@@ -31,7 +48,7 @@ const Search = ({ options, skiTargetID, setSkiTargetID }) => {
             <TextField
               {...params}
               label="Search Ski Resorts"
-              variant="outlined"
+              variant="standard"
               InputProps={{
                 ...params.InputProps,
                 endAdornment: (

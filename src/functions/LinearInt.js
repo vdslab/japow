@@ -1,10 +1,10 @@
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const fs = require("fs");
-const skiPoint = require("./assets/ski_resorts_japan.json");
+const skiPoint = require("../assets/ski_resorts_japan.json");
 const path = require("path");
 const fileNamePrefix = `calculatedData`;
-const gridDirectory = "../docker-python/data";
+const gridDirectory = "../../docker-python/data";
 
 function getFilesFromDirectory(directory) {
   const files = fs.readdirSync(directory);
@@ -206,7 +206,7 @@ const FindNearPoint = (skiPoint, nearest, xSorted) => {
 
 const makeJsonFile = (data, outputFileName) => {
   const jsonData = data;
-  const outputFolderPath = "./data";
+  const outputFolderPath = "../dataWithFourPoints";
   const fileNameWithJson = `${outputFileName}.json`;
   const outputPath = path.join(outputFolderPath, fileNameWithJson);
   const blobData = JSON.stringify(jsonData, null, 2);
