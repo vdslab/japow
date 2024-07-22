@@ -25,11 +25,6 @@ const BarChart = ({ skiTargetID, skiData }) => {
 
     return (
       <text x={x} y={y} textAnchor="middle" fill="#666" fontSize={10}>
-        {lines[1] && (
-          <tspan x={x} dy={10}>
-            {lines[1]}
-          </tspan>
-        )}
         {lines[0] && prevMonth !== lines[0] && (
           <tspan x={x} dy={13}>
             {lines[0]}
@@ -39,7 +34,7 @@ const BarChart = ({ skiTargetID, skiData }) => {
     );
   };
 
-  if (skiTargetID && skiData) {
+  if (skiTargetID) {
     const skiTargetNames = [];
     const pastData = snowFilterBySkiTarget(skiTargetID, skiData).map((item) => {
       let newItem = { name: item.name };
@@ -54,9 +49,10 @@ const BarChart = ({ skiTargetID, skiData }) => {
       return newItem;
     });
 
+    console.log(skiTargetID);
     return (
-      <div style={{ overflow: "auto" }}>
-        <ResponsiveContainer width="100%" height={height}>
+      <div width={`${skiTargetID.length * 100}%`} style={{ overflow: "auto" }}>
+        <ResponsiveContainer width={"100%"} height={height}>
           <BarC
             data={pastData}
             barCategoryGap={20}

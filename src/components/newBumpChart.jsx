@@ -185,10 +185,17 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       yTicks.push(maxRank);
     }
     //console.log(yTicks);
+
     svg
       .append("g")
       .attr("transform", `translate(${margin.left},0)`)
-      .call(d3.axisLeft(y).tickValues(yTicks).tickFormat(d3.format("d")));
+      .call(
+        d3
+          .axisLeft(y)
+          .tickSizeOuter(0)
+          .tickValues(yTicks)
+          .tickFormat(d3.format("d"))
+      );
 
     svg
       .append("text")
