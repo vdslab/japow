@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
-  LineChart,
-  Line,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
   Bar,
   BarChart as BarC,
+  CartesianGrid,
+  ResponsiveContainer,
 } from "recharts";
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
 
 const BarChart = ({ skiTargetID, skiData }) => {
-  const width = 600;
   const height = 300;
 
   const renderTick = (tickProps) => {
@@ -41,41 +38,55 @@ const BarChart = ({ skiTargetID, skiData }) => {
       </text>
     );
   };
-  if (skiData[0].monthValues.find((item) => item.skiID === skiTargetID)) {
+
+  if (skiTargetID && skiData) {
+    const skiTargetNames = [];
     const pastData = snowFilterBySkiTarget(skiTargetID, skiData).map((item) => {
-      let newItem = {};
-      newItem.name = item.name;
-      newItem.value = item.values[0].snowScore;
+      let newItem = { name: item.name };
+
+      item.values.forEach((skiResort) => {
+        newItem[skiResort.name] = skiResort.snowScore;
+        if (!skiTargetNames.includes(skiResort.name)) {
+          skiTargetNames.push(skiResort.name);
+        }
+      });
+
       return newItem;
     });
-    // console.log(snowFilterBySkiTarget(skiTargetID, skiData))
 
     return (
       <div style={{ overflow: "auto" }}>
-        <BarC
-          width={width}
-          height={height}
-          data={pastData}
-          barCategoryGap={20}
-          margin={{ top: 5, right: 30, left: 5, bottom: 5 }}
-        >
-          <XAxis
-            dataKey="name"
-            interval={0}
-            tick={(tickProps) =>
-              renderTick({ ...tickProps, allTicks: pastData })
-            }
-          />
-
-          <YAxis dataKey="value" />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="value" fill="#8884d8" />
-        </BarC>
+        <ResponsiveContainer width="100%" height={height}>
+          <BarC
+            data={pastData}
+            barCategoryGap={20}
+            margin={{ top: 5, right: 30, left: 5, bottom: 5 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis
+              dataKey="name"
+              interval={0}
+              tick={(tickProps) =>
+                renderTick({ ...tickProps, allTicks: pastData })
+              }
+            />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            {skiTargetNames.map((name, index) => (
+              <Bar
+                key={name}
+                dataKey={name}
+                fill={`#${Math.floor(Math.random() * 16777215).toString(16)}`}
+                name={name}
+              />
+            ))}
+          </BarC>
+        </ResponsiveContainer>
       </div>
     );
   } else {
-    return <div></div>;
+    return <div>No data available</div>;
   }
 };
 

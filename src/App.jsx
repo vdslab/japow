@@ -13,6 +13,8 @@ import {
   snowFilterByPeriod,
 } from "./functions/filtering";
 import Search from "./components/Search";
+import { sort } from "./functions/SortData";
+import { rank } from "./functions/MakeRank";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState(null);
@@ -23,7 +25,10 @@ function App() {
   const [filter, setFilter] = useState({ pref: "", period: "", sq: "" });
 
   useEffect(() => {
+    setSnowData(rank(sort(snowData)));
+  }, []);
 
+  useEffect(() => {
     let snowFilteredData = JSON.parse(JSON.stringify(snowQualityMap));
     let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
@@ -54,7 +59,6 @@ function App() {
       >
         <Filter filter={filter} setFilter={setFilter}></Filter>
         <Search
-          options={mapData}
           skiTargetID={skiTargetID}
           setSkiTargetID={setSkiTargetID}
         ></Search>

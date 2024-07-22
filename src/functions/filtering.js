@@ -39,12 +39,13 @@ export const snowFilterByPeriod = (data, period) => {
 // 選択されたスキー場の名前でフィルタリング
 export const snowFilterBySkiTarget = (skiTargetID, data) => {
   return data.flatMap((month) => {
-    return month.weeks.map((week) => {
-      let item = {};
-      item.name = month.month + "/" + week.week;
-      item.values = week.weekValues.filter(
-        ({ skiID }) => skiID === skiTargetID
-      );
+    return month.weeks.flatMap((week) => {
+      let item = {
+        name: month.month + "/" + week.week,
+        values: week.weekValues.filter(({ skiID }) =>
+          skiTargetID.includes(skiID)
+        ),
+      };
       return item;
     });
   });

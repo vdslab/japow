@@ -1,9 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 import d3Tip from "d3-tip";
-import { sort } from "../functions/SortData.js";
-import { rank } from "../functions/MakeRank.js";
-import { avgRank } from "../functions/AverageRank.js";
+import { avgRank } from "../functions/AverageRank";
 
 const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   const transformData = (data) => {
@@ -27,7 +25,6 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   };
 
   const getSkiResortData = (data, names) => {
-    // 週ごとにデータをわける
     const weekData = names.reduce((acc, name) => {
       if (data[name]) {
         data[name].forEach((entry) => {
@@ -40,7 +37,6 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       return acc;
     }, []);
 
-    // それに相対的なrankをつける
     Object.values(weekData).forEach((weekEntries) => {
       weekEntries.sort((a, b) => a.rank - b.rank);
       weekEntries.forEach((entry, index) => {
@@ -52,7 +48,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
         acc[name] = data[name];
       }
       return acc;
-    }, []);
+    }, {});
 
     return newData;
   };
@@ -84,12 +80,10 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       let offsetX = 10;
       let offsetY = -10;
 
-      // 右端に近い場合、左に表示
       if (clientX + tipWidth > innerWidth) {
         offsetX = -tipWidth - 10;
       }
 
-      // 上端に近い場合、下に表示
       if (clientY - tipHeight < 0) {
         offsetY = 10;
       }
@@ -98,13 +92,16 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     });
 
   useEffect(() => {
-    const scoreSortedData = rank(sort(data));
-    //console.log(data);
+    const scoreSortedData = data;
+    const svg = d3.select(svgRef.current);
+    svg.selectAll("*").remove();
+    let top50;
+    const a = 50;
+    console.log();
     //console.log(scoreSortedData[0].monthValues.length);
     if (scoreSortedData[0].monthValues.length === 0) {
       return;
     }
-    let top50;
     if (scoreSortedData[0].monthValues.length > 50) {
       top50 = avgRank(scoreSortedData).slice(0, 50);
     } else {
@@ -116,9 +113,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       top50Names
     );
 
-    const svg = d3.select(svgRef.current);
-    svg.selectAll("*").remove();
-    const margin = { top: 10, right: 30, bottom: 80, left: 50 };
+    const margin = { top: 10, right: 30, bottom: 120, left: 50 };
     const width = 900 - margin.right - margin.left;
     const height = 500 - margin.top - margin.bottom;
     svg.attr("viewBox", [0, 0, width, height]);
@@ -131,7 +126,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     const y = d3
       .scaleLinear()
       .domain([
-        0,
+        1,
         d3.max(Object.values(transformedData).flat(), (d) => d.relativeRank),
       ])
       .nice()
@@ -145,15 +140,14 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       .x((d) => x(d.week))
       .y((d) => y(d.relativeRank));
 
-    //縦線
     svg
       .append("g")
       .attr("class", "grid")
-      .attr("transform", `translate(0,${height - margin.bottom})`)
+      .attr("transform", `translate(0,${height - margin.bottom + 10})`)
       .call(
         d3
           .axisBottom(x)
-          .tickSize(-height + margin.top + margin.bottom)
+          .tickSize(-height + margin.top + margin.bottom - 15)
           .tickFormat("")
       )
       .selectAll("line")
@@ -164,16 +158,37 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
 
     svg
       .append("g")
-      .attr("transform", `translate(0,${height - margin.bottom})`)
+      .attr("transform", `translate(0,${height - margin.bottom + 10})`)
       .call(d3.axisBottom(x).tickSizeOuter(0))
       .selectAll("text")
       .attr("transform", "rotate(-45)")
       .style("text-anchor", "end");
 
+    const maxRank = d3.max(
+      Object.values(transformedData).flat(),
+      (d) => d.relativeRank
+    );
+    // Y軸の目盛を1, 5, 10, 15, 20...のように設定
+    const yTicks = [];
+    const step = 5; // 一度に増加する目盛の間隔
+
+    // 最初に1を追加
+    if (maxRank >= 1) yTicks.push(1);
+
+    // 目盛を5単位で追加
+    for (let i = step; i <= maxRank; i += step) {
+      yTicks.push(i);
+    }
+
+    // 最大値を最後に追加
+    if (yTicks[yTicks.length - 1] !== maxRank) {
+      yTicks.push(maxRank);
+    }
+    //console.log(yTicks);
     svg
       .append("g")
       .attr("transform", `translate(${margin.left},0)`)
-      .call(d3.axisLeft(y));
+      .call(d3.axisLeft(y).tickValues(yTicks).tickFormat(d3.format("d")));
 
     svg
       .append("text")
@@ -186,43 +201,34 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       .append("text")
       .attr("class", "y label")
       .attr("text-anchor", "end")
-      .attr("x", -height / 2)
+      .attr("x", -height / 2 + 50)
       .attr("y", 1)
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
       .text("Rank");
+
     Object.keys(transformedData).forEach((name, skiID) => {
       const colorValue = color(name);
+      const isSelected = skiTargetID
+        ? skiTargetID.includes(transformedData[name][0].skiID)
+        : false;
+
       svg
         .append("g")
         .append("path")
         .datum(transformedData[name])
         .attr("fill", "none")
         .attr("stroke", colorValue)
-        .attr(
-          "stroke-width",
-          !skiTargetID
-            ? 2
-            : skiTargetID === transformedData[name][0].skiID
-            ? 4
-            : 1
-        )
-        .style(
-          "opacity",
-          !skiTargetID
-            ? 0.8
-            : skiTargetID === transformedData[name][0].skiID
-            ? 0.8
-            : 0.3
-        )
+        .attr("stroke-width", isSelected ? 4 : 2)
+        .style("opacity", isSelected ? 0.8 : 0.3)
         .attr("d", line)
         .on("click", () => {
-          tip.remove();
-          setSkiTargetID(
-            transformedData[name][0].skiID === skiTargetID
-              ? null
-              : transformedData[name][0].skiID
-          );
+          tip.hide();
+          const skiID = transformedData[name][0].skiID;
+          const updatedSkiTargetID = isSelected
+            ? skiTargetID.filter((id) => id !== skiID)
+            : [...(skiTargetID || []), skiID];
+          setSkiTargetID(updatedSkiTargetID);
         });
 
       svg
@@ -235,24 +241,17 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
         .attr("cy", (d) => y(d.relativeRank))
         .attr("r", 3)
         .attr("fill", colorValue)
-        .style(
-          "opacity",
-          !skiTargetID
-            ? 0.8
-            : skiTargetID === transformedData[name][0].skiID
-            ? 0.8
-            : 0.3
-        )
+        .style("opacity", isSelected ? 0.8 : 0.3)
         .on("mouseenter", tip.show)
         .on("mouseout", tip.hide)
         .on("click", () => {
+          console.log(transformedData[name]);
+          const skiID = transformedData[name][0].skiID;
           tip.hide();
-          //console.log(transformedData[name], transformedData[name][0].skiID);
-          setSkiTargetID(
-            transformedData[name][0].skiID === skiTargetID
-              ? null
-              : transformedData[name][0].skiID
-          );
+          const updatedSkiTargetID = isSelected
+            ? skiTargetID.filter((id) => id !== skiID)
+            : [...(skiTargetID || []), skiID];
+          setSkiTargetID(updatedSkiTargetID);
         });
     });
   }, [data, skiTargetID]);
@@ -260,7 +259,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   if (data[0].monthValues.length === 0) {
     return <div>選択している県にはスキー場がありません</div>;
   }
-  //console.log(skiTargetID);
+
   return (
     <div style={{ overflow: "auto" }}>
       <svg ref={svgRef} width={900} height={500}></svg>
