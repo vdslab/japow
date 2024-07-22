@@ -6,6 +6,7 @@ import pinIcon from "../assets/images/pin-icon.svg"
 import data from "../assets/ski_resorts_japan.json";
 import geojson from "../assets/Japan.json"
 import { icon } from "leaflet";
+import { filter } from "d3";
 function Map({ mapData, skiTargetID, setSkiTargetID }) {
 
     const DEFAULT_ZOOM = 5;
@@ -39,41 +40,11 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
         tooltipAnchor: [0, -24]
     })
 
-
-    const PopupEventHandler = () => {
-        useMapEvent('popupclose', (e) => {
-            console.log(e)
-            console.log(markerRef.current);
-            markerRef.current && console.log(markerRef.current._popup === e.popup);
-
-            // setSkiTargetID(null)
-        });
-
-        return null;
-    };
-
-    const handleCircleClick = (item) => {
-        setSkiTargetID(item.skiID);
-        setToolTips((prev) => ({
-            ...prev,
-            [item.skiID]: true
-        }));
-    };
-
     const handleTooltipClose = (skiID) => {
-        setSkiTargetID(null);
+        setSkiTargetID((prev) => prev.filter((item) => item !== skiID));
     };
 
-    const markerRef = useRef();
-    const [toolTips, setToolTips] = useState({})
     const [hoverCircle, setHoverCircle] = useState(null);
-    useEffect(() => {
-        if (markerRef.current) {
-            setTimeout(() => {
-                markerRef.current.openPopup();
-            }, 0); // 0ms の遅延を使って次のレンダリングサイクルを待つ
-        }
-    }, [skiTargetID]);
 
     return (
         <MapContainer
@@ -96,15 +67,14 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
             />
             {/* <PopupEventHandler /> */}
             {mapData.map((item) => (
-                item.skiID === skiTargetID ? (
+                skiTargetID.includes(item.skiID) ? (
                     <Marker
                         position={[item.latitude, item.longitude]}
                         icon={markerIcon}
                         key={item.skiID}
-                        ref={markerRef}
                     >
                         <Tooltip
-                        opacity={1}
+                            opacity={1}
                             permanent
                             direction="top"
                             key={item.id}
@@ -131,7 +101,8 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                         color="blue"
                         eventHandlers={{
                             click: (e) => {
-                                setSkiTargetID(item.skiID);
+                                console.log(skiTargetID)
+                                setSkiTargetID((prev) => [...prev, item.skiID]);
                             },
                             mouseover: (e) => {
                                 setHoverCircle(item.skiID);

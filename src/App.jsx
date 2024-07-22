@@ -17,7 +17,7 @@ import { sort } from "./functions/SortData";
 import { rank } from "./functions/MakeRank";
 
 function App() {
-  const [skiTargetID, setSkiTargetID] = useState(null);
+  const [skiTargetID, setSkiTargetID] = useState([]);
   //各日付の雪質データ
   const [snowData, setSnowData] = useState([...snowQualityMap]);
   // マップに描画するデータ
