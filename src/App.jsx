@@ -13,6 +13,8 @@ import {
   snowFilterByPeriod,
 } from "./filtering";
 import Search from "./Search";
+import { sort } from "./SortData.js";
+import { rank } from "./MakeRank.js";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState(null);
@@ -23,21 +25,25 @@ function App() {
   const [filter, setFilter] = useState({ pref: "", period: "", sq: "" });
 
   useEffect(() => {
-    let snowFilteredData = [...snowQualityMap];
-    let mapFilteredData = [...sukijouZahyou];
+    setSnowData(rank(sort(snowData)));
+  }, []);
+
+  useEffect(() => {
+    let snowFilteredData = JSON.parse(JSON.stringify(snowQualityMap));
+    let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
     if (filter.pref !== "") {
       snowFilteredData = snowFilterBypref(snowFilteredData, filter.pref);
       mapFilteredData = mapFilterBypref(mapFilteredData, filter.pref);
     }
 
-    if (filter.period != "") {
+    if (filter.period !== "") {
       snowFilteredData = snowFilterByPeriod(snowFilteredData, filter.period);
-      console.log(snowFilteredData);
+      //console.log(snowFilteredData);
     }
 
-    setSnowData([...snowFilteredData]);
-    setMapData([...mapFilteredData]);
+    setSnowData(snowFilteredData);
+    setMapData(mapFilteredData);
   }, [filter]);
   return (
     <>
@@ -46,7 +52,7 @@ function App() {
           display: "flex",
           alignItems: "center",
           p: 1,
-          m: 1,
+
           bgcolor: "background.paper",
           borderRadius: 1,
         }}
@@ -58,13 +64,18 @@ function App() {
           setSkiTargetID={setSkiTargetID}
         ></Search>
       </Box>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <Map
-            mapData={mapData}
-            skiTargetID={skiTargetID}
-            setSkiTargetID={setSkiTargetID}
-          ></Map>
+      <Grid container spacing={2} sx={{ height: "calc(100vh - 64px)" }}>
+        <Grid item xs={6} sx={{ height: "100%" }}>
+          <Box sx={{ height: "50%", overflow: "hidden" }}>
+            <Map
+              mapData={mapData}
+              skiTargetID={skiTargetID}
+              setSkiTargetID={setSkiTargetID}
+            />
+          </Box>
+          {/* <Box sx={{ height: "50%", overflow: "hidden" }}> */}
+          <BarChart skiTargetID={skiTargetID} skiData={snowData} />
+          {/* </Box> */}
         </Grid>
         {/* <BumpChart
         skiTargetID={skiTargetID}
@@ -78,8 +89,6 @@ function App() {
             skiTargetID={skiTargetID}
             setSkiTargetID={setSkiTargetID}
           ></NewBumpChart>
-
-          <BarChart skiTargetID={skiTargetID} skiData={snowData}></BarChart>
         </Grid>
       </Grid>
     </>
