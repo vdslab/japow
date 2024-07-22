@@ -23,7 +23,6 @@ function App() {
   const [filter, setFilter] = useState({ pref: "", period: "", sq: "" });
 
   useEffect(() => {
-
     let snowFilteredData = JSON.parse(JSON.stringify(snowQualityMap));
     let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
@@ -54,7 +53,6 @@ function App() {
       >
         <Filter filter={filter} setFilter={setFilter}></Filter>
         <Search
-          options={mapData}
           skiTargetID={skiTargetID}
           setSkiTargetID={setSkiTargetID}
         ></Search>

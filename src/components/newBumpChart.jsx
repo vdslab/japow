@@ -27,7 +27,6 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   };
 
   const getSkiResortData = (data, names) => {
-    // 週ごとにデータをわける
     const weekData = names.reduce((acc, name) => {
       if (data[name]) {
         data[name].forEach((entry) => {
@@ -40,7 +39,6 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       return acc;
     }, []);
 
-    // それに相対的なrankをつける
     Object.values(weekData).forEach((weekEntries) => {
       weekEntries.sort((a, b) => a.rank - b.rank);
       weekEntries.forEach((entry, index) => {
@@ -52,7 +50,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
         acc[name] = data[name];
       }
       return acc;
-    }, []);
+    }, {});
 
     return newData;
   };
@@ -84,12 +82,10 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       let offsetX = 10;
       let offsetY = -10;
 
-      // 右端に近い場合、左に表示
       if (clientX + tipWidth > innerWidth) {
         offsetX = -tipWidth - 10;
       }
 
-      // 上端に近い場合、下に表示
       if (clientY - tipHeight < 0) {
         offsetY = 10;
       }
@@ -99,8 +95,6 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
 
   useEffect(() => {
     const scoreSortedData = rank(sort(data));
-    //console.log(data);
-    //console.log(scoreSortedData[0].monthValues.length);
     if (scoreSortedData[0].monthValues.length === 0) {
       return;
     }
@@ -145,7 +139,6 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       .x((d) => x(d.week))
       .y((d) => y(d.relativeRank));
 
-    //縦線
     svg
       .append("g")
       .attr("class", "grid")
@@ -191,38 +184,29 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
       .text("Rank");
-    Object.keys(transformedData).forEach((name, skiID) => {
+
+    Object.keys(transformedData).forEach((name) => {
       const colorValue = color(name);
+      const isSelected = skiTargetID
+        ? skiTargetID.includes(transformedData[name][0].skiID)
+        : false;
+
       svg
         .append("g")
         .append("path")
         .datum(transformedData[name])
         .attr("fill", "none")
         .attr("stroke", colorValue)
-        .attr(
-          "stroke-width",
-          !skiTargetID
-            ? 2
-            : skiTargetID === transformedData[name][0].skiID
-            ? 4
-            : 1
-        )
-        .style(
-          "opacity",
-          !skiTargetID
-            ? 0.8
-            : skiTargetID === transformedData[name][0].skiID
-            ? 0.8
-            : 0.3
-        )
+        .attr("stroke-width", isSelected ? 4 : 2)
+        .style("opacity", isSelected ? 0.8 : 0.3)
         .attr("d", line)
         .on("click", () => {
-          tip.remove();
-          setSkiTargetID(
-            transformedData[name][0].skiID === skiTargetID
-              ? null
-              : transformedData[name][0].skiID
-          );
+          tip.hide();
+          const skiID = transformedData[name][0].skiID;
+          const updatedSkiTargetID = isSelected
+            ? skiTargetID.filter((id) => id !== skiID)
+            : [...(skiTargetID || []), skiID];
+          setSkiTargetID(updatedSkiTargetID);
         });
 
       svg
@@ -235,24 +219,16 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
         .attr("cy", (d) => y(d.relativeRank))
         .attr("r", 3)
         .attr("fill", colorValue)
-        .style(
-          "opacity",
-          !skiTargetID
-            ? 0.8
-            : skiTargetID === transformedData[name][0].skiID
-            ? 0.8
-            : 0.3
-        )
+        .style("opacity", isSelected ? 0.8 : 0.3)
         .on("mouseenter", tip.show)
         .on("mouseout", tip.hide)
         .on("click", () => {
+          const skiID = transformedData[name][0].skiID;
           tip.hide();
-          //console.log(transformedData[name], transformedData[name][0].skiID);
-          setSkiTargetID(
-            transformedData[name][0].skiID === skiTargetID
-              ? null
-              : transformedData[name][0].skiID
-          );
+          const updatedSkiTargetID = isSelected
+            ? skiTargetID.filter((id) => id !== skiID)
+            : [...(skiTargetID || []), skiID];
+          setSkiTargetID(updatedSkiTargetID);
         });
     });
   }, [data, skiTargetID]);
@@ -260,7 +236,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
   if (data[0].monthValues.length === 0) {
     return <div>選択している県にはスキー場がありません</div>;
   }
-  //console.log(skiTargetID);
+
   return (
     <div style={{ overflow: "auto" }}>
       <svg ref={svgRef} width={900} height={500}></svg>
