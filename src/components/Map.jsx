@@ -21,7 +21,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
     // GeoJSONスタイルオブジェクト
     const geoJSONStyle = {
         // 塗りつぶしの色（半透明の青色）
-        fillColor: "rgba(0, 123, 255, 0.5)",
+        fillColor: "rgb(123, 188, 151)",
         // 塗りつぶしの不透明度（0は完全に透明、1は不透明）
         fillOpacity: 0.5,
         // 境界線の色（黒色）
@@ -66,7 +66,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                 style={geoJSONStyle}
             />
             {/* <PopupEventHandler /> */}
-            {mapData.map((item) => (
+            {mapData.map((item, index) => (
                 skiTargetID.includes(item.skiID) ? (
                     <Marker
                         position={[item.latitude, item.longitude]}
@@ -77,7 +77,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                             opacity={1}
                             permanent
                             direction="top"
-                            key={item.id}
+                            key={index}
                             className="custom-tooltip leaflet-popup-content-wrapper"
                         >
                             <div>
@@ -95,7 +95,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                 ) : (
                     <Circle
                         center={[item.latitude, item.longitude]}
-                        key={item.id}
+                        key={index}
                         radius={hoverCircle === item.skiID ? 5000 : 200}
                         fillColor="blue"
                         color="blue"
@@ -114,7 +114,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                             }
                         }}
                     >
-                        <Popup key={item.id}>
+                        <Popup key={index}>
                             {item.name}<br />
                             {item.region}
                         </Popup>
