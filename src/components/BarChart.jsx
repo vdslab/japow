@@ -70,12 +70,7 @@ const BarChart = ({ skiTargetID, skiData }) => {
             <Tooltip />
             <Legend />
             {skiTargetNames.map((name, index) => (
-              <Bar
-                key={name}
-                dataKey={name}
-                fill={`#${Math.floor(Math.random() * 16777215).toString(16)}`}
-                name={name}
-              />
+              <Bar key={name} dataKey={name} fill={"#8884d8"} name={name} />
             ))}
           </BarC>
         </ResponsiveContainer>
