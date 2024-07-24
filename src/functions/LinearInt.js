@@ -133,16 +133,30 @@ const bilinearInt = (skiPoint) => {
     };
   } else if (skiPoint.surroundingPoints.length === 2) {
     const [p0, p1] = skiPoint.surroundingPoints;
-    for (let i = 0; i < p0.values.length; i++) {
-      const f0 = p0.values[i].data_value;
-      const f1 = p1.values[i].data_value;
-      const result = {
-        name: p1.values[i].name,
-        data_value:
-          (f0 * (p1.latitude - x) + f1 * (x - p0.latitude)) /
-          (p1.latitude - p0.latitude),
-      };
-      dataResult.push(result);
+    if (p0.longitude === p1.longitude) {
+      for (let i = 0; i < p0.values.length; i++) {
+        const f0 = p0.values[i].data_value;
+        const f1 = p1.values[i].data_value;
+        const result = {
+          name: p1.values[i].name,
+          data_value:
+            (f0 * (p1.latitude - x) + f1 * (x - p0.latitude)) /
+            (p1.latitude - p0.latitude),
+        };
+        dataResult.push(result);
+      }
+    } else if (p0.latitude === p1.latitude) {
+      for (let i = 0; i < p0.values.length; i++) {
+        const f0 = p0.values[i].data_value;
+        const f1 = p1.values[i].data_value;
+        const result = {
+          name: p1.values[i].name,
+          data_value:
+            (f0 * (p1.longitude - y) + f1 * (y - p0.longitude)) /
+            (p1.longitude - p0.longitude),
+        };
+        dataResult.push(result);
+      }
     }
 
     return {
@@ -253,7 +267,7 @@ files.forEach((file) => {
   // const dataWithFourPoints = mergedData.filter(
   //   (item) => item.surroundingPoints.length === 4
   // );
-
+  console.dir(mergedData.filter((item) => item.surroundingPoints.length === 2));
   const outputFileName = `${fileNamePrefix}_${path.parse(file).name}`;
   makeJsonFile(mergedData, outputFileName);
 });

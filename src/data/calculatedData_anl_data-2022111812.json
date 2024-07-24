@@ -617,47 +617,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.07449234486467
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.0560223623483862
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0047494869599726194
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.75445400701227
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.2886740916791544
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.1635316232672673
       }
     ]
   },
@@ -771,47 +771,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.1339128540502
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.0465828517242046
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.00476479165530805
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.81968344581271
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.3790150491272513
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.14229272436285875
       }
     ]
   },
@@ -1687,47 +1687,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 276.70378906238176
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.9050168052820311
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004705428515133355
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.68896879697773
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.11363316205803
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.41994483392152465
       }
     ]
   },
@@ -1841,47 +1841,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 276.87617433016874
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.044514230687125
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004708944683658253
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.8116469747801
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.066784540946908
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.25980973561235154
       }
     ]
   },
@@ -1995,47 +1995,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 276.8606585352871
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.0319585554435757
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004708628205630275
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.89061164277742
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.0710012214381155
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.274222935595255
       }
     ]
   },
@@ -2149,47 +2149,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 276.9608606607792
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.113044014228466
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004710672043623545
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.38065210590203
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.0437695938636036
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.1811414477021552
       }
     ]
   },
@@ -2711,47 +2711,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 278.7489433013812
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.3181242563693667
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005577300001535633
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 97.7335070898147
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.6826978140098742
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.7290363389479978
       }
     ]
   },
@@ -4389,47 +4389,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 282.9716926887443
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.644493934990197
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0068050811211973
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 89.61242281582089
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 1.9532998086277094
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.6941343646489142
       }
     ]
   },
@@ -16227,47 +16227,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 276.94198167898446
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.0134737381818866
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0050469489919791125
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.05570979936952
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.06358206724905463
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.85985821722241
       }
     ]
   },
@@ -17651,47 +17651,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.5640171784257
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.1101514396976915
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005182010001753773
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.29597278087924
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.277695087601946
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.4613237710779332
       }
     ]
   },
@@ -18821,47 +18821,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.7433334227017
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.2011305122547367
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005210113369345927
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 91.76359646074309
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.17407263246285157
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.4915613252074322
       }
     ]
   },
@@ -19483,47 +19483,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 278.10563935113925
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.384952438060967
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005266895824994625
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 90.68793765624493
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.03529506853777875
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.5526558744870975
       }
     ]
   },
@@ -22685,47 +22685,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 279.33556109651556
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.4179673624877944
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005750658806833291
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 90.55743514253662
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 1.1259474866903112
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.24833116349648696
       }
     ]
   },
@@ -32745,47 +32745,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 281.7339287852098
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 2.102399079814782
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.006079515654003654
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 86.6810307691549
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.011826954704946638
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.3162647255648496
       }
     ]
   },
@@ -34169,47 +34169,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.06537315277654
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.9356357073513198
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005920235827163033
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.66672634677893
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.22222329550043782
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.5728424653406048
       }
     ]
   },
@@ -34577,47 +34577,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.0788960403763
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.9437757963637718
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0059217430273986555
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.61466221581013
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.2019693753922447
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.5758531831945255
       }
     ]
   },
@@ -34731,47 +34731,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.0833214139527
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.9464396456755052
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005922236259635325
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.5976241958038
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.19534126714212832
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.5768384425290023
       }
     ]
   },
@@ -34885,47 +34885,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.0078306581144
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.9009980587653063
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005913822399492845
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.8882692647587
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.3084076315836943
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.5600312802471473
       }
     ]
   },
@@ -35447,47 +35447,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.7538420462477
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.8217266477359041
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.00630898657804587
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 94.40978299952205
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.19255640649283592
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.7839691360607447
       }
     ]
   },
@@ -35855,47 +35855,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.89898642340376
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.897506446858786
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.006334698625463761
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.95635160888554
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.11316804550695954
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.8177826972213958
       }
     ]
   },
@@ -36925,47 +36925,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 288.6858108021604
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 3.3362977527123334
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.008686355688046094
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 79.90624554803004
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 1.1320981134746024
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 2.396086991004387
       }
     ]
   },
@@ -39873,47 +39873,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 276.7859201711353
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.9714788548751453
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004707103755849811
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.2709782406166
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.0913126398647746
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.3436501868015796
       }
     ]
   },
@@ -41043,47 +41043,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.1762178607915
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.0398623007551244
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004775687981310854
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.86612417622725
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.4433341683377439
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.12717148468242814
       }
     ]
   },
@@ -41197,47 +41197,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 278.1353239872833
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.6753622473972138
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004886969424216466
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 88.87919303567291
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.733438653392185
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.7298477106060748
       }
     ]
   },
@@ -41351,47 +41351,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 278.1354121480752
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.6753769967312229
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004886993437795854
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 88.87910538607947
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.7334159846714497
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.729903355820745
       }
     ]
   },
@@ -41505,47 +41505,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 275.5487192432565
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 2.1068689427809786
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.003895742505770315
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 85.77866519205666
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.255957313288526
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -1.590228834887343
       }
     ]
   },
@@ -41659,47 +41659,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -2.032191626883513
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 273.49566327220987
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 2.3076883264358226
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0033498617399993764
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 84.21249905589337
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.18098359146724016
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -2.155777677022647
       }
     ]
   },
@@ -41810,52 +41810,7 @@
         ]
       }
     ],
-    "values": [
-      {
-        "name": "snowLayers",
-        "data_value": -1.0193905954662577
-      },
-      {
-        "name": "iceT",
-        "data_value": 25.163809024231064
-      },
-      {
-        "name": "snowMassDensity",
-        "data_value": 15.394956812295927
-      },
-      {
-        "name": "waterContent",
-        "data_value": 0.0016362539564260881
-      },
-      {
-        "name": "iceContent",
-        "data_value": 0.12649198970364703
-      },
-      {
-        "name": "airT",
-        "data_value": 274.55517899049187
-      },
-      {
-        "name": "dewPointDiff",
-        "data_value": 2.658405923344803
-      },
-      {
-        "name": "specificHumidity",
-        "data_value": 0.0035206463391237435
-      },
-      {
-        "name": "relativeHumidity",
-        "data_value": 82.28543872898027
-      },
-      {
-        "name": "windU",
-        "data_value": -0.8312666504116153
-      },
-      {
-        "name": "windV",
-        "data_value": -0.5732466990987285
-      }
-    ]
+    "values": []
   },
   {
     "name": "士別市 日向スキー場",
@@ -45423,47 +45378,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 276.91045059417775
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.2141679649215151
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004602744928337229
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 91.70359734386295
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.6473824829133559
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.431148271458744
       }
     ]
   },
@@ -46085,47 +46040,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -0.6875974806971835
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 87.59074586437758
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 53.587107915197095
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0.0056955091468422585
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0.44029612978475413
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 273.81047914512646
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 3.4440510971927143
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.003118014857308352
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 77.26183594448055
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.6228597942852808
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.5657406309015239
       }
     ]
   },
@@ -47001,47 +46956,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1.4108278021468355
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 272.9515903684002
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 3.1905281300986075
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0029319819783186533
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 78.69299909378749
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.4796234645358541
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.23486365585023505
       }
     ]
   },
@@ -47409,47 +47364,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.2670742874468
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.0254288969279992
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004799089496179802
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.96586269754549
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.5814692447088843
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.09469632607139648
       }
     ]
   },
@@ -47563,47 +47518,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.134954679706
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.0464173478522059
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004765059994042824
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.8208271200051
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.380599006056059
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.1419203406508617
       }
     ]
   },
@@ -47717,47 +47672,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 276.9488164087222
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.4768590783603566
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004563783875262742
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 90.05882067485273
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.0385244898948305
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.019050608942037917
       }
     ]
   },
@@ -48630,52 +48585,7 @@
         ]
       }
     ],
-    "values": [
-      {
-        "name": "snowLayers",
-        "data_value": -1
-      },
-      {
-        "name": "iceT",
-        "data_value": 0
-      },
-      {
-        "name": "snowMassDensity",
-        "data_value": 0
-      },
-      {
-        "name": "waterContent",
-        "data_value": 0
-      },
-      {
-        "name": "iceContent",
-        "data_value": 0
-      },
-      {
-        "name": "airT",
-        "data_value": 277.38809550237863
-      },
-      {
-        "name": "dewPointDiff",
-        "data_value": 5.174439575411025
-      },
-      {
-        "name": "specificHumidity",
-        "data_value": 0.003516328847944931
-      },
-      {
-        "name": "relativeHumidity",
-        "data_value": 69.01431200243154
-      },
-      {
-        "name": "windU",
-        "data_value": -1.618599419224278
-      },
-      {
-        "name": "windV",
-        "data_value": -1.9954532817396295
-      }
-    ]
+    "values": []
   },
   {
     "name": "倶知安町旭ヶ丘スキー場",
@@ -48787,47 +48697,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 276.9083138609495
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.4700829867177851
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004552751633773143
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 90.09908836944912
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.0489388807432134
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.04461495468446497
       }
     ]
   },
@@ -48941,47 +48851,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.2188612107933
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.0330880007548287
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004786671452991021
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.91293632622929
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.508167693340576
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": -0.11192930968176228
       }
     ]
   },
@@ -49600,52 +49510,7 @@
         ]
       }
     ],
-    "values": [
-      {
-        "name": "snowLayers",
-        "data_value": -1.0799728803284385
-      },
-      {
-        "name": "iceT",
-        "data_value": 0
-      },
-      {
-        "name": "snowMassDensity",
-        "data_value": 0
-      },
-      {
-        "name": "waterContent",
-        "data_value": 0
-      },
-      {
-        "name": "iceContent",
-        "data_value": 0
-      },
-      {
-        "name": "airT",
-        "data_value": 275.3918935087323
-      },
-      {
-        "name": "dewPointDiff",
-        "data_value": 3.551726605403681
-      },
-      {
-        "name": "specificHumidity",
-        "data_value": 0.003486153773526333
-      },
-      {
-        "name": "relativeHumidity",
-        "data_value": 77.22219555916652
-      },
-      {
-        "name": "windU",
-        "data_value": -0.6643328764085074
-      },
-      {
-        "name": "windV",
-        "data_value": -1.2101688532552155
-      }
-    ]
+    "values": []
   },
   {
     "name": "ウィンザースノービレッジ",
@@ -50265,47 +50130,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.8573574058713
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.4025659626803133
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004861484519242597
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 90.66384402738122
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.6206322760399091
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 2.01795565995262
       }
     ]
   },
@@ -50419,47 +50284,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.8724600263036
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.468845604781637
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004841811279840634
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 90.23177392338033
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.6065947723210081
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 2.0637556786273126
       }
     ]
   },
@@ -50827,47 +50692,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.72982954547615
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.8428948127068064
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005027607089774411
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 94.31228213460072
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.7391661968644109
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.631216258413799
       }
     ]
   },
@@ -60533,47 +60398,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 279.71174125641977
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 2.3423287219601314
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005449658330319643
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 85.02024318133024
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 1.139644217225375
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.8712188605292173
       }
     ]
   },
@@ -61957,47 +61822,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.2963068753769
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.1304901699236158
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005113251179314116
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.31535613557277
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.023246563777506793
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.0619549257247396
       }
     ]
   },
@@ -62365,47 +62230,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 281.392918449885
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 3.5046835518442236
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0055872773361053405
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 78.60874929382054
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.7347211375844918
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.2900612224470671
       }
     ]
   },
@@ -62519,47 +62384,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 282.68684388582045
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 2.229543391556739
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.006525893036985586
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 86.0219134415978
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.9339948269351431
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.2199392702456475
       }
     ]
   },
@@ -63643,47 +63508,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 279.01979798625393
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.8487659934280896
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005410167485986036
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 87.97387004821576
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.5635649000839112
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.706807671073232
       }
     ]
   },
@@ -64105,47 +63970,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 281.0937983846475
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 2.6978398006046134
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005833548173235222
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 83.09877557056633
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 1.5107752905378924
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.9884729538372685
       }
     ]
   },
@@ -64259,47 +64124,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 281.19940319439286
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 3.4380692136461164
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0055476566041552265
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 78.9419255094214
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.6378348641641868
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.2873194615145926
       }
     ]
   },
@@ -64413,47 +64278,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 276.7806138406851
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.9601817656438699
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005016753451967552
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.39288387425977
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.08195178260712647
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.7678187311500535
       }
     ]
   },
@@ -65483,47 +65348,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.2344522642483
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.1616831255390545
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005110786395653938
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 91.9863792258862
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.1048229715920499
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.7264756318856411
       }
     ]
   },
@@ -65637,47 +65502,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 279.48131612977494
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.094941100457466
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005729660966474692
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.40572186499459
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.2958584568434661
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 2.445209966324384
       }
     ]
   },
@@ -65791,47 +65656,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 282.2586235935366
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.9733711914656524
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0064490405090151985
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 87.55544545915559
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.5912418336107589
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.7754487371629175
       }
     ]
   },
@@ -69655,47 +69520,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.42474514766127
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.1729071035055771
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005137284859325267
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.0469875678682
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.00862546872032872
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.1352123523449305
       }
     ]
   },
@@ -74127,47 +73992,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 281.869957030457
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 2.5226489431802035
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005965773582722896
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 84.1830508357016
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.03159886450948051
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.17643948593809197
       }
     ]
   },
@@ -75043,47 +74908,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.09536195355776
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.9536874367570972
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005923578244029994
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.55126721573525
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.17730753540984812
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.5795191323810981
       }
     ]
   },
@@ -75705,47 +75570,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.0197791975953
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.908190470461852
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0059151541299674315
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.84226649206448
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.2905116931407326
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.562691487312993
       }
     ]
   },
@@ -77383,47 +77248,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.5056190751731
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.6921295716775946
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0062650143558520876
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 95.1852321706693
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.32832477188725545
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.7261418693186772
       }
     ]
   },
@@ -77537,47 +77402,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 281.4662653202655
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.1936824454965764
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.00643519099162414
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.18417094213926
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.19711157211358263
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.9499388306523674
       }
     ]
   },
@@ -77691,47 +77556,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 281.39667485915027
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.1573493041960818
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.006422863175203772
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 92.40157171354222
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.15904828122735012
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.933726688237861
       }
     ]
   },
@@ -78099,47 +77964,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 279.2458568805311
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.8785538761103803
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005692986987867274
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 94.0643145436131
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.38165752666403413
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.097916032988251
       }
     ]
   },
@@ -79015,47 +78880,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.49514977210805
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.3277451667764475
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.006044593539902461
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 91.274989834701
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.531940480380972
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.9993111665945543
       }
     ]
   },
@@ -80439,47 +80304,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 277.11879746025664
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.5052969729136538
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.004610083975190059
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 89.88982525489082
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -0.9948173849137719
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.08823781141812477
       }
     ]
   },
@@ -82425,47 +82290,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 280.0145445146366
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 0.9050394581561042
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005914570695746698
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 93.86242041386065
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.29835194542825916
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.5615260444053877
       }
     ]
   },
@@ -83592,52 +83457,7 @@
         ]
       }
     ],
-    "values": [
-      {
-        "name": "snowLayers",
-        "data_value": -1.196587073833699
-      },
-      {
-        "name": "iceT",
-        "data_value": 0
-      },
-      {
-        "name": "snowMassDensity",
-        "data_value": 0
-      },
-      {
-        "name": "waterContent",
-        "data_value": 0
-      },
-      {
-        "name": "iceContent",
-        "data_value": 0
-      },
-      {
-        "name": "airT",
-        "data_value": 276.0036290153257
-      },
-      {
-        "name": "dewPointDiff",
-        "data_value": 1.9852564478034085
-      },
-      {
-        "name": "specificHumidity",
-        "data_value": 0.004086244465769337
-      },
-      {
-        "name": "relativeHumidity",
-        "data_value": 86.69099658729425
-      },
-      {
-        "name": "windU",
-        "data_value": -1.748884636233007
-      },
-      {
-        "name": "windV",
-        "data_value": -0.6600620187797674
-      }
-    ]
+    "values": []
   },
   {
     "name": "メムロスキー場",
@@ -84003,47 +83823,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -2
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 272.4378211804263
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 1.9337914706908383
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.0031305006515326777
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 86.346138429949
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": -1.2636000858441914
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 0.5322441051176329
       }
     ]
   },
@@ -85173,47 +84993,47 @@
     "values": [
       {
         "name": "snowLayers",
-        "data_value": null
+        "data_value": -1
       },
       {
         "name": "iceT",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "snowMassDensity",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "waterContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "iceContent",
-        "data_value": null
+        "data_value": 0
       },
       {
         "name": "airT",
-        "data_value": null
+        "data_value": 278.8291186872938
       },
       {
         "name": "dewPointDiff",
-        "data_value": null
+        "data_value": 2.1152888296307135
       },
       {
         "name": "specificHumidity",
-        "data_value": null
+        "data_value": 0.005204494919563968
       },
       {
         "name": "relativeHumidity",
-        "data_value": null
+        "data_value": 86.24734924262562
       },
       {
         "name": "windU",
-        "data_value": null
+        "data_value": 0.902628934196071
       },
       {
         "name": "windV",
-        "data_value": null
+        "data_value": 1.7963369276754022
       }
     ]
   },
