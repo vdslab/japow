@@ -206,7 +206,7 @@ const FindNearPoint = (skiPoint, nearest, xSorted) => {
 
 const makeJsonFile = (data, outputFileName) => {
   const jsonData = data;
-  const outputFolderPath = "../dataWithFourPoints";
+  const outputFolderPath = "../data";
   const fileNameWithJson = `${outputFileName}.json`;
   const outputPath = path.join(outputFolderPath, fileNameWithJson);
   const blobData = JSON.stringify(jsonData, null, 2);
@@ -255,5 +255,5 @@ files.forEach((file) => {
   );
   console.log(dataWithFourPoints);
   const outputFileName = `${fileNamePrefix}_${path.parse(file).name}`;
-  //makeJsonFile(dataWithFourPoints, outputFileName);
+  makeJsonFile(dataWithFourPoints, outputFileName);
 });
