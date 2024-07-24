@@ -11,7 +11,7 @@ import {
 } from "recharts";
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
 
-const BarChart = ({ skiTargetID, skiData }) => {
+const BarChart = ({ skiTargetID, skiData, skiColors }) => {
   const height = 300;
 
   const renderTick = (tickProps) => {
@@ -49,7 +49,6 @@ const BarChart = ({ skiTargetID, skiData }) => {
       return newItem;
     });
 
-    console.log(skiTargetID);
     return (
       <div width={`${skiTargetID.length * 100}%`} style={{ overflow: "auto" }}>
         <ResponsiveContainer width={"100%"} height={height}>
@@ -70,7 +69,12 @@ const BarChart = ({ skiTargetID, skiData }) => {
             <Tooltip />
             <Legend />
             {skiTargetNames.map((name, index) => (
-              <Bar key={name} dataKey={name} fill={"#8884d8"} name={name} />
+              <Bar
+                key={name}
+                dataKey={name}
+                fill={skiColors[name]}
+                name={name}
+              />
             ))}
           </BarC>
         </ResponsiveContainer>

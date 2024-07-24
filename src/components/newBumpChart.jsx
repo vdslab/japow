@@ -3,7 +3,7 @@ import * as d3 from "d3";
 import d3Tip from "d3-tip";
 import { avgRank } from "../functions/AverageRank";
 
-const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
+const NewBumpChart = ({ data, skiTargetID, setSkiTargetID, setSkiColors }) => {
   const transformData = (data) => {
     const transformed = [];
     data.forEach((month) => {
@@ -71,12 +71,10 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     .style("border-radius", "3px")
     .offset((event) => {
       const { clientX, clientY, view } = event;
-
       const { innerWidth, innerHeight } = view;
 
       const tipWidth = 200;
       const tipHeight = 100;
-
       let offsetX = 10;
       let offsetY = -10;
 
@@ -139,7 +137,13 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       .range([margin.top, height - margin.bottom]);
 
     const color = d3.scaleOrdinal(d3.schemePaired).domain(top50Names);
-
+    // バンプチャートの色をskiTargetIDと一緒に渡す
+    const skiColors = top50Names.reduce((acc, name) => {
+      const skiName = transformedData[name][0].name;
+      acc[skiName] = color(name);
+      return acc;
+    }, {});
+    setSkiColors(skiColors);
     const line = d3
       .line()
       .curve(d3.curveBumpX)
@@ -263,7 +267,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     });
 
     return () => {
-      tip.hide(); // Clean up the tooltip when data changes
+      tip.hide();
     };
   }, [data, skiTargetID]);
 
