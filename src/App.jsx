@@ -23,6 +23,7 @@ function App() {
   // マップに描画するデータ
   const [mapData, setMapData] = useState([...sukijouZahyou]);
   const [filter, setFilter] = useState({ pref: "", period: "", sq: "" });
+  const [skiColors, setSkiColors] = useState({});
 
   useEffect(() => {
     setSnowData(rank(sort(snowData)));
@@ -81,7 +82,11 @@ function App() {
             />
           </Box>
           {/* <Box sx={{ height: "50%", overflow: "hidden" }}> */}
-          <BarChart skiTargetID={skiTargetID} skiData={snowData} />
+          <BarChart
+            skiTargetID={skiTargetID}
+            skiData={snowData}
+            skiColors={skiColors}
+          />
           {/* </Box> */}
         </Grid>
         {/* <BumpChart
@@ -95,6 +100,7 @@ function App() {
             data={snowData}
             skiTargetID={skiTargetID}
             setSkiTargetID={setSkiTargetID}
+            setSkiColors={setSkiColors}
           ></NewBumpChart>
         </Grid>
       </Grid>
