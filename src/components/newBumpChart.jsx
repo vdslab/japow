@@ -95,19 +95,25 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     const scoreSortedData = data;
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
-    let top50;
-    const a = 50;
-    console.log();
-    //console.log(scoreSortedData[0].monthValues.length);
+
     if (scoreSortedData[0].monthValues.length === 0) {
       return;
     }
-    if (scoreSortedData[0].monthValues.length > 50) {
-      top50 = avgRank(scoreSortedData).slice(0, 50);
-    } else {
-      top50 = avgRank(scoreSortedData);
-    }
-    const top50Names = top50.map((item) => item.name);
+
+    const top50 = avgRank(scoreSortedData);
+    const skiTargetData = top50.filter((item) =>
+      skiTargetID.includes(item.skiID)
+    );
+    const remainingData = top50.filter(
+      (item) => !skiTargetID.includes(item.skiID)
+    );
+
+    const displayedData = [
+      ...skiTargetData,
+      ...remainingData.slice(0, 50 - skiTargetData.length),
+    ];
+
+    const top50Names = displayedData.map((item) => item.name);
     const transformedData = getSkiResortData(
       transformData(scoreSortedData),
       top50Names
@@ -168,23 +174,18 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       Object.values(transformedData).flat(),
       (d) => d.relativeRank
     );
-    // Y軸の目盛を1, 5, 10, 15, 20...のように設定
     const yTicks = [];
-    const step = 5; // 一度に増加する目盛の間隔
+    const step = 5;
 
-    // 最初に1を追加
     if (maxRank >= 1) yTicks.push(1);
 
-    // 目盛を5単位で追加
     for (let i = step; i <= maxRank; i += step) {
       yTicks.push(i);
     }
 
-    // 最大値を最後に追加
     if (yTicks[yTicks.length - 1] !== maxRank) {
       yTicks.push(maxRank);
     }
-    //console.log(yTicks);
 
     svg
       .append("g")
@@ -252,15 +253,18 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
         .on("mouseenter", tip.show)
         .on("mouseout", tip.hide)
         .on("click", () => {
-          console.log(transformedData[name]);
-          const skiID = transformedData[name][0].skiID;
           tip.hide();
+          const skiID = transformedData[name][0].skiID;
           const updatedSkiTargetID = isSelected
             ? skiTargetID.filter((id) => id !== skiID)
             : [...(skiTargetID || []), skiID];
           setSkiTargetID(updatedSkiTargetID);
         });
     });
+
+    return () => {
+      tip.hide(); // Clean up the tooltip when data changes
+    };
   }, [data, skiTargetID]);
 
   if (data[0].monthValues.length === 0) {
