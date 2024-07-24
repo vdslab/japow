@@ -157,6 +157,15 @@ const bilinearInt = (skiPoint) => {
         };
         dataResult.push(result);
       }
+    } else {
+      for (let i = 0; i < p0.values.length; i++) {
+        const f0 = p0.values[i].data_value;
+        const result = {
+          name: p0.values[i].name,
+          data_value: f0,
+        };
+        dataResult.push(result);
+      }
     }
 
     return {
@@ -267,7 +276,6 @@ files.forEach((file) => {
   // const dataWithFourPoints = mergedData.filter(
   //   (item) => item.surroundingPoints.length === 4
   // );
-  console.dir(mergedData.filter((item) => item.surroundingPoints.length === 2));
   const outputFileName = `${fileNamePrefix}_${path.parse(file).name}`;
   makeJsonFile(mergedData, outputFileName);
 });
