@@ -250,10 +250,10 @@ files.forEach((file) => {
   const xSorted = grid.slice().sort((a, b) => a.latitude - b.latitude);
   const ySorted = grid.slice().sort((a, b) => a.longitude - b.longitude);
   const mergedData = dataMerge(grid, xSorted, ySorted);
-  const dataWithFourPoints = mergedData.filter(
-    (item) => item.surroundingPoints.length === 4
-  );
-  console.log(dataWithFourPoints);
+  // const dataWithFourPoints = mergedData.filter(
+  //   (item) => item.surroundingPoints.length === 4
+  // );
+
   const outputFileName = `${fileNamePrefix}_${path.parse(file).name}`;
-  makeJsonFile(dataWithFourPoints, outputFileName);
+  makeJsonFile(mergedData, outputFileName);
 });
