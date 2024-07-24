@@ -41810,7 +41810,52 @@
         ]
       }
     ],
-    "values": []
+    "values": [
+      {
+        "name": "snowLayers",
+        "data_value": 0.20000000000004547
+      },
+      {
+        "name": "iceT",
+        "data_value": 267.73437499999994
+      },
+      {
+        "name": "snowMassDensity",
+        "data_value": 120.48124999999999
+      },
+      {
+        "name": "waterContent",
+        "data_value": 0
+      },
+      {
+        "name": "iceContent",
+        "data_value": 6.264648437500005
+      },
+      {
+        "name": "airT",
+        "data_value": 266.36238708496086
+      },
+      {
+        "name": "dewPointDiff",
+        "data_value": 1.583398437499986
+      },
+      {
+        "name": "specificHumidity",
+        "data_value": 0.001975721310736835
+      },
+      {
+        "name": "relativeHumidity",
+        "data_value": 87.17464127540599
+      },
+      {
+        "name": "windU",
+        "data_value": 1.8808078765868868
+      },
+      {
+        "name": "windV",
+        "data_value": -0.16593589782714413
+      }
+    ]
   },
   {
     "name": "士別市 日向スキー場",
@@ -48585,7 +48630,52 @@
         ]
       }
     ],
-    "values": []
+    "values": [
+      {
+        "name": "snowLayers",
+        "data_value": -2
+      },
+      {
+        "name": "iceT",
+        "data_value": 0
+      },
+      {
+        "name": "snowMassDensity",
+        "data_value": 0
+      },
+      {
+        "name": "waterContent",
+        "data_value": 0
+      },
+      {
+        "name": "iceContent",
+        "data_value": 0
+      },
+      {
+        "name": "airT",
+        "data_value": 268.74266052246094
+      },
+      {
+        "name": "dewPointDiff",
+        "data_value": 6.4140625
+      },
+      {
+        "name": "specificHumidity",
+        "data_value": 0.0015340270510932896
+      },
+      {
+        "name": "relativeHumidity",
+        "data_value": 57.152570962905884
+      },
+      {
+        "name": "windU",
+        "data_value": 2.373483657836914
+      },
+      {
+        "name": "windV",
+        "data_value": -2.8840999603271484
+      }
+    ]
   },
   {
     "name": "倶知安町旭ヶ丘スキー場",
@@ -49510,7 +49600,52 @@
         ]
       }
     ],
-    "values": []
+    "values": [
+      {
+        "name": "snowLayers",
+        "data_value": 0.20000000000004547
+      },
+      {
+        "name": "iceT",
+        "data_value": 268.7398437499999
+      },
+      {
+        "name": "snowMassDensity",
+        "data_value": 123.13906249999991
+      },
+      {
+        "name": "waterContent",
+        "data_value": 0
+      },
+      {
+        "name": "iceContent",
+        "data_value": 11.286718749999878
+      },
+      {
+        "name": "airT",
+        "data_value": 265.3481292724609
+      },
+      {
+        "name": "dewPointDiff",
+        "data_value": 1.4128906249999904
+      },
+      {
+        "name": "specificHumidity",
+        "data_value": 0.0018285216799995342
+      },
+      {
+        "name": "relativeHumidity",
+        "data_value": 88.24339127540595
+      },
+      {
+        "name": "windU",
+        "data_value": 0.57123756408692
+      },
+      {
+        "name": "windV",
+        "data_value": -0.8092952728271279
+      }
+    ]
   },
   {
     "name": "ウィンザースノービレッジ",
@@ -83457,7 +83592,52 @@
         ]
       }
     ],
-    "values": []
+    "values": [
+      {
+        "name": "snowLayers",
+        "data_value": 2
+      },
+      {
+        "name": "iceT",
+        "data_value": 268.19218750000005
+      },
+      {
+        "name": "snowMassDensity",
+        "data_value": 126.00312500000017
+      },
+      {
+        "name": "waterContent",
+        "data_value": 0
+      },
+      {
+        "name": "iceContent",
+        "data_value": 9.450000000000012
+      },
+      {
+        "name": "airT",
+        "data_value": 267.46648864746095
+      },
+      {
+        "name": "dewPointDiff",
+        "data_value": 1.6144531250000116
+      },
+      {
+        "name": "specificHumidity",
+        "data_value": 0.002160018872382357
+      },
+      {
+        "name": "relativeHumidity",
+        "data_value": 87.3303053379058
+      },
+      {
+        "name": "windU",
+        "data_value": -0.6274929046630913
+      },
+      {
+        "name": "windV",
+        "data_value": -1.0299983978271523
+      }
+    ]
   },
   {
     "name": "メムロスキー場",
