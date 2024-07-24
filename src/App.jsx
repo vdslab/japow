@@ -33,8 +33,16 @@ function App() {
     let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
     if (filter.pref !== "") {
-      snowFilteredData = snowFilterBypref(snowFilteredData, filter.pref);
-      mapFilteredData = mapFilterBypref(mapFilteredData, filter.pref);
+      snowFilteredData = snowFilterBypref(
+        snowFilteredData,
+        filter.pref,
+        skiTargetID
+      );
+      mapFilteredData = mapFilterBypref(
+        mapFilteredData,
+        filter.pref,
+        skiTargetID
+      );
     }
 
     if (filter.period !== "") {
@@ -44,7 +52,7 @@ function App() {
 
     setSnowData(snowFilteredData);
     setMapData(mapFilteredData);
-  }, [filter]);
+  }, [filter, skiTargetID]);
   return (
     <>
       <Box
