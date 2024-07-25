@@ -23,7 +23,6 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
     setSkiTargetID(searchInput);
   };
 
-  console.log(skiTargetID);
   return (
     <div>
       <Autocomplete

@@ -100,6 +100,7 @@ function App() {
             data={snowData}
             skiTargetID={skiTargetID}
             setSkiTargetID={setSkiTargetID}
+            skiColors={skiColors}
             setSkiColors={setSkiColors}
           ></NewBumpChart>
         </Grid>
