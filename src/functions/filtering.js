@@ -1,16 +1,17 @@
 //都道府県で雪質データのフィルタリング
-export const snowFilterBypref = (data, slectedPref) => {
+export const snowFilterBypref = (data, slectedPref, skiTargetID) => {
   if (slectedPref === "") {
     return data;
   } else {
     return data.map((month) => {
       month.monthValues = month.monthValues.filter(
-        ({ region }) => region === slectedPref
+        ({ region, skiID }) =>
+          region === slectedPref || skiTargetID.includes(skiID)
       );
       month.weeks = month.weeks.map((week) => {
-        week.weekValues = week.weekValues.filter(
-          ({ region }) => region === slectedPref
-        );
+        week.weekValues = week.weekValues.filter(({ region, skiID }) => {
+          return region === slectedPref || skiTargetID.includes(skiID);
+        });
         return week;
       });
       return month;
@@ -19,11 +20,14 @@ export const snowFilterBypref = (data, slectedPref) => {
 };
 
 //都道府県で地図描画用データのフィルタリング
-export const mapFilterBypref = (data, slectedPref) => {
+export const mapFilterBypref = (data, slectedPref, skiTargetID) => {
   if (slectedPref === "") {
     return data;
   } else {
-    return data.filter(({ region }) => region === slectedPref);
+    return data.filter(
+      ({ region, skiID }) =>
+        region === slectedPref || skiTargetID.includes(skiID)
+    );
   }
 };
 

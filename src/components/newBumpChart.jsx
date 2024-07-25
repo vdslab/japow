@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 import d3Tip from "d3-tip";
-import { avgRank } from "./AverageRank";
+import { avgRank } from "../functions/AverageRank";
 
-const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
+const NewBumpChart = ({ data, skiTargetID, setSkiTargetID, setSkiColors }) => {
   const transformData = (data) => {
     const transformed = [];
     data.forEach((month) => {
@@ -71,12 +71,10 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     .style("border-radius", "3px")
     .offset((event) => {
       const { clientX, clientY, view } = event;
-
       const { innerWidth, innerHeight } = view;
 
       const tipWidth = 200;
       const tipHeight = 100;
-
       let offsetX = 10;
       let offsetY = -10;
 
@@ -95,19 +93,25 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
     const scoreSortedData = data;
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
-    let top50;
-    const a = 50;
-    console.log();
-    //console.log(scoreSortedData[0].monthValues.length);
+
     if (scoreSortedData[0].monthValues.length === 0) {
       return;
     }
-    if (scoreSortedData[0].monthValues.length > 50) {
-      top50 = avgRank(scoreSortedData).slice(0, 50);
-    } else {
-      top50 = avgRank(scoreSortedData);
-    }
-    const top50Names = top50.map((item) => item.name);
+
+    const top50 = avgRank(scoreSortedData);
+    const skiTargetData = top50.filter((item) =>
+      skiTargetID.includes(item.skiID)
+    );
+    const remainingData = top50.filter(
+      (item) => !skiTargetID.includes(item.skiID)
+    );
+
+    const displayedData = [
+      ...skiTargetData,
+      ...remainingData.slice(0, 50 - skiTargetData.length),
+    ];
+
+    const top50Names = displayedData.map((item) => item.name);
     const transformedData = getSkiResortData(
       transformData(scoreSortedData),
       top50Names
@@ -133,7 +137,13 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       .range([margin.top, height - margin.bottom]);
 
     const color = d3.scaleOrdinal(d3.schemePaired).domain(top50Names);
-
+    // バンプチャートの色をskiTargetIDと一緒に渡す
+    const skiColors = top50Names.reduce((acc, name) => {
+      const skiName = transformedData[name][0].name;
+      acc[skiName] = color(name);
+      return acc;
+    }, {});
+    setSkiColors(skiColors);
     const line = d3
       .line()
       .curve(d3.curveBumpX)
@@ -168,27 +178,29 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
       Object.values(transformedData).flat(),
       (d) => d.relativeRank
     );
-    // Y軸の目盛を1, 5, 10, 15, 20...のように設定
     const yTicks = [];
-    const step = 5; // 一度に増加する目盛の間隔
+    const step = 5;
 
-    // 最初に1を追加
     if (maxRank >= 1) yTicks.push(1);
 
-    // 目盛を5単位で追加
     for (let i = step; i <= maxRank; i += step) {
       yTicks.push(i);
     }
 
-    // 最大値を最後に追加
     if (yTicks[yTicks.length - 1] !== maxRank) {
       yTicks.push(maxRank);
     }
-    //console.log(yTicks);
+
     svg
       .append("g")
       .attr("transform", `translate(${margin.left},0)`)
-      .call(d3.axisLeft(y).tickValues(yTicks).tickFormat(d3.format("d")));
+      .call(
+        d3
+          .axisLeft(y)
+          .tickSizeOuter(0)
+          .tickValues(yTicks)
+          .tickFormat(d3.format("d"))
+      );
 
     svg
       .append("text")
@@ -245,15 +257,18 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID }) => {
         .on("mouseenter", tip.show)
         .on("mouseout", tip.hide)
         .on("click", () => {
-          console.log(transformedData[name]);
-          const skiID = transformedData[name][0].skiID;
           tip.hide();
+          const skiID = transformedData[name][0].skiID;
           const updatedSkiTargetID = isSelected
             ? skiTargetID.filter((id) => id !== skiID)
             : [...(skiTargetID || []), skiID];
           setSkiTargetID(updatedSkiTargetID);
         });
     });
+
+    return () => {
+      tip.hide();
+    };
   }, [data, skiTargetID]);
 
   if (data[0].monthValues.length === 0) {

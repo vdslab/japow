@@ -133,16 +133,39 @@ const bilinearInt = (skiPoint) => {
     };
   } else if (skiPoint.surroundingPoints.length === 2) {
     const [p0, p1] = skiPoint.surroundingPoints;
-    for (let i = 0; i < p0.values.length; i++) {
-      const f0 = p0.values[i].data_value;
-      const f1 = p1.values[i].data_value;
-      const result = {
-        name: p1.values[i].name,
-        data_value:
-          (f0 * (p1.latitude - x) + f1 * (x - p0.latitude)) /
-          (p1.latitude - p0.latitude),
-      };
-      dataResult.push(result);
+    if (p0.longitude === p1.longitude) {
+      for (let i = 0; i < p0.values.length; i++) {
+        const f0 = p0.values[i].data_value;
+        const f1 = p1.values[i].data_value;
+        const result = {
+          name: p1.values[i].name,
+          data_value:
+            (f0 * (p1.latitude - x) + f1 * (x - p0.latitude)) /
+            (p1.latitude - p0.latitude),
+        };
+        dataResult.push(result);
+      }
+    } else if (p0.latitude === p1.latitude) {
+      for (let i = 0; i < p0.values.length; i++) {
+        const f0 = p0.values[i].data_value;
+        const f1 = p1.values[i].data_value;
+        const result = {
+          name: p1.values[i].name,
+          data_value:
+            (f0 * (p1.longitude - y) + f1 * (y - p0.longitude)) /
+            (p1.longitude - p0.longitude),
+        };
+        dataResult.push(result);
+      }
+    } else {
+      for (let i = 0; i < p0.values.length; i++) {
+        const f0 = p0.values[i].data_value;
+        const result = {
+          name: p0.values[i].name,
+          data_value: f0,
+        };
+        dataResult.push(result);
+      }
     }
 
     return {
@@ -206,7 +229,7 @@ const FindNearPoint = (skiPoint, nearest, xSorted) => {
 
 const makeJsonFile = (data, outputFileName) => {
   const jsonData = data;
-  const outputFolderPath = "../dataWithFourPoints";
+  const outputFolderPath = "../data";
   const fileNameWithJson = `${outputFileName}.json`;
   const outputPath = path.join(outputFolderPath, fileNameWithJson);
   const blobData = JSON.stringify(jsonData, null, 2);
@@ -250,10 +273,9 @@ files.forEach((file) => {
   const xSorted = grid.slice().sort((a, b) => a.latitude - b.latitude);
   const ySorted = grid.slice().sort((a, b) => a.longitude - b.longitude);
   const mergedData = dataMerge(grid, xSorted, ySorted);
-  const dataWithFourPoints = mergedData.filter(
-    (item) => item.surroundingPoints.length === 4
-  );
-  console.log(dataWithFourPoints);
+  // const dataWithFourPoints = mergedData.filter(
+  //   (item) => item.surroundingPoints.length === 4
+  // );
   const outputFileName = `${fileNamePrefix}_${path.parse(file).name}`;
-  //makeJsonFile(dataWithFourPoints, outputFileName);
+  makeJsonFile(mergedData, outputFileName);
 });

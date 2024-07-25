@@ -1,9 +1,52 @@
 .leaflet-container {
-    width: 100%;
-    height: 100%;
-    /* margin: 10px; */
-  }
+  width: 100%;
+  height: 100%;
+  background-color: rgb(147, 183, 219)
+  /* margin: 10px; */
+}
 
 .leaflet-control-attribution {
-    display: none
+  display: none
+}
+
+.leaflet-popup-content-wrapper {
+  z-index: 1000;
+}
+
+
+.custom-tooltip {
+  /* position: relative; */
+  /* background-color: white; */
+  /* border: 1px solid black; */
+  /* padding: 10px; */
+  /* border-radius: 5px; */
+  pointer-events: auto;
+  background: white;
+  color: #333;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+  /* opacity: 1.0 !important; */
+  padding: 12px;
+  text-align: left;
+  border-radius: 12px;
+  /* ツールチップ内の要素にクリックイベントを許可 */
+}
+
+
+.custom-tooltip div {
+  padding-top: 3px;
+}
+
+.close-button {
+  position: absolute;
+  top: -3px;
+  right: -1px;
+  background: none;
+  border: none;
+  color: #757575;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+  /* ボタンが他の要素より前面に表示されるように */
+  pointer-events: auto;
+  /* ボタンにクリックイベントを許可 */
 }

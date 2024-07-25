@@ -11,18 +11,19 @@ import {
   mapFilterBypref,
   snowFilterBypref,
   snowFilterByPeriod,
-} from "./filtering";
-import Search from "./Search";
-import { sort } from "./SortData.js";
-import { rank } from "./MakeRank.js";
+} from "./functions/filtering";
+import Search from "./components/Search";
+import { sort } from "./functions/SortData";
+import { rank } from "./functions/MakeRank";
 
 function App() {
-  const [skiTargetID, setSkiTargetID] = useState(null);
+  const [skiTargetID, setSkiTargetID] = useState([]);
   //各日付の雪質データ
   const [snowData, setSnowData] = useState([...snowQualityMap]);
   // マップに描画するデータ
   const [mapData, setMapData] = useState([...sukijouZahyou]);
   const [filter, setFilter] = useState({ pref: "", period: "", sq: "" });
+  const [skiColors, setSkiColors] = useState({});
 
   useEffect(() => {
     setSnowData(rank(sort(snowData)));
@@ -33,8 +34,16 @@ function App() {
     let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
     if (filter.pref !== "") {
-      snowFilteredData = snowFilterBypref(snowFilteredData, filter.pref);
-      mapFilteredData = mapFilterBypref(mapFilteredData, filter.pref);
+      snowFilteredData = snowFilterBypref(
+        snowFilteredData,
+        filter.pref,
+        skiTargetID
+      );
+      mapFilteredData = mapFilterBypref(
+        mapFilteredData,
+        filter.pref,
+        skiTargetID
+      );
     }
 
     if (filter.period !== "") {
@@ -44,7 +53,7 @@ function App() {
 
     setSnowData(snowFilteredData);
     setMapData(mapFilteredData);
-  }, [filter]);
+  }, [filter, skiTargetID]);
   return (
     <>
       <Box
@@ -73,7 +82,11 @@ function App() {
             />
           </Box>
           {/* <Box sx={{ height: "50%", overflow: "hidden" }}> */}
-          <BarChart skiTargetID={skiTargetID} skiData={snowData} />
+          <BarChart
+            skiTargetID={skiTargetID}
+            skiData={snowData}
+            skiColors={skiColors}
+          />
           {/* </Box> */}
         </Grid>
         {/* <BumpChart
@@ -87,6 +100,7 @@ function App() {
             data={snowData}
             skiTargetID={skiTargetID}
             setSkiTargetID={setSkiTargetID}
+            setSkiColors={setSkiColors}
           ></NewBumpChart>
         </Grid>
       </Grid>
