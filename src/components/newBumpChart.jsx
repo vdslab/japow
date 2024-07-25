@@ -98,20 +98,48 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID, setSkiColors }) => {
       return;
     }
 
+    const skiTargetName = [];
+    scoreSortedData[0].weeks[0].weekValues.forEach((item) => {
+      if (skiTargetID.includes(item.skiID)) {
+        skiTargetName.push(item.name);
+      }
+    });
+
     const top50 = avgRank(scoreSortedData);
     const skiTargetData = top50.filter((item) =>
-      skiTargetID.includes(item.skiID)
-    );
-    const remainingData = top50.filter(
-      (item) => !skiTargetID.includes(item.skiID)
+      skiTargetName.includes(item.name)
     );
 
-    const displayedData = [
-      ...skiTargetData,
-      ...remainingData.slice(0, 50 - skiTargetData.length),
-    ];
+    let displayedData = [...skiTargetData];
+    if (skiTargetData.length < 50) {
+      const remainingData = top50.filter(
+        (item) => !skiTargetName.includes(item.name)
+      );
+      displayedData = [
+        ...displayedData,
+        ...remainingData.slice(0, 50 - skiTargetData.length),
+      ];
+    }
 
-    const top50Names = displayedData.map((item) => item.name);
+    skiTargetID.forEach((id) => {
+      if (!displayedData.find((item) => item.skiID === id)) {
+        const additionalItem = top50.find((item) => item.skiID === id);
+        if (additionalItem) {
+          displayedData.push(additionalItem);
+          displayedData.sort((a, b) => a.avgRank - b.avgRank);
+          if (displayedData.length > 50) {
+            displayedData.pop();
+          }
+        }
+      }
+    });
+
+    const sortedDisplayData = displayedData.sort(
+      (a, b) => a.avgRank - b.avgRank
+    );
+
+    const top50Names = sortedDisplayData.map((item) => item.name);
+
     const transformedData = getSkiResortData(
       transformData(scoreSortedData),
       top50Names
@@ -137,13 +165,14 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID, setSkiColors }) => {
       .range([margin.top, height - margin.bottom]);
 
     const color = d3.scaleOrdinal(d3.schemePaired).domain(top50Names);
-    // バンプチャートの色をskiTargetIDと一緒に渡す
+
     const skiColors = top50Names.reduce((acc, name) => {
       const skiName = transformedData[name][0].name;
       acc[skiName] = color(name);
       return acc;
     }, {});
     setSkiColors(skiColors);
+
     const line = d3
       .line()
       .curve(d3.curveBumpX)
