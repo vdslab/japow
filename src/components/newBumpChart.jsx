@@ -2,8 +2,15 @@ import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 import d3Tip from "d3-tip";
 import { avgRank } from "../functions/AverageRank";
+import { sort } from "../functions/SortData";
 
-const NewBumpChart = ({ data, skiTargetID, setSkiTargetID, setSkiColors }) => {
+const NewBumpChart = ({
+  data,
+  skiTargetID,
+  setSkiTargetID,
+  skiColors,
+  setSkiColors,
+}) => {
   const transformData = (data) => {
     const transformed = [];
     data.forEach((month) => {
@@ -166,12 +173,16 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID, setSkiColors }) => {
 
     const color = d3.scaleOrdinal(d3.schemePaired).domain(top50Names);
 
-    const skiColors = top50Names.reduce((acc, name) => {
+    const updatedSkiColors = { ...skiColors };
+
+    top50Names.forEach((name) => {
       const skiName = transformedData[name][0].name;
-      acc[skiName] = color(name);
-      return acc;
-    }, {});
-    setSkiColors(skiColors);
+      if (!updatedSkiColors[skiName]) {
+        updatedSkiColors[skiName] = color(name);
+      }
+    });
+
+    setSkiColors(updatedSkiColors);
 
     const line = d3
       .line()
@@ -249,7 +260,7 @@ const NewBumpChart = ({ data, skiTargetID, setSkiTargetID, setSkiColors }) => {
       .text("Rank");
 
     Object.keys(transformedData).forEach((name, skiID) => {
-      const colorValue = color(name);
+      const colorValue = updatedSkiColors[name];
       const isSelected = skiTargetID
         ? skiTargetID.includes(transformedData[name][0].skiID)
         : false;
