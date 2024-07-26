@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import options from "../assets/ski_resorts_japan.json";
-import { InputAdornment } from "@mui/material";
-import Box from "@mui/material/Box";
+import { InputAdornment, IconButton, Box } from "@mui/material";
 
 const Search = ({ skiTargetID, setSkiTargetID }) => {
   const [filteredOptions, setFilteredOptions] = useState(options);
@@ -53,7 +51,11 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
               endAdornment: (
                 <>
                   {params.InputProps.endAdornment}
-                  <InputAdornment position="end"></InputAdornment>
+                  <InputAdornment position="end">
+                    <IconButton onClick={handleSearchClick}>
+                      <SearchIcon />
+                    </IconButton>
+                  </InputAdornment>
                 </>
               ),
               disableUnderline: true,
@@ -65,6 +67,7 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
                 maxHeight: "100px",
                 overflowY: "auto",
                 borderBottom: "1px solid rgba(0, 0, 0, 0.42)",
+                paddingRight: "32px", // Adjust padding to prevent horizontal scroll
               },
               "& .MuiAutocomplete-input": {
                 minWidth: "0",

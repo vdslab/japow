@@ -154,7 +154,7 @@ const NewBumpChart = ({
 
     const margin = { top: 20, right: 30, bottom: 100, left: 50 };
     const width = 900 - margin.right - margin.left;
-    const height = 500 - margin.top - margin.bottom;
+    const height = 700 - margin.top - margin.bottom;
     svg.attr("viewBox", [0, 0, width, height]);
 
     const x = d3
@@ -298,7 +298,7 @@ const NewBumpChart = ({
         .append("circle")
         .attr("cx", (d) => x(d.week))
         .attr("cy", (d) => y(d.relativeRank))
-        .attr("r", 3)
+        .attr("r", 2)
         .attr("fill", colorValue)
         .style("opacity", isSelected ? 0.8 : 0.3)
         .on("mouseenter", tip.show)
@@ -324,7 +324,7 @@ const NewBumpChart = ({
 
   return (
     <div style={{ overflow: "auto" }}>
-      <svg ref={svgRef} width={900} height={500}></svg>
+      <svg ref={svgRef} width={900} height={800}></svg>
     </div>
   );
 };
