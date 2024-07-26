@@ -72,7 +72,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
     return null;
   };
 
-  const legendFontSize = Math.max(10, 20 - skiTargetID.length); // 選択数に応じてフォントサイズを調整
+  const legendFontSize = Math.max(10, 15 - skiTargetID.length); // 選択数に応じてフォントサイズを調整
 
   if (skiTargetID) {
     const skiTargetNames = [];
@@ -106,7 +106,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
           />
           <YAxis />
           <Tooltip content={renderCustomTooltip} />
-          <Legend wrapperStyle={{ fontSize: `${legendFontSize}px` }} />
+          <Legend wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }} />
           <ReferenceLine
             y={90.80954978411411}
             label={{ value: "Powder", fill: "white" }}

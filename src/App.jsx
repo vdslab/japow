@@ -6,7 +6,8 @@ import Map from "./components/Map";
 import BarChart from "./components/BarChart";
 import snowQualityData from "./assets/snowQualityData.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
-import { Box, Stack, Grid, AppBar, Toolbar, Typography } from "@mui/material";
+import { Box, Stack, Grid, AppBar, Toolbar, Typography, IconButton } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
 import {
   mapFilterBypref,
   snowFilterBypref,
@@ -17,6 +18,7 @@ import Search from "./components/Search";
 import { sort } from "./functions/SortData";
 import { rank } from "./functions/MakeRank";
 import LineChart from "./components/LineChart";
+import Header from "./components/Header.jsx"
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState([]);
@@ -61,49 +63,17 @@ function App() {
   return (
     <>
       <Box sx={{ width: "100vw", height: "100vh" }}>
-        <Box border={2}>
-          <AppBar
-            position="static"
-            color="inherit"
-            sx={{ height: "15vh" }}
-            stroke="black"
-          >
-            <Toolbar>
-              <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
-                Japow
-              </Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  p: 0,
-                  mx: 2,
-                  my: 1,
-                  height: "100%",
 
-                  bgcolor: "background.paper",
-                  borderRadius: 1,
-                }}
-              >
-                <Filter filter={filter} setFilter={setFilter}></Filter>
-                <Search
-                  skiTargetID={skiTargetID}
-                  setSkiTargetID={setSkiTargetID}
-                ></Search>
-              </Box>
-            </Toolbar>
-          </AppBar>
+        <Header />
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Filter filter={filter} setFilter={setFilter}></Filter>
+          <Search skiTargetID={skiTargetID} setSkiTargetID={setSkiTargetID}></Search>
         </Box>
-
-        <Grid container direction="row" spacing={1} sx={{ height: "100%" }}>
+        <Grid container direction="row" spacing={1} xs={12} sx={{ width: "100vw", height: "90vh", m: 0, backgroundColor: "#008000" }}>
           <Grid item xs={6}>
-            {/* <Box sx={{ height: "100%" }}> */}
-            <Grid
-              container
-              direction="column"
-              spacing={1}
-              sx={{ height: "100%" }}
-            >
+            <Grid container direction="column" spacing={1} sx={{ height: "100%", p: 0 }}>
+              {/* <Grid item xs={1} sx={{ backgroundColor: "#FF32FF", p: 0 }}> */}
+              {/* </Grid> */}
               <Grid item xs={6} sx={{ height: "50%" }}>
                 <Box sx={{ height: "100%", overflow: "hidden", m: 2 }}>
                   <Map
@@ -124,7 +94,6 @@ function App() {
                 </Box>
               </Grid>
             </Grid>
-            {/* </Box> */}
           </Grid>
 
           <Grid item xs={6}>

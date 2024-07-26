@@ -36,7 +36,7 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
   };
 
   return (
-    <Box sx={{ width: 500 }}>
+    <Box sx={{ width: 500, height: "100%" }}>
       <Autocomplete
         multiple
         options={filteredOptions}
@@ -66,7 +66,7 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
               "& .MuiAutocomplete-inputRoot": {
                 display: "flex",
                 flexWrap: "wrap",
-                maxHeight: "100px",
+                maxHeight: "8vh",
                 overflowY: "auto",
                 overflowX: "hidden",
                 whiteSpace: "nowrap",
