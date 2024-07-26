@@ -98,18 +98,21 @@ const NewBumpChart = ({
       return [offsetY, offsetX];
     });
 
+  const [width, setWidth] = useState();
+  const [height, setHeight] = useState();
   useEffect(() => {
+    setWidth(document.getElementById("aiueo").clientWidth);
+    setHeight(document.getElementById("aiueo").clientHeight);
+  }, []);
+  useEffect(() => {
+    const svgWidth = width * 1.2; // グラフを横長にするために幅を2倍に設定
+    const svgHeight = height * 0.7; // 高さを60%に設定
+
     const scoreSortedData = data;
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
-    // svg
-    //   .append("rect")
-    //   .attr("width", "100%")
-    //   .attr("height", "100%")
-    //   .attr("fill", "lightgray"); //背景色
-
-    if (scoreSortedData[0].weeks[0].weekValues.length.length === 0) {
+    if (scoreSortedData[0].weeks[0].weekValues.length === 0) {
       return;
     }
 
@@ -160,15 +163,19 @@ const NewBumpChart = ({
       top50Names
     );
 
-    const margin = { top: 20, right: 30, bottom: 100, left: 50 };
-    const width = 900 - margin.right - margin.left;
-    const height = 700 - margin.top - margin.bottom;
-    svg.attr("viewBox", [0, 0, width, height]);
+    const margin = { top: 70, right: -20, bottom: 60, left: -100 }; // マージンを調整
+
+    svg.attr("viewBox", [
+      0,
+      0,
+      svgWidth + margin.right + margin.left,
+      svgHeight + margin.top + margin.bottom,
+    ]);
 
     const x = d3
       .scalePoint()
       .domain(transformedData[top50Names[0]].map((d) => d.week))
-      .range([margin.left, width - margin.right]);
+      .range([margin.left, svgWidth - margin.right]);
 
     const y = d3
       .scaleLinear()
@@ -177,7 +184,7 @@ const NewBumpChart = ({
         d3.max(Object.values(transformedData).flat(), (d) => d.relativeRank),
       ])
       .nice()
-      .range([margin.top, height - margin.bottom]);
+      .range([margin.top, svgHeight - margin.bottom]);
 
     const color = d3.scaleOrdinal(d3.schemePaired).domain(top50Names);
 
@@ -201,11 +208,11 @@ const NewBumpChart = ({
     svg
       .append("g")
       .attr("class", "grid")
-      .attr("transform", `translate(0,${height - margin.bottom + 10})`)
+      .attr("transform", `translate(0,${svgHeight - margin.bottom + 10})`)
       .call(
         d3
           .axisBottom(x)
-          .tickSize(-height + margin.top + margin.bottom - 15)
+          .tickSize(-svgHeight + margin.top + margin.bottom - 15)
           .tickFormat("")
       )
       .selectAll("line")
@@ -216,7 +223,7 @@ const NewBumpChart = ({
 
     svg
       .append("g")
-      .attr("transform", `translate(0,${height - margin.bottom + 10})`)
+      .attr("transform", `translate(0,${svgHeight - margin.bottom + 10})`)
       .call(d3.axisBottom(x).tickSizeOuter(0))
       .selectAll("text")
       .attr("transform", "rotate(-45)")
@@ -254,23 +261,23 @@ const NewBumpChart = ({
       .append("text")
       .attr("class", "x label")
       .attr("text-anchor", "middle")
-      .attr("x", width / 2)
-      .attr("y", height)
+      .attr("x", svgWidth / 2)
+      .attr("y", svgHeight + margin.bottom)
       .text("Week");
     svg
       .append("text")
       .attr("class", "y label")
       .attr("text-anchor", "end")
-      .attr("x", -height / 2 + 70)
-      .attr("y", 1)
+      .attr("x", -svgHeight / 2 + margin.bottom / 2)
+      .attr("y", margin.left * 1.5)
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
       .text("Rank");
     svg
       .append("text")
       .attr("text-anchor", "middle")
-      .attr("x", width / 2)
-      .attr("y", -20)
+      .attr("x", svgWidth / 2)
+      .attr("y", margin.top / 2)
       .style("font-size", "20px")
       .text("平均雪質ランキング");
 
@@ -331,8 +338,8 @@ const NewBumpChart = ({
   }
 
   return (
-    <div style={{ overflow: "auto" }}>
-      <svg ref={svgRef} width={900} height={800}></svg>
+    <div style={{ width: "100%", overflowX: "scroll" }}>
+      <svg ref={svgRef} width={width * 1.5} height={height * 0.8}></svg>
     </div>
   );
 };
