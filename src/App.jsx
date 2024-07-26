@@ -4,14 +4,14 @@ import NewBumpChart from "./components/newBumpChart";
 import Filter from "./components/Filter";
 import Map from "./components/Map";
 import BarChart from "./components/BarChart";
-import snowQualityData from "./assets/snowQualityData.json"
+import snowQualityData from "./assets/snowQualityData.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
 import { Box, Stack, Grid, AppBar, Toolbar, Typography } from "@mui/material";
 import {
   mapFilterBypref,
   snowFilterBypref,
   snowFilterByPeriod,
-  snowFilterBySeason
+  snowFilterBySeason,
 } from "./functions/filtering";
 import Search from "./components/Search";
 import { sort } from "./functions/SortData";
@@ -24,12 +24,18 @@ function App() {
   const [snowData, setSnowData] = useState([...snowQualityData[0].months]);
   // マップに描画するデータ
   const [mapData, setMapData] = useState([...sukijouZahyou]);
-  const [filter, setFilter] = useState({ pref: "", season: "2023/24", period: "" });
+  const [filter, setFilter] = useState({
+    pref: "",
+    season: "2023/24",
+    period: "",
+  });
   const [skiColors, setSkiColors] = useState({});
 
   useEffect(() => {
-    let snowFilteredData = JSON.parse(JSON.stringify(snowQualityData))
-    snowFilteredData = rank(sort(snowFilterBySeason(snowFilteredData, filter.season)));
+    let snowFilteredData = JSON.parse(JSON.stringify(snowQualityData));
+    snowFilteredData = rank(
+      sort(snowFilterBySeason(snowFilteredData, filter.season))
+    );
     let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
     if (filter.pref !== "") {
@@ -51,11 +57,17 @@ function App() {
     setMapData(mapFilteredData);
     setSnowData(snowFilteredData);
   }, [filter, skiTargetID]);
+
   return (
     <>
       <Box sx={{ width: "100vw", height: "100vh" }}>
         <Box border={2}>
-          <AppBar position="static" color="inherit" sx={{ height: "15vh" }} stroke="black">
+          <AppBar
+            position="static"
+            color="inherit"
+            sx={{ height: "15vh" }}
+            stroke="black"
+          >
             <Toolbar>
               <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
                 Japow
@@ -84,9 +96,14 @@ function App() {
         </Box>
 
         <Grid container direction="row" spacing={1} sx={{ height: "90%" }}>
-          <Grid item xs={6} >
+          <Grid item xs={6}>
             {/* <Box sx={{ height: "100%" }}> */}
-            <Grid container direction="column" spacing={1} sx={{ height: "100%" }}>
+            <Grid
+              container
+              direction="column"
+              spacing={1}
+              sx={{ height: "100%" }}
+            >
               <Grid item xs={6} sx={{ height: "50%" }}>
                 <Box sx={{ height: "100%", overflow: "hidden", m: 2 }}>
                   <Map
@@ -95,7 +112,6 @@ function App() {
                     setSkiTargetID={setSkiTargetID}
                   />
                 </Box>
-
               </Grid>
 
               <Grid item xs={6} sx={{ height: "50%" }}>
@@ -107,11 +123,9 @@ function App() {
                   ></LineChart>
                 </Box>
               </Grid>
-
             </Grid>
             {/* </Box> */}
-          </Grid >
-
+          </Grid>
 
           <Grid item xs={6}>
             <NewBumpChart
@@ -122,9 +136,8 @@ function App() {
               setSkiColors={setSkiColors}
             ></NewBumpChart>
           </Grid>
-
-        </Grid >
-      </Box >
+        </Grid>
+      </Box>
     </>
   );
 }
