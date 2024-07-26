@@ -8,6 +8,7 @@ import {
   CartesianGrid,
   ResponsiveContainer,
   Legend,
+  ReferenceLine,
 } from "recharts";
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
 
@@ -78,6 +79,12 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
       return newItem;
     });
 
+    // burn/shaba:30.668378549764917
+    // shaba/wet:38.36131928287439
+    // wet/dry:61.438865697856755
+    // dry/new:75.1128755797243
+    // new/powder:90.80954978411411
+
     return (
       <div width={`${skiTargetID.length * 100}%`} style={{ overflow: "auto" }}>
         <ResponsiveContainer width={"100%"} height={height}>
@@ -96,6 +103,36 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
             <YAxis />
             <Tooltip content={renderCustomTooltip} />
             <Legend wrapperStyle={{ fontSize: `${legendFontSize}px` }} />
+            <ReferenceLine
+              y={90.80954978411411}
+              label={{ value: "Powder", fill: "white" }}
+              stroke="black"
+              strokeDasharray="3 3"
+            />
+            <ReferenceLine
+              y={75.1128755797243}
+              label={{ value: "new", fill: "white" }}
+              stroke="black"
+              strokeDasharray="3 3"
+            />
+            <ReferenceLine
+              y={61.438865697856755}
+              label={{ value: "dry", fill: "white" }}
+              stroke="black"
+              strokeDasharray="3 3"
+            />
+            <ReferenceLine
+              y={38.36131928287439}
+              label={{ value: "wet", fill: "white" }}
+              stroke="black"
+              strokeDasharray="3 3"
+            />
+            <ReferenceLine
+              y={30.668378549764917}
+              label={{ value: "shaba", fill: "white" }}
+              stroke="black"
+              strokeDasharray="3 3"
+            />
             {skiTargetNames.map((name) => (
               <Line
                 key={name}
