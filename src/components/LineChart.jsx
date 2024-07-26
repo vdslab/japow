@@ -38,10 +38,20 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
   const renderCustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       const displayCount = Math.min(payload.length, 5);
-      const sortedPayload = payload.slice(0, displayCount);
-      const fontSize = 14 - displayCount; // データポイントの数に応じてフォントサイズを調整
+      const sortedPayload = payload
+        .sort((a, b) => b.value - a.value)
+        .slice(0, displayCount);
+      const fontSize = 10; // ツールチップのフォントサイズを小さく設定
+      const tooltipStyle = {
+        backgroundColor: "rgba(255, 255, 255, 0.9)",
+        border: "1px solid #ccc",
+        padding: "5px",
+        fontSize: `${fontSize}px`,
+        lineHeight: "1.2em",
+      };
+
       return (
-        <div className="custom-tooltip">
+        <div className="custom-tooltip" style={tooltipStyle}>
           <p className="label" style={{ fontSize: `${fontSize}px` }}>
             {`${payload[0].payload.name}`}
           </p>
@@ -50,7 +60,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
               key={`item-${index}`}
               style={{ color: entry.color, fontSize: `${fontSize}px` }}
             >
-              {`${entry.name} : ${entry.value}`}
+              {`${entry.name} : ${Math.round(entry.value)}`}
             </p>
           ))}
           {payload.length > 5 && (
@@ -79,20 +89,18 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
       return newItem;
     });
 
-    // burn/shaba:30.668378549764917
-    // shaba/wet:38.36131928287439
-    // wet/dry:61.438865697856755
-    // dry/new:75.1128755797243
-    // new/powder:90.80954978411411
-
     return (
       <div width={`${skiTargetID.length * 100}%`} style={{ overflow: "auto" }}>
-        <ResponsiveContainer width={"100%"} height={height}>
+        <ResponsiveContainer width={"100%"} height={"100%"}>
           <LineC
             data={pastData}
             margin={{ top: 5, right: 30, left: 5, bottom: 5 }}
           >
-            <CartesianGrid strokeDasharray="3 3" fill="gray" />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              fill="gray"
+              horizontal={false}
+            />
             <XAxis
               dataKey="name"
               interval={0}

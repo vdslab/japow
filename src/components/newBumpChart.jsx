@@ -22,6 +22,7 @@ const NewBumpChart = ({
           transformed[value.name].push({
             name: value.name,
             week: month.month + "/" + week.week,
+            region: value.region,
             rank: value.rank,
             skiID: value.skiID,
           });
@@ -68,6 +69,7 @@ const NewBumpChart = ({
     .html((event, d) => {
       return `<strong>Name:</strong> <span style='color:black'>${d.name}</span><br>
               <strong>Week:</strong> <span style='color:black'>${d.week}</span><br>
+              <strong>Region:</strong> <span style='color:black'>${d.region}</span><br>
               <strong>Rank:</strong> <span style='color:black'>${d.rank}</span><br>
               <strong>相対的なRank:</strong> <span style='color:black'>${d.relativeRank}</span>`;
     })
@@ -101,6 +103,12 @@ const NewBumpChart = ({
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
+    // svg
+    //   .append("rect")
+    //   .attr("width", "100%")
+    //   .attr("height", "100%")
+    //   .attr("fill", "lightgray"); //背景色
+
     if (scoreSortedData[0].weeks[0].weekValues.length.length === 0) {
       return;
     }
@@ -118,13 +126,13 @@ const NewBumpChart = ({
     );
 
     let displayedData = [...skiTargetData];
-    if (skiTargetData.length < 50) {
+    if (skiTargetData.length < 20) {
       const remainingData = top50.filter(
         (item) => !skiTargetName.includes(item.name)
       );
       displayedData = [
         ...displayedData,
-        ...remainingData.slice(0, 50 - skiTargetData.length),
+        ...remainingData.slice(0, 20 - skiTargetData.length),
       ];
     }
 
@@ -134,7 +142,7 @@ const NewBumpChart = ({
         if (additionalItem) {
           displayedData.push(additionalItem);
           displayedData.sort((a, b) => a.avgRank - b.avgRank);
-          if (displayedData.length > 50) {
+          if (displayedData.length > 20) {
             displayedData.pop();
           }
         }
@@ -298,7 +306,7 @@ const NewBumpChart = ({
         .append("circle")
         .attr("cx", (d) => x(d.week))
         .attr("cy", (d) => y(d.relativeRank))
-        .attr("r", 2)
+        .attr("r", 3)
         .attr("fill", colorValue)
         .style("opacity", isSelected ? 0.8 : 0.3)
         .on("mouseenter", tip.show)
