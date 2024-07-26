@@ -47,6 +47,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
     const [hoverCircle, setHoverCircle] = useState(null);
 
     return (
+
         <MapContainer
             center={JAPAN}
             zoom={DEFAULT_ZOOM}
@@ -122,6 +123,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                 )
             ))}
         </MapContainer>
+
     );
 }
 
