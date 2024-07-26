@@ -27,7 +27,7 @@ function App() {
   // マップに描画するデータ
   const [mapData, setMapData] = useState([...sukijouZahyou]);
   const [filter, setFilter] = useState({
-    pref: "",
+    pref: [],
     season: "2023/24",
     period: "",
   });
