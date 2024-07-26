@@ -2,24 +2,26 @@
   width: 100%;
   height: 100%;
   background-color: rgb(147, 183, 219)
-  /* margin: 10px; */
+    /* margin: 10px; */
 }
 
 .leaflet-control-attribution {
   display: none
 }
 
-.leaflet-popup-content-wrapper {
+.leaflet-tooltip {
   z-index: 1000;
+  padding: 13px 3px 3px 3px !important;
 }
 
+.leaflet-popup-content {
+  margin: 3px 3px 3px 3px !important;
+}
 
+.leaflet-circle-popup .leaflet-popup-close-button {
+  display: none;
+}
 .custom-tooltip {
-  /* position: relative; */
-  /* background-color: white; */
-  /* border: 1px solid black; */
-  /* padding: 10px; */
-  /* border-radius: 5px; */
   pointer-events: auto;
   background: white;
   color: #333;
@@ -32,9 +34,6 @@
 }
 
 
-.custom-tooltip div {
-  padding-top: 3px;
-}
 
 .close-button {
   position: absolute;
@@ -49,4 +48,19 @@
   /* ボタンが他の要素より前面に表示されるように */
   pointer-events: auto;
   /* ボタンにクリックイベントを許可 */
+}
+
+
+.small-table td {
+  /* セル内の余白を小さくする */
+  font-size: 10px;
+  /* フォントサイズを小さくする */
+  line-height: 1.2;
+  /* 行間を縮小する */
+}
+
+.small-table tr {
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center;
 }
