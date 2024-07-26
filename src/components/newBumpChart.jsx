@@ -101,7 +101,7 @@ const NewBumpChart = ({
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
-    if (scoreSortedData[0].monthValues.length === 0) {
+    if (scoreSortedData[0].weeks[0].weekValues.length.length === 0) {
       return;
     }
 
@@ -318,7 +318,7 @@ const NewBumpChart = ({
     };
   }, [data, skiTargetID]);
 
-  if (data[0].monthValues.length === 0) {
+  if (data[0].weeks[0].weekValues.length === 0) {
     return <div>選択している県にはスキー場がありません</div>;
   }
 

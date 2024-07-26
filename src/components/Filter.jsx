@@ -3,10 +3,12 @@ import prefData from "../assets/prefectures.json";
 import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 const Filter = ({ filter, setFilter }) => {
     const SELECT_ALL_REGION_NAME = "全選択";
-    const SELECT_ALL_PERION_NAME = "全期間"
+    const SELECT_ALL_PERIOD_NAME = "全期間"
     const months = ["11月", "12月", "1月", "2月", "3月", "4月"];
+    const seasons = ["2023/24", "2022/23", "2021/22"];
     const [selectRegion, setSelectRegion] = useState(SELECT_ALL_REGION_NAME);
-    const [selectPeriod, setSelectPeriod] = useState(SELECT_ALL_PERION_NAME);
+    const [selectSeason, setSelectSeason] = useState("2023/24");
+    const [selectPeriod, setSelectPeriod] = useState(SELECT_ALL_PERIOD_NAME);
     return (
         <Box
             sx={{
@@ -26,17 +28,35 @@ const Filter = ({ filter, setFilter }) => {
                     id="region"
                     value={selectRegion}
                     label="地域"
-                    
                     onChange={(e) => {
-                        console.log(e)
                         setSelectRegion(e.target.value);
-                        setFilter({ "pref": e.target.value !== SELECT_ALL_REGION_NAME ? e.target.value : "", "period": filter.period, "sq": filter.sq });
+                        setFilter({ ...filter, "pref": e.target.value !== SELECT_ALL_REGION_NAME ? e.target.value : "" });
                     }}
                 >
                     <MenuItem key="none" value={SELECT_ALL_REGION_NAME}>{SELECT_ALL_REGION_NAME}</MenuItem>
                     {prefData.map(({ prefCode, name }, index) => {
                         return (
-                            <MenuItem key={index} value={name} name={"a"}>{name}</MenuItem>
+                            <MenuItem key={index} value={name}>{name}</MenuItem>
+                        )
+                    })}
+                </Select>
+            </FormControl>
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <InputLabel id="season-label">シーズン</InputLabel>
+                <Select
+                    labelId="season-label"
+                    id="season"
+                    value={selectSeason}
+                    label="シーズン"
+
+                    onChange={(e) => {
+                        setSelectSeason(e.target.value);
+                        setFilter({ ...filter, "season": e.target.value });
+                    }}
+                >
+                    {seasons.map((item, index) => {
+                        return (
+                            <MenuItem key={index} value={item}>{item + "年"}</MenuItem>
                         )
                     })}
                 </Select>
@@ -50,10 +70,10 @@ const Filter = ({ filter, setFilter }) => {
                     label="期間"
                     onChange={(e) => {
                         setSelectPeriod(e.target.value)
-                        setFilter({ "pref": filter.pref, "period": e.target.value !== SELECT_ALL_PERION_NAME ? e.target.value : "", "sq": filter.sq });
+                        setFilter({ ...filter, "period": e.target.value !== SELECT_ALL_PERIOD_NAME ? e.target.value : "", });
                     }}
                 >
-                    <MenuItem key="all" value={SELECT_ALL_PERION_NAME}>{SELECT_ALL_PERION_NAME}</MenuItem>
+                    <MenuItem key="all" value={SELECT_ALL_PERIOD_NAME}>{SELECT_ALL_PERIOD_NAME}</MenuItem>
                     {months.map((item, index) => {
                         return (
                             <MenuItem key={index} value={item}>{item}</MenuItem>

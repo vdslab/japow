@@ -54,3 +54,15 @@ export const snowFilterBySkiTarget = (skiTargetID, data) => {
     });
   });
 };
+
+//シーズンでフィルタリング
+export const snowFilterBySeason = (data, selectedYear) => {
+  let seasonData = []
+  for(const item of data) {
+    if(selectedYear === item.year) {
+      seasonData = item.months
+      break;
+    }
+  }
+  return seasonData;
+}

@@ -4,13 +4,14 @@ import NewBumpChart from "./components/newBumpChart";
 import Filter from "./components/Filter";
 import Map from "./components/Map";
 import BarChart from "./components/BarChart";
-import snowQualityMap from "./assets/snowQualityMap2324.json";
+import snowQualityData from "./assets/snowQualityData.json"
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
 import { Box, Stack, Grid } from "@mui/material";
 import {
   mapFilterBypref,
   snowFilterBypref,
   snowFilterByPeriod,
+  snowFilterBySeason
 } from "./functions/filtering";
 import Search from "./components/Search";
 import { sort } from "./functions/SortData";
@@ -19,18 +20,15 @@ import { rank } from "./functions/MakeRank";
 function App() {
   const [skiTargetID, setSkiTargetID] = useState([]);
   //各日付の雪質データ
-  const [snowData, setSnowData] = useState([...snowQualityMap]);
+  const [snowData, setSnowData] = useState([...snowQualityData[0].months]);
   // マップに描画するデータ
   const [mapData, setMapData] = useState([...sukijouZahyou]);
-  const [filter, setFilter] = useState({ pref: "", period: "", sq: "" });
+  const [filter, setFilter] = useState({ pref: "", season:"2023/24", period: "" });
   const [skiColors, setSkiColors] = useState({});
 
   useEffect(() => {
-    setSnowData(rank(sort(snowData)));
-  }, []);
-
-  useEffect(() => {
-    let snowFilteredData = JSON.parse(JSON.stringify(snowQualityMap));
+    let snowFilteredData = JSON.parse(JSON.stringify(snowQualityData))
+    snowFilteredData = rank(sort(snowFilterBySeason(snowFilteredData, filter.season)));
     let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
     if (filter.pref !== "") {
@@ -48,11 +46,9 @@ function App() {
 
     if (filter.period !== "") {
       snowFilteredData = snowFilterByPeriod(snowFilteredData, filter.period);
-      //console.log(snowFilteredData);
     }
-
-    setSnowData(snowFilteredData);
     setMapData(mapFilteredData);
+    setSnowData(snowFilteredData);
   }, [filter, skiTargetID]);
   return (
     <>
