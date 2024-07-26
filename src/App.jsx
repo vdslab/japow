@@ -15,6 +15,7 @@ import {
 import Search from "./components/Search";
 import { sort } from "./functions/SortData";
 import { rank } from "./functions/MakeRank";
+import LineChart from "./components/LineChart";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState([]);
@@ -82,11 +83,16 @@ function App() {
             />
           </Box>
           {/* <Box sx={{ height: "50%", overflow: "hidden" }}> */}
-          <BarChart
+          {/* <BarChart
             skiTargetID={skiTargetID}
             skiData={snowData}
             skiColors={skiColors}
-          />
+          /> */}
+          <LineChart
+            skiTargetID={skiTargetID}
+            skiData={snowData}
+            skiColors={skiColors}
+          ></LineChart>
           {/* </Box> */}
         </Grid>
         {/* <BumpChart
