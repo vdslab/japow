@@ -152,7 +152,7 @@ const NewBumpChart = ({
       top50Names
     );
 
-    const margin = { top: 10, right: 30, bottom: 120, left: 50 };
+    const margin = { top: 20, right: 30, bottom: 100, left: 50 };
     const width = 900 - margin.right - margin.left;
     const height = 500 - margin.top - margin.bottom;
     svg.attr("viewBox", [0, 0, width, height]);
@@ -245,7 +245,7 @@ const NewBumpChart = ({
     svg
       .append("text")
       .attr("class", "x label")
-      .attr("text-anchor", "end")
+      .attr("text-anchor", "middle")
       .attr("x", width / 2)
       .attr("y", height)
       .text("Week");
@@ -253,11 +253,18 @@ const NewBumpChart = ({
       .append("text")
       .attr("class", "y label")
       .attr("text-anchor", "end")
-      .attr("x", -height / 2 + 50)
+      .attr("x", -height / 2 + 70)
       .attr("y", 1)
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
       .text("Rank");
+    svg
+      .append("text")
+      .attr("text-anchor", "middle")
+      .attr("x", width / 2)
+      .attr("y", -20)
+      .style("font-size", "20px")
+      .text("平均雪質ランキング");
 
     Object.keys(transformedData).forEach((name, skiID) => {
       const colorValue = updatedSkiColors[name];
