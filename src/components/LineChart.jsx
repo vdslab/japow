@@ -91,7 +91,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
 
     return (
       // <div width={`${skiTargetID.length * 100}%`} style={{ overflow: "auto" }}>
-      <ResponsiveContainer width={"100%"} height={"100%"}>
+      <ResponsiveContainer width={"90%"} height={"90%"}>
         <LineC
           data={pastData}
           margin={{ top: 5, right: 30, left: 5, bottom: 5 }}

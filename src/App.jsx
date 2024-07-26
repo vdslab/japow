@@ -95,7 +95,7 @@ function App() {
           </AppBar>
         </Box>
 
-        <Grid container direction="row" spacing={1} sx={{ height: "90%" }}>
+        <Grid container direction="row" spacing={1} sx={{ height: "100%" }}>
           <Grid item xs={6}>
             {/* <Box sx={{ height: "100%" }}> */}
             <Grid
@@ -128,13 +128,15 @@ function App() {
           </Grid>
 
           <Grid item xs={6}>
-            <NewBumpChart
-              data={snowData}
-              skiTargetID={skiTargetID}
-              setSkiTargetID={setSkiTargetID}
-              skiColors={skiColors}
-              setSkiColors={setSkiColors}
-            ></NewBumpChart>
+            <Box id={"aiueo"} sx={{ height: "100%", overflow: "hidden", m: 2 }}>
+              <NewBumpChart
+                data={snowData}
+                skiTargetID={skiTargetID}
+                setSkiTargetID={setSkiTargetID}
+                skiColors={skiColors}
+                setSkiColors={setSkiColors}
+              ></NewBumpChart>
+            </Box>
           </Grid>
         </Grid>
       </Box>
