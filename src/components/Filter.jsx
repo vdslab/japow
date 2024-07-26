@@ -14,7 +14,7 @@ const Filter = ({ filter, setFilter }) => {
             sx={{
                 display: "flex",
                 alignItems: "center",
-                p: 5,
+                p: 1,
                 m: 1,
                 bgcolor: "background.paper",
                 borderRadius: 1,
@@ -28,6 +28,7 @@ const Filter = ({ filter, setFilter }) => {
                     id="region"
                     value={selectRegion}
                     label="地域"
+
                     onChange={(e) => {
                         setSelectRegion(e.target.value);
                         setFilter({ ...filter, "pref": e.target.value !== SELECT_ALL_REGION_NAME ? e.target.value : "" });

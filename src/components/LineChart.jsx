@@ -86,65 +86,65 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
     // new/powder:90.80954978411411
 
     return (
-      <div width={`${skiTargetID.length * 100}%`} style={{ overflow: "auto" }}>
-        <ResponsiveContainer width={"100%"} height={height}>
-          <LineC
-            data={pastData}
-            margin={{ top: 5, right: 30, left: 5, bottom: 5 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" fill="gray" />
-            <XAxis
-              dataKey="name"
-              interval={0}
-              tick={(tickProps) =>
-                renderTick({ ...tickProps, allTicks: pastData })
-              }
+      // <div width={`${skiTargetID.length * 100}%`} style={{ overflow: "auto" }}>
+      <ResponsiveContainer width={"100%"} height={"100%"}>
+        <LineC
+          data={pastData}
+          margin={{ top: 5, right: 30, left: 5, bottom: 5 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" fill="gray" />
+          <XAxis
+            dataKey="name"
+            interval={0}
+            tick={(tickProps) =>
+              renderTick({ ...tickProps, allTicks: pastData })
+            }
+          />
+          <YAxis />
+          <Tooltip content={renderCustomTooltip} />
+          <Legend wrapperStyle={{ fontSize: `${legendFontSize}px` }} />
+          <ReferenceLine
+            y={90.80954978411411}
+            label={{ value: "Powder", fill: "white" }}
+            stroke="black"
+            strokeDasharray="3 3"
+          />
+          <ReferenceLine
+            y={75.1128755797243}
+            label={{ value: "new", fill: "white" }}
+            stroke="black"
+            strokeDasharray="3 3"
+          />
+          <ReferenceLine
+            y={61.438865697856755}
+            label={{ value: "dry", fill: "white" }}
+            stroke="black"
+            strokeDasharray="3 3"
+          />
+          <ReferenceLine
+            y={38.36131928287439}
+            label={{ value: "wet", fill: "white" }}
+            stroke="black"
+            strokeDasharray="3 3"
+          />
+          <ReferenceLine
+            y={30.668378549764917}
+            label={{ value: "shaba", fill: "white" }}
+            stroke="black"
+            strokeDasharray="3 3"
+          />
+          {skiTargetNames.map((name) => (
+            <Line
+              key={name}
+              type="monotone"
+              dataKey={name}
+              stroke={skiColors[name]}
+              name={name}
             />
-            <YAxis />
-            <Tooltip content={renderCustomTooltip} />
-            <Legend wrapperStyle={{ fontSize: `${legendFontSize}px` }} />
-            <ReferenceLine
-              y={90.80954978411411}
-              label={{ value: "Powder", fill: "white" }}
-              stroke="black"
-              strokeDasharray="3 3"
-            />
-            <ReferenceLine
-              y={75.1128755797243}
-              label={{ value: "new", fill: "white" }}
-              stroke="black"
-              strokeDasharray="3 3"
-            />
-            <ReferenceLine
-              y={61.438865697856755}
-              label={{ value: "dry", fill: "white" }}
-              stroke="black"
-              strokeDasharray="3 3"
-            />
-            <ReferenceLine
-              y={38.36131928287439}
-              label={{ value: "wet", fill: "white" }}
-              stroke="black"
-              strokeDasharray="3 3"
-            />
-            <ReferenceLine
-              y={30.668378549764917}
-              label={{ value: "shaba", fill: "white" }}
-              stroke="black"
-              strokeDasharray="3 3"
-            />
-            {skiTargetNames.map((name) => (
-              <Line
-                key={name}
-                type="monotone"
-                dataKey={name}
-                stroke={skiColors[name]}
-                name={name}
-              />
-            ))}
-          </LineC>
-        </ResponsiveContainer>
-      </div>
+          ))}
+        </LineC>
+      </ResponsiveContainer>
+      // </div>
     );
   } else {
     return <div>No data available</div>;

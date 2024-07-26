@@ -55,7 +55,7 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
                   {params.InputProps.endAdornment}
                   <InputAdornment position="end">
                     <IconButton onClick={handleSearchClick}>
-                      <SearchIcon />
+                      {/* <SearchIcon /> */}
                     </IconButton>
                   </InputAdornment>
                 </>
