@@ -5,6 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import options from "../assets/ski_resorts_japan.json";
 import { InputAdornment } from "@mui/material";
+import Box from "@mui/material/Box";
 
 const Search = ({ skiTargetID, setSkiTargetID }) => {
   const [filteredOptions, setFilteredOptions] = useState(options);
@@ -23,49 +24,66 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
     setSkiTargetID(searchInput);
   };
 
+  const handleOptionChange = (event, newValues) => {
+    if (newValues) {
+      const newIDs = newValues.map((value) => value.skiID);
+      setSearchInput(newIDs);
+      setSkiTargetID(newIDs);
+    } else {
+      setSearchInput([]);
+      setSkiTargetID([]);
+    }
+  };
+
   return (
-    <div>
+    <Box sx={{ width: 500 }}>
       <Autocomplete
         multiple
         options={filteredOptions}
-        sx={{ width: 500 }}
         getOptionLabel={(option) => (option && option.name) || ""}
         value={selectedOptions}
-        onInputChange={(event, newInputValue) => {}}
-        onChange={(event, newValues) => {
-          if (newValues) {
-            const newIDs = newValues.map((value) => value.skiID);
-            setSearchInput(newIDs);
-            setSkiTargetID(newIDs);
-          } else {
-            setSearchInput([]);
-            setSkiTargetID([]);
-          }
-        }}
+        onChange={handleOptionChange}
         renderInput={(params) => (
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <TextField
-              {...params}
-              label="Search Ski Resorts"
-              variant="standard"
-              InputProps={{
-                ...params.InputProps,
-                endAdornment: (
-                  <>
-                    {params.InputProps.endAdornment}
-                    <InputAdornment position="end">
-                      <IconButton onClick={handleSearchClick}>
-                        <SearchIcon />
-                      </IconButton>
-                    </InputAdornment>
-                  </>
-                ),
-              }}
-            />
-          </div>
+          <TextField
+            {...params}
+            variant="standard"
+            label="Search Ski Resorts"
+            InputProps={{
+              ...params.InputProps,
+              endAdornment: (
+                <>
+                  {params.InputProps.endAdornment}
+                  <InputAdornment position="end"></InputAdornment>
+                </>
+              ),
+              disableUnderline: true,
+            }}
+            sx={{
+              "& .MuiAutocomplete-inputRoot": {
+                display: "flex",
+                flexWrap: "wrap",
+                maxHeight: "100px",
+                overflowY: "auto",
+                borderBottom: "1px solid rgba(0, 0, 0, 0.42)",
+              },
+              "& .MuiAutocomplete-input": {
+                minWidth: "0",
+              },
+              "& .MuiInputBase-root": {
+                alignItems: "flex-start",
+                paddingBottom: "10px",
+              },
+              "& .MuiFormLabel-root": {
+                transform: "translate(14px, 10px) scale(1)",
+              },
+              "& .MuiInputLabel-shrink": {
+                transform: "translate(0, -1.5px) scale(0.75)",
+              },
+            }}
+          />
         )}
       />
-    </div>
+    </Box>
   );
 };
 
