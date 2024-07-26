@@ -13,8 +13,6 @@ import {
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
 
 const LineChart = ({ skiTargetID, skiData, skiColors }) => {
-  const height = 300;
-
   const renderTick = (tickProps) => {
     const { x, y, payload, index, allTicks } = tickProps;
 
@@ -91,10 +89,11 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
 
     return (
       // <div width={`${skiTargetID.length * 100}%`} style={{ overflow: "auto" }}>
-      <ResponsiveContainer width={"90%"} height={"90%"}>
+      <ResponsiveContainer width={"100%"} height={"100%"}>
         <LineC
           data={pastData}
-          margin={{ top: 5, right: 30, left: 5, bottom: 5 }}
+          width={"100%"}
+          margin={{ top: 5, right: 0, left: 0, bottom: 5 }}
         >
           <CartesianGrid strokeDasharray="3 3" fill="gray" />
           <XAxis
@@ -106,7 +105,9 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
           />
           <YAxis />
           <Tooltip content={renderCustomTooltip} />
-          <Legend wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }} />
+          <Legend
+            wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }}
+          />
           <ReferenceLine
             y={90.80954978411411}
             label={{ value: "Powder", fill: "white" }}
