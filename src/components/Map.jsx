@@ -12,7 +12,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
     const DEFAULT_ZOOM = 5;
     const MAX_ZOOM = 10;
     const MIN_Z00M = 5;
-    const JAPAN = [35.6895, 139.6917];
+    const JAPAN = [40.345119, 140.800075];
     const JAPAN_BOUNDS = [
         [30.0, 120.0], // 南端の座標
         [50.0, 155.0], // 北端の座標
@@ -79,10 +79,19 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                             direction="top"
                             key={index}
                             className="custom-tooltip leaflet-popup-content-wrapper"
+                            style={{ padding: 0 }}
                         >
                             <div>
-                                {item.name}<br />
-                                {item.region}
+                                <table className="small-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>{item.name}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{item.region}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                                 <button
                                     className="close-button"
                                     onClick={() => handleTooltipClose(item.skiID)}
@@ -91,6 +100,13 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                                 </button>
                             </div>
                         </Tooltip>
+                        <Circle
+                            center={[item.latitude, item.longitude]}
+                            key={index}
+                            radius={200}
+                            fillColor="red"
+                            color="red"
+                        />
                     </Marker>
                 ) : (
                     <Circle
@@ -114,9 +130,17 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                             }
                         }}
                     >
-                        <Popup key={index}>
-                            {item.name}<br />
-                            {item.region}
+                        <Popup key={index} className="leaflet-circle-popup">
+                            <table className="small-table">
+                                <tbody>
+                                    <tr>
+                                        <td>{item.name}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{item.region}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </Popup>
                     </Circle>
                 )
