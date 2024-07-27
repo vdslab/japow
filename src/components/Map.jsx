@@ -114,7 +114,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                     <Circle
                         center={[item.latitude, item.longitude]}
                         key={index}
-                        radius={hoverCircle === item.skiID ? 5000 : 200}
+                        radius={hoverCircle === item.skiID ? 5000 : 1000}
                         fillColor="blue"
                         color="blue"
                         eventHandlers={{
