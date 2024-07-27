@@ -6,7 +6,7 @@ import Map from "./components/Map";
 import BarChart from "./components/BarChart";
 import snowQualityData from "./assets/snowQualityData.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
-import { Box, Stack, Grid, AppBar, Toolbar, Typography, IconButton } from "@mui/material";
+import { Box, Stack, Grid, } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import {
   mapFilterBypref,
@@ -71,16 +71,16 @@ function App() {
           <Search skiTargetID={skiTargetID} setSkiTargetID={setSkiTargetID}></Search>
         </Box>
 
-        <Grid container direction="row" spacing={1} xs={12} sx={{ width: "100%", height: "100%", m: 0, backgroundColor: "#CCF2FF" }}>
+        <Grid container direction="row" spacing={1} xs={12} sx={{ width: "100%", height: "80vh", m: 0, backgroundColor: "#CCF2FF" }}>
           <Grid item xs={6} >
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "40%", overflow: "hidden", m: 2, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
+            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "40%", overflow: "hidden", mb: 1, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
               <Map
                 mapData={mapData}
                 skiTargetID={skiTargetID}
                 setSkiTargetID={setSkiTargetID}
               />
             </Box>
-            <Box sx={{ height: "50%", m: 2, p: 1, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
+            <Box sx={{ height: "50%", mt: 1, p: 1, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
               <LineChart
                 skiTargetID={skiTargetID}
                 skiData={snowData}
@@ -90,7 +90,7 @@ function App() {
           </Grid>
 
           <Grid item xs={6}>
-            <Box id={"aiueo"} sx={{ height: "90%", overflow: "hidden", m: 2, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
+            <Box id={"aiueo"} sx={{ height: "90%", pt: 1, pb: 1, overflow: "hidden", backgroundColor: "#FFFFFF", borderRadius: 2 }}>
               <NewBumpChart
                 data={snowData}
                 skiTargetID={skiTargetID}
