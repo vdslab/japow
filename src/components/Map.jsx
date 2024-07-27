@@ -104,7 +104,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                         <Circle
                             position={[item.latitude, item.longitude]}
                             center={[item.latitude, item.longitude]}
-                            key={index}
+                            key={`${item.skiID}-circle`}
                             radius={200}
                             fillColor="red"
                             color="red"
