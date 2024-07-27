@@ -2,9 +2,9 @@ import { useState } from "react";
 import prefData from "../assets/prefectures.json";
 import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 const Filter = ({ filter, setFilter }) => {
-    const SELECT_ALL_REGION_NAME = "全選択";
+    const SELECT_ALL_REGION_NAME = "全国";
     const SELECT_ALL_PERIOD_NAME = "全期間"
-    const months = ["11月", "12月", "1月", "2月", "3月", "4月"];
+    const months = ["11月", "12月", "1月", "2月", "3月"];
     const seasons = ["2023/24", "2022/23", "2021/22"];
     const [selectRegion, setSelectRegion] = useState(SELECT_ALL_REGION_NAME);
     const [selectSeason, setSelectSeason] = useState("2023/24");
