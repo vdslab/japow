@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 import d3Tip from "d3-tip";
 import { avgRank } from "../functions/AverageRank";
+import { Margin, ModelTrainingOutlined } from "@mui/icons-material";
 
 const NewBumpChart = ({
   data,
@@ -100,12 +101,12 @@ const NewBumpChart = ({
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
   useEffect(() => {
-    setWidth(document.getElementById("aiueo").clientWidth);
-    setHeight(document.getElementById("aiueo").clientHeight);
+    setWidth(document.getElementById("Bump").clientWidth);
+    setHeight(document.getElementById("Bump").clientHeight);
   }, []);
   useEffect(() => {
-    const svgWidth = width * 1.2; // グラフを横長にするために幅を2倍に設定
-    const svgHeight = height * 0.7; // 高さを60%に設定
+    const svgWidth = document.getElementById("Bump").clientWidth * 1.2;
+    const svgHeight = document.getElementById("Bump").clientHeight * 0.8;
 
     const scoreSortedData = data;
     const svg = d3.select(svgRef.current);
@@ -162,14 +163,9 @@ const NewBumpChart = ({
       top50Names
     );
 
-    const margin = { top: 70, right: -20, bottom: 60, left: -100 }; // マージンを調整
+    const margin = { top: 0, right: -20, bottom: 160, left: -70 }; // マージンを調整
 
-    svg.attr("viewBox", [
-      0,
-      0,
-      svgWidth + margin.right + margin.left,
-      svgHeight + margin.top + margin.bottom,
-    ]);
+    svg.attr("viewBox", [margin.right, 0, svgWidth, svgHeight]);
 
     const x = d3
       .scalePoint()
@@ -261,7 +257,7 @@ const NewBumpChart = ({
       .attr("class", "x label")
       .attr("text-anchor", "middle")
       .attr("x", svgWidth / 2)
-      .attr("y", svgHeight + margin.bottom)
+      .attr("y", svgHeight - 40)
       .text("Week");
     svg
       .append("text")
@@ -272,13 +268,6 @@ const NewBumpChart = ({
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
       .text("Rank");
-    svg
-      .append("text")
-      .attr("text-anchor", "middle")
-      .attr("x", svgWidth / 2)
-      .attr("y", margin.top / 2)
-      .style("font-size", "20px")
-      .text("平均雪質ランキング");
 
     Object.keys(transformedData).forEach((name, skiID) => {
       const colorValue = updatedSkiColors[name];
@@ -292,8 +281,8 @@ const NewBumpChart = ({
         .datum(transformedData[name])
         .attr("fill", "none")
         .attr("stroke", colorValue)
-        .attr("stroke-width", isSelected ? 4 : 2)
-        .style("opacity", isSelected ? 0.8 : 0.3)
+        .attr("stroke-width", skiTargetID.length === 0 ? 3 : isSelected ? 4 : 2)
+        .style("opacity", skiTargetID.length === 0 ? 1 : isSelected ? 0.8 : 0.3)
         .attr("d", line)
         .on("click", () => {
           tip.hide();
@@ -314,7 +303,7 @@ const NewBumpChart = ({
         .attr("cy", (d) => y(d.relativeRank))
         .attr("r", 3)
         .attr("fill", colorValue)
-        .style("opacity", isSelected ? 0.8 : 0.3)
+        .style("opacity", skiTargetID.length === 0 ? 1 : isSelected ? 0.8 : 0.3)
         .on("mouseenter", tip.show)
         .on("mouseout", tip.hide)
         .on("click", () => {
@@ -337,7 +326,7 @@ const NewBumpChart = ({
   }
 
   return (
-    <div style={{ width: "100%", overflowX: "scroll" }}>
+    <div style={{ width: "100%", overflowX: "scroll", marginTop: "0px" }}>
       <svg ref={svgRef} width={width * 1.5} height={height * 0.8}></svg>
     </div>
   );

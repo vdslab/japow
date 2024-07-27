@@ -5,7 +5,7 @@ import Filter from "./components/Filter";
 import Map from "./components/Map";
 import snowQualityData from "./assets/snowQualityData.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
-import { Box, Stack, Grid, } from "@mui/material";
+import { Box, Stack, Grid } from "@mui/material";
 import {
   mapFilterBypref,
   snowFilterBypref,
@@ -16,7 +16,7 @@ import Search from "./components/Search";
 import { sort } from "./functions/SortData";
 import { rank } from "./functions/MakeRank";
 import LineChart from "./components/LineChart";
-import Header from "./components/Header.jsx"
+import Header from "./components/Header.jsx";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState([]);
@@ -61,24 +61,71 @@ function App() {
   return (
     <>
       <Box sx={{ width: "100vw", height: "100vh" }}>
-
         <Header />
 
-        <Box sx={{ height: "10vh", display: "flex", alignItems: "center", justifyContent: "center", p: 1 }}>
+        <Box
+          sx={{
+            height: "10vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            p: 1,
+          }}
+        >
           <Filter filter={filter} setFilter={setFilter}></Filter>
-          <Search skiTargetID={skiTargetID} setSkiTargetID={setSkiTargetID}></Search>
+          <Search
+            skiTargetID={skiTargetID}
+            setSkiTargetID={setSkiTargetID}
+          ></Search>
         </Box>
 
-        <Grid container direction="row" spacing={1} sx={{ width: "100%", height: "80vh", m: 0, backgroundColor: "#CCF2FF" }}>
-          <Grid item xs={6} >
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "40%", overflow: "hidden", mb: 1, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
+        <Grid
+          container
+          direction="row"
+          spacing={1}
+          sx={{
+            width: "100%",
+            height: "80vh",
+            m: 0,
+            backgroundColor: "#CCF2FF",
+          }}
+        >
+          <Grid item xs={6}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "40%",
+                overflow: "hidden",
+                mb: 1,
+                backgroundColor: "#FFFFFF",
+                borderRadius: 2,
+              }}
+            >
               <Map
                 mapData={mapData}
                 skiTargetID={skiTargetID}
                 setSkiTargetID={setSkiTargetID}
               />
             </Box>
-            <Box sx={{ height: "50%", mt: 1, p: 1, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
+            <Box
+              sx={{
+                height: "50%",
+                mt: 1,
+                p: 1,
+                backgroundColor: "#FFFFFF",
+                borderRadius: 2,
+              }}
+            >
+              <h3
+                style={{
+                  margin: "auto",
+                  textAlign: "center",
+                }}
+              >
+                雪質のスコア推移
+              </h3>
               <LineChart
                 skiTargetID={skiTargetID}
                 skiData={snowData}
@@ -88,7 +135,25 @@ function App() {
           </Grid>
 
           <Grid item xs={6}>
-            <Box id={"aiueo"} sx={{ height: "90%", pt: 1, pb: 1, overflow: "hidden", backgroundColor: "#FFFFFF", borderRadius: 2 }}>
+            <Box
+              id={"Bump"}
+              sx={{
+                height: "91%",
+                pt: 1,
+                pb: 1,
+                overflow: "hidden",
+                backgroundColor: "white",
+                borderRadius: 2,
+              }}
+            >
+              <h3
+                style={{
+                  marginBottom: "5px",
+                  textAlign: "center",
+                }}
+              >
+                雪質の平均順位
+              </h3>
               <NewBumpChart
                 data={snowData}
                 skiTargetID={skiTargetID}

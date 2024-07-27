@@ -62,7 +62,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
             </p>
           ))}
           {payload.length > 5 && (
-            <p style={{ fontSize: `${fontSize}px` }}>...</p>
+            <p style={{ fontSize: `${fontSize}px` }}>...more</p>
           )}
         </div>
       );
@@ -70,7 +70,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
     return null;
   };
 
-  const legendFontSize = Math.max(10, 15 - skiTargetID.length); // 選択数に応じてフォントサイズを調整
+  const legendFontSize = Math.max(10, 15 - skiTargetID.length);
 
   if (skiTargetID) {
     const skiTargetNames = [];
@@ -92,9 +92,9 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
         <LineC
           data={pastData}
           width={"100%"}
-          margin={{ top: 5, right: 0, left: 0, bottom: 5 }}
+          margin={{ top: 5, right: 0, left: 0, bottom: 17 }}
         >
-          <CartesianGrid strokeDasharray="3 3" fill="gray" />
+          <CartesianGrid strokeDasharray="3 3" fill="gray" horizontal={false} />
           <XAxis
             dataKey="name"
             interval={0}
