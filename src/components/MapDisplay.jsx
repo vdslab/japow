@@ -3,7 +3,7 @@ import * as d3 from "d3";
 import d3Tip from "d3-tip";
 import JapanData from "../assets/Japan.json";
 import zahyou from "../../docker-python/data/anl_data-2023121612.json";
-// import sukizahyou from "./assets/ski_resorts_japan.json";
+
 const ZoomableSVG = (props) => {
   const { children } = props;
 
@@ -95,7 +95,6 @@ const MapDisplay = ({ skiTargetID, setSkiTargetID, mapData }) => {
       .attr("fill", "red")
       .on("click", (event, d) => {
         // クリックイベントのハンドラ
-        console.log("Clicked data:", d);
         // d3.select(event.currentTarget).attr("fill", "blue");
       });
 
@@ -119,14 +118,13 @@ const MapDisplay = ({ skiTargetID, setSkiTargetID, mapData }) => {
         return !skiTargetID
           ? "#00ffff"
           : skiTargetID === d.skiID
-          ? "#00ffff"
-          : "rgb(0,0,0)";
+            ? "#00ffff"
+            : "rgb(0,0,0)";
       })
       .on("mouseenter", tip.show)
       .on("mouseout", tip.hide)
       .on("click", (event, d) => {
         tip.hide();
-        console.log("Cliked skijou-data;", d);
 
         setSkiTargetID(d.skiID);
       });

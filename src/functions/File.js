@@ -9,8 +9,5 @@ export default function a() {
   } catch (error) {
     console.error("Error reading directory:", error);
   }
-  // const files = fs.readdirSync("../docker-python/data");
-  // console.log(files);
-  console.log("adfa");
 }
 a();

@@ -88,7 +88,6 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
     });
 
     return (
-      // <div width={`${skiTargetID.length * 100}%`} style={{ overflow: "auto" }}>
       <ResponsiveContainer width={"100%"} height={"100%"}>
         <LineC
           data={pastData}
@@ -149,7 +148,6 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
           ))}
         </LineC>
       </ResponsiveContainer>
-      // </div>
     );
   } else {
     return <div>No data available</div>;

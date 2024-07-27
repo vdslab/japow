@@ -72,8 +72,6 @@ const BumpChart = ({ skiTarget, setSkiTarget, skiData }) => {
     setBumpData(transformData(filteredSkiResorts));
   }, [skiData]);
 
-  // console.log(skiTarget);
-
   const handleLineClick = (serie) => {
     setHighlightedLine(serie.id === highlightedLine ? null : serie.id);
   };
@@ -138,12 +136,10 @@ const BumpChart = ({ skiTarget, setSkiTarget, skiData }) => {
           isInteractive={true} //インタラクションを行うかどうか
           useMesh={true} //点をアバウトに判定してくれる
           // lineWidth={(serie) => {
-          //   //console.log(serie);
           //   highlightedLine ? (serie.id === highlightedLine ? 4 : 0.2) : 2;
           // }}
 
           activeLineWidth={(serie) => {
-            console.log(serie);
             serie.id === highlightedLine ? 4 : 2;
           }}
           // inactiveOpacity={0.2}
@@ -154,7 +150,6 @@ const BumpChart = ({ skiTarget, setSkiTarget, skiData }) => {
           // activeLineWidth={5}
           inactiveOpacity={0.1}
           onClick={(event) => {
-            console.log(event);
             setSkiTarget(
               event.serie.data.id === skiTarget ? null : event.serie.data.id
             );

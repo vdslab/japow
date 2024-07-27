@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 import d3Tip from "d3-tip";
 import { avgRank } from "../functions/AverageRank";
-import { sort } from "../functions/SortData";
 
 const NewBumpChart = ({
   data,

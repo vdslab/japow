@@ -119,7 +119,6 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                         color="blue"
                         eventHandlers={{
                             click: (e) => {
-                                console.log(skiTargetID)
                                 setSkiTargetID((prev) => [...prev, item.skiID]);
                             },
                             mouseover: (e) => {

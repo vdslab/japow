@@ -3,11 +3,9 @@ import { useEffect, useState } from "react";
 import NewBumpChart from "./components/newBumpChart";
 import Filter from "./components/Filter";
 import Map from "./components/Map";
-import BarChart from "./components/BarChart";
 import snowQualityData from "./assets/snowQualityData.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
 import { Box, Stack, Grid, } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
 import {
   mapFilterBypref,
   snowFilterBypref,
@@ -71,7 +69,7 @@ function App() {
           <Search skiTargetID={skiTargetID} setSkiTargetID={setSkiTargetID}></Search>
         </Box>
 
-        <Grid container direction="row" spacing={1} xs={12} sx={{ width: "100%", height: "80vh", m: 0, backgroundColor: "#CCF2FF" }}>
+        <Grid container direction="row" spacing={1} sx={{ width: "100%", height: "80vh", m: 0, backgroundColor: "#CCF2FF" }}>
           <Grid item xs={6} >
             <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "40%", overflow: "hidden", mb: 1, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
               <Map
