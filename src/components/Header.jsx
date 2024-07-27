@@ -11,7 +11,7 @@ export default function Header() {
         justifyContent: "center",
         backgroundColor: "#65D8FF"
       }}>
-      <h1>Japow</h1>
+      <h1>Predict JAPOW Vis</h1>
       {/* <Typography variant="h3">Japow</Typography> */}
     </Box>
   );
