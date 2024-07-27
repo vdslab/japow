@@ -98,8 +98,8 @@ const NewBumpChart = ({
       return [offsetY, offsetX];
     });
 
-  const [width, setWidth] = useState();
-  const [height, setHeight] = useState();
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
   useEffect(() => {
     setWidth(document.getElementById("Bump").clientWidth);
     setHeight(document.getElementById("Bump").clientHeight);
