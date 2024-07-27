@@ -36,7 +36,7 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
   };
 
   return (
-    <Box sx={{ width: 500, height: "100%" }}>
+    <Box sx={{ height: "100%", display: "flex", alignItems: "center", pl: 3 }}>
       <Autocomplete
         multiple
         options={filteredOptions}
@@ -55,7 +55,6 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
                   {params.InputProps.endAdornment}
                   <InputAdornment position="end">
                     <IconButton onClick={handleSearchClick}>
-                      {/* <SearchIcon /> */}
                     </IconButton>
                   </InputAdornment>
                 </>
@@ -73,11 +72,13 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
                 borderBottom: "1px solid rgba(0, 0, 0, 0.42)",
               },
               "& .MuiAutocomplete-input": {
-                minWidth: "0",
+                minWidth: 0,
               },
               "& .MuiInputBase-root": {
                 alignItems: "flex-start",
                 paddingBottom: "10px",
+                minWidth: 500,
+                maxWidth: 500
               },
               "& .MuiFormLabel-root": {
                 transform: "translate(14px, 10px) scale(1)",
