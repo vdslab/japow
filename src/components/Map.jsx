@@ -102,6 +102,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
                             </div>
                         </Tooltip>
                         <Circle
+                            position={[item.latitude, item.longitude]}
                             center={[item.latitude, item.longitude]}
                             key={index}
                             radius={200}
