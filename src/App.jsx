@@ -65,39 +65,32 @@ function App() {
       <Box sx={{ width: "100vw", height: "100vh" }}>
 
         <Header />
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+
+        <Box sx={{ height: "10vh", display: "flex", alignItems: "center", justifyContent: "center", p: 1 }}>
           <Filter filter={filter} setFilter={setFilter}></Filter>
           <Search skiTargetID={skiTargetID} setSkiTargetID={setSkiTargetID}></Search>
         </Box>
-        <Grid container direction="row" spacing={1} xs={12} sx={{ width: "100vw", height: "90vh", m: 0, backgroundColor: "#008000" }}>
-          <Grid item xs={6}>
-            <Grid container direction="column" spacing={1} sx={{ height: "100%", p: 0 }}>
-              {/* <Grid item xs={1} sx={{ backgroundColor: "#FF32FF", p: 0 }}> */}
-              {/* </Grid> */}
-              <Grid item xs={6} sx={{ height: "50%" }}>
-                <Box sx={{ height: "100%", overflow: "hidden", m: 2 }}>
-                  <Map
-                    mapData={mapData}
-                    skiTargetID={skiTargetID}
-                    setSkiTargetID={setSkiTargetID}
-                  />
-                </Box>
-              </Grid>
 
-              <Grid item xs={6} sx={{ height: "50%" }}>
-                <Box sx={{ height: "100%", m: 2 }}>
-                  <LineChart
-                    skiTargetID={skiTargetID}
-                    skiData={snowData}
-                    skiColors={skiColors}
-                  ></LineChart>
-                </Box>
-              </Grid>
-            </Grid>
+        <Grid container direction="row" spacing={1} xs={12} sx={{ width: "100%", height: "100%", m: 0, backgroundColor: "#CCF2FF" }}>
+          <Grid item xs={6} >
+            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "40%", overflow: "hidden", m: 2, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
+              <Map
+                mapData={mapData}
+                skiTargetID={skiTargetID}
+                setSkiTargetID={setSkiTargetID}
+              />
+            </Box>
+            <Box sx={{ height: "50%", m: 2, p: 1, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
+              <LineChart
+                skiTargetID={skiTargetID}
+                skiData={snowData}
+                skiColors={skiColors}
+              ></LineChart>
+            </Box>
           </Grid>
 
           <Grid item xs={6}>
-            <Box id={"aiueo"} sx={{ height: "100%", overflow: "hidden", m: 2 }}>
+            <Box id={"aiueo"} sx={{ height: "90%", overflow: "hidden", m: 2, backgroundColor: "#FFFFFF", borderRadius: 2 }}>
               <NewBumpChart
                 data={snowData}
                 skiTargetID={skiTargetID}

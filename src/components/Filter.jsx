@@ -14,10 +14,6 @@ const Filter = ({ filter, setFilter }) => {
             sx={{
                 display: "flex",
                 alignItems: "center",
-                p: 1,
-                m: 1,
-                bgcolor: "background.paper",
-                borderRadius: 1,
                 gap: 2,
             }}
         >
