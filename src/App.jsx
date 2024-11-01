@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import NewBumpChart from "./components/newBumpChart";
 import Filter from "./components/Filter";
 import Map from "./components/Map";
-import snowQualityData from "./assets/snowQualityData.json";
+import snowQualityData from "./assets/aaa.json";
 import sukijouZahyou from "./assets/ski_resorts_japan.json";
 import { Box, Stack, Grid } from "@mui/material";
 import {
@@ -96,7 +96,7 @@ function App() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                height: "40%",
+                height: "100%",
                 overflow: "hidden",
                 mb: 1,
                 backgroundColor: "#FFFFFF",
@@ -109,7 +109,7 @@ function App() {
                 setSkiTargetID={setSkiTargetID}
               />
             </Box>
-            <Box
+            {/* <Box
               sx={{
                 height: "50%",
                 mt: 1,
@@ -131,7 +131,7 @@ function App() {
                 skiData={snowData}
                 skiColors={skiColors}
               ></LineChart>
-            </Box>
+            </Box> */}
           </Grid>
 
           <Grid item xs={6}>
@@ -146,7 +146,7 @@ function App() {
                 borderRadius: 2,
               }}
             >
-              <h3
+              {/* <h3
                 style={{
                   marginBottom: "5px",
                   textAlign: "center",
@@ -160,7 +160,20 @@ function App() {
                 setSkiTargetID={setSkiTargetID}
                 skiColors={skiColors}
                 setSkiColors={setSkiColors}
-              ></NewBumpChart>
+              ></NewBumpChart> */}
+              <h3
+                style={{
+                  margin: "auto",
+                  textAlign: "center",
+                }}
+              >
+                雪質のスコア推移
+              </h3>
+              <LineChart
+                skiTargetID={skiTargetID}
+                skiData={snowData}
+                skiColors={skiColors}
+              ></LineChart>
             </Box>
           </Grid>
         </Grid>
