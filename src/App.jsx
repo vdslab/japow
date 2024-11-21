@@ -28,14 +28,17 @@ function App() {
     pref: [],
     season: "2023/24",
     period: "",
+    sq: "powder",
   });
   const [skiColors, setSkiColors] = useState({});
+  const [sqTarget, setSqTarget] = useState("powder");
 
   useEffect(() => {
     let snowFilteredData = JSON.parse(JSON.stringify(snowQualityData));
-    snowFilteredData = rank(
-      sort(snowFilterBySeason(snowFilteredData, filter.season))
-    );
+    // snowFilteredData = rank(
+    //   sort(snowFilterBySeason(snowFilteredData, filter.season))
+    // );
+    snowFilteredData = snowFilterBySeason(snowFilteredData, filter.season)
     let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
     if (filter.pref !== "") {
@@ -54,10 +57,11 @@ function App() {
     if (filter.period !== "") {
       snowFilteredData = snowFilterByPeriod(snowFilteredData, filter.period);
     }
+
     setMapData(mapFilteredData);
     setSnowData(snowFilteredData);
   }, [filter, skiTargetID]);
-
+  console.log(sqTarget);
   return (
     <>
       <Box sx={{ width: "100vw", height: "100vh" }}>
@@ -72,7 +76,12 @@ function App() {
             p: 1,
           }}
         >
-          <Filter filter={filter} setFilter={setFilter}></Filter>
+          <Filter
+            filter={filter}
+            setFilter={setFilter}
+            setSqTarget={setSqTarget}
+            sqTarget={sqTarget}
+          ></Filter>
           <Search
             skiTargetID={skiTargetID}
             setSkiTargetID={setSkiTargetID}
@@ -130,12 +139,13 @@ function App() {
                 skiTargetID={skiTargetID}
                 skiData={snowData}
                 skiColors={skiColors}
+                sqTarget={sqTarget}
               ></LineChart>
             </Box>
           </Grid>
 
           <Grid item xs={6}>
-            <Box
+            {/* <Box
               id={"Bump"}
               sx={{
                 height: "91%",
@@ -161,7 +171,7 @@ function App() {
                 skiColors={skiColors}
                 setSkiColors={setSkiColors}
               ></NewBumpChart>
-            </Box>
+            </Box> */}
           </Grid>
         </Grid>
       </Box>

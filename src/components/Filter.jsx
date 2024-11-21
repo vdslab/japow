@@ -1,14 +1,16 @@
 import { useState } from "react";
 import prefData from "../assets/prefectures.json";
 import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
-const Filter = ({ filter, setFilter }) => {
+const Filter = ({ filter, setFilter, setSqTarget, sqTarget}) => {
     const SELECT_ALL_REGION_NAME = "全国";
     const SELECT_ALL_PERIOD_NAME = "全期間"
     const months = ["11月", "12月", "1月", "2月", "3月"];
     const seasons = ["2023/24", "2022/23", "2021/22"];
+    const sqList = ['powder', 'dry', 'wet', 'shaba', 'burn', 'new'];
     const [selectRegion, setSelectRegion] = useState(SELECT_ALL_REGION_NAME);
     const [selectSeason, setSelectSeason] = useState("2023/24");
     const [selectPeriod, setSelectPeriod] = useState(SELECT_ALL_PERIOD_NAME);
+    const [selectSq, setSelectSq] = useState(sqTarget);
     const regions = {
         "北海道": ["北海道"],
         "東北": ["青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県"],
@@ -85,6 +87,26 @@ const Filter = ({ filter, setFilter }) => {
                 >
                     <MenuItem key="all" value={SELECT_ALL_PERIOD_NAME}>{SELECT_ALL_PERIOD_NAME}</MenuItem>
                     {months.map((item, index) => {
+                        return (
+                            <MenuItem key={index} value={item}>{item}</MenuItem>
+                        )
+                    })}
+                </Select>
+            </FormControl>
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <InputLabel id="sq-label">雪質</InputLabel>
+                <Select
+                    labelId="sq-label"
+                    id="sq"
+                    value={selectSq}
+                    label="シーズン"
+
+                    onChange={(e) => {
+                        setSelectSq(e.target.value);
+                        setSqTarget(e.target.value);
+                    }}
+                >
+                    {sqList.map((item, index) => {
                         return (
                             <MenuItem key={index} value={item}>{item}</MenuItem>
                         )

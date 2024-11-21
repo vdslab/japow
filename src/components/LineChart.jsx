@@ -12,7 +12,7 @@ import {
 } from "recharts";
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
 
-const LineChart = ({ skiTargetID, skiData, skiColors }) => {
+const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
   const renderTick = (tickProps) => {
     const { x, y, payload, index, allTicks } = tickProps;
 
@@ -72,13 +72,13 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
 
   const legendFontSize = Math.max(10, 15 - skiTargetID.length);
 
-  if (skiTargetID) {
+  if (skiTargetID.length > 0) {
     const skiTargetNames = [];
     const pastData = snowFilterBySkiTarget(skiTargetID, skiData).map((item) => {
       let newItem = { name: item.name };
 
       item.values.forEach((skiResort) => {
-        newItem[skiResort.name] = skiResort.snowScore;
+        newItem[skiResort.name] = skiResort[sqTarget];
         if (!skiTargetNames.includes(skiResort.name)) {
           skiTargetNames.push(skiResort.name);
         }
