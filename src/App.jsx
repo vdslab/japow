@@ -17,6 +17,7 @@ import { sort } from "./functions/SortData";
 import { rank } from "./functions/MakeRank";
 import LineChart from "./components/LineChart";
 import Header from "./components/Header.jsx";
+import  StackedBarChart  from "./components/StackedBarChart.jsx";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState([]);
@@ -35,10 +36,10 @@ function App() {
 
   useEffect(() => {
     let snowFilteredData = JSON.parse(JSON.stringify(snowQualityData));
-    // snowFilteredData = rank(
-    //   sort(snowFilterBySeason(snowFilteredData, filter.season))
-    // );
-    snowFilteredData = snowFilterBySeason(snowFilteredData, filter.season)
+    snowFilteredData = rank(
+      sort(snowFilterBySeason(snowFilteredData, filter.season), sqTarget)
+    );
+    // snowFilteredData = snowFilterBySeason(snowFilteredData, filter.season)
     let mapFilteredData = JSON.parse(JSON.stringify(sukijouZahyou));
 
     if (filter.pref !== "") {
@@ -145,7 +146,7 @@ function App() {
           </Grid>
 
           <Grid item xs={6}>
-            {/* <Box
+            <Box
               id={"Bump"}
               sx={{
                 height: "91%",
@@ -164,14 +165,18 @@ function App() {
               >
                 雪質の平均順位
               </h3>
-              <NewBumpChart
+              <StackedBarChart
+                snowData={snowData}
+                sqTarget={sqTarget}
+              ></StackedBarChart>
+              {/* <NewBumpChart
                 data={snowData}
                 skiTargetID={skiTargetID}
                 setSkiTargetID={setSkiTargetID}
                 skiColors={skiColors}
                 setSkiColors={setSkiColors}
-              ></NewBumpChart>
-            </Box> */}
+              ></NewBumpChart> */}
+            </Box>
           </Grid>
         </Grid>
       </Box>

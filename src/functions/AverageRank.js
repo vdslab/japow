@@ -4,8 +4,8 @@ export const avgRank = (SortedData, start, end) => {
   const skiIDs = {}; // skiIDを保存するオブジェクト
 
   SortedData.forEach((monthData) => {
-    monthData.weeks.forEach((weekData) => {
-      weekData.weekValues.forEach((skiResort) => {
+    monthData.days.forEach((dayData) => {
+      dayData.dayValues.forEach((skiResort) => {
         const { name, rank, skiID } = skiResort;
         if (!rankSums[name]) {
           rankSums[name] = 0;
