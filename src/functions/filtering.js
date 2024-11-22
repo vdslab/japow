@@ -8,11 +8,11 @@ export const snowFilterBypref = (data, slectedPref, skiTargetID) => {
         ({ region, skiID }) =>
           slectedPref.includes(region) || skiTargetID.includes(skiID)
       );
-      month.weeks = month.weeks.map((week) => {
-        week.weekValues = week.weekValues.filter(({ region, skiID }) => {
+      month.days = month.days.map((day) => {
+        day.dayValues = day.dayValues.filter(({ region, skiID }) => {
           return slectedPref.includes(region) || skiTargetID.includes(skiID);
         });
-        return week;
+        return day;
       });
       return month;
     });
