@@ -13,6 +13,7 @@ import {
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
 
 const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
+  // x軸のカスタムメモリ
   const renderTick = (tickProps) => {
     const { x, y, payload, index, allTicks } = tickProps;
 
@@ -48,6 +49,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
         lineHeight: "1.2em",
       };
 
+      console.log(payload[0]);
       return (
         <div className="custom-tooltip" style={tooltipStyle}>
           <p className="label" style={{ fontSize: `${fontSize}px` }}>
@@ -58,7 +60,8 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
               key={`item-${index}`}
               style={{ color: entry.color, fontSize: `${fontSize}px` }}
             >
-              {`${entry.name} : ${Math.round(entry.value)}`}
+              {`${entry.name} : ${Math.round(entry.value)}`}{" "}
+              {/* ツールチップのスキー場名とvalue */}
             </p>
           ))}
           {payload.length > 5 && (
@@ -76,7 +79,6 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
     const skiTargetNames = [];
     const pastData = snowFilterBySkiTarget(skiTargetID, skiData).map((item) => {
       let newItem = { name: item.name };
-
       item.values.forEach((skiResort) => {
         newItem[skiResort.name] = skiResort[sqTarget];
         if (!skiTargetNames.includes(skiResort.name)) {
@@ -86,7 +88,6 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
 
       return newItem;
     });
-
     return (
       <ResponsiveContainer width={"100%"} height={"100%"}>
         <LineC
@@ -94,49 +95,28 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
           width={"100%"}
           margin={{ top: 5, right: 0, left: 0, bottom: 17 }}
         >
-          <CartesianGrid strokeDasharray="3 3" fill="gray" horizontal={false} />
+          <CartesianGrid vertical={false} horizontal={true} />
           <XAxis
             dataKey="name"
             interval={0}
             tick={(tickProps) =>
               renderTick({ ...tickProps, allTicks: pastData })
             }
+            tickFormatter={(value) => {
+              console.log(value.split("/"));
+              const day = value.split("/")[1]; // 日付を抽出
+              console.log(day);
+              return day === "01日" ? value : ""; // 日付が01の時のみ表示
+            }}
+            tickLine={false} // X軸の目盛り線を非表示
           />
+
           <YAxis />
           <Tooltip content={renderCustomTooltip} />
           <Legend
             wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }}
           />
-          <ReferenceLine
-            y={90.80954978411411}
-            label={{ value: "Powder", fill: "white" }}
-            stroke="black"
-            strokeDasharray="3 3"
-          />
-          <ReferenceLine
-            y={75.1128755797243}
-            label={{ value: "new", fill: "white" }}
-            stroke="black"
-            strokeDasharray="3 3"
-          />
-          <ReferenceLine
-            y={61.438865697856755}
-            label={{ value: "dry", fill: "white" }}
-            stroke="black"
-            strokeDasharray="3 3"
-          />
-          <ReferenceLine
-            y={38.36131928287439}
-            label={{ value: "wet", fill: "white" }}
-            stroke="black"
-            strokeDasharray="3 3"
-          />
-          <ReferenceLine
-            y={30.668378549764917}
-            label={{ value: "shaba", fill: "white" }}
-            stroke="black"
-            strokeDasharray="3 3"
-          />
+
           {skiTargetNames.map((name) => (
             <Line
               key={name}
