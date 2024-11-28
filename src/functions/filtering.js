@@ -66,17 +66,10 @@ export const snowFilterBySkiTarget = (skiTargetID, data) => {
 
 //シーズンでフィルタリング
 export const snowFilterBySeason = (data, selectedYear) => {
-<<<<<<< HEAD
   let seasonData = [];
   for (const item of data) {
     if (selectedYear === item.year) {
       seasonData = item.months;
-=======
-  let seasonData = []
-  for (const item of data) {
-    if (selectedYear === item.year) {
-      seasonData = item.months
->>>>>>> e85b147 (シーズン中の期間フィルター実装)
       break;
     }
   }
