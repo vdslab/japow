@@ -1,15 +1,15 @@
 import { useState } from "react";
 import prefData from "../assets/prefectures.json";
 import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
+import { PERIOD_IDS, SNOW_QUALITY_LIST } from "../constants";
 const Filter = ({ filter, setFilter, setSqTarget, sqTarget}) => {
     const SELECT_ALL_REGION_NAME = "全国";
-    const SELECT_ALL_PERIOD_NAME = "全期間"
-    const months = ["11月", "12月", "1月", "2月", "3月"];
+    const periods = [{name:"全期間", id:PERIOD_IDS.ALL}, {name:"序盤（11月）", id:PERIOD_IDS.early}, {name:"中盤（12月〜２月）", id:PERIOD_IDS.middele}, {name:"終盤（3月）", id:PERIOD_IDS.late}];
+    const SELECT_ALL_PERIOD_NAME = "全期間";
     const seasons = ["2023/24", "2022/23", "2021/22"];
-    const sqList = ['powder', 'dry', 'wet', 'shaba', 'burn', 'new'];
     const [selectRegion, setSelectRegion] = useState(SELECT_ALL_REGION_NAME);
     const [selectSeason, setSelectSeason] = useState("2023/24");
-    const [selectPeriod, setSelectPeriod] = useState(SELECT_ALL_PERIOD_NAME);
+    const [selectPeriod, setSelectPeriod] = useState(filter.period);
     const [selectSq, setSelectSq] = useState(sqTarget);
     const regions = {
         "北海道": ["北海道"],
@@ -81,14 +81,14 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget}) => {
                     value={selectPeriod}
                     label="期間"
                     onChange={(e) => {
-                        setSelectPeriod(e.target.value)
-                        setFilter({ ...filter, "period": e.target.value !== SELECT_ALL_PERIOD_NAME ? e.target.value : "", });
+                        setSelectPeriod(e.target.value);
+                        setFilter({ ...filter, "period": e.target.value});
                     }}
                 >
-                    <MenuItem key="all" value={SELECT_ALL_PERIOD_NAME}>{SELECT_ALL_PERIOD_NAME}</MenuItem>
-                    {months.map((item, index) => {
+                    {/* <MenuItem key="all" value={SELECT_ALL_PERIOD_NAME}>{SELECT_ALL_PERIOD_NAME}</MenuItem> */}
+                    {periods.map((item, index) => {
                         return (
-                            <MenuItem key={index} value={item}>{item}</MenuItem>
+                            <MenuItem key={index} value={item.id} name={item.name}>{item.name}</MenuItem>
                         )
                     })}
                 </Select>
@@ -106,9 +106,9 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget}) => {
                         setSqTarget(e.target.value);
                     }}
                 >
-                    {sqList.map((item, index) => {
+                    {Object.keys(SNOW_QUALITY_LIST).map((item, index) => {
                         return (
-                            <MenuItem key={index} value={item}>{item}</MenuItem>
+                            <MenuItem key={index} value={item}>{SNOW_QUALITY_LIST[item]}</MenuItem>
                         )
                     })}
                 </Select>

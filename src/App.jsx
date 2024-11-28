@@ -18,6 +18,7 @@ import { rank } from "./functions/MakeRank";
 import LineChart from "./components/LineChart";
 import Header from "./components/Header.jsx";
 import  StackedBarChart  from "./components/StackedBarChart.jsx";
+import { PERIOD_IDS } from "./constants.js";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState([]);
@@ -28,7 +29,7 @@ function App() {
   const [filter, setFilter] = useState({
     pref: [],
     season: "2023/24",
-    period: "",
+    period: PERIOD_IDS.ALL,
     sq: "powder",
   });
   const [skiColors, setSkiColors] = useState({});
@@ -62,7 +63,6 @@ function App() {
     setMapData(mapFilteredData);
     setSnowData(snowFilteredData);
   }, [filter, skiTargetID]);
-  console.log(sqTarget);
   return (
     <>
       <Box sx={{ width: "100vw", height: "100vh" }}>
@@ -149,7 +149,7 @@ function App() {
             <Box
               id={"Bump"}
               sx={{
-                height: "91%",
+                height: "89%",
                 pt: 1,
                 pb: 1,
                 overflow: "hidden",
@@ -168,6 +168,7 @@ function App() {
               <StackedBarChart
                 snowData={snowData}
                 sqTarget={sqTarget}
+                filter={filter}
               ></StackedBarChart>
               {/* <NewBumpChart
                 data={snowData}
@@ -183,5 +184,4 @@ function App() {
     </>
   );
 }
-
 export default App;
