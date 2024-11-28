@@ -7,27 +7,46 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
+  Cell,
 } from "recharts";
 import { calcPeriodAverage } from "../functions/AverageRank";
 import { snowFilterByPeriod } from "../functions/filtering";
 import { SNOW_QUALITY_LIST } from "../constants";
+import { CreateSelecetAndSortData } from "../functions/SortData";
 
-const StackedBarChart = ({ snowData, sqTarget, filter }) => {
+const StackedBarChart = ({
+  snowData,
+  sqTarget,
+  filter,
+  skiTargetID,
+  setSkiTargetID,
+}) => {
   const data = snowFilterByPeriod(snowData, filter.period);
-  const filteredData = calcPeriodAverage(data)
-    .sort((a, b) => b[sqTarget] - a[sqTarget]) // sqTarget で降順ソート
-    .slice(0, 10); // 上位10件を取得
+  const averageData = calcPeriodAverage(data);
+  const displayData = CreateSelecetAndSortData(
+    averageData,
+    skiTargetID,
+    sqTarget,
+    10
+  );
   // 積み上げ順序を定義
   const categories = Object.keys(SNOW_QUALITY_LIST);
   const orderedCategories = [
     sqTarget,
     ...categories.filter((cat) => cat !== sqTarget),
   ];
+  const getOpacity = (entry) => {
+    console.log(entry);
+    return skiTargetID.length > 0 || !skiTargetID.includes(entry.skiID)
+      ? 0.6
+      : 1;
+  };
+  console.log(displayData);
 
   return (
     <ResponsiveContainer width="100%" height="90%">
       <BarChart
-        data={filteredData}
+        data={displayData}
         layout="vertical"
         margin={{ top: 20, right: 30, left: 100, bottom: 20 }}
       >
@@ -78,7 +97,26 @@ const StackedBarChart = ({ snowData, sqTarget, filter }) => {
             dataKey={category}
             stackId="a"
             fill={getCategoryColor(category)}
-          />
+            onClick={(e) => {
+              setSkiTargetID((prev) =>
+                prev.includes(e.skiID)
+                  ? prev.filter((id) => id !== e.skiID)
+                  : [...prev, e.skiID]
+              );
+            }}
+          >
+            {displayData.map((entry, index) => (
+              <Cell
+                key={`cell-${category}-${index}`}
+                fill={getCategoryColor(category)}
+                opacity={
+                  skiTargetID.length === 0 || skiTargetID.includes(entry.skiID)
+                    ? 1
+                    : 0.6
+                }
+              />
+            ))}
+          </Bar>
         ))}
       </BarChart>
     </ResponsiveContainer>
