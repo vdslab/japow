@@ -169,6 +169,8 @@ function App() {
                 snowData={snowData}
                 sqTarget={sqTarget}
                 filter={filter}
+                skiTargetID={skiTargetID}
+                setSkiTargetID={setSkiTargetID}
               ></StackedBarChart>
               {/* <NewBumpChart
                 data={snowData}

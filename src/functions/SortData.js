@@ -6,3 +6,22 @@ export const sort = (data, sqTarget) => {
   });
   return data;
 };
+
+//選択されたスキー場と雪質が上位のスキー場をnum個分抽出
+export const CreateSelecetAndSortData = (data, skiTargetID, sqTarget, num) => {
+  const seledtedData = [];
+  const notSelectedData = [];
+  data.forEach((item) => {
+    if (skiTargetID.includes(item.skiID)) {
+      seledtedData.push(item);
+    } else {
+      notSelectedData.push(item);
+    }
+  })
+  const sortData = notSelectedData
+    .sort((a, b) => b[sqTarget] - a[sqTarget])
+    .slice(0, num - seledtedData.length);
+  const displayData = [...sortData, ...seledtedData];
+  displayData.sort((a, b) => b[sqTarget] - a[sqTarget]);
+  return displayData;
+}
