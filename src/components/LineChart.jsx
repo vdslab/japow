@@ -8,12 +8,11 @@ import {
   CartesianGrid,
   ResponsiveContainer,
   Legend,
-  ReferenceLine,
 } from "recharts";
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
+import * as d3 from "d3"; // D3をインポート
 
 const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
-  // x軸のカスタムメモリ
   const renderTick = (tickProps) => {
     const { x, y, payload, index, allTicks } = tickProps;
 
@@ -24,13 +23,21 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
         : null;
 
     return (
-      <text x={x} y={y} textAnchor="middle" fill="#666" fontSize={10}>
+      <g transform={`translate(${x},${y})`}>
+        {/* 小さいメモリ線 */}
         {lines[0] && prevMonth !== lines[0] && (
-          <tspan x={x} dy={13}>
-            {lines[0]}
-          </tspan>
+          <line x1={0} y1={-8} x2={0} y2={0} stroke="#666" strokeWidth={1} />
         )}
-      </text>
+
+        {/* ラベル */}
+        <text x={0} y={0} textAnchor="middle" fill="#666" fontSize={10}>
+          {lines[0] && prevMonth !== lines[0] && (
+            <tspan x={0} dy={13}>
+              {lines[0]}
+            </tspan>
+          )}
+        </text>
+      </g>
     );
   };
 
@@ -40,7 +47,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
       const sortedPayload = payload
         .sort((a, b) => b.value - a.value)
         .slice(0, displayCount);
-      const fontSize = 10; // ツールチップのフォントサイズを小さく設定
+      const fontSize = 10;
       const tooltipStyle = {
         backgroundColor: "rgba(255, 255, 255, 0.9)",
         border: "1px solid #ccc",
@@ -49,7 +56,6 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
         lineHeight: "1.2em",
       };
 
-      console.log(payload[0]);
       return (
         <div className="custom-tooltip" style={tooltipStyle}>
           <p className="label" style={{ fontSize: `${fontSize}px` }}>
@@ -60,8 +66,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
               key={`item-${index}`}
               style={{ color: entry.color, fontSize: `${fontSize}px` }}
             >
-              {`${entry.name} : ${Math.round(entry.value)}`}{" "}
-              {/* ツールチップのスキー場名とvalue */}
+              {`${entry.name} : ${Math.round(entry.value)}`}
             </p>
           ))}
           {payload.length > 5 && (
@@ -77,6 +82,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
 
   if (skiTargetID.length > 0) {
     const skiTargetNames = [];
+    const colorScheme = d3.schemeCategory10; // D3のカラー配列
     const pastData = snowFilterBySkiTarget(skiTargetID, skiData).map((item) => {
       let newItem = { name: item.name };
       item.values.forEach((skiResort) => {
@@ -88,12 +94,19 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
 
       return newItem;
     });
+
+    //色つけ
+    const skiColors = skiTargetNames.reduce((acc, name, index) => {
+      acc[name] = colorScheme[index % colorScheme.length]; // 色をループで割り当て
+      return acc;
+    }, {});
+
     return (
       <ResponsiveContainer width={"100%"} height={"100%"}>
         <LineC
           data={pastData}
           width={"100%"}
-          margin={{ top: 5, right: 0, left: 0, bottom: 17 }}
+          margin={{ top: 5, right: 20, left: -20, bottom: 17 }}
         >
           <CartesianGrid vertical={false} horizontal={true} />
           <XAxis
@@ -102,16 +115,10 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
             tick={(tickProps) =>
               renderTick({ ...tickProps, allTicks: pastData })
             }
-            tickFormatter={(value) => {
-              console.log(value.split("/"));
-              const day = value.split("/")[1]; // 日付を抽出
-              console.log(day);
-              return day === "01日" ? value : ""; // 日付が01の時のみ表示
-            }}
-            tickLine={false} // X軸の目盛り線を非表示
+            tickLine={false}
           />
 
-          <YAxis />
+          <YAxis tick={{ style: { fontSize: "12px", fill: "#666" } }} />
           <Tooltip content={renderCustomTooltip} />
           <Legend
             wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }}
@@ -124,6 +131,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
               dataKey={name}
               stroke={skiColors[name]}
               name={name}
+              dot={{ r: 1 }} // ノードサイズを調整
             />
           ))}
         </LineC>
