@@ -10,7 +10,7 @@ import {
   Legend,
 } from "recharts";
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
-import * as d3 from "d3"; // D3をインポート
+import * as d3 from "d3";
 
 const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
   const renderTick = (tickProps) => {
@@ -84,6 +84,8 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
     const skiTargetNames = [];
     const colorScheme = d3.schemeCategory10; // D3のカラー配列
     const pastData = snowFilterBySkiTarget(skiTargetID, skiData).map((item) => {
+      item.values.sort((a, b) => a.name.localeCompare(b.name));
+
       let newItem = { name: item.name };
       item.values.forEach((skiResort) => {
         newItem[skiResort.name] = skiResort[sqTarget];
