@@ -41,7 +41,29 @@ const StackedBarChart = ({
       ? 0.6
       : 1;
   };
-  console.log(displayData);
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div
+          style={{
+            backgroundColor: "white",
+            padding: "5px",
+            border: "1px solid #ccc",
+            fontSize: "10px", // フォントサイズを小さく
+            lineHeight: "1.2", // 行間を調整
+          }}
+        >
+          <p>{`スキー場名: ${label}`}</p>
+          {payload.map((data, index) => (
+            <p key={index} style={{ color: data.color }}>
+              {`${SNOW_QUALITY_LIST[data.dataKey]}: ${Math.round(data.value * 100) / 100} %`}
+            </p>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
     <ResponsiveContainer width="100%" height="90%">
@@ -89,7 +111,7 @@ const StackedBarChart = ({
             );
           }}
         />
-        <Tooltip />
+        <Tooltip content={<CustomTooltip />} />
         <Legend formatter={(value) => SNOW_QUALITY_LIST[value]} />
         {orderedCategories.map((category) => (
           <Bar

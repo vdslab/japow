@@ -84,7 +84,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
           })}
         </Select>
       </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
+      {/*<FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="season-label">シーズン</InputLabel>
         <Select
           labelId="season-label"
@@ -104,7 +104,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
             );
           })}
         </Select>
-      </FormControl>
+      </FormControl>*/}
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="period-label">期間</InputLabel>
         <Select
