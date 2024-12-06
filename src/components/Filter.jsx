@@ -1,6 +1,7 @@
 import { useState } from "react";
 import prefData from "../assets/prefectures.json";
 import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
+import HelpIcon from "@mui/icons-material/Help";
 import { PERIOD_IDS, SNOW_QUALITY_LIST } from "../constants";
 const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
   const SELECT_ALL_REGION_NAME = "全国";
@@ -16,6 +17,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
   const [selectSeason, setSelectSeason] = useState("2023/24");
   const [selectPeriod, setSelectPeriod] = useState(filter.period);
   const [selectSq, setSelectSq] = useState(sqTarget);
+  const [showHelp, setShowHelp] = useState(false); // ヘルプ表示制御
   const regions = {
     北海道: ["北海道"],
     東北: ["青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県"],
@@ -128,12 +130,30 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
         </Select>
       </FormControl>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="sq-label">雪質</InputLabel>
+        <InputLabel
+          id="sq-label"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "4px",
+          }}
+        >
+          雪質
+          <HelpIcon
+            sx={{
+              cursor: "pointer",
+              color: "#888",
+            }}
+            onClick={() => setShowHelp((prev) => !prev)}
+          />
+        </InputLabel>
+
+        {/* 雪質の選択 */}
         <Select
           labelId="sq-label"
           id="sq"
           value={selectSq}
-          label="シーズン"
+          label="雪質"
           onChange={(e) => {
             setSelectSq(e.target.value);
             setSqTarget(e.target.value);
@@ -142,12 +162,32 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
           {Object.keys(SNOW_QUALITY_LIST).map((item, index) => {
             return (
               <MenuItem key={index} value={item}>
-                {SNOW_QUALITY_LIST[item]}
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <span style={{ fontWeight: "bold" }}>
+                    {SNOW_QUALITY_LIST[item]}
+                  </span>
+                  <span style={{ fontSize: "12px", color: "gray" }}>
+                    {/* 雪質の説明を追加 */}
+                    {item === "powder"
+                      ? "降りたての乾雪"
+                      : item === "dry"
+                      ? "水分量が少なくさらさらした雪"
+                      : item === "wet"
+                      ? "水分量が多く固まりやすい雪"
+                      : item === "slushy"
+                      ? "溶けかけたザラザラの雪"
+                      : item === "icy"
+                      ? "固く滑りやすい雪面"
+                      : "降りたての新しい雪"}
+                  </span>
+                </div>
               </MenuItem>
             );
           })}
         </Select>
       </FormControl>
+
+      {/* ヘルプアイコン */}
     </Box>
   );
 };
