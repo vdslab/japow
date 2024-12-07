@@ -16,7 +16,19 @@ HOKKAIDO_LAT_MAX = 46  # 北緯46度まで
 HOKKAIDO_LON_MIN = 139  # 東経139度から
 HOKKAIDO_LON_MAX = 147  # 東経145度まで
 
-parameterName = ["snowLayers", "iceT", "snowMassDensity", "waterContent", "iceContent", "airT", "dewPointDiff", "specificHumidity", "relativeHumidity", "windU", "windV"]
+parameterName = [
+    "snowLayers",
+    "iceT",
+    "snowMassDensity",
+    "waterContent",
+    "iceContent",
+    "airT",
+    "dewPointDiff",
+    "specificHumidity",
+    "relativeHumidity",
+    "windU",
+    "windV"
+    ]
 
 snowLevFiles = os.listdir('/grib2')
 surfFiles = os.listdir('/grib2_surf')
