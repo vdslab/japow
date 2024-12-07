@@ -130,6 +130,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
         </Select>
       </FormControl>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
+        {/* カスタムラベル */}
         <InputLabel
           id="sq-label"
           sx={{
@@ -148,6 +149,33 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
           />
         </InputLabel>
 
+        {/* ヘルプ説明ポップアップ */}
+        {showHelp && (
+          <Box
+            sx={{
+              position: "absolute",
+              top: "100%", // フィルターの下に表示
+              right: 0,
+              mt: 1,
+              p: 1,
+              backgroundColor: "white",
+              border: "1px solid #ccc",
+              borderRadius: "4px",
+              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+              fontSize: "12px",
+              zIndex: 10,
+              maxWidth: "200px",
+            }}
+          >
+            <p>パウダースノー：降りたての乾雪</p>
+            <p>乾雪：水分量が少なくさらさらした雪</p>
+            <p>湿雪：水分量が多く固まりやすい雪</p>
+            <p>シャバ雪：溶けかけたザラザラの雪</p>
+            <p>アイスバーン：固く滑りやすい雪面</p>
+            <p>新雪：降りたての新しい雪</p>
+          </Box>
+        )}
+
         {/* 雪質の選択 */}
         <Select
           labelId="sq-label"
@@ -162,25 +190,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
           {Object.keys(SNOW_QUALITY_LIST).map((item, index) => {
             return (
               <MenuItem key={index} value={item}>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <span style={{ fontWeight: "bold" }}>
-                    {SNOW_QUALITY_LIST[item]}
-                  </span>
-                  <span style={{ fontSize: "12px", color: "gray" }}>
-                    {/* 雪質の説明を追加 */}
-                    {item === "powder"
-                      ? "降りたての乾雪"
-                      : item === "dry"
-                      ? "水分量が少なくさらさらした雪"
-                      : item === "wet"
-                      ? "水分量が多く固まりやすい雪"
-                      : item === "slushy"
-                      ? "溶けかけたザラザラの雪"
-                      : item === "icy"
-                      ? "固く滑りやすい雪面"
-                      : "降りたての新しい雪"}
-                  </span>
-                </div>
+                {SNOW_QUALITY_LIST[item]}
               </MenuItem>
             );
           })}
