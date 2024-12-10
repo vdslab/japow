@@ -41,7 +41,6 @@ const StackedBarChart = ({
         item.shaba +
         item.burn -
         100;
-      console.log(diff);
       item.powder = Math.trunc(item.powder * 100) / 100;
     }
     return item;
