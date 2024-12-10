@@ -109,7 +109,6 @@ function App() {
           sx={{
             width: "100%",
             height: "85%",
-            // m: 1
           }}
         >
           {/* コンテナを作る */}
@@ -137,6 +136,7 @@ function App() {
                   height: "45%",
                   overflow: "hidden",
                   mb: 1,
+                  ml: 1,
                   backgroundColor: "#FFFFFF",
                   borderRadius: 2,
                 }}
@@ -154,6 +154,7 @@ function App() {
                 sx={{
                   height: "50%",
                   mt: 1,
+                  ml: 1,
                   p: 1,
                   backgroundColor: "#FFFFFF",
                   borderRadius: 2,
