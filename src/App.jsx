@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 //import BumpChart from "./BumpChart";
 import NewBumpChart from "./components/newBumpChart";
 import Filter from "./components/Filter";
@@ -18,7 +18,8 @@ import { rank } from "./functions/MakeRank";
 import LineChart from "./components/LineChart";
 import Header from "./components/Header.jsx";
 import  StackedBarChart  from "./components/StackedBarChart.jsx";
-import { PERIOD_IDS } from "./constants.js";
+import { PERIOD_IDS, SNOW_QUALITY_LIST } from "./constants.js";
+import { createColors } from "./functions/createColors.js";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState([]);
@@ -63,6 +64,12 @@ function App() {
     setMapData(mapFilteredData);
     setSnowData(snowFilteredData);
   }, [filter, skiTargetID]);
+
+  let prevSkiColors = useRef([]);
+  useEffect(() => {
+    setSkiColors(createColors(skiTargetID, prevSkiColors.current, skiColors));
+    prevSkiColors.current = [...skiTargetID];
+  }, [skiTargetID])
   return (
     <>
       <Box sx={{ width: "100vw", height: "100vh" }}>
@@ -106,7 +113,7 @@ function App() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                height: "40%",
+                height: "45%",
                 overflow: "hidden",
                 mb: 1,
                 backgroundColor: "#FFFFFF",
@@ -117,6 +124,7 @@ function App() {
                 mapData={mapData}
                 skiTargetID={skiTargetID}
                 setSkiTargetID={setSkiTargetID}
+                skiColors={skiColors}
               />
             </Box>
             <Box
@@ -134,7 +142,7 @@ function App() {
                   textAlign: "center",
                 }}
               >
-                雪質のスコア推移
+                {`${SNOW_QUALITY_LIST[sqTarget]} 確率推移`}
               </h3>
               <LineChart
                 skiTargetID={skiTargetID}
@@ -149,7 +157,8 @@ function App() {
             <Box
               id={"Bump"}
               sx={{
-                height: "89%",
+                height: "96.3%",
+                width: "99%",
                 pt: 1,
                 pb: 1,
                 overflow: "hidden",
@@ -163,7 +172,7 @@ function App() {
                   textAlign: "center",
                 }}
               >
-                雪質の平均順位
+                {`${SNOW_QUALITY_LIST[sqTarget]}になる確率ランキング`}
               </h3>
               <StackedBarChart
                 snowData={snowData}

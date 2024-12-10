@@ -12,7 +12,7 @@ import {
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
 import * as d3 from "d3";
 
-const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
+const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget}) => {
   const renderTick = (tickProps) => {
     const { x, y, payload, index, allTicks } = tickProps;
 
@@ -89,19 +89,19 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
       let newItem = { name: item.name };
       item.values.forEach((skiResort) => {
         newItem[skiResort.name] = skiResort[sqTarget];
-        if (!skiTargetNames.includes(skiResort.name)) {
-          skiTargetNames.push(skiResort.name);
+        if (skiTargetNames.every(({skiID}) => skiID !== skiResort.skiID)) {
+          skiTargetNames.push({"name":skiResort.name, "skiID":skiResort.skiID});
         }
       });
 
       return newItem;
     });
 
-    //色つけ
-    const skiColors = skiTargetNames.reduce((acc, name, index) => {
-      acc[name] = colorScheme[index % colorScheme.length]; // 色をループで割り当て
-      return acc;
-    }, {});
+    // //色つけ
+    // const skiColors = skiTargetNames.reduce((acc, name, index) => {
+    //   acc[name] = colorScheme[index % colorScheme.length]; // 色をループで割り当て
+    //   return acc;
+    // }, {});
 
     return (
       <ResponsiveContainer width={"100%"} height={"100%"}>
@@ -125,13 +125,12 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
           <Legend
             wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }}
           />
-
-          {skiTargetNames.map((name) => (
+          {skiTargetNames.map(({name, skiID}) => (
             <Line
               key={name}
               type="monotone"
               dataKey={name}
-              stroke={skiColors[name]}
+              stroke={skiColors[skiID]}
               name={name}
               dot={{ r: 1 }} // ノードサイズを調整
             />

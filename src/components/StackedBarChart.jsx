@@ -28,7 +28,14 @@ const StackedBarChart = ({
     skiTargetID,
     sqTarget,
     10
-  );
+  ).map((item) => {
+    if(item.powder + item.new + item.dry + item.wet + item.shaba + item.burn > 100) {
+      const diff = item.powder + item.new + item.dry + item.wet + item.shaba + item.burn - 100;
+      console.log(diff);
+      item.powder = Math.trunc(item.powder * 100) / 100
+    }
+    return item;
+  })
   // 積み上げ順序を定義
   const categories = Object.keys(SNOW_QUALITY_LIST);
   const orderedCategories = [
@@ -36,7 +43,6 @@ const StackedBarChart = ({
     ...categories.filter((cat) => cat !== sqTarget),
   ];
   const getOpacity = (entry) => {
-    console.log(entry);
     return skiTargetID.length > 0 || !skiTargetID.includes(entry.skiID)
       ? 0.6
       : 1;
@@ -56,7 +62,7 @@ const StackedBarChart = ({
           <p>{`スキー場名: ${label}`}</p>
           {payload.map((data, index) => (
             <p key={index} style={{ color: data.color }}>
-              {`${SNOW_QUALITY_LIST[data.dataKey]}: ${Math.round(data.value * 100) / 100} %`}
+              {`${SNOW_QUALITY_LIST[data.dataKey]}: ${Math.trunc(data.value * 100) / 100} %`}
             </p>
           ))}
         </div>
@@ -148,12 +154,18 @@ const StackedBarChart = ({
 // カテゴリーに応じた色を返す関数
 const getCategoryColor = (category) => {
   const colors = {
-    powder: "#8884d8",
-    new: "#83a6ed",
-    dry: "#8dd1e1",
-    wet: "#82ca9d",
-    shaba: "#a4de6c",
-    burn: "#d0ed57",
+    powder: "#54c3f1",
+    new: "#49a2dc",
+    dry: "#3e82c7",
+    wet: "#3361b2",
+    shaba: "#28419d",
+    burn: "#1d2088",
+    // powder: "#00A0E9",
+    // new: "#0099D9",
+    // dry: "#718CC7",
+    // wet: "#796BAF",
+    // shaba: "#4D4398",
+    // burn: "#1D2088",
   };
   return colors[category];
 };

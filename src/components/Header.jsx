@@ -5,13 +5,13 @@ export default function Header() {
     <Box
       border={2}
       sx={{
-        height: "10vh",
+        height: "6vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#65D8FF"
+        backgroundColor: "#54C3F1"
       }}>
-      <h1>Japow</h1>
+      <h2>Japow</h2>
       {/* <Typography variant="h3">Japow</Typography> */}
     </Box>
   );
