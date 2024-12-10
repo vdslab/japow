@@ -1,20 +1,15 @@
 import {
   MapContainer,
-  TileLayer,
   Circle,
   Popup,
   GeoJSON,
   Marker,
-  useMapEvent,
   Tooltip,
 } from "react-leaflet";
 import { useState, useEffect, useContext, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import "../styles/Map.css";
-import pinIcon from "../assets/images/pin-icon.svg";
 import geojson from "../assets/Japan.json";
-import { icon } from "leaflet";
-import { filter, reduce } from "d3";
 import L from "leaflet";
 const generateDivIcon = (color) =>
   L.divIcon({

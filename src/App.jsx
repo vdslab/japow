@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-//import BumpChart from "./BumpChart";
 import NewBumpChart from "./components/newBumpChart";
 import Filter from "./components/Filter";
 import Map from "./components/Map";

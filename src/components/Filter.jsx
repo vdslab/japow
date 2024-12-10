@@ -1,7 +1,5 @@
 import { useState } from "react";
-import prefData from "../assets/prefectures.json";
 import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
-import HelpIcon from "@mui/icons-material/Help";
 import { PERIOD_IDS, SNOW_QUALITY_LIST } from "../constants";
 const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
   const SELECT_ALL_REGION_NAME = "全国";
