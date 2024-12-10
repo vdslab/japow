@@ -1,3 +1,5 @@
+import { PERIOD_IDS, PERIOD_MONTH } from "../constants";
+
 //都道府県で雪質データのフィルタリング
 export const snowFilterBypref = (data, slectedPref, skiTargetID) => {
   if (!slectedPref.length > 0) {
@@ -8,11 +10,11 @@ export const snowFilterBypref = (data, slectedPref, skiTargetID) => {
         ({ region, skiID }) =>
           slectedPref.includes(region) || skiTargetID.includes(skiID)
       );
-      month.weeks = month.weeks.map((week) => {
-        week.weekValues = week.weekValues.filter(({ region, skiID }) => {
+      month.days = month.days.map((day) => {
+        day.dayValues = day.dayValues.filter(({ region, skiID }) => {
           return slectedPref.includes(region) || skiTargetID.includes(skiID);
         });
-        return week;
+        return day;
       });
       return month;
     });
@@ -33,20 +35,27 @@ export const mapFilterBypref = (data, slectedPref, skiTargetID) => {
 
 //選択された期間で雪質データをフィルタリング
 export const snowFilterByPeriod = (data, period) => {
-  if (period === "") {
-    return data;
+  if (period === PERIOD_IDS.early) {
+    return data.filter(({ month }) => PERIOD_MONTH.early.includes(month));
+  } else if (period === PERIOD_IDS.middele) {
+    return data.filter(({ month }) => PERIOD_MONTH.middele.includes(month));
+  } else if (period === PERIOD_IDS.late) {
+    return data.filter(({ month }) => PERIOD_MONTH.late.includes(month));
   } else {
-    return data.filter(({ month }) => month === period);
+    return data;
   }
 };
 
 // 選択されたスキー場の名前でフィルタリング
 export const snowFilterBySkiTarget = (skiTargetID, data) => {
   return data.flatMap((month) => {
-    return month.weeks.flatMap((week) => {
+    return month.days.flatMap((day) => {
+      const arr = day.date.split("/"); //スラッシュで分割して日付の最後を持ってくる
+      const dayDate = arr.slice(-1)[0];
+
       let item = {
-        name: month.month + "/" + week.week,
-        values: week.weekValues.filter(({ skiID }) =>
+        name: month.month + "/" + dayDate + "日",
+        values: day.dayValues.filter(({ skiID }) =>
           skiTargetID.includes(skiID)
         ),
       };
@@ -57,12 +66,12 @@ export const snowFilterBySkiTarget = (skiTargetID, data) => {
 
 //シーズンでフィルタリング
 export const snowFilterBySeason = (data, selectedYear) => {
-  let seasonData = []
-  for(const item of data) {
-    if(selectedYear === item.year) {
-      seasonData = item.months
+  let seasonData = [];
+  for (const item of data) {
+    if (selectedYear === item.year) {
+      seasonData = item.months;
       break;
     }
   }
   return seasonData;
-}
+};

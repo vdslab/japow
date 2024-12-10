@@ -8,11 +8,11 @@ import {
   CartesianGrid,
   ResponsiveContainer,
   Legend,
-  ReferenceLine,
 } from "recharts";
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
+import * as d3 from "d3";
 
-const LineChart = ({ skiTargetID, skiData, skiColors }) => {
+const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
   const renderTick = (tickProps) => {
     const { x, y, payload, index, allTicks } = tickProps;
 
@@ -23,13 +23,21 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
         : null;
 
     return (
-      <text x={x} y={y} textAnchor="middle" fill="#666" fontSize={10}>
+      <g transform={`translate(${x},${y})`}>
+        {/* 小さいメモリ線 */}
         {lines[0] && prevMonth !== lines[0] && (
-          <tspan x={x} dy={13}>
-            {lines[0]}
-          </tspan>
+          <line x1={0} y1={-8} x2={0} y2={0} stroke="#666" strokeWidth={1} />
         )}
-      </text>
+
+        {/* ラベル */}
+        <text x={0} y={0} textAnchor="middle" fill="#666" fontSize={10}>
+          {lines[0] && prevMonth !== lines[0] && (
+            <tspan x={0} dy={13}>
+              {lines[0]}
+            </tspan>
+          )}
+        </text>
+      </g>
     );
   };
 
@@ -39,7 +47,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
       const sortedPayload = payload
         .sort((a, b) => b.value - a.value)
         .slice(0, displayCount);
-      const fontSize = 10; // ツールチップのフォントサイズを小さく設定
+      const fontSize = 10;
       const tooltipStyle = {
         backgroundColor: "rgba(255, 255, 255, 0.9)",
         border: "1px solid #ccc",
@@ -72,78 +80,59 @@ const LineChart = ({ skiTargetID, skiData, skiColors }) => {
 
   const legendFontSize = Math.max(10, 15 - skiTargetID.length);
 
-  if (skiTargetID) {
+  if (skiTargetID.length > 0) {
     const skiTargetNames = [];
+    const colorScheme = d3.schemeCategory10; // D3のカラー配列
     const pastData = snowFilterBySkiTarget(skiTargetID, skiData).map((item) => {
-      let newItem = { name: item.name };
+      item.values.sort((a, b) => a.name.localeCompare(b.name));
 
+      let newItem = { name: item.name };
       item.values.forEach((skiResort) => {
-        newItem[skiResort.name] = skiResort.snowScore;
-        if (!skiTargetNames.includes(skiResort.name)) {
-          skiTargetNames.push(skiResort.name);
+        newItem[skiResort.name] = skiResort[sqTarget];
+        if (skiTargetNames.every(({ skiID }) => skiID !== skiResort.skiID)) {
+          skiTargetNames.push({ name: skiResort.name, skiID: skiResort.skiID });
         }
       });
 
       return newItem;
     });
 
+    // //色つけ
+    // const skiColors = skiTargetNames.reduce((acc, name, index) => {
+    //   acc[name] = colorScheme[index % colorScheme.length]; // 色をループで割り当て
+    //   return acc;
+    // }, {});
+
     return (
-      <ResponsiveContainer width={"100%"} height={"100%"}>
+      <ResponsiveContainer width={"100%"} height={"95%"}>
         <LineC
           data={pastData}
           width={"100%"}
-          margin={{ top: 5, right: 0, left: 0, bottom: 17 }}
+          margin={{ top: 5, right: 20, left: -20, bottom: 17 }}
         >
-          <CartesianGrid strokeDasharray="3 3" fill="gray" horizontal={false} />
+          <CartesianGrid vertical={false} horizontal={true} />
           <XAxis
             dataKey="name"
             interval={0}
             tick={(tickProps) =>
               renderTick({ ...tickProps, allTicks: pastData })
             }
+            tickLine={false}
           />
-          <YAxis />
+
+          <YAxis tick={{ style: { fontSize: "12px", fill: "#666" } }} />
           <Tooltip content={renderCustomTooltip} />
           <Legend
             wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }}
           />
-          <ReferenceLine
-            y={90.80954978411411}
-            label={{ value: "Powder", fill: "white" }}
-            stroke="black"
-            strokeDasharray="3 3"
-          />
-          <ReferenceLine
-            y={75.1128755797243}
-            label={{ value: "new", fill: "white" }}
-            stroke="black"
-            strokeDasharray="3 3"
-          />
-          <ReferenceLine
-            y={61.438865697856755}
-            label={{ value: "dry", fill: "white" }}
-            stroke="black"
-            strokeDasharray="3 3"
-          />
-          <ReferenceLine
-            y={38.36131928287439}
-            label={{ value: "wet", fill: "white" }}
-            stroke="black"
-            strokeDasharray="3 3"
-          />
-          <ReferenceLine
-            y={30.668378549764917}
-            label={{ value: "shaba", fill: "white" }}
-            stroke="black"
-            strokeDasharray="3 3"
-          />
-          {skiTargetNames.map((name) => (
+          {skiTargetNames.map(({ name, skiID }) => (
             <Line
               key={name}
               type="monotone"
               dataKey={name}
-              stroke={skiColors[name]}
+              stroke={skiColors[skiID]}
               name={name}
+              dot={{ r: 1 }} // ノードサイズを調整
             />
           ))}
         </LineC>
