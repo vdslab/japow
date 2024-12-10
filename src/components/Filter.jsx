@@ -18,6 +18,8 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
   const [selectPeriod, setSelectPeriod] = useState(filter.period);
   const [selectSq, setSelectSq] = useState(sqTarget);
   const [showHelp, setShowHelp] = useState(false); // ヘルプ表示制御
+  const [helpText, setHelpText] = useState("");
+
   const regions = {
     北海道: ["北海道"],
     東北: ["青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県"],
@@ -129,73 +131,97 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
           })}
         </Select>
       </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
-        {/* カスタムラベル */}
-        <InputLabel
-          id="sq-label"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            gap: "4px",
-          }}
-        >
-          雪質
-          <HelpIcon
-            sx={{
-              cursor: "pointer",
-              color: "#888",
+      <Box sx={{ position: "relative", display: "inline-block" }}>
+        {/* 雪質の選択 */}
+        <FormControl sx={{ m: 1, minWidth: 200 }}>
+          <InputLabel id="sq-label">雪質</InputLabel>
+          <Select
+            labelId="sq-label"
+            id="sq"
+            value={selectSq}
+            label="雪質"
+            onChange={(e) => {
+              setSelectSq(e.target.value);
+              setSqTarget(e.target.value);
             }}
-            onClick={() => setShowHelp((prev) => !prev)}
-          />
-        </InputLabel>
+            onOpen={() => setShowHelp(true)} // プルダウンが開かれたとき
+            onClose={() => setShowHelp(false)} // プルダウンが閉じられたとき
+          >
+            {Object.keys(SNOW_QUALITY_LIST).map((item, index) => (
+              <MenuItem key={index} value={item}>
+                {SNOW_QUALITY_LIST[item]}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
 
-        {/* ヘルプ説明ポップアップ */}
+        {/* 雪質説明文 */}
         {showHelp && (
           <Box
             sx={{
               position: "absolute",
-              top: "100%", // フィルターの下に表示
-              right: 0,
-              mt: 1,
-              p: 1,
-              backgroundColor: "white",
+              top: 70, // プルダウンの上辺に揃える
+              left: "calc(100% + 16px)", // プルダウン右横に配置
+              width: "550px", // 説明文の幅を固定
+              p: 2,
               border: "1px solid #ccc",
               borderRadius: "4px",
-              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-              fontSize: "12px",
-              zIndex: 10,
-              maxWidth: "200px",
+              backgroundColor: "#f9f9f9",
+              fontSize: "13px",
+              color: "#333",
+              zIndex: 10, // 他要素より前面に表示
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // 見た目を改善
+              overflowY: "auto", // 長すぎた場合にスクロール可能に
+              maxHeight: "800px", // 高さ制限を設定
             }}
           >
-            <p>パウダースノー：降りたての乾雪</p>
-            <p>乾雪：水分量が少なくさらさらした雪</p>
-            <p>湿雪：水分量が多く固まりやすい雪</p>
-            <p>シャバ雪：溶けかけたザラザラの雪</p>
-            <p>アイスバーン：固く滑りやすい雪面</p>
-            <p>新雪：降りたての新しい雪</p>
+            {Object.keys(SNOW_QUALITY_LIST).map((key) => (
+              <Box key={key} sx={{ mb: 2 }}>
+                <strong>{SNOW_QUALITY_LIST[key]}:</strong>{" "}
+                {key === "powder" ? (
+                  <>
+                    水分量が非常に少なく、降りたばかりのふわふわでサラサラな雪を指します。
+                    <br />
+                    滑走時に軽快な感触が楽しめます。
+                  </>
+                ) : key === "dry" ? (
+                  <>
+                    水分量が少なく、さらさらした雪を指します。
+                    <br />
+                    滑走時にスピードが出やすく、カーブもしやすい特徴があります。
+                  </>
+                ) : key === "new" ? (
+                  <>
+                    新しく降り積もった雪を指します。
+                    <br />
+                    浮遊感を味わえますが、滑走にはやや難しく、初心者には扱いづらい場合もあります。
+                  </>
+                ) : key === "wet" ? (
+                  <>
+                    乾雪に比べて水分を多く含んでいる雪を指します。
+                    <br />
+                    スピードが出にくいですが、安定感があります。
+                  </>
+                ) : key === "shaba" ? (
+                  <>
+                    水分量がかなり多く、べっとりとした雪を指します。
+                    <br />
+                    スピードが出にくいため、低速での練習に適しています。
+                  </>
+                ) : (
+                  <>
+                    凍って硬くなった状態の雪を指します。
+                    <br />
+                    スピードが出やすいですが、カーブがしづらく、エッジをしっかり効かせる技術が必要です。
+                    <br />
+                    エッジングの練習に適しています。
+                  </>
+                )}
+              </Box>
+            ))}
           </Box>
         )}
-
-        {/* 雪質の選択 */}
-        <Select
-          labelId="sq-label"
-          id="sq"
-          value={selectSq}
-          label="雪質"
-          onChange={(e) => {
-            setSelectSq(e.target.value);
-            setSqTarget(e.target.value);
-          }}
-        >
-          {Object.keys(SNOW_QUALITY_LIST).map((item, index) => {
-            return (
-              <MenuItem key={index} value={item}>
-                {SNOW_QUALITY_LIST[item]}
-              </MenuItem>
-            );
-          })}
-        </Select>
-      </FormControl>
+      </Box>
 
       {/* ヘルプアイコン */}
     </Box>
