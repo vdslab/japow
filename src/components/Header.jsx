@@ -17,17 +17,15 @@ export default function Header() {
     <Box
       border={2}
       sx={{
-        height: "10vh",
+        height: "5%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#65D8FF",
-        padding: "0 20px",
       }}
     >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
-        <h1>Japow</h1>
-      </Box>
+      <h2>Predict Japow Vis</h2>
+      {/* <Typography variant="h3">Japow</Typography> */}
     </Box>
   );
 }
