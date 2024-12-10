@@ -6,7 +6,6 @@ import { InputAdornment } from "@mui/material";
 import Box from "@mui/material/Box";
 
 const Search = ({ skiTargetID, setSkiTargetID, mapData }) => {
-  console.log(mapData);
   const [filteredOptions, setFilteredOptions] = useState(mapData);
   const [searchInput, setSearchInput] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState([]);
