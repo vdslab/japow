@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 //import BumpChart from "./BumpChart";
 import NewBumpChart from "./components/newBumpChart";
 import Filter from "./components/Filter";
@@ -17,8 +17,9 @@ import { sort } from "./functions/SortData";
 import { rank } from "./functions/MakeRank";
 import LineChart from "./components/LineChart";
 import Header from "./components/Header.jsx";
-import StackedBarChart from "./components/StackedBarChart.jsx";
-import { PERIOD_IDS } from "./constants.js";
+import  StackedBarChart  from "./components/StackedBarChart.jsx";
+import { PERIOD_IDS, SNOW_QUALITY_LIST } from "./constants.js";
+import { createColors } from "./functions/createColors.js";
 
 function App() {
   const [skiTargetID, setSkiTargetID] = useState([]);
@@ -63,6 +64,12 @@ function App() {
     setMapData(mapFilteredData);
     setSnowData(snowFilteredData);
   }, [filter, skiTargetID]);
+
+  let prevSkiColors = useRef([]);
+  useEffect(() => {
+    setSkiColors(createColors(skiTargetID, prevSkiColors.current, skiColors));
+    prevSkiColors.current = [...skiTargetID];
+  }, [skiTargetID])
   return (
     <>
       <Box
@@ -205,6 +212,81 @@ function App() {
                   setSkiTargetID={setSkiTargetID}
                 ></StackedBarChart>
                 {/* <NewBumpChart
+          <Grid item xs={6}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "45%",
+                overflow: "hidden",
+                mb: 1,
+                backgroundColor: "#FFFFFF",
+                borderRadius: 2,
+              }}
+            >
+              <Map
+                mapData={mapData}
+                skiTargetID={skiTargetID}
+                setSkiTargetID={setSkiTargetID}
+                skiColors={skiColors}
+              />
+            </Box>
+            <Box
+              sx={{
+                height: "50%",
+                mt: 1,
+                p: 1,
+                backgroundColor: "#FFFFFF",
+                borderRadius: 2,
+              }}
+            >
+              <h3
+                style={{
+                  margin: "auto",
+                  textAlign: "center",
+                }}
+              >
+                {`${SNOW_QUALITY_LIST[sqTarget]} 確率推移`}
+              </h3>
+              <LineChart
+                skiTargetID={skiTargetID}
+                skiData={snowData}
+                skiColors={skiColors}
+                sqTarget={sqTarget}
+              ></LineChart>
+            </Box>
+          </Grid>
+
+          <Grid item xs={6}>
+            <Box
+              id={"Bump"}
+              sx={{
+                height: "96.3%",
+                width: "99%",
+                pt: 1,
+                pb: 1,
+                overflow: "hidden",
+                backgroundColor: "white",
+                borderRadius: 2,
+              }}
+            >
+              <h3
+                style={{
+                  marginBottom: "5px",
+                  textAlign: "center",
+                }}
+              >
+                {`${SNOW_QUALITY_LIST[sqTarget]}になる確率ランキング`}
+              </h3>
+              <StackedBarChart
+                snowData={snowData}
+                sqTarget={sqTarget}
+                filter={filter}
+                skiTargetID={skiTargetID}
+                setSkiTargetID={setSkiTargetID}
+              ></StackedBarChart>
+              {/* <NewBumpChart
                 data={snowData}
                 skiTargetID={skiTargetID}
                 setSkiTargetID={setSkiTargetID}

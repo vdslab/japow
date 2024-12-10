@@ -15,7 +15,32 @@ import pinIcon from "../assets/images/pin-icon.svg";
 import geojson from "../assets/Japan.json";
 import { icon } from "leaflet";
 import { filter, reduce } from "d3";
-function Map({ mapData, skiTargetID, setSkiTargetID }) {
+import L from "leaflet";
+const generateDivIcon = (color) =>
+  L.divIcon({
+    className: "custom-icon",
+    html: `
+      <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="opacity: 1;" xml:space="preserve">
+<style type="text/css">
+
+	.st0{fill:#4B4B4B;}
+
+</style>
+<g>
+	<path class="st0" d="M256,0C159.969,0,82.109,77.859,82.109,173.906c0,100.719,80.016,163.688,123.297,238.719
+		C246.813,484.406,246.781,512,256,512s9.188-27.594,50.594-99.375c43.297-75.031,123.297-138,123.297-238.719
+		C429.891,77.859,352.031,0,256,0z M256,240.406c-36.734,0-66.516-29.781-66.516-66.5c0-36.75,29.781-66.531,66.516-66.531
+		s66.516,29.781,66.516,66.531C322.516,210.625,292.734,240.406,256,240.406z" style="fill: ${color};"></path>
+</g>
+</svg>
+    `,
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -30],
+    tooltipAnchor: [0, -24],
+  });
+
+function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
   const mapRef = useRef();
   const DEFAULT_ZOOM = 5;
   const MAX_ZOOM = 10;
@@ -40,14 +65,6 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
     opacity: 1,
   };
 
-  const markerIcon = new icon({
-    iconUrl: pinIcon,
-    iconSize: [32, 32],
-    iconAnchor: [16, 32],
-    popupAnchor: [0, -30],
-    tooltipAnchor: [0, -24],
-  });
-
   const handleTooltipClose = (skiID) => {
     setSkiTargetID((prev) => prev.filter((item) => item !== skiID));
   };
@@ -56,23 +73,19 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
   let prevSkiTarget = useRef([]);
   useEffect(() => {
     if (prevSkiTarget.current.length < skiTargetID.length) {
-      skiTargetID.forEach((item) => {
+      for (const item of skiTargetID) {
         if (!prevSkiTarget.current.includes(item)) {
-          let foucusSkiResort = mapData.filter(
-            ({ skiID }) => skiID === item
-          )[0];
-          console.log([foucusSkiResort.longitude, foucusSkiResort.latitude]);
-          console.log(mapRef);
+          let foucusSkiResort = mapData.find(({ skiID }) => skiID === item);
           mapRef.current.panTo(
             [foucusSkiResort.latitude, foucusSkiResort.longitude],
             { animate: true, duration: 1.5 }
           );
+          break;
         }
-      });
+      }
     }
     prevSkiTarget.current = [...skiTargetID];
   }, [skiTargetID]);
-
   return (
     <MapContainer
       center={JAPAN}
@@ -95,8 +108,9 @@ function Map({ mapData, skiTargetID, setSkiTargetID }) {
         skiTargetID.includes(item.skiID) ? (
           <Marker
             position={[item.latitude, item.longitude]}
-            icon={markerIcon}
+            icon={generateDivIcon(skiColors[item.skiID])}
             key={item.skiID}
+            fillColor={skiColors[item.skiID]}
           >
             <Tooltip
               opacity={1}
