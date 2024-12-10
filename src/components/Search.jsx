@@ -3,18 +3,18 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-import options from "../assets/ski_resorts_japan.json";
 import { InputAdornment } from "@mui/material";
 import Box from "@mui/material/Box";
 
-const Search = ({ skiTargetID, setSkiTargetID }) => {
-  const [filteredOptions, setFilteredOptions] = useState(options);
+const Search = ({ skiTargetID, setSkiTargetID, mapData }) => {
+  console.log(mapData);
+  const [filteredOptions, setFilteredOptions] = useState(mapData);
   const [searchInput, setSearchInput] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   useEffect(() => {
     const selected = skiTargetID
-      ? options.filter((option) => skiTargetID.includes(option.skiID))
+      ? mapData.filter((option) => skiTargetID.includes(option.skiID))
       : [];
     setSelectedOptions(selected);
     setSearchInput(selected.map((option) => option.skiID));
