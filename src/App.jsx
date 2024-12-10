@@ -109,7 +109,6 @@ function App() {
           sx={{
             width: "100%",
             height: "85%",
-            // m: 1
           }}
         >
           {/* コンテナを作る */}
@@ -137,6 +136,7 @@ function App() {
                   height: "45%",
                   overflow: "hidden",
                   mb: 1,
+                  ml: 1,
                   backgroundColor: "#FFFFFF",
                   borderRadius: 2,
                 }}
@@ -154,6 +154,7 @@ function App() {
                 sx={{
                   height: "50%",
                   mt: 1,
+                  ml: 1,
                   p: 1,
                   backgroundColor: "#FFFFFF",
                   borderRadius: 2,
@@ -165,7 +166,7 @@ function App() {
                     textAlign: "center",
                   }}
                 >
-                  {`${SNOW_QUALITY_LIST[sqTarget]} 確率推移`}
+                  {`${SNOW_QUALITY_LIST[sqTarget]} になる確率推移`}
                 </h3>
                 <LineChart
                   skiTargetID={skiTargetID}
@@ -199,7 +200,7 @@ function App() {
                     textAlign: "center",
                   }}
                 >
-                  雪質の平均順位
+                  {`${SNOW_QUALITY_LIST[sqTarget]} になる確率ランキング`}
                 </h3>
                 <StackedBarChart
                   snowData={snowData}
