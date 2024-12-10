@@ -11,7 +11,8 @@ export const sort = (data, sqTarget) => {
 export const CreateSelecetAndSortData = (data, skiTargetID, sqTarget, num) => {
   const seledtedData = [];
   const notSelectedData = [];
-  data.forEach((item) => {
+  data.slice().sort((a, b) => b[sqTarget] - a[sqTarget]).forEach((item, index) => {
+    item["rank"] = index + 1;
     if (skiTargetID.includes(item.skiID)) {
       seledtedData.push(item);
     } else {

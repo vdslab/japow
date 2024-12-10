@@ -139,14 +139,14 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
                 </button>
               </div>
             </Tooltip>
-            <Circle
+            {/* <Circle
               position={[item.latitude, item.longitude]}
               center={[item.latitude, item.longitude]}
               key={`${item.skiID}-circle`}
               radius={200}
               fillColor="red"
               color="red"
-            />
+            /> */}
           </Marker>
         ) : (
           <Circle
