@@ -166,7 +166,7 @@ function App() {
                     textAlign: "center",
                   }}
                 >
-                  {`${SNOW_QUALITY_LIST[sqTarget]} 確率推移`}
+                  {`${SNOW_QUALITY_LIST[sqTarget]} になる確率推移`}
                 </h3>
                 <LineChart
                   skiTargetID={skiTargetID}
@@ -200,7 +200,7 @@ function App() {
                     textAlign: "center",
                   }}
                 >
-                  雪質の平均順位
+                  {`${SNOW_QUALITY_LIST[sqTarget]} になる確率ランキング`}
                 </h3>
                 <StackedBarChart
                   snowData={snowData}
