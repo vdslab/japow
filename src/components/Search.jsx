@@ -54,8 +54,7 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
                 <>
                   {params.InputProps.endAdornment}
                   <InputAdornment position="end">
-                    <IconButton onClick={handleSearchClick}>
-                    </IconButton>
+                    <IconButton onClick={handleSearchClick}></IconButton>
                   </InputAdornment>
                 </>
               ),
@@ -65,7 +64,7 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
               "& .MuiAutocomplete-inputRoot": {
                 display: "flex",
                 flexWrap: "wrap",
-                maxHeight: "8vh",
+                maxHeight: "6vh",
                 overflowY: "auto",
                 overflowX: "hidden",
                 whiteSpace: "nowrap",
@@ -78,7 +77,7 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
                 alignItems: "flex-start",
                 paddingBottom: "10px",
                 minWidth: 500,
-                maxWidth: 500
+                maxWidth: 500,
               },
               "& .MuiFormLabel-root": {
                 transform: "translate(14px, 10px) scale(1)",

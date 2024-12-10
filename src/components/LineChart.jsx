@@ -12,7 +12,7 @@ import {
 import { snowFilterBySkiTarget } from "../functions/filtering.js";
 import * as d3 from "d3";
 
-const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget}) => {
+const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
   const renderTick = (tickProps) => {
     const { x, y, payload, index, allTicks } = tickProps;
 
@@ -89,8 +89,8 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget}) => {
       let newItem = { name: item.name };
       item.values.forEach((skiResort) => {
         newItem[skiResort.name] = skiResort[sqTarget];
-        if (skiTargetNames.every(({skiID}) => skiID !== skiResort.skiID)) {
-          skiTargetNames.push({"name":skiResort.name, "skiID":skiResort.skiID});
+        if (skiTargetNames.every(({ skiID }) => skiID !== skiResort.skiID)) {
+          skiTargetNames.push({ name: skiResort.name, skiID: skiResort.skiID });
         }
       });
 
@@ -104,7 +104,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget}) => {
     // }, {});
 
     return (
-      <ResponsiveContainer width={"100%"} height={"100%"}>
+      <ResponsiveContainer width={"100%"} height={"95%"}>
         <LineC
           data={pastData}
           width={"100%"}
@@ -125,7 +125,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget}) => {
           <Legend
             wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }}
           />
-          {skiTargetNames.map(({name, skiID}) => (
+          {skiTargetNames.map(({ name, skiID }) => (
             <Line
               key={name}
               type="monotone"

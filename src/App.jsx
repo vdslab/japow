@@ -127,7 +127,7 @@ function App() {
             }}
           >
             {/* 左側の大枠 */}
-            <Grid item xs={6} spacing={1}>
+            <Grid item xs={6}>
               {/* マップ枠 */}
               <Box
                 sx={{
