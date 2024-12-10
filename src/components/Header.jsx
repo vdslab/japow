@@ -1,4 +1,16 @@
-import { Box, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  Typography,
+  Card,
+  CardContent,
+  CardHeader,
+  IconButton,
+} from "@mui/material";
+import { useState } from "react";
 
 export default function Header() {
   return (
@@ -9,8 +21,9 @@ export default function Header() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#65D8FF"
-      }}>
+        backgroundColor: "#65D8FF",
+      }}
+    >
       <h2>Predict Japow Vis</h2>
       {/* <Typography variant="h3">Japow</Typography> */}
     </Box>
