@@ -37,7 +37,7 @@ const Search = ({ skiTargetID, setSkiTargetID, mapData }) => {
     <Box sx={{ height: "100%", display: "flex", alignItems: "center", pl: 3 }}>
       <Autocomplete
         multiple
-        options={filteredOptions}
+        options={mapData} //filteredOptionsをmapDataに変えた
         getOptionLabel={(option) => (option && option.name) || ""}
         value={selectedOptions}
         onChange={handleOptionChange}

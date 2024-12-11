@@ -178,7 +178,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
                 <strong>{SNOW_QUALITY_LIST[key]}:</strong>{" "}
                 {key === "powder" ? (
                   <>
-                    水分量が非常に少なく、降りたばかりのふわふわでサラサラな雪を指します。
+                    水分量が非常に少なく、降ったばかりのふわふわでサラサラな雪を指します。
                     <br />
                     滑走時に軽快な感触が楽しめます。
                   </>

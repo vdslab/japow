@@ -51,7 +51,6 @@ function App() {
       setMapData(JSON.parse(JSON.stringify(mapDataRef.current)));
     })();
   }, []);
-
   useEffect(() => {
     let snowFilteredData = JSON.parse(JSON.stringify(snowDataRef.current));
     let mapFilteredData = JSON.parse(JSON.stringify(mapDataRef.current));
