@@ -2,17 +2,19 @@ import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import IconButton from "@mui/material/IconButton";
+import SearchIcon from "@mui/icons-material/Search";
+import options from "../../public/data/ski_resorts_japan.json";
 import { InputAdornment } from "@mui/material";
 import Box from "@mui/material/Box";
 
-const Search = ({ skiTargetID, setSkiTargetID, mapData }) => {
-  const [filteredOptions, setFilteredOptions] = useState(mapData);
+const Search = ({ skiTargetID, setSkiTargetID }) => {
+  const [filteredOptions, setFilteredOptions] = useState(options);
   const [searchInput, setSearchInput] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   useEffect(() => {
     const selected = skiTargetID
-      ? mapData.filter((option) => skiTargetID.includes(option.skiID))
+      ? options.filter((option) => skiTargetID.includes(option.skiID))
       : [];
     setSelectedOptions(selected);
     setSearchInput(selected.map((option) => option.skiID));
@@ -37,7 +39,7 @@ const Search = ({ skiTargetID, setSkiTargetID, mapData }) => {
     <Box sx={{ height: "100%", display: "flex", alignItems: "center", pl: 3 }}>
       <Autocomplete
         multiple
-        options={mapData} //filteredOptionsをmapDataに変えた
+        options={filteredOptions}
         getOptionLabel={(option) => (option && option.name) || ""}
         value={selectedOptions}
         onChange={handleOptionChange}
