@@ -111,7 +111,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
               opacity={1}
               permanent
               direction="top"
-              key={index}
+              key={item.skiID}
               className="custom-tooltip leaflet-popup-content-wrapper"
               style={{ padding: 0 }}
             >
@@ -146,7 +146,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
         ) : (
           <Circle
             center={[item.latitude, item.longitude]}
-            key={index}
+            key={item.skiID}
             radius={hoverCircle === item.skiID ? 5000 : 200}
             fillColor="blue"
             color="blue"
