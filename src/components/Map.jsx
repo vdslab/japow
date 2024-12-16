@@ -80,7 +80,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
       }
     }
     prevSkiTarget.current = [...skiTargetID];
-  }, [skiTargetID]);
+  }, [mapData]);
   return (
     <MapContainer
       center={JAPAN}
