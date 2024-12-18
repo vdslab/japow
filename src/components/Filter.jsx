@@ -1,6 +1,18 @@
 import { useState } from "react";
-import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
+import {
+  Box,
+  InputLabel,
+  MenuItem,
+  FormControl,
+  Select,
+  Checkbox,
+  ListItemText,
+  Collapse,
+  IconButton,
+} from "@mui/material";
+import { ExpandMore, ChevronRight } from "@mui/icons-material";
 import { PERIOD_IDS, SNOW_QUALITY_LIST } from "../constants";
+
 const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
   const SELECT_ALL_REGION_NAME = "全国";
   const periods = [
@@ -11,12 +23,13 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
   ];
   const SELECT_ALL_PERIOD_NAME = "全期間";
   const seasons = ["2023/24", "2022/23", "2021/22"];
-  const [selectRegion, setSelectRegion] = useState(SELECT_ALL_REGION_NAME);
+
   const [selectSeason, setSelectSeason] = useState("2023/24");
   const [selectPeriod, setSelectPeriod] = useState(filter.period);
   const [selectSq, setSelectSq] = useState(sqTarget);
-  const [showHelp, setShowHelp] = useState(false); // ヘルプ表示制御
+  const [showHelp, setShowHelp] = useState(false);
   const [helpText, setHelpText] = useState("");
+  const [expandedRegions, setExpandedRegions] = useState([]);
 
   const regions = {
     北海道: ["北海道"],
@@ -48,6 +61,56 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
     ],
   };
 
+  const allPrefectures = Object.values(regions).flat();
+  const [selectRegion, setSelectRegion] = useState([]);
+  const handlePrefectureChange = (pref) => {
+    const newSelection = selectRegion.includes(pref)
+      ? selectRegion.filter((item) => item !== pref)
+      : [...selectRegion, pref];
+
+    setSelectRegion(newSelection);
+    setFilter({ ...filter, pref: newSelection });
+  };
+
+  const handleRegionGroupChange = (region) => {
+    const regionPrefs = regions[region];
+    const isAllSelected = regionPrefs.every((pref) =>
+      selectRegion.includes(pref)
+    );
+
+    const newSelection = isAllSelected
+      ? selectRegion.filter((pref) => !regionPrefs.includes(pref))
+      : [
+          ...selectRegion,
+          ...regionPrefs.filter((pref) => !selectRegion.includes(pref)),
+        ];
+
+    setSelectRegion(newSelection);
+    setFilter({ ...filter, pref: newSelection });
+  };
+
+  const toggleRegionExpand = (region) => {
+    setExpandedRegions((prev) =>
+      prev.includes(region)
+        ? prev.filter((r) => r !== region)
+        : [...prev, region]
+    );
+  };
+
+  const handleSelectAllRegions = () => {
+    if (selectRegion.length === allPrefectures.length) {
+      // 全選択解除
+      setSelectRegion([]);
+    } else {
+      // 全選択
+      setSelectRegion(allPrefectures);
+    }
+    setFilter({
+      ...filter,
+      pref: selectRegion.length === allPrefectures.length ? [] : allPrefectures,
+    });
+  };
+
   return (
     <Box
       sx={{
@@ -56,57 +119,93 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
         gap: 2,
       }}
     >
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
+      {/* 地域選択 */}
+      <FormControl sx={{ m: 1, minWidth: 300 }}>
         <InputLabel id="region-label">地域</InputLabel>
         <Select
           labelId="region-label"
           id="region"
-          value={selectRegion}
+          multiple
           label="地域"
-          onChange={(e) => {
-            setSelectRegion(e.target.value);
-            setFilter({
-              ...filter,
-              pref:
-                e.target.value !== SELECT_ALL_REGION_NAME
-                  ? regions[e.target.value]
-                  : [],
-            });
+          value={selectRegion}
+          renderValue={(selected) =>
+            selected.length === allPrefectures.length
+              ? SELECT_ALL_REGION_NAME
+              : `${selected.length}県選択中`
+          }
+          MenuProps={{
+            PaperProps: {
+              style: {
+                m: 2,
+                maxHeight: 500,
+                width: 300,
+              },
+            },
           }}
         >
-          <MenuItem key="none" value={SELECT_ALL_REGION_NAME}>
-            {SELECT_ALL_REGION_NAME}
+          {/* 全国選択オプション */}
+          <MenuItem onClick={handleSelectAllRegions}>
+            <Checkbox
+              checked={selectRegion.length === allPrefectures.length}
+              indeterminate={
+                selectRegion.length > 0 &&
+                selectRegion.length < allPrefectures.length
+              }
+            />
+            <ListItemText primary={SELECT_ALL_REGION_NAME} />
           </MenuItem>
-          {Object.keys(regions).map((region, index) => {
-            return (
-              <MenuItem key={index} value={region}>
-                {region}
+
+          {/* 地域リスト表示 */}
+          {Object.keys(regions).map((region) => (
+            <div key={region}>
+              <MenuItem>
+                <Checkbox
+                  checked={regions[region].every((pref) =>
+                    selectRegion.includes(pref)
+                  )}
+                  indeterminate={
+                    regions[region].some((pref) =>
+                      selectRegion.includes(pref)
+                    ) &&
+                    !regions[region].every((pref) =>
+                      selectRegion.includes(pref)
+                    )
+                  }
+                  onClick={() => handleRegionGroupChange(region)}
+                />
+                <ListItemText primary={region} />
+                <IconButton
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleRegionExpand(region);
+                  }}
+                >
+                  {expandedRegions.includes(region) ? (
+                    <ExpandMore />
+                  ) : (
+                    <ChevronRight />
+                  )}
+                </IconButton>
               </MenuItem>
-            );
-          })}
+              <Collapse in={expandedRegions.includes(region)} timeout="auto">
+                <Box sx={{ pl: 4 }}>
+                  {regions[region].map((pref) => (
+                    <MenuItem
+                      key={pref}
+                      onClick={() => handlePrefectureChange(pref)}
+                    >
+                      <Checkbox checked={selectRegion.includes(pref)} />
+                      <ListItemText primary={pref} />
+                    </MenuItem>
+                  ))}
+                </Box>
+              </Collapse>
+            </div>
+          ))}
         </Select>
       </FormControl>
-      {/*<FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="season-label">シーズン</InputLabel>
-        <Select
-          labelId="season-label"
-          id="season"
-          value={selectSeason}
-          label="シーズン"
-          onChange={(e) => {
-            setSelectSeason(e.target.value);
-            setFilter({ ...filter, season: e.target.value });
-          }}
-        >
-          {seasons.map((item, index) => {
-            return (
-              <MenuItem key={index} value={item}>
-                {item + "年"}
-              </MenuItem>
-            );
-          })}
-        </Select>
-      </FormControl>*/}
+
+      {/* 期間選択 */}
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="period-label">期間</InputLabel>
         <Select
@@ -119,16 +218,16 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
             setFilter({ ...filter, period: e.target.value });
           }}
         >
-          {/* <MenuItem key="all" value={SELECT_ALL_PERIOD_NAME}>{SELECT_ALL_PERIOD_NAME}</MenuItem> */}
           {periods.map((item, index) => {
             return (
-              <MenuItem key={index} value={item.id} name={item.name}>
+              <MenuItem key={index} value={item.id}>
                 {item.name}
               </MenuItem>
             );
           })}
         </Select>
       </FormControl>
+
       <Box sx={{ position: "relative", display: "inline-block" }}>
         {/* 雪質の選択 */}
         <FormControl sx={{ m: 1, minWidth: 200 }}>
@@ -220,8 +319,6 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
           </Box>
         )}
       </Box>
-
-      {/* ヘルプアイコン */}
     </Box>
   );
 };

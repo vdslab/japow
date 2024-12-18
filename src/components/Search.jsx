@@ -78,10 +78,6 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
     setSearchInput(selected.map((option) => option.skiID));
   }, [skiTargetID]);
 
-  const handleSearchClick = () => {
-    setSkiTargetID(searchInput);
-  };
-
   const handleOptionChange = (event, newValues) => {
     if (newValues) {
       const newIDs = newValues.map((value) => value.skiID);

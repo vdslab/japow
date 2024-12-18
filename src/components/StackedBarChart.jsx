@@ -69,6 +69,7 @@ const StackedBarChart = ({
           }}
         >
           <p>{`スキー場名: ${label}`}</p>
+          <p>{`都道府県名: ${payload[0].payload.region}`}</p>
           {payload.map((data, index) => (
             <p key={index} style={{ color: data.color }}>
               {`${SNOW_QUALITY_LIST[data.dataKey]}: ${
@@ -100,8 +101,12 @@ const StackedBarChart = ({
 
             // 長いテキストを複数行に分割するzロジック
             let lines = [];
-            if ((displayData[payload.index].rank + "位 " + payload.value).length > maxLineLength) {
-              let temp = (displayData[payload.index].rank + "位 " + payload.value);
+            if (
+              (displayData[payload.index].rank + "位 " + payload.value).length >
+              maxLineLength
+            ) {
+              let temp =
+                displayData[payload.index].rank + "位 " + payload.value;
               while (temp.length > maxLineLength) {
                 // 1行分を切り取る
                 const line = temp.slice(0, maxLineLength);
@@ -118,7 +123,7 @@ const StackedBarChart = ({
                 }
               }
             } else {
-              lines = [(displayData[payload.index].rank + "位 " + payload.value)]; // 1行に収まる場合
+              lines = [displayData[payload.index].rank + "位 " + payload.value]; // 1行に収まる場合
             }
 
             return (
