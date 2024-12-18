@@ -1,20 +1,15 @@
 import {
   MapContainer,
-  TileLayer,
   Circle,
   Popup,
   GeoJSON,
   Marker,
-  useMapEvent,
   Tooltip,
 } from "react-leaflet";
 import { useState, useEffect, useContext, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import "../styles/Map.css";
-import pinIcon from "../assets/images/pin-icon.svg";
 import geojson from "../assets/Japan.json";
-import { icon } from "leaflet";
-import { filter, reduce } from "d3";
 import L from "leaflet";
 const generateDivIcon = (color) =>
   L.divIcon({
@@ -85,7 +80,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
       }
     }
     prevSkiTarget.current = [...skiTargetID];
-  }, [skiTargetID]);
+  }, [mapData]);
   return (
     <MapContainer
       center={JAPAN}
@@ -116,7 +111,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
               opacity={1}
               permanent
               direction="top"
-              key={index}
+              key={item.skiID}
               className="custom-tooltip leaflet-popup-content-wrapper"
               style={{ padding: 0 }}
             >
@@ -151,7 +146,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
         ) : (
           <Circle
             center={[item.latitude, item.longitude]}
-            key={index}
+            key={item.skiID}
             radius={hoverCircle === item.skiID ? 5000 : 200}
             fillColor="blue"
             color="blue"
