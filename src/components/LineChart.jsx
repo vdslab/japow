@@ -139,7 +139,20 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
       </ResponsiveContainer>
     );
   } else {
-    return <div>No data available</div>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "85%",
+          fontSize: "16px",
+          color: "#666",
+        }}
+      >
+        スキー場を選択してください
+      </div>
+    );
   }
 };
 
