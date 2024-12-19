@@ -6,11 +6,24 @@ import {
   Marker,
   Tooltip,
 } from "react-leaflet";
+import React from "react";
 import { useState, useEffect, useContext, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import "../styles/Map.css";
 import geojson from "../assets/Japan.json";
 import L from "leaflet";
+import { useMap } from "react-leaflet";
+import { transition } from "d3";
+const ZoomChangeListener = ({ setZoomLev }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    map.on("zoomend", () => {
+      setZoomLev(map.getZoom());
+    });
+  }, [map]);
+  return null;
+};
 const generateDivIcon = (color) =>
   L.divIcon({
     className: "custom-icon",
@@ -38,14 +51,14 @@ const generateDivIcon = (color) =>
 function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
   const mapRef = useRef();
   const DEFAULT_ZOOM = 5;
-  const MAX_ZOOM = 10;
+  const MAX_ZOOM = 12;
   const MIN_Z00M = 5;
   const JAPAN = [40.345119, 140.800075];
   const JAPAN_BOUNDS = [
     [30.0, 120.0], // 南端の座標
     [50.0, 155.0], // 北端の座標
   ];
-
+  const [zoomLev, setZoomLev] = useState(DEFAULT_ZOOM);
   // GeoJSONスタイルオブジェクト
   const geoJSONStyle = {
     // 塗りつぶしの色（半透明の青色）
@@ -59,7 +72,6 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
     // 境界線の不透明度
     opacity: 1,
   };
-
   const handleTooltipClose = (skiID) => {
     setSkiTargetID((prev) => prev.filter((item) => item !== skiID));
   };
@@ -81,6 +93,8 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
     }
     prevSkiTarget.current = [...skiTargetID];
   }, [mapData]);
+  // const radius = radiusScale(0.5, 1000, MIN_Z00M, MAX_ZOOM, zoomLev); // 二次関数で変化を大きく
+  const radius = logScale(MIN_Z00M, zoomLev);
   return (
     <MapContainer
       center={JAPAN}
@@ -99,8 +113,8 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
             /> */}
       <GeoJSON data={geojson} style={geoJSONStyle} />
       {/* <PopupEventHandler /> */}
-      {mapData.map((item, index) =>
-        skiTargetID.includes(item.skiID) ? (
+      {mapData.map((item, index) => {
+        return skiTargetID.includes(item.skiID) ? (
           <Marker
             position={[item.latitude, item.longitude]}
             icon={generateDivIcon(skiColors[item.skiID])}
@@ -144,43 +158,77 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
             /> */}
           </Marker>
         ) : (
-          <Circle
-            center={[item.latitude, item.longitude]}
-            key={item.skiID}
-            radius={hoverCircle === item.skiID ? 5000 : 200}
-            fillColor="blue"
-            color="blue"
-            eventHandlers={{
-              click: (e) => {
-                setSkiTargetID((prev) => [...prev, item.skiID]);
-              },
-              mouseover: (e) => {
-                setHoverCircle(item.skiID);
-                e.target.openPopup();
-              },
-              mouseout: (e) => {
-                setHoverCircle(null);
-                e.target.closePopup();
-              },
-            }}
-          >
-            <Popup key={index} className="leaflet-circle-popup">
-              <table className="small-table">
-                <tbody>
-                  <tr>
-                    <td>{item.name}</td>
-                  </tr>
-                  <tr>
-                    <td>{item.region}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </Popup>
-          </Circle>
-        )
-      )}
+          <React.Fragment key={`fragment-${item.skiID}`}>
+            <Circle
+              key={`inner${item.skiID}`}
+              center={[item.latitude, item.longitude]}
+              fillOpacity={0.7}
+              radius={
+                hoverCircle === item.skiID
+                  ? 600 * (MAX_ZOOM - zoomLev) + radius
+                  : radius
+              }
+              fillColor="blue"
+              color="blue"
+              weight={0.5}
+              className="circle-hover"
+            />
+            <Circle
+              center={[item.latitude, item.longitude]}
+              key={`outer${item.skiID}`}
+              fillOpacity={0}
+              opacity={0}
+              radius={600 * (MAX_ZOOM - zoomLev) + radius}
+              fillColor="blue"
+              color="blue"
+              strokeOpacity={1}
+              // stroke={false}
+              weight={0.5}
+              eventHandlers={{
+                click: (e) => {
+                  setSkiTargetID((prev) => [...prev, item.skiID]);
+                },
+                mouseover: (e) => {
+                  setHoverCircle(item.skiID);
+                  e.target.openPopup();
+                },
+                mouseout: (e) => {
+                  setHoverCircle(null);
+                  e.target.closePopup();
+                },
+              }}
+            >
+              <Popup key={index} className="leaflet-circle-popup">
+                <table className="small-table">
+                  <tbody>
+                    <tr>
+                      <td>{item.name}</td>
+                    </tr>
+                    <tr>
+                      <td>{item.region}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </Popup>
+            </Circle>
+          </React.Fragment>
+        );
+      })}
+      <ZoomChangeListener setZoomLev={setZoomLev} />
     </MapContainer>
   );
 }
+
+//半径を線形スケール
+const radiusScale = (minRadius, maxRadius, minZoom, maxZoom, zoomLev) => {
+  const scale = (zoomLev - minZoom) / (maxZoom - minZoom); // スケールを計算
+  const radius = minRadius + scale * (maxRadius - minRadius); // スケール変換で半径を計算
+  return radius;
+};
+
+//ログの半径スケーリング
+const logScale = (MIN_Z00M, zoomLev) => {
+  return 200 * Math.log(5 * (zoomLev - MIN_Z00M) + 1.1);
+};
 
 export default Map;

@@ -34,6 +34,14 @@
   /* ツールチップ内の要素にクリックイベントを許可 */
 }
 
+.circle-hover {
+  transition: d 0.00000s ease-in-out;
+}
+
+
+/* .leaflet-container :has(:scrolling) .circle-hover {
+  transition: all none !important
+} */
 
 
 .close-button {
