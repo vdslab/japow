@@ -98,8 +98,8 @@ const NewBumpChart = ({
       return [offsetY, offsetX];
     });
 
-  const [width, setWidth] = useState();
-  const [height, setHeight] = useState();
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
   useEffect(() => {
     setWidth(document.getElementById("Bump").clientWidth);
     setHeight(document.getElementById("Bump").clientHeight);
@@ -301,7 +301,7 @@ const NewBumpChart = ({
         .append("circle")
         .attr("cx", (d) => x(d.week))
         .attr("cy", (d) => y(d.relativeRank))
-        .attr("r", 3)
+        .attr("r", 4)
         .attr("fill", colorValue)
         .style("opacity", skiTargetID.length === 0 ? 1 : isSelected ? 0.8 : 0.3)
         .on("mouseenter", tip.show)
