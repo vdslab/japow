@@ -101,16 +101,18 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
         getOptionLabel={(option) => (option && option.name) || ""}
         value={selectedOptions}
         onChange={handleOptionChange}
-        renderOption={(props, option) => (
-          <li {...props}>
-            <Box>
-              <div>{option.name}</div>
-              <div style={{ fontSize: "0.8rem", color: "gray" }}>
-                {option.region}
-              </div>
-            </Box>
-          </li>
-        )}
+        renderOption={(props, option) => {
+          return (
+            <li {...props} key={props.key}>
+              <Box>
+                <div>{option.name}</div>
+                <div style={{ fontSize: "0.8rem", color: "gray" }}>
+                  {option.region}
+                </div>
+              </Box>
+            </li>
+          );
+        }}
         renderInput={(params) => (
           <TextField
             {...params}
