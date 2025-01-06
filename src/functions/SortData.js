@@ -11,18 +11,24 @@ export const sort = (data, sqTarget) => {
 export const CreateSelecetAndSortData = (data, skiTargetID, sqTarget, num) => {
   const seledtedData = [];
   const notSelectedData = [];
-  data.slice().sort((a, b) => b[sqTarget] - a[sqTarget]).forEach((item, index) => {
-    item["rank"] = index + 1;
-    if (skiTargetID.includes(item.skiID)) {
-      seledtedData.push(item);
-    } else {
-      notSelectedData.push(item);
-    }
-  })
-  const sortData = notSelectedData
+  data
+    .slice()
     .sort((a, b) => b[sqTarget] - a[sqTarget])
-    .slice(0, num - seledtedData.length);
+    .forEach((item, index) => {
+      item["rank"] = index + 1;
+      if (skiTargetID.includes(item.skiID)) {
+        seledtedData.push(item);
+      } else {
+        notSelectedData.push(item);
+      }
+    });
+  let sortData = [];
+  if (num - seledtedData.length > 0) {
+    sortData = notSelectedData
+      .sort((a, b) => b[sqTarget] - a[sqTarget])
+      .slice(0, num - seledtedData.length);
+  }
   const displayData = [...sortData, ...seledtedData];
   displayData.sort((a, b) => b[sqTarget] - a[sqTarget]);
   return displayData;
-}
+};

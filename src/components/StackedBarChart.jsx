@@ -151,6 +151,7 @@ const StackedBarChart = ({
             dataKey={category}
             stackId="a"
             fill={getCategoryColor(category)}
+            barSize={80}
             onClick={(e) => {
               setSkiTargetID((prev) =>
                 prev.includes(e.skiID)

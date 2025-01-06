@@ -97,12 +97,6 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
       return newItem;
     });
 
-    // //色つけ
-    // const skiColors = skiTargetNames.reduce((acc, name, index) => {
-    //   acc[name] = colorScheme[index % colorScheme.length]; // 色をループで割り当て
-    //   return acc;
-    // }, {});
-
     return (
       <ResponsiveContainer width={"100%"} height={"95%"}>
         <LineC
@@ -139,7 +133,20 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
       </ResponsiveContainer>
     );
   } else {
-    return <div>No data available</div>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "85%",
+          fontSize: "16px",
+          color: "#666",
+        }}
+      >
+        スキー場を選択してください
+      </div>
+    );
   }
 };
 
