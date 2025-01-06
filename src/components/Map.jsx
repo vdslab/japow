@@ -5,6 +5,7 @@ import {
   GeoJSON,
   Marker,
   Tooltip,
+  TileLayer,
 } from "react-leaflet";
 import React from "react";
 import { useState, useEffect, useContext, useRef } from "react";
@@ -105,13 +106,13 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
       maxZoom={MAX_ZOOM}
       ref={mapRef}
     >
-      {/* <TileLayer
+      <TileLayer
                 bounds={JAPAN_BOUNDS}
                 minZoom={5}
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            /> */}
-      <GeoJSON data={geojson} style={geoJSONStyle} />
+            />
+      {/* <GeoJSON data={geojson} style={geoJSONStyle} /> */}
       {/* <PopupEventHandler /> */}
       {mapData.map((item, index) => {
         return skiTargetID.includes(item.skiID) ? (
