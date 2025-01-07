@@ -38,6 +38,7 @@ function App() {
     (async () => {
       const sqRes = await fetch("/data/snowQualityData.json");
       snowQualityData = await sqRes.json();
+      console.log(snowQualityData)
       const szRes = await fetch("/data/ski_resorts_japan.json");
       sukijouZahyou = await szRes.json();
       snowDataRef.current = snowQualityData;
