@@ -95,7 +95,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
     prevSkiTarget.current = [...skiTargetID];
   }, [mapData]);
   // const radius = radiusScale(0.5, 1000, MIN_Z00M, MAX_ZOOM, zoomLev); // 二次関数で変化を大きく
-  const radius = logScale(MIN_Z00M, zoomLev);
+  const radius = logScale(MIN_Z00M, MAX_ZOOM, zoomLev);
   return (
     <MapContainer
       center={JAPAN}
@@ -129,7 +129,8 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
               direction="auto"
               key={item.skiID}
               className="custom-tooltip leaflet-popup-content-wrapper"
-              style={{ padding: 0 }}
+              style={{ padding: 0, pointerEvents: "auto" }}
+              interactive={true}
             >
               <div>
                 <table className="small-table">
@@ -248,9 +249,9 @@ const radiusScale = (minRadius, maxRadius, minZoom, maxZoom, zoomLev) => {
   return radius;
 };
 
-//ログの半径スケーリング
-const logScale = (MIN_Z00M, zoomLev) => {
-  return 200 * Math.log(5 * (zoomLev - MIN_Z00M) + 1.1);
+const logScale = (minZoom, maxZoom, zoomLev) => {
+  const factor = maxZoom - zoomLev + 2; // +1 で log(0) を防止
+  return 500 * Math.log(factor);
 };
 
 export default Map;

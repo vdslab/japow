@@ -127,7 +127,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
             PaperProps: {
               style: {
                 m: 2,
-                maxHeight: 500,
+                maxHeight: "50%",
                 width: 300,
               },
             },
