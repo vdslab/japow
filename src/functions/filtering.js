@@ -48,7 +48,6 @@ export const snowFilterByPeriod = (data, period) => {
 
 // 選択されたスキー場の名前でフィルタリング
 export const snowFilterBySkiTarget = (skiTargetID, data) => {
-  console.log(data);
   return data.flatMap((month) => {
     return month.days.flatMap((day) => {
       // const arr = day.date.split("/"); //スラッシュで分割して日付の最後を持ってくる

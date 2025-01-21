@@ -32,7 +32,6 @@ export const avgRank = (SortedData, start, end) => {
 export const calcPeriodAverage = (data) => {
   const periodSumData = [];
   const periodAverageData = [];
-  console.log(data)
   data.forEach((monthData) => {
     monthData.days.forEach((dayData => {
       dayData.dayValues.forEach((skiResort) => {

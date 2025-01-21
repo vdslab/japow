@@ -20,6 +20,7 @@ const StackedBarChart = ({
   filter,
   skiTargetID,
   setSkiTargetID,
+  setOpen,
 }) => {
   const data = snowFilterByPeriod(snowData, filter.period);
   const averageData = calcPeriodAverage(data);
@@ -33,14 +34,7 @@ const StackedBarChart = ({
       item.powder + item.new + item.dry + item.wet + item.shaba + item.burn >
       100
     ) {
-      const diff =
-        item.powder +
-        item.new +
-        item.dry +
-        item.wet +
-        item.shaba +
-        item.burn -
-        100;
+      console.log("a")
       item.powder = Math.trunc(item.powder * 100) / 100;
     }
     return item;
@@ -100,8 +94,12 @@ const StackedBarChart = ({
 
             // 長いテキストを複数行に分割するzロジック
             let lines = [];
-            if ((displayData[payload.index].rank + "位 " + payload.value).length > maxLineLength) {
-              let temp = (displayData[payload.index].rank + "位 " + payload.value);
+            if (
+              (displayData[payload.index].rank + "位 " + payload.value).length >
+              maxLineLength
+            ) {
+              let temp =
+                displayData[payload.index].rank + "位 " + payload.value;
               while (temp.length > maxLineLength) {
                 // 1行分を切り取る
                 const line = temp.slice(0, maxLineLength);
@@ -118,7 +116,7 @@ const StackedBarChart = ({
                 }
               }
             } else {
-              lines = [(displayData[payload.index].rank + "位 " + payload.value)]; // 1行に収まる場合
+              lines = [displayData[payload.index].rank + "位 " + payload.value]; // 1行に収まる場合
             }
 
             return (
@@ -152,12 +150,22 @@ const StackedBarChart = ({
             stackId="a"
             fill={getCategoryColor(category)}
             barSize={80}
+            cursor="pointer"
             onClick={(e) => {
-              setSkiTargetID((prev) =>
-                prev.includes(e.skiID)
-                  ? prev.filter((id) => id !== e.skiID)
-                  : [...prev, e.skiID]
-              );
+              if (skiTargetID.includes(e.skiID)) {
+                setSkiTargetID((prev) => prev.filter((id) => id !== e.skiID));
+              } else {
+                if (skiTargetID.length >= 10) {
+                  setOpen(true);
+                } else {
+                  setSkiTargetID((prev) => [...prev, e.skiID]);
+                }
+              }
+              // setSkiTargetID((prev) =>
+              //   prev.includes(e.skiID)
+              //     ? prev.filter((id) => id !== e.skiID)
+              //     : [...prev, e.skiID]
+              // );
             }}
           >
             {displayData.map((entry, index) => (

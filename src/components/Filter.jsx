@@ -99,7 +99,6 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
 
   const handleSelectAllRegions = () => {
     if (selectRegion.length === allPrefectures.length) {
-      console.log(selectRegion.length());
       // 全選択解除
       setSelectRegion([]);
     } else {

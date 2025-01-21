@@ -49,7 +49,7 @@ const generateDivIcon = (color) =>
     tooltipAnchor: [0, -24],
   });
 
-function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
+function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
   const mapRef = useRef();
   const DEFAULT_ZOOM = 5;
   const MAX_ZOOM = 12;
@@ -107,11 +107,11 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
       ref={mapRef}
     >
       <TileLayer
-                bounds={JAPAN_BOUNDS}
-                minZoom={5}
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
+        bounds={JAPAN_BOUNDS}
+        minZoom={5}
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
       {/* <GeoJSON data={geojson} style={geoJSONStyle} /> */}
       {/* <PopupEventHandler /> */}
       {mapData.map((item, index) => {
@@ -125,7 +125,8 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
             <Tooltip
               opacity={1}
               permanent
-              direction="top"
+              // direction="top"
+              direction="auto"
               key={item.skiID}
               className="custom-tooltip leaflet-popup-content-wrapper"
               style={{ padding: 0 }}
@@ -138,6 +139,22 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
                     </tr>
                     <tr>
                       <td>{item.region}</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: "2px 5px" }}>
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "#007bff",
+                            textDecoration: "none",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          サイトへアクセス
+                        </a>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -187,7 +204,11 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors }) {
               weight={0.5}
               eventHandlers={{
                 click: (e) => {
-                  setSkiTargetID((prev) => [...prev, item.skiID]);
+                  if (skiTargetID.length >= 10) {
+                    setOpen(true);
+                  } else {
+                    setSkiTargetID((prev) => [...prev, item.skiID]);
+                  }
                 },
                 mouseover: (e) => {
                   setHoverCircle(item.skiID);

@@ -57,7 +57,7 @@ const prefectureOrder = [
   "沖縄県",
 ];
 
-const Search = ({ skiTargetID, setSkiTargetID }) => {
+const Search = ({ skiTargetID, setSkiTargetID, setOpen }) => {
   const [filteredOptions, setFilteredOptions] = useState([]);
   const [searchInput, setSearchInput] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -85,8 +85,12 @@ const Search = ({ skiTargetID, setSkiTargetID }) => {
   const handleOptionChange = (event, newValues) => {
     if (newValues) {
       const newIDs = newValues.map((value) => value.skiID);
-      setSearchInput(newIDs);
-      setSkiTargetID(newIDs);
+      if (newIDs.length > 10) {
+        setOpen(true);
+      } else {
+        setSearchInput(newIDs);
+        setSkiTargetID(newIDs);
+      }
     } else {
       setSearchInput([]);
       setSkiTargetID([]);

@@ -15,6 +15,12 @@ import Header from "./components/Header.jsx";
 import StackedBarChart from "./components/StackedBarChart.jsx";
 import { PERIOD_IDS, SNOW_QUALITY_LIST } from "./constants.js";
 import { createColors } from "./functions/createColors.js";
+import * as React from "react";
+import Alert from "@mui/material/Alert";
+import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 
 function App() {
   let snowQualityData;
@@ -34,11 +40,36 @@ function App() {
   });
   const [skiColors, setSkiColors] = useState({});
   const [sqTarget, setSqTarget] = useState("powder");
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+  const action = (
+    <React.Fragment>
+      {/* <Button color="secondary" size="small" onClick={handleClose}>
+        UNDO
+      </Button> */}
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
   useEffect(() => {
     (async () => {
       const sqRes = await fetch("/data/snowQualityData.json");
       snowQualityData = await sqRes.json();
-      console.log(snowQualityData)
       const szRes = await fetch("/data/ski_resorts_japan.json");
       sukijouZahyou = await szRes.json();
       snowDataRef.current = snowQualityData;
@@ -116,6 +147,7 @@ function App() {
             skiTargetID={skiTargetID}
             setSkiTargetID={setSkiTargetID}
             mapData={mapData}
+            setOpen={setOpen}
           ></Search>
         </Box>
 
@@ -161,6 +193,7 @@ function App() {
                   skiTargetID={skiTargetID}
                   setSkiTargetID={setSkiTargetID}
                   skiColors={skiColors}
+                  setOpen={setOpen}
                 />
               </Box>
 
@@ -223,12 +256,20 @@ function App() {
                   filter={filter}
                   skiTargetID={skiTargetID}
                   setSkiTargetID={setSkiTargetID}
+                  setOpen={setOpen}
                 ></StackedBarChart>
               </Box>
             </Grid>
           </Grid>
         </Box>
       </Box>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message="スキー場は10件までしか選択できません"
+        action={action}
+      />
     </>
   );
 }
