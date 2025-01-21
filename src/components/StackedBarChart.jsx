@@ -34,7 +34,6 @@ const StackedBarChart = ({
       item.powder + item.new + item.dry + item.wet + item.shaba + item.burn >
       100
     ) {
-      console.log("a")
       item.powder = Math.trunc(item.powder * 100) / 100;
     }
     return item;
@@ -76,7 +75,7 @@ const StackedBarChart = ({
     return null;
   };
 
-  return (
+  return displayData.length > 0 ? (
     <ResponsiveContainer width="100%" height="90%">
       <BarChart
         data={displayData}
@@ -183,6 +182,19 @@ const StackedBarChart = ({
         ))}
       </BarChart>
     </ResponsiveContainer>
+  ) : (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "85%",
+        fontSize: "16px",
+        color: "#666",
+      }}
+    >
+      選択された地域にスキー場はありません
+    </div>
   );
 };
 
