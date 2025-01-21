@@ -23,7 +23,6 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
   ];
   const SELECT_ALL_PERIOD_NAME = "全期間";
   const seasons = ["2023/24", "2022/23", "2021/22"];
-
   const [selectSeason, setSelectSeason] = useState("2023/24");
   const [selectPeriod, setSelectPeriod] = useState(filter.period);
   const [selectSq, setSelectSq] = useState(sqTarget);
@@ -60,17 +59,8 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
       "沖縄県",
     ],
   };
-
   const allPrefectures = Object.values(regions).flat();
-  const [selectRegion, setSelectRegion] = useState([]);
-  const handlePrefectureChange = (pref) => {
-    const newSelection = selectRegion.includes(pref)
-      ? selectRegion.filter((item) => item !== pref)
-      : [...selectRegion, pref];
-
-    setSelectRegion(newSelection);
-    setFilter({ ...filter, pref: newSelection });
-  };
+  const [selectRegion, setSelectRegion] = useState(allPrefectures);
 
   const handleRegionGroupChange = (region) => {
     const regionPrefs = regions[region];
@@ -96,19 +86,19 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
         : [...prev, region]
     );
   };
+  const handlePrefectureChange = (pref) => {
+    const newSelection = selectRegion.includes(pref)
+      ? selectRegion.filter((item) => item !== pref)
+      : [...selectRegion, pref];
+
+    setSelectRegion(newSelection);
+    setFilter({ ...filter, pref: newSelection });
+  };
 
   const handleSelectAllRegions = () => {
-    if (selectRegion.length === allPrefectures.length) {
-      // 全選択解除
-      setSelectRegion([]);
-    } else {
-      // 全選択
-      setSelectRegion(allPrefectures);
-    }
-    setFilter({
-      ...filter,
-      pref: selectRegion.length === allPrefectures.length ? [] : allPrefectures,
-    });
+    const isAllSelected = selectRegion.length === allPrefectures.length;
+    setSelectRegion(isAllSelected ? [] : allPrefectures);
+    setFilter({ ...filter, pref: isAllSelected ? [] : allPrefectures });
   };
 
   return (
@@ -145,13 +135,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
         >
           {/* 全国選択オプション */}
           <MenuItem onClick={handleSelectAllRegions}>
-            <Checkbox
-              checked={selectRegion.length === allPrefectures.length}
-              indeterminate={
-                selectRegion.length > 0 &&
-                selectRegion.length < allPrefectures.length
-              }
-            />
+            <Checkbox checked={selectRegion.length === allPrefectures.length} />
             <ListItemText primary={SELECT_ALL_REGION_NAME} />
           </MenuItem>
 
