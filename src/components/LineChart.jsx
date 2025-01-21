@@ -59,7 +59,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
       return (
         <div className="custom-tooltip" style={tooltipStyle}>
           <p className="label" style={{ fontSize: `${fontSize}px` }}>
-            {`${payload[0].payload.name.replace("/", "")}`}
+            {`${payload[0].payload.name.replace("/", " ")}`}
           </p>
           {sortedPayload.map((entry, index) => (
             <p

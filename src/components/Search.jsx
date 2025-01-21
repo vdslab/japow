@@ -121,7 +121,7 @@ const Search = ({ skiTargetID, setSkiTargetID, setOpen }) => {
           <TextField
             {...params}
             variant="standard"
-            label="Search Ski Resorts"
+            label="スキー場検索"
             InputProps={{
               ...params.InputProps,
               endAdornment: <>{params.InputProps.endAdornment}</>,
@@ -147,7 +147,7 @@ const Search = ({ skiTargetID, setSkiTargetID, setOpen }) => {
                 maxWidth: 500,
               },
               "& .MuiFormLabel-root": {
-                transform: "translate(14px, 10px) scale(1)",
+                transform: "translate(14px, 18px) scale(1)",
               },
               "& .MuiInputLabel-shrink": {
                 transform: "translate(0, -1.5px) scale(0.75)",
