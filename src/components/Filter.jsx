@@ -191,7 +191,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
 
       {/* 期間選択 */}
       <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="period-label">期間</InputLabel>
+        <InputLabel id="period-label">時期</InputLabel>
         <Select
           labelId="period-label"
           id="period"

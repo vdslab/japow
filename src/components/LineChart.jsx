@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   XAxis,
   YAxis,
@@ -13,9 +13,10 @@ import { snowFilterBySkiTarget } from "../functions/filtering.js";
 import * as d3 from "d3";
 
 const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
+  const [hoveredLine, setHoveredLine] = useState(null);
+
   const renderTick = (tickProps) => {
     const { x, y, payload, index, allTicks } = tickProps;
-
     const lines = payload.value.split("/");
     const prevMonth =
       index > 0 && allTicks && allTicks[index - 1]
@@ -24,12 +25,9 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
 
     return (
       <g transform={`translate(${x},${y})`}>
-        {/* 小さいメモリ線 */}
         {lines[0] && prevMonth !== lines[0] && (
           <line x1={0} y1={-8} x2={0} y2={0} stroke="#666" strokeWidth={1} />
         )}
-
-        {/* ラベル */}
         <text x={0} y={0} textAnchor="middle" fill="#666" fontSize={10}>
           {lines[0] && prevMonth !== lines[0] && (
             <tspan x={0} dy={13}>
@@ -113,7 +111,6 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
             }
             tickLine={false}
           />
-
           <YAxis tick={{ style: { fontSize: "12px", fill: "#666" } }} />
           <Tooltip content={renderCustomTooltip} />
           <Legend
@@ -126,7 +123,20 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
               dataKey={name}
               stroke={skiColors[skiID]}
               name={name}
-              dot={{ r: 1 }} // ノードサイズを調整
+              strokeOpacity={hoveredLine && hoveredLine !== name ? 0.2 : 1}
+              strokeWidth={hoveredLine === name ? 2 : 1}
+              dot={{
+                r: hoveredLine === name ? 1 : 1,
+                onMouseEnter: () => setHoveredLine(name),
+                onMouseLeave: () => setHoveredLine(null),
+              }}
+              activeDot={{
+                r: 2,
+                onMouseEnter: () => setHoveredLine(name),
+                onMouseLeave: () => setHoveredLine(null),
+              }}
+              onMouseEnter={() => setHoveredLine(name)}
+              onMouseLeave={() => setHoveredLine(null)}
             />
           ))}
         </LineC>
