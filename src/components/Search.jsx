@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-import options from "../../public/data/ski_resorts_japan.json";
+import options from "../assets/ski_resorts_japan_open.json"
 import { InputAdornment } from "@mui/material";
 import Box from "@mui/material/Box";
 

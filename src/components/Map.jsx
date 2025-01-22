@@ -62,16 +62,10 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
   const [zoomLev, setZoomLev] = useState(DEFAULT_ZOOM);
   // GeoJSONスタイルオブジェクト
   const geoJSONStyle = {
-    // 塗りつぶしの色（半透明の青色）
-    fillColor: "rgb(123, 188, 151)",
-    // 塗りつぶしの不透明度（0は完全に透明、1は不透明）
-    fillOpacity: 0.5,
-    // 境界線の色（黒色）
-    color: "black",
-    // 境界線の太さ
-    weight: 1,
-    // 境界線の不透明度
-    opacity: 1,
+    color: "#000000", // 境界線の色（黒）
+    weight: 0.5, // 境界線の太さ
+    opacity: 0.5, // 境界線の透明度（薄い）
+    fillOpacity: 0, // 塗りつぶしなし
   };
   const handleTooltipClose = (skiID) => {
     setSkiTargetID((prev) => prev.filter((item) => item !== skiID));
@@ -112,7 +106,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {/* <GeoJSON data={geojson} style={geoJSONStyle} /> */}
+      <GeoJSON data={geojson} style={geoJSONStyle} />
       {/* <PopupEventHandler /> */}
       {mapData.map((item, index) => {
         return skiTargetID.includes(item.skiID) ? (
@@ -136,13 +130,7 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
                 <table className="small-table">
                   <tbody>
                     <tr>
-                      <td>{item.name}</td>
-                    </tr>
-                    <tr>
-                      <td>{item.region}</td>
-                    </tr>
-                    <tr>
-                      <td style={{ padding: "2px 5px" }}>
+                      <td>
                         <a
                           href={item.url}
                           target="_blank"
@@ -153,9 +141,12 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
                             fontWeight: "bold",
                           }}
                         >
-                          サイトへアクセス
+                          {item.name}
                         </a>
                       </td>
+                    </tr>
+                    <tr>
+                      <td>{item.region}</td>
                     </tr>
                   </tbody>
                 </table>

@@ -1,0 +1,2618 @@
+[
+  {
+    "name": "富良野スキー場",
+    "skiID": 1000,
+    "latitude": 43.324792002091606,
+    "longitude": 142.3541741796832,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0118s.htm"
+  },
+  {
+    "name": "星野リゾート トマム スキー場",
+    "skiID": 1,
+    "latitude": 43.06938641054328,
+    "longitude": 142.61499396804308,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0274s.htm"
+  },
+  {
+    "name": "サッポロテイネ",
+    "skiID": 2,
+    "latitude": 43.07830022781328,
+    "longitude": 141.20058574483377,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0065s.htm"
+  },
+  {
+    "name": "さっぽろばんけいスキー場",
+    "skiID": 3,
+    "latitude": 43.030700895074695,
+    "longitude": 141.27803813969885,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0246s.htm"
+  },
+  {
+    "name": "ニセコ東急 グラン・ヒラフ",
+    "skiID": 4,
+    "latitude": 42.86455053741844,
+    "longitude": 140.70132929921812,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0148s.htm"
+  },
+  {
+    "name": "ニセコビレッジスキーリゾート",
+    "skiID": 5,
+    "latitude": 42.84716665696919,
+    "longitude": 140.68426915318207,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0119s.htm"
+  },
+  {
+    "name": "ニセコアンヌプリ国際スキー場",
+    "skiID": 6,
+    "latitude": 42.84766035546021,
+    "longitude": 140.64783258016456,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0260s.htm"
+  },
+  {
+    "name": "SNOW CRUISE ONZE",
+    "skiID": 7,
+    "latitude": 43.14645036758197,
+    "longitude": 141.13325464155795,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0174s.htm"
+  },
+  {
+    "name": "KIRORO SNOW WORLD",
+    "skiID": 8,
+    "latitude": 43.05877431532112,
+    "longitude": 141.02730722985788,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0030s.htm"
+  },
+  {
+    "name": "朝里川温泉スキー場",
+    "skiID": 9,
+    "latitude": 43.14370297637751,
+    "longitude": 141.03684318573906,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0249s.htm"
+  },
+  {
+    "name": "小樽天狗山スキー場",
+    "skiID": 10,
+    "latitude": 43.17768161182414,
+    "longitude": 140.97525929299104,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0259s.htm"
+  },
+  {
+    "name": "マウントレースイスキー場",
+    "skiID": 11,
+    "latitude": 43.05146705118472,
+    "longitude": 141.96944868388113,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0213s.htm"
+  },
+  {
+    "name": "函館七飯スノーパーク",
+    "skiID": 12,
+    "latitude": 41.98710961704084,
+    "longitude": 140.74695941267132,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0120s.htm"
+  },
+  {
+    "name": "青森スプリング・スキーリゾート",
+    "skiID": 13,
+    "latitude": 40.693339531105366,
+    "longitude": 140.27952530283315,
+    "region": "青森県",
+    "url": "https://surfsnow.jp/guide/htm/r0121s.htm"
+  },
+  {
+    "name": "安比高原スキー場",
+    "skiID": 14,
+    "latitude": 40.00233925639402,
+    "longitude": 140.97061599909674,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r0226s.htm"
+  },
+  {
+    "name": "八幡平リゾート パノラマスキー場＆下倉スキー場",
+    "skiID": 15,
+    "latitude": 39.89485892132973,
+    "longitude": 140.9751638400741,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r0009s.htm"
+  },
+  {
+    "name": "雫石スキー場",
+    "skiID": 16,
+    "latitude": 39.77386239014551,
+    "longitude": 140.9244310567599,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r0122s.htm"
+  },
+  {
+    "name": "岩手高原スノーパーク",
+    "skiID": 17,
+    "latitude": 39.81400834715855,
+    "longitude": 140.96635897210666,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r0251s.htm"
+  },
+  {
+    "name": "夏油高原スキー場",
+    "skiID": 18,
+    "latitude": 39.25308669824,
+    "longitude": 140.9128483152054,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r0270s.htm"
+  },
+  {
+    "name": "ジュネス栗駒スキー場",
+    "skiID": 19,
+    "latitude": 39.15913477270237,
+    "longitude": 140.7262544837174,
+    "region": "秋田県",
+    "url": "https://surfsnow.jp/guide/htm/r0175s.htm"
+  },
+  {
+    "name": "鳥海高原矢島スキー場",
+    "skiID": 20,
+    "latitude": 39.19053552548441,
+    "longitude": 140.09307435302836,
+    "region": "秋田県",
+    "url": "https://surfsnow.jp/guide/htm/r0250s.htm"
+  },
+  {
+    "name": "たざわ湖スキー場",
+    "skiID": 21,
+    "latitude": 39.789655536576575,
+    "longitude": 140.76682114656992,
+    "region": "秋田県",
+    "url": "https://surfsnow.jp/guide/htm/r0263s.htm"
+  },
+  {
+    "name": "オニコウベスキー場",
+    "skiID": 22,
+    "latitude": 38.78716023464364,
+    "longitude": 140.63953548133446,
+    "region": "宮城県",
+    "url": "https://surfsnow.jp/guide/htm/r0186s.htm"
+  },
+  {
+    "name": "みやぎ蔵王えぼしリゾート",
+    "skiID": 23,
+    "latitude": 38.12685830775608,
+    "longitude": 140.52875792600344,
+    "region": "宮城県",
+    "url": "https://surfsnow.jp/guide/htm/r0024s.htm"
+  },
+  {
+    "name": "みやぎ蔵王七ヶ宿スキー場",
+    "skiID": 24,
+    "latitude": 37.99879779987312,
+    "longitude": 140.36675656832605,
+    "region": "宮城県",
+    "url": "https://surfsnow.jp/guide/htm/r0235s.htm"
+  },
+  {
+    "name": "スプリングバレー仙台泉スキー場",
+    "skiID": 26,
+    "latitude": 38.41891587257509,
+    "longitude": 140.7231852008867,
+    "region": "宮城県",
+    "url": "https://surfsnow.jp/guide/htm/r0258s.htm"
+  },
+  {
+    "name": "Asahi自然観 SNOW PARK",
+    "skiID": 27,
+    "latitude": 38.30519322219855,
+    "longitude": 140.05401721199073,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0256s.htm"
+  },
+  {
+    "name": "黒伏高原スノーパーク ジャングル・ジャングル",
+    "skiID": 28,
+    "latitude": 38.436152754189465,
+    "longitude": 140.54342879532567,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0203s.htm"
+  },
+  {
+    "name": "蔵王温泉スキー場",
+    "skiID": 29,
+    "latitude": 38.1679743523666,
+    "longitude": 140.41717409234533,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0177s.htm"
+  },
+  {
+    "name": "天元台高原",
+    "skiID": 30,
+    "latitude": 37.7746100478672,
+    "longitude": 140.13656005750587,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0211s.htm"
+  },
+  {
+    "name": "米沢スキー場",
+    "skiID": 31,
+    "latitude": 37.87644160686361,
+    "longitude": 140.2381429129893,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0227s.htm"
+  },
+  {
+    "name": "北日光・高畑スキー場（会津高原高畑スキー場）",
+    "skiID": 32,
+    "latitude": 37.10090982793593,
+    "longitude": 139.44933925479967,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0104s.htm"
+  },
+  {
+    "name": "リステルスキーファンタジア",
+    "skiID": 33,
+    "latitude": 37.5431974925424,
+    "longitude": 140.14975228550702,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0005s.htm"
+  },
+  {
+    "name": "Grandeco Snow Resort",
+    "skiID": 34,
+    "latitude": 37.69562902381151,
+    "longitude": 140.13268043947772,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r1025s.htm"
+  },
+  {
+    "name": "星野リゾート ネコマ マウンテン(旧猫魔スキー場＆アルツ磐梯）",
+    "skiID": 35,
+    "latitude": 37.6289464492415,
+    "longitude": 140.03761622772242,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0215s.htm"
+  },
+  {
+    "name": "星野リゾート ネコマ マウンテン(旧アルツ磐梯＆猫魔スキー場）",
+    "skiID": 36,
+    "latitude": 37.588513976664885,
+    "longitude": 140.0335655584827,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0275s.htm"
+  },
+  {
+    "name": "沼尻スキー場",
+    "skiID": 38,
+    "latitude": 37.62267195185452,
+    "longitude": 140.2279719971473,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0153s.htm"
+  },
+  {
+    "name": "あだたら高原スキー場",
+    "skiID": 39,
+    "latitude": 37.622752913730224,
+    "longitude": 140.32437335296598,
+    "region": "福島県",
+    "url": "あだたら高原スキー場"
+  },
+  {
+    "name": "ハンターマウンテン塩原",
+    "skiID": 42,
+    "latitude": 36.93853941474633,
+    "longitude": 139.75416756035497,
+    "region": "栃木県",
+    "url": "https://surfsnow.jp/guide/htm/r0067s.htm"
+  },
+  {
+    "name": "エーデルワイススキーリゾート",
+    "skiID": 43,
+    "latitude": 36.925257532438586,
+    "longitude": 139.74894228177527,
+    "region": "栃木県",
+    "url": "https://surfsnow.jp/guide/htm/r0161s.htm"
+  },
+  {
+    "name": "たんばらスキーパーク",
+    "skiID": 44,
+    "latitude": 36.77860701874119,
+    "longitude": 139.07278783944224,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0170s.htm"
+  },
+  {
+    "name": "川場スキー場",
+    "skiID": 45,
+    "latitude": 36.7690471769597,
+    "longitude": 139.1080382394419,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0210s.htm"
+  },
+  {
+    "name": "丸沼高原スキー場",
+    "skiID": 46,
+    "latitude": 36.81476181124133,
+    "longitude": 139.329988381771,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0025s.htm"
+  },
+  {
+    "name": "スノーパーク尾瀬戸倉",
+    "skiID": 47,
+    "latitude": 36.85117640917848,
+    "longitude": 139.23905502780752,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0115s.htm"
+  },
+  {
+    "name": "ホワイトバレースキー場",
+    "skiID": 48,
+    "latitude": 36.79499787646282,
+    "longitude": 138.95724796642534,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0116s.htm"
+  },
+  {
+    "name": "ホワイトワールド尾瀬岩鞍",
+    "skiID": 49,
+    "latitude": 36.81517834592668,
+    "longitude": 139.2201013688898,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0059s.htm"
+  },
+  {
+    "name": "奥利根スノーパーク",
+    "skiID": 50,
+    "latitude": 36.80350599109279,
+    "longitude": 139.00664460206488,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0074s.htm"
+  },
+  {
+    "name": "水上高原スキーリゾート",
+    "skiID": 51,
+    "latitude": 36.858933439015146,
+    "longitude": 139.0775139253241,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0126s.htm"
+  },
+  {
+    "name": "ノルンみなかみスキー場",
+    "skiID": 52,
+    "latitude": 36.74352043555812,
+    "longitude": 138.94219106431024,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0071s.htm"
+  },
+  {
+    "name": "鹿沢スノーエリア",
+    "skiID": 53,
+    "latitude": 36.47160548726287,
+    "longitude": 138.42957542020375,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0035s.htm"
+  },
+  {
+    "name": "草津温泉スキー場",
+    "skiID": 54,
+    "latitude": 36.629048898840594,
+    "longitude": 138.58718346507155,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0038s.htm"
+  },
+  {
+    "name": "万座温泉スキー場",
+    "skiID": 55,
+    "latitude": 36.63597312761855,
+    "longitude": 138.50613000485123,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0127s.htm"
+  },
+  {
+    "name": "パルコール嬬恋リゾート",
+    "skiID": 56,
+    "latitude": 36.555955710002806,
+    "longitude": 138.46396460670678,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0147s.htm"
+  },
+  {
+    "name": "GALA湯沢スキー場",
+    "skiID": 57,
+    "latitude": 36.95098338869519,
+    "longitude": 138.7995694181153,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0001s.htm"
+  },
+  {
+    "name": "湯沢パークスキー場",
+    "skiID": 58,
+    "latitude": 36.92512018713794,
+    "longitude": 138.8597916527278,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0154s.htm"
+  },
+  {
+    "name": "湯沢中里スノーリゾート",
+    "skiID": 59,
+    "latitude": 36.91488301699952,
+    "longitude": 138.84925057136311,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0046s.htm"
+  },
+  {
+    "name": "神立スノーリゾート",
+    "skiID": 60,
+    "latitude": 36.91123304409975,
+    "longitude": 138.81284872212612,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0083s.htm"
+  },
+  {
+    "name": "上越国際スキー場",
+    "skiID": 61,
+    "latitude": 37.03481548073114,
+    "longitude": 138.81889199260056,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0037s.htm"
+  },
+  {
+    "name": "舞子スノーリゾート",
+    "skiID": 62,
+    "latitude": 36.98298227851497,
+    "longitude": 138.82504990327774,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0020s.htm"
+  },
+  {
+    "name": "ムイカスノーリゾート",
+    "skiID": 63,
+    "latitude": 37.07169947201455,
+    "longitude": 138.84598737783193,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0039s.htm"
+  },
+  {
+    "name": "六日町八海山スキー場",
+    "skiID": 64,
+    "latitude": 37.10813791536702,
+    "longitude": 138.97778196437244,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0044s.htm"
+  },
+  {
+    "name": "かぐらスキー場",
+    "skiID": 65,
+    "latitude": 36.8632233262033,
+    "longitude": 138.729006169842,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0070s.htm"
+  },
+  {
+    "name": "苗場スキー場",
+    "skiID": 66,
+    "latitude": 36.79232990201973,
+    "longitude": 138.77945337105186,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0047s.htm"
+  },
+  {
+    "name": "ニュー・グリーンピア津南スキー場",
+    "skiID": 67,
+    "latitude": 36.96018078857728,
+    "longitude": 138.68696315086538,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0084s.htm"
+  },
+  {
+    "name": "NASPAスキーガーデン",
+    "skiID": 68,
+    "latitude": 36.92696934489136,
+    "longitude": 138.80897810665437,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0156s.htm"
+  },
+  {
+    "name": "岩原スキー場",
+    "skiID": 69,
+    "latitude": 36.93838194600439,
+    "longitude": 138.840543906674,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0298s.htm"
+  },
+  {
+    "name": "湯沢高原スキー場",
+    "skiID": 70,
+    "latitude": 36.93982596898297,
+    "longitude": 138.80312940670015,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0301s.htm"
+  },
+  {
+    "name": "シャトー塩沢",
+    "skiID": 71,
+    "latitude": 37.04975398217419,
+    "longitude": 138.82885784828423,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0158s.htm"
+  },
+  {
+    "name": "妙高杉ノ原スキー場",
+    "skiID": 72,
+    "latitude": 36.85709848258014,
+    "longitude": 138.15497880486097,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0132s.htm"
+  },
+  {
+    "name": "キューピットバレイ",
+    "skiID": 73,
+    "latitude": 37.05518908245544,
+    "longitude": 138.48446819834928,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0150s.htm"
+  },
+  {
+    "name": "池の平温泉アルペンブリックスキー場",
+    "skiID": 74,
+    "latitude": 36.87272264658844,
+    "longitude": 138.17205256805357,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0168s.htm"
+  },
+  {
+    "name": "赤倉観光リゾートスキー場",
+    "skiID": 75,
+    "latitude": 36.88756119258561,
+    "longitude": 138.17783778322544,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0276s.htm"
+  },
+  {
+    "name": "タングラムスキーサーカス",
+    "skiID": 76,
+    "latitude": 36.853565675640674,
+    "longitude": 138.26302482201507,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0016s.htm"
+  },
+  {
+    "name": "斑尾高原スキー場",
+    "skiID": 77,
+    "latitude": 36.85295291469404,
+    "longitude": 138.29044154726392,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0202s.htm"
+  },
+  {
+    "name": "野沢温泉スキー場",
+    "skiID": 78,
+    "latitude": 36.92108800520585,
+    "longitude": 138.45249897812425,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0028s.htm"
+  },
+  {
+    "name": "戸隠スキー場",
+    "skiID": 79,
+    "latitude": 36.75458879450885,
+    "longitude": 138.09474365271737,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0034s.htm"
+  },
+  {
+    "name": "黒姫高原スノーパーク",
+    "skiID": 80,
+    "latitude": 36.826593628699214,
+    "longitude": 138.1620382661976,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0051s.htm"
+  },
+  {
+    "name": "戸狩温泉スキー場",
+    "skiID": 81,
+    "latitude": 36.93234130918084,
+    "longitude": 138.38790562205764,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0171s.htm"
+  },
+  {
+    "name": "いいづなリゾートスキー場",
+    "skiID": 82,
+    "latitude": 36.73774805075232,
+    "longitude": 138.17082311037277,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0006s.htm"
+  },
+  {
+    "name": "白樺湖ロイヤルヒル",
+    "skiID": 84,
+    "latitude": 36.10223450099352,
+    "longitude": 138.23433763744652,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0017s.htm"
+  },
+  {
+    "name": "車山高原SKYPARKスキー場",
+    "skiID": 85,
+    "latitude": 36.10223516822597,
+    "longitude": 138.20837799131516,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0066s.htm"
+  },
+  {
+    "name": "蓼科東急スキー場",
+    "skiID": 86,
+    "latitude": 36.06994610623074,
+    "longitude": 138.25685926250333,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0187s.htm"
+  },
+  {
+    "name": "シャトレーゼスキーバレー小海",
+    "skiID": 87,
+    "latitude": 36.05461297011517,
+    "longitude": 138.4118448815891,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0068s.htm"
+  },
+  {
+    "name": "シャトレーゼスキーバレー野辺山",
+    "skiID": 88,
+    "latitude": 35.930786342008744,
+    "longitude": 138.49539013291383,
+    "region": "山梨県",
+    "url": "https://surfsnow.jp/guide/htm/r0106s.htm"
+  },
+  {
+    "name": "ブランシュたかやまスキーリゾート",
+    "skiID": 89,
+    "latitude": 36.14814738144946,
+    "longitude": 138.20534658888434,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0077s.htm"
+  },
+  {
+    "name": "サンメドウズ清里スキー場",
+    "skiID": 91,
+    "latitude": 35.94774962528864,
+    "longitude": 138.41449265085183,
+    "region": "山梨県",
+    "url": "https://surfsnow.jp/guide/htm/r0018s.htm"
+  },
+  {
+    "name": "ふじてんスノーリゾート",
+    "skiID": 92,
+    "latitude": 35.44225826792354,
+    "longitude": 138.68817474900496,
+    "region": "山梨県",
+    "url": "https://surfsnow.jp/guide/htm/r0107s.htm"
+  },
+  {
+    "name": "富士見パノラマリゾート",
+    "skiID": 93,
+    "latitude": 35.910866685377314,
+    "longitude": 138.20704550855913,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0297s.htm"
+  },
+  {
+    "name": "スノーパーク イエティ",
+    "skiID": 94,
+    "latitude": 35.300200501974935,
+    "longitude": 138.76841227966358,
+    "region": "静岡県",
+    "url": "https://surfsnow.jp/guide/htm/r0209s.htm"
+  },
+  {
+    "name": "菅平高原スノーリゾート",
+    "skiID": 95,
+    "latitude": 36.53187262132537,
+    "longitude": 138.33009461251874,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0108s.htm"
+  },
+  {
+    "name": "湯の丸スキー場",
+    "skiID": 96,
+    "latitude": 36.42836833505442,
+    "longitude": 138.42040424902308,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0111s.htm"
+  },
+  {
+    "name": "佐久スキーガーデン「パラダ」北パラダスキー場",
+    "skiID": 97,
+    "latitude": 36.294365759052745,
+    "longitude": 138.51023500482813,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0105s.htm"
+  },
+  {
+    "name": "軽井沢プリンスホテルスキー場",
+    "skiID": 98,
+    "latitude": 36.34058879472691,
+    "longitude": 138.64371810173708,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0129s.htm"
+  },
+  {
+    "name": "軽井沢スノーパーク",
+    "skiID": 99,
+    "latitude": 36.42381890315339,
+    "longitude": 138.62724977203388,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0166s.htm"
+  },
+  {
+    "name": "志賀高原 焼額山スキー場",
+    "skiID": 100,
+    "latitude": 36.752692341502325,
+    "longitude": 138.5170474201748,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0130s.htm"
+  },
+  {
+    "name": "Mt.KOSHA よませ温泉スキー場 & X-JAM 高井富士",
+    "skiID": 101,
+    "latitude": 36.79994258691549,
+    "longitude": 138.42715920850878,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0023s.htm"
+  },
+  {
+    "name": "スノーリゾート ロマンスの神様（旧 木島平スキー場）",
+    "skiID": 102,
+    "latitude": 36.819936592746416,
+    "longitude": 138.40333719250953,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0027s.htm"
+  },
+  {
+    "name": "奥志賀高原スキー場",
+    "skiID": 103,
+    "latitude": 36.76611509711792,
+    "longitude": 138.51464027969286,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0160s.htm"
+  },
+  {
+    "name": "竜王スキーパーク",
+    "skiID": 104,
+    "latitude": 36.784642961843055,
+    "longitude": 138.45620885941375,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0112s.htm"
+  },
+  {
+    "name": "志賀高原リゾート中央エリア（サンバレー～一の瀬）",
+    "skiID": 105,
+    "latitude": 36.7213288127885,
+    "longitude": 138.49647393234784,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0280s.htm"
+  },
+  {
+    "name": "志賀高原 熊の湯スキー場",
+    "skiID": 106,
+    "latitude": 36.68367419299375,
+    "longitude": 138.49601769874954,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0294s.htm"
+  },
+  {
+    "name": "白馬乗鞍温泉スキー場",
+    "skiID": 107,
+    "latitude": 36.76607658141594,
+    "longitude": 137.8739108624917,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0010s.htm"
+  },
+  {
+    "name": "エイブル白馬五竜",
+    "skiID": 108,
+    "latitude": 36.663341223155285,
+    "longitude": 137.83666317069918,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0041s.htm"
+  },
+  {
+    "name": "Hakuba47 ウインタースポーツパーク",
+    "skiID": 109,
+    "latitude": 36.6852021889725,
+    "longitude": 137.8284459527396,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0061s.htm"
+  },
+  {
+    "name": "白馬八方尾根スキー場",
+    "skiID": 110,
+    "latitude": 36.69989256429324,
+    "longitude": 137.83714070270264,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0142s.htm"
+  },
+  {
+    "name": "白馬岩岳スノーフィールド",
+    "skiID": 111,
+    "latitude": 36.71606640711909,
+    "longitude": 137.85618917780457,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0143s.htm"
+  },
+  {
+    "name": "つがいけマウンテンリゾート",
+    "skiID": 112,
+    "latitude": 36.749146905882746,
+    "longitude": 137.87159846366004,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0144s.htm"
+  },
+  {
+    "name": "HAKUBAVALLEY 鹿島槍スキー場 ファミリーパーク",
+    "skiID": 113,
+    "latitude": 36.59707661127239,
+    "longitude": 137.82550437970556,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0196s.htm"
+  },
+  {
+    "name": "信州松本 野麦峠スキー場",
+    "skiID": 114,
+    "latitude": 36.04863129890779,
+    "longitude": 137.70917829131054,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0229s.htm"
+  },
+  {
+    "name": "御嶽スキー場（旧 Ontake2240）",
+    "skiID": 116,
+    "latitude": 35.86318601883294,
+    "longitude": 137.52861997970842,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0262s.htm"
+  },
+  {
+    "name": "ヘブンスそのはら SNOW WORLD",
+    "skiID": 117,
+    "latitude": 35.45541117516593,
+    "longitude": 137.66875360856827,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0273s.htm"
+  },
+  {
+    "name": "治部坂高原スキー場",
+    "skiID": 118,
+    "latitude": 35.354659029569426,
+    "longitude": 137.671667922003,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0253s.htm"
+  },
+  {
+    "name": "モンデウス飛騨位山スノーパーク",
+    "skiID": 119,
+    "latitude": 36.061720723919336,
+    "longitude": 137.2264418545506,
+    "region": "岐阜県",
+    "url": "https://www.city.takayama.lg.jp/shisetsu/1004139/1000043/1018844.html"
+  },
+  {
+    "name": "ひるがの高原スキー場",
+    "skiID": 120,
+    "latitude": 36.0056708343957,
+    "longitude": 136.90850504671965,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0272s.htm"
+  },
+  {
+    "name": "高鷲スノーパーク",
+    "skiID": 121,
+    "latitude": 35.99840439993,
+    "longitude": 136.8773452932089,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0212s.htm"
+  },
+  {
+    "name": "ダイナランド",
+    "skiID": 122,
+    "latitude": 35.990349902634655,
+    "longitude": 136.8705709905147,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0231s.htm"
+  },
+  {
+    "name": "スノーウェーブパーク白鳥高原",
+    "skiID": 123,
+    "latitude": 35.957407663340405,
+    "longitude": 136.80501926250076,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0252s.htm"
+  },
+  {
+    "name": "ホワイトピアたかす",
+    "skiID": 124,
+    "latitude": 35.956020989503706,
+    "longitude": 136.9351059698368,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0194s.htm"
+  },
+  {
+    "name": "鷲ヶ岳スキー場",
+    "skiID": 125,
+    "latitude": 35.94256220439805,
+    "longitude": 136.91945407601793,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0224s.htm"
+  },
+  {
+    "name": "めいほうスキー場",
+    "skiID": 127,
+    "latitude": 35.94183683280406,
+    "longitude": 137.04288326252197,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0138s.htm"
+  },
+  {
+    "name": "茶臼山高原スキー場",
+    "skiID": 128,
+    "latitude": 35.22031380869894,
+    "longitude": 137.65509290851682,
+    "region": "愛知県",
+    "url": "https://surfsnow.jp/guide/htm/r0264s.htm"
+  },
+  {
+    "name": "ウイングヒルズ白鳥リゾート",
+    "skiID": 129,
+    "latitude": 35.966111880544574,
+    "longitude": 136.8028297738565,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0199s.htm"
+  },
+  {
+    "name": "白山千丈温泉セイモアスキー場",
+    "skiID": 130,
+    "latitude": 36.347236431948375,
+    "longitude": 136.67775559190113,
+    "region": "石川県",
+    "url": "https://surfsnow.jp/guide/htm/r0267s.htm"
+  },
+  {
+    "name": "スキージャム勝山",
+    "skiID": 131,
+    "latitude": 36.07289283071582,
+    "longitude": 136.55572276433807,
+    "region": "福井県",
+    "url": "https://surfsnow.jp/guide/htm/r0019s.htm"
+  },
+  {
+    "name": "福井和泉スキー場",
+    "skiID": 132,
+    "latitude": 35.93985671770931,
+    "longitude": 136.69227847972778,
+    "region": "福井県",
+    "url": "https://surfsnow.jp/guide/htm/r0133s.htm"
+  },
+  {
+    "name": "今庄365スキー場",
+    "skiID": 133,
+    "latitude": 35.72350822924794,
+    "longitude": 136.14830863366325,
+    "region": "福井県",
+    "url": "https://surfsnow.jp/guide/htm/r0232s.htm"
+  },
+  {
+    "name": "箱館山スキー場",
+    "skiID": 134,
+    "latitude": 35.43859716531906,
+    "longitude": 135.98631332016373,
+    "region": "滋賀県",
+    "url": "https://surfsnow.jp/guide/htm/r0136s.htm"
+  },
+  {
+    "name": "グランスノー奥伊吹（旧名称 奥伊吹スキー場）",
+    "skiID": 135,
+    "latitude": 35.52169761663026,
+    "longitude": 136.38671130019964,
+    "region": "滋賀県",
+    "url": "https://surfsnow.jp/guide/htm/r0244s.htm"
+  },
+  {
+    "name": "びわ湖バレイ",
+    "skiID": 136,
+    "latitude": 35.213122063709086,
+    "longitude": 135.8958820449399,
+    "region": "滋賀県",
+    "url": "https://surfsnow.jp/guide/htm/r0254s.htm"
+  },
+  {
+    "name": "余呉高原リゾート・ヤップ",
+    "skiID": 137,
+    "latitude": 35.69850966569147,
+    "longitude": 136.15797753735805,
+    "region": "滋賀県",
+    "url": "https://surfsnow.jp/guide/htm/r0014s.htm"
+  },
+  {
+    "name": "若杉高原おおやスキー場",
+    "skiID": 138,
+    "latitude": 35.28337205535373,
+    "longitude": 134.5878656355232,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0240s.htm"
+  },
+  {
+    "name": "ハチ高原スキー場",
+    "skiID": 139,
+    "latitude": 35.3857001717306,
+    "longitude": 134.53546773323842,
+    "region": "兵庫県",
+    "url": "https://hachikougen.net/"
+  },
+  {
+    "name": "ハチ・ハチ北スキー場",
+    "skiID": 140,
+    "latitude": 35.40803774079173,
+    "longitude": 134.55393108695915,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0053s.htm"
+  },
+  {
+    "name": "スカイバレイスキー場",
+    "skiID": 141,
+    "latitude": 35.39824750332688,
+    "longitude": 134.57337900850973,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0222s.htm"
+  },
+  {
+    "name": "おじろスキー場",
+    "skiID": 143,
+    "latitude": 35.466269437321856,
+    "longitude": 134.51518221725348,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0220s.htm"
+  },
+  {
+    "name": "アップかんなべ",
+    "skiID": 144,
+    "latitude": 35.501309271640274,
+    "longitude": 134.67816076059268,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0225s.htm"
+  },
+  {
+    "name": "ばんしゅう戸倉スキー場",
+    "skiID": 145,
+    "latitude": 35.2894856699456,
+    "longitude": 134.54270899505428,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0245s.htm"
+  },
+  {
+    "name": "琴引フォレストパーク",
+    "skiID": 146,
+    "latitude": 35.055118305165564,
+    "longitude": 132.76860933125704,
+    "region": "島根県",
+    "url": "https://surfsnow.jp/guide/htm/r0015s.htm"
+  },
+  {
+    "name": "瑞穂ハイランド",
+    "skiID": 147,
+    "latitude": 34.816103310433924,
+    "longitude": 132.39995208776696,
+    "region": "島根県",
+    "url": "https://surfsnow.jp/guide/htm/r1024s.htm"
+  },
+  {
+    "name": "だいせんホワイトリゾート",
+    "skiID": 148,
+    "latitude": 35.397157159503415,
+    "longitude": 133.53409501328747,
+    "region": "鳥取県",
+    "url": "https://surfsnow.jp/guide/htm/r0247s.htm"
+  },
+  {
+    "name": "女鹿平温泉めがひらスキー場",
+    "skiID": 150,
+    "latitude": 34.49824548450952,
+    "longitude": 132.14308969319524,
+    "region": "広島県",
+    "url": "https://surfsnow.jp/guide/htm/r0200s.htm"
+  },
+  {
+    "name": "かたしな高原スキー場",
+    "skiID": 152,
+    "latitude": 36.81135989818552,
+    "longitude": 139.2297428913632,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0303s.htm"
+  },
+  {
+    "name": "カムイみさかスキー場",
+    "skiID": 155,
+    "latitude": 35.58266748187679,
+    "longitude": 138.75321863547936,
+    "region": "山梨県",
+    "url": "https://surfsnow.jp/guide/htm/r0325s.htm"
+  },
+  {
+    "name": "White Resort 白馬さのさか",
+    "skiID": 156,
+    "latitude": 36.6302009539335,
+    "longitude": 137.84460465271732,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0326s.htm"
+  },
+  {
+    "name": "白山一里野温泉スキー場",
+    "skiID": 157,
+    "latitude": 36.268512779424825,
+    "longitude": 136.71501423553167,
+    "region": "石川県",
+    "url": "https://surfsnow.jp/guide/htm/r0328s.htm"
+  },
+  {
+    "name": "サホロリゾートスキー場",
+    "skiID": 158,
+    "latitude": 43.17485169646597,
+    "longitude": 142.80818521223622,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0330s.htm"
+  },
+  {
+    "name": "ルスツリゾート",
+    "skiID": 159,
+    "latitude": 42.75137031372196,
+    "longitude": 140.89884738054835,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0331s.htm"
+  },
+  {
+    "name": "会津高原だいくらスキー場",
+    "skiID": 160,
+    "latitude": 37.1815894907032,
+    "longitude": 139.63721728540094,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0332s.htm"
+  },
+  {
+    "name": "会津高原南郷スキー場",
+    "skiID": 161,
+    "latitude": 37.27161957712288,
+    "longitude": 139.5431981761736,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0333s.htm"
+  },
+  {
+    "name": "中央道 伊那スキーリゾート",
+    "skiID": 162,
+    "latitude": 35.81561965133792,
+    "longitude": 137.91718534849608,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0334s.htm"
+  },
+  {
+    "name": "水上高原・奥利根温泉 藤原スキー場",
+    "skiID": 163,
+    "latitude": 36.85106458169229,
+    "longitude": 139.06975411169117,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0335s.htm"
+  },
+  {
+    "name": "裏磐梯スキー場",
+    "skiID": 164,
+    "latitude": 37.632106411852426,
+    "longitude": 140.0680950043037,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0336s.htm"
+  },
+  {
+    "name": "札幌国際スキー場",
+    "skiID": 166,
+    "latitude": 43.07239380266253,
+    "longitude": 141.08277713553787,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0602s.htm"
+  },
+  {
+    "name": "カムイスキーリンクス",
+    "skiID": 167,
+    "latitude": 43.70515702055528,
+    "longitude": 142.18712882204343,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0604s.htm"
+  },
+  {
+    "name": "ぬかびら源泉郷スキー場",
+    "skiID": 168,
+    "latitude": 43.36407359843106,
+    "longitude": 143.1869973489838,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0606s.htm"
+  },
+  {
+    "name": "ぴっぷスキー場",
+    "skiID": 169,
+    "latitude": 43.93324561139535,
+    "longitude": 142.4998040778748,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0608s.htm"
+  },
+  {
+    "name": "かもい岳スキー場",
+    "skiID": 170,
+    "latitude": 43.520761344541725,
+    "longitude": 142.01920480855165,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0609s.htm"
+  },
+  {
+    "name": "札幌藻岩山スキー場",
+    "skiID": 171,
+    "latitude": 43.01249230229346,
+    "longitude": 141.33318112200925,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0612s.htm"
+  },
+  {
+    "name": "IWANAI RESORT（旧：ニセコいわない国際スキー場）",
+    "skiID": 172,
+    "latitude": 42.9472715907591,
+    "longitude": 140.51466163920304,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0614s.htm"
+  },
+  {
+    "name": "中頓別町寿スキー場",
+    "skiID": 173,
+    "latitude": 42.94725198634725,
+    "longitude": 140.51464554902049,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0617s.htm"
+  },
+  {
+    "name": "枝幸町三笠山スキー場",
+    "skiID": 174,
+    "latitude": 44.9336495182277,
+    "longitude": 142.56462220327995,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0618s.htm"
+  },
+  {
+    "name": "名寄ピヤシリスキー場",
+    "skiID": 175,
+    "latitude": 44.40451661093369,
+    "longitude": 142.51341317786813,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0621s.htm"
+  },
+  {
+    "name": "紋別市営大山スキー場",
+    "skiID": 176,
+    "latitude": 44.34809010922207,
+    "longitude": 143.33264258156203,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0623s.htm"
+  },
+  {
+    "name": "士別市 日向スキー場",
+    "skiID": 177,
+    "latitude": 44.2657110193357,
+    "longitude": 142.34385299501332,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0624s.htm"
+  },
+  {
+    "name": "士別市あさひスキー場",
+    "skiID": 178,
+    "latitude": 44.125593733758805,
+    "longitude": 142.59569589590993,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0625s.htm"
+  },
+  {
+    "name": "ほろたちスキー場",
+    "skiID": 179,
+    "latitude": 44.01545404002909,
+    "longitude": 142.13560620670123,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0628s.htm"
+  },
+  {
+    "name": "上川町営中山スキー場",
+    "skiID": 180,
+    "latitude": 43.85193983304842,
+    "longitude": 142.78053844901345,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0629s.htm"
+  },
+  {
+    "name": "大雪山 黒岳スキー場",
+    "skiID": 181,
+    "latitude": 43.71089540236272,
+    "longitude": 142.9388685932058,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0630s.htm"
+  },
+  {
+    "name": "とうま山スキー場",
+    "skiID": 182,
+    "latitude": 43.83666348104216,
+    "longitude": 142.53838630851638,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0631s.htm"
+  },
+  {
+    "name": "キャンモアスキービレッジ",
+    "skiID": 183,
+    "latitude": 43.73054467673494,
+    "longitude": 142.53892583736902,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0632s.htm"
+  },
+  {
+    "name": "サンタプレゼントパーク マロースゲレンデ",
+    "skiID": 184,
+    "latitude": 43.761096148302144,
+    "longitude": 142.30267526619653,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0635s.htm"
+  },
+  {
+    "name": "沼田町営高穂スキー場",
+    "skiID": 185,
+    "latitude": 43.82092144842165,
+    "longitude": 141.96313162202935,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0636s.htm"
+  },
+  {
+    "name": "暑寒別岳スキー場",
+    "skiID": 186,
+    "latitude": 43.80982073087075,
+    "longitude": 141.5289253778515,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0638s.htm"
+  },
+  {
+    "name": "中富良野北星スキー場",
+    "skiID": 187,
+    "latitude": 43.411737066720704,
+    "longitude": 142.4203490048514,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0640s.htm"
+  },
+  {
+    "name": "岩見沢萩の山市民スキー場",
+    "skiID": 189,
+    "latitude": 43.16450194698977,
+    "longitude": 141.81300072204098,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0644s.htm"
+  },
+  {
+    "name": "長沼スキー場",
+    "skiID": 191,
+    "latitude": 43.0394556100893,
+    "longitude": 141.74418809501535,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0647s.htm"
+  },
+  {
+    "name": "三笠桂沢国設スキー場",
+    "skiID": 192,
+    "latitude": 43.25212075041439,
+    "longitude": 141.98099182205502,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0648s.htm"
+  },
+  {
+    "name": "日高国際スキー場",
+    "skiID": 193,
+    "latitude": 42.8706463670262,
+    "longitude": 142.44657817972322,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0649s.htm"
+  },
+  {
+    "name": "湧別町 五鹿山スキー場",
+    "skiID": 194,
+    "latitude": 44.18384509031196,
+    "longitude": 143.6094968508715,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0653s.htm"
+  },
+  {
+    "name": "佐呂間町営スキー場",
+    "skiID": 195,
+    "latitude": 44.00888138894603,
+    "longitude": 143.7549571220379,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0654s.htm"
+  },
+  {
+    "name": "北見市留辺蘂町 八方台スキー場",
+    "skiID": 196,
+    "latitude": 43.77010282439438,
+    "longitude": 143.61305282204896,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0655s.htm"
+  },
+  {
+    "name": "北見若松市民スキー場",
+    "skiID": 197,
+    "latitude": 43.75536216352915,
+    "longitude": 143.92115603550502,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0656s.htm"
+  },
+  {
+    "name": "標津町営金山スキー場",
+    "skiID": 198,
+    "latitude": 43.74332499547626,
+    "longitude": 144.92734893548737,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0659s.htm"
+  },
+  {
+    "name": "国設阿寒湖畔スキー場【ウタラ】",
+    "skiID": 199,
+    "latitude": 43.42442560814956,
+    "longitude": 144.08457036436528,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0660s.htm"
+  },
+  {
+    "name": "ダイナスティスキーリゾート",
+    "skiID": 200,
+    "latitude": 42.931635612565216,
+    "longitude": 141.4516090508472,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0662s.htm"
+  },
+  {
+    "name": "Fu’s snow area",
+    "skiID": 201,
+    "latitude": 42.95433552689752,
+    "longitude": 141.27939612018704,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0663s.htm"
+  },
+  {
+    "name": "仁木町民スキー場",
+    "skiID": 202,
+    "latitude": 43.11569322455528,
+    "longitude": 140.7312105508796,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0664s.htm"
+  },
+  {
+    "name": "オロフレスキー場",
+    "skiID": 203,
+    "latitude": 42.55797800738339,
+    "longitude": 140.98578955085887,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0665s.htm"
+  },
+  {
+    "name": "カルルス温泉サンライバスキー場",
+    "skiID": 204,
+    "latitude": 42.52181130863567,
+    "longitude": 141.10475299317463,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0666s.htm"
+  },
+  {
+    "name": "今金町ピリカスキー場",
+    "skiID": 205,
+    "latitude": 42.463976510027386,
+    "longitude": 140.20312693548897,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0668s.htm"
+  },
+  {
+    "name": "幌延町東ヶ丘スキー場",
+    "skiID": 206,
+    "latitude": 45.01953785289935,
+    "longitude": 141.85420252202988,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0671s.htm"
+  },
+  {
+    "name": "倶知安町旭ヶ丘スキー場",
+    "skiID": 207,
+    "latitude": 42.90180406656936,
+    "longitude": 140.73860265085332,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0673s.htm"
+  },
+  {
+    "name": "滝野スノーワールド",
+    "skiID": 208,
+    "latitude": 42.91704922977389,
+    "longitude": 141.38876512201168,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0680s.htm"
+  },
+  {
+    "name": "そっち岳スキー場",
+    "skiID": 210,
+    "latitude": 43.53820751409511,
+    "longitude": 141.79900853738738,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0682s.htm"
+  },
+  {
+    "name": "羽幌町民スキー場 びゅー",
+    "skiID": 211,
+    "latitude": 44.3162052670297,
+    "longitude": 141.7849036778355,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0683s.htm"
+  },
+  {
+    "name": "ウィンザースノービレッジ",
+    "skiID": 212,
+    "latitude": 42.59207751278596,
+    "longitude": 140.75731472016528,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0685s.htm"
+  },
+  {
+    "name": "明野ヶ丘スキー場",
+    "skiID": 213,
+    "latitude": 42.897180285052144,
+    "longitude": 143.37201247967985,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0686s.htm"
+  },
+  {
+    "name": "七戸町営スキー場",
+    "skiID": 215,
+    "latitude": 40.69818981552855,
+    "longitude": 141.09903769504174,
+    "region": "青森県",
+    "url": "https://surfsnow.jp/guide/htm/r0691s.htm"
+  },
+  {
+    "name": "奥入瀬渓流温泉スキー場",
+    "skiID": 216,
+    "latitude": 40.57949908673123,
+    "longitude": 140.99332483737916,
+    "region": "青森県",
+    "url": "https://surfsnow.jp/guide/htm/r0693s.htm"
+  },
+  {
+    "name": "八甲田スキー場",
+    "skiID": 217,
+    "latitude": 40.67956857834729,
+    "longitude": 140.8326461355197,
+    "region": "青森県",
+    "url": "https://surfsnow.jp/guide/htm/r0694s.htm"
+  },
+  {
+    "name": "創遊村229スキーランド",
+    "skiID": 218,
+    "latitude": 40.36502485422302,
+    "longitude": 141.07177792202685,
+    "region": "青森県",
+    "url": "https://surfsnow.jp/guide/htm/r0695s.htm"
+  },
+  {
+    "name": "奥中山高原スキー場",
+    "skiID": 219,
+    "latitude": 40.08338339644939,
+    "longitude": 141.1912850355024,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r0699s.htm"
+  },
+  {
+    "name": "網張温泉スキー場",
+    "skiID": 220,
+    "latitude": 39.821509846360286,
+    "longitude": 140.9363290085415,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r0700s.htm"
+  },
+  {
+    "name": "ひめかゆスキー場",
+    "skiID": 221,
+    "latitude": 39.12840438243652,
+    "longitude": 140.9419440558738,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r0703s.htm"
+  },
+  {
+    "name": "八幡平市 田山スキー場",
+    "skiID": 222,
+    "latitude": 40.13483695424753,
+    "longitude": 140.95179277783345,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r0704s.htm"
+  },
+  {
+    "name": "町営湯田スキー場",
+    "skiID": 223,
+    "latitude": 39.33774450974666,
+    "longitude": 140.78505042198907,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r0708s.htm"
+  },
+  {
+    "name": "町営 志賀来スキー場",
+    "skiID": 224,
+    "latitude": 39.40301698876683,
+    "longitude": 140.76989208986242,
+    "region": "岩手県",
+    "url": "https://www.town.nishiwaga.lg.jp/soshikikarasagasu/kyoikuiinkai_shogaigakushuuka/1/3/4/1299.html"
+  },
+  {
+    "name": "みやぎ蔵王白石スキー場",
+    "skiID": 225,
+    "latitude": 38.068569653997145,
+    "longitude": 140.51330904897054,
+    "region": "宮城県",
+    "url": "https://surfsnow.jp/guide/htm/r0713s.htm"
+  },
+  {
+    "name": "太平山スキー場 オーパス",
+    "skiID": 226,
+    "latitude": 39.7875850078644,
+    "longitude": 140.21970063547732,
+    "region": "秋田県",
+    "url": "https://surfsnow.jp/guide/htm/r0717s.htm"
+  },
+  {
+    "name": "阿仁スキー場",
+    "skiID": 227,
+    "latitude": 39.957496137520245,
+    "longitude": 140.49765400668406,
+    "region": "秋田県",
+    "url": "https://surfsnow.jp/guide/htm/r0719s.htm"
+  },
+  {
+    "name": "水晶山スキー場",
+    "skiID": 228,
+    "latitude": 40.17758942750741,
+    "longitude": 140.76384840669115,
+    "region": "秋田県",
+    "url": "https://surfsnow.jp/guide/htm/r0721s.htm"
+  },
+  {
+    "name": "大仙市営協和スキー場",
+    "skiID": 229,
+    "latitude": 39.6809198419559,
+    "longitude": 140.39284658764106,
+    "region": "秋田県",
+    "url": "https://surfsnow.jp/guide/htm/r0722s.htm"
+  },
+  {
+    "name": "秋田八幡平スキー場",
+    "skiID": 232,
+    "latitude": 39.97873218004932,
+    "longitude": 140.80116763555395,
+    "region": "秋田県",
+    "url": "https://surfsnow.jp/guide/htm/r0728s.htm"
+  },
+  {
+    "name": "藤里町営スキー場",
+    "skiID": 233,
+    "latitude": 40.321550408649074,
+    "longitude": 140.2922172624781,
+    "region": "秋田県",
+    "url": "https://surfsnow.jp/guide/htm/r0729s.htm"
+  },
+  {
+    "name": "稲川スキー場",
+    "skiID": 234,
+    "latitude": 39.16702379503266,
+    "longitude": 140.54187932974938,
+    "region": "秋田県",
+    "url": "https://surfsnow.jp/guide/htm/r0732s.htm"
+  },
+  {
+    "name": "蔵王ライザワールド",
+    "skiID": 235,
+    "latitude": 38.12421878268072,
+    "longitude": 140.40531669317713,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0733s.htm"
+  },
+  {
+    "name": "松山スキー場",
+    "skiID": 236,
+    "latitude": 38.85967802985963,
+    "longitude": 139.98081772201323,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0734s.htm"
+  },
+  {
+    "name": "天童高原スキー場",
+    "skiID": 237,
+    "latitude": 38.34677166482896,
+    "longitude": 140.48179170668098,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0738s.htm"
+  },
+  {
+    "name": "羽黒山スキー場",
+    "skiID": 238,
+    "latitude": 38.69297980953031,
+    "longitude": 139.98477307785862,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0740s.htm"
+  },
+  {
+    "name": "櫛引たらのきだいスキー場",
+    "skiID": 239,
+    "latitude": 38.65268277713598,
+    "longitude": 139.9127773085622,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0741s.htm"
+  },
+  {
+    "name": "湯殿山スキー場",
+    "skiID": 240,
+    "latitude": 38.57976405224056,
+    "longitude": 139.94239425791747,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0742s.htm"
+  },
+  {
+    "name": "西川町民スキー場",
+    "skiID": 241,
+    "latitude": 38.43677478277305,
+    "longitude": 140.12565676436742,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0743s.htm"
+  },
+  {
+    "name": "白鷹町営スキー場",
+    "skiID": 242,
+    "latitude": 38.23599170262999,
+    "longitude": 140.15458856437996,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0745s.htm"
+  },
+  {
+    "name": "蔵王猿倉スキー場",
+    "skiID": 243,
+    "latitude": 38.12854341005633,
+    "longitude": 140.3764029760238,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0746s.htm"
+  },
+  {
+    "name": "グリーンバレー神室スキー場",
+    "skiID": 244,
+    "latitude": 38.91676764953404,
+    "longitude": 140.3939618540957,
+    "region": "山形県",
+    "url": "https://surfsnow.jp/guide/htm/r0751s.htm"
+  },
+  {
+    "name": "猪苗代リゾートスキー場",
+    "skiID": 245,
+    "latitude": 37.5797324488847,
+    "longitude": 140.06007449178117,
+    "region": "福島県",
+    "url": "https://www.syakunage.com/%E7%8C%AA%E8%8B%97%E4%BB%A3%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%E3%82%B9%E3%82%AD%E3%83%BC%E5%A0%B4/"
+  },
+  {
+    "name": "会津高原たかつえスキー場",
+    "skiID": 246,
+    "latitude": 37.11017070236208,
+    "longitude": 139.61641823739376,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0759s.htm"
+  },
+  {
+    "name": "尾瀬檜枝岐温泉スキー場",
+    "skiID": 247,
+    "latitude": 37.04124160884408,
+    "longitude": 139.39656201260013,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0762s.htm"
+  },
+  {
+    "name": "日光湯元温泉スキー場",
+    "skiID": 248,
+    "latitude": 36.803674524471454,
+    "longitude": 139.41948684896863,
+    "region": "栃木県",
+    "url": "https://surfsnow.jp/guide/htm/r0767s.htm"
+  },
+  {
+    "name": "谷川岳天神平スキー場",
+    "skiID": 249,
+    "latitude": 36.81816641668709,
+    "longitude": 138.9482599220566,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0769s.htm"
+  },
+  {
+    "name": "群馬みなかみほうだいぎスキー場（旧 宝台樹スキー場）",
+    "skiID": 251,
+    "latitude": 36.83745434108206,
+    "longitude": 139.0783448796954,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0771s.htm"
+  },
+  {
+    "name": "オグナほたかスキー場",
+    "skiID": 253,
+    "latitude": 36.78091938554353,
+    "longitude": 139.16796683553838,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0774s.htm"
+  },
+  {
+    "name": "シャルマン火打スキー場",
+    "skiID": 256,
+    "latitude": 37.00355568088839,
+    "longitude": 138.07063867783998,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0782s.htm"
+  },
+  {
+    "name": "胎内スキー場",
+    "skiID": 257,
+    "latitude": 38.01690963374681,
+    "longitude": 139.50226499133734,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0784s.htm"
+  },
+  {
+    "name": "石打丸山スキー場",
+    "skiID": 258,
+    "latitude": 36.97998999884289,
+    "longitude": 138.80249228296918,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0788s.htm"
+  },
+  {
+    "name": "奥只見丸山スキー場",
+    "skiID": 259,
+    "latitude": 37.18392090544815,
+    "longitude": 139.24016440060387,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0789s.htm"
+  },
+  {
+    "name": "一本杉スノーパーク",
+    "skiID": 260,
+    "latitude": 36.936680101506326,
+    "longitude": 138.80663354896447,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0791s.htm"
+  },
+  {
+    "name": "松之山温泉スキー場",
+    "skiID": 262,
+    "latitude": 37.05239948205452,
+    "longitude": 138.59753570667905,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0795s.htm"
+  },
+  {
+    "name": "小出スキー場",
+    "skiID": 263,
+    "latitude": 37.22830232564364,
+    "longitude": 138.9553514662016,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0796s.htm"
+  },
+  {
+    "name": "須原スキー場",
+    "skiID": 264,
+    "latitude": 37.32316569857424,
+    "longitude": 139.016099742992,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0799s.htm"
+  },
+  {
+    "name": "三川・温泉スキー場",
+    "skiID": 265,
+    "latitude": 37.72086056036037,
+    "longitude": 139.393345777845,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0802s.htm"
+  },
+  {
+    "name": "村上市 ぶどうスキー場",
+    "skiID": 267,
+    "latitude": 38.39009557166816,
+    "longitude": 139.5544494471797,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0804s.htm"
+  },
+  {
+    "name": "高柳ガルルのスキー場",
+    "skiID": 268,
+    "latitude": 37.222752280359785,
+    "longitude": 138.6372531508653,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0805s.htm"
+  },
+  {
+    "name": "古志高原スキー場",
+    "skiID": 269,
+    "latitude": 37.31851316301449,
+    "longitude": 138.88735550774368,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0806s.htm"
+  },
+  {
+    "name": "金谷山スキー場",
+    "skiID": 271,
+    "latitude": 37.10422405524483,
+    "longitude": 138.22492574901503,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0808s.htm"
+  },
+  {
+    "name": "休暇村妙高 ルンルンスキー場",
+    "skiID": 272,
+    "latitude": 36.912109877495936,
+    "longitude": 138.16817166431483,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0809s.htm"
+  },
+  {
+    "name": "松代ファミリースキー場",
+    "skiID": 273,
+    "latitude": 37.1268502949655,
+    "longitude": 138.60559074289912,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0810s.htm"
+  },
+  {
+    "name": "糸魚川シーサイドバレースキー場",
+    "skiID": 274,
+    "latitude": 36.94121956350681,
+    "longitude": 137.89926502205353,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0811s.htm"
+  },
+  {
+    "name": "とちおファミリースキー場",
+    "skiID": 275,
+    "latitude": 37.43723545138173,
+    "longitude": 139.03925596435718,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0812s.htm"
+  },
+  {
+    "name": "赤倉温泉スキー場",
+    "skiID": 277,
+    "latitude": 36.89106413592625,
+    "longitude": 138.17669332437228,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0814s.htm"
+  },
+  {
+    "name": "タカンボースキー場",
+    "skiID": 278,
+    "latitude": 36.37888653960003,
+    "longitude": 136.86535026435922,
+    "region": "富山県",
+    "url": "https://surfsnow.jp/guide/htm/r0816s.htm"
+  },
+  {
+    "name": "たいらスキー場",
+    "skiID": 279,
+    "latitude": 36.44016086048553,
+    "longitude": 136.92468548876855,
+    "region": "富山県",
+    "url": "https://surfsnow.jp/guide/htm/r0817s.htm"
+  },
+  {
+    "name": "牛岳温泉スキー場",
+    "skiID": 280,
+    "latitude": 36.57258827740408,
+    "longitude": 137.0564609069511,
+    "region": "富山県",
+    "url": "https://surfsnow.jp/guide/htm/r0819s.htm"
+  },
+  {
+    "name": "立山山麓スキー場",
+    "skiID": 281,
+    "latitude": 36.57672331189169,
+    "longitude": 137.4279413593142,
+    "region": "富山県",
+    "url": "https://surfsnow.jp/guide/htm/r0821s.htm"
+  },
+  {
+    "name": "となみ夢の平スキー場",
+    "skiID": 282,
+    "latitude": 36.5860842302956,
+    "longitude": 137.02056586436075,
+    "region": "富山県",
+    "url": "https://surfsnow.jp/guide/htm/r0822s.htm"
+  },
+  {
+    "name": "金沢市営医王山スキー場",
+    "skiID": 283,
+    "latitude": 36.52731208185834,
+    "longitude": 136.75358837785762,
+    "region": "石川県",
+    "url": "https://surfsnow.jp/guide/htm/r0830s.htm"
+  },
+  {
+    "name": "七尾コロサスキー場",
+    "skiID": 284,
+    "latitude": 36.97539079618119,
+    "longitude": 136.9596997220556,
+    "region": "石川県",
+    "url": "https://surfsnow.jp/guide/htm/r0831s.htm"
+  },
+  {
+    "name": "新保ファミリースキー場",
+    "skiID": 285,
+    "latitude": 35.8559519564304,
+    "longitude": 136.30778609318529,
+    "region": "福井県",
+    "url": "https://surfsnow.jp/guide/htm/r0834s.htm"
+  },
+  {
+    "name": "高峰マウンテンパーク（旧アサマ2000パーク）",
+    "skiID": 286,
+    "latitude": 36.40797275012705,
+    "longitude": 138.46928125084924,
+    "region": "群馬県",
+    "url": "https://surfsnow.jp/guide/htm/r0836s.htm"
+  },
+  {
+    "name": "北志賀 よませ温泉スキー場",
+    "skiID": 287,
+    "latitude": 36.78565293203884,
+    "longitude": 138.4150438219829,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0023s.htm"
+  },
+  {
+    "name": "八千穂高原スキー場",
+    "skiID": 288,
+    "latitude": 36.070053422350846,
+    "longitude": 138.38084502201716,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0840s.htm"
+  },
+  {
+    "name": "しらかば2in1スキー場",
+    "skiID": 289,
+    "latitude": 36.095189143939365,
+    "longitude": 138.263449135506,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0842s.htm"
+  },
+  {
+    "name": "白樺高原国際スキー場",
+    "skiID": 290,
+    "latitude": 36.13063433632807,
+    "longitude": 138.27771312237653,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0843s.htm"
+  },
+  {
+    "name": "ピラタス蓼科スノーリゾート",
+    "skiID": 291,
+    "latitude": 36.068179328574445,
+    "longitude": 138.30143502338274,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0844s.htm"
+  },
+  {
+    "name": "Mt．乗鞍スノーリゾート",
+    "skiID": 292,
+    "latitude": 36.14655171748593,
+    "longitude": 137.6177701232538,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0845s.htm"
+  },
+  {
+    "name": "やぶはら高原スキー場",
+    "skiID": 293,
+    "latitude": 35.9657007661418,
+    "longitude": 137.73948732013966,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0847s.htm"
+  },
+  {
+    "name": "木曽福島スキー場",
+    "skiID": 294,
+    "latitude": 35.94566629034463,
+    "longitude": 137.667396535338,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0848s.htm"
+  },
+  {
+    "name": "開田高原マイアスキー場",
+    "skiID": 295,
+    "latitude": 35.93048655545509,
+    "longitude": 137.53007856435477,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0849s.htm"
+  },
+  {
+    "name": "聖高原スキー場",
+    "skiID": 297,
+    "latitude": 36.48715203794245,
+    "longitude": 138.0728284643553,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0854s.htm"
+  },
+  {
+    "name": "武石番所ヶ原スキー場",
+    "skiID": 298,
+    "latitude": 36.26042319796338,
+    "longitude": 138.112455564342,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0855s.htm"
+  },
+  {
+    "name": "さかえ倶楽部スキー場",
+    "skiID": 299,
+    "latitude": 36.996281061593976,
+    "longitude": 138.56511942202573,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0856s.htm"
+  },
+  {
+    "name": "爺ガ岳スキー場",
+    "skiID": 300,
+    "latitude": 36.56162451298339,
+    "longitude": 137.79837073384732,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0857s.htm"
+  },
+  {
+    "name": "池の平スノーパーク",
+    "skiID": 301,
+    "latitude": 36.10937730109769,
+    "longitude": 138.24462857863853,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0859s.htm"
+  },
+  {
+    "name": "ファミリーゲレンデ 霧ヶ峰スキー場",
+    "skiID": 302,
+    "latitude": 36.09709166265871,
+    "longitude": 138.16170717970743,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0860s.htm"
+  },
+  {
+    "name": "富士見高原スキー場",
+    "skiID": 303,
+    "latitude": 35.922904610094086,
+    "longitude": 138.3082859931509,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0861s.htm"
+  },
+  {
+    "name": "ひらや高原スキー場",
+    "skiID": 304,
+    "latitude": 35.30624768865798,
+    "longitude": 137.62431254228247,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0863s.htm"
+  },
+  {
+    "name": "あさひプライムスキー場",
+    "skiID": 305,
+    "latitude": 36.11595124252886,
+    "longitude": 137.83456990670334,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0864s.htm"
+  },
+  {
+    "name": "REWILD NINJA SNOW HIGHLAND",
+    "skiID": 306,
+    "latitude": 36.55698233495896,
+    "longitude": 138.3510041220193,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0865s.htm"
+  },
+  {
+    "name": "駒ヶ根高原スキー場",
+    "skiID": 307,
+    "latitude": 35.80158905417262,
+    "longitude": 137.89642062840977,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0866s.htm"
+  },
+  {
+    "name": "飛騨かわいスキー場",
+    "skiID": 308,
+    "latitude": 36.23983974024439,
+    "longitude": 137.08210136437134,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0873s.htm"
+  },
+  {
+    "name": "飛騨ほおのき平スキー場",
+    "skiID": 309,
+    "latitude": 36.17601394704461,
+    "longitude": 137.49099710479945,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0874s.htm"
+  },
+  {
+    "name": "平湯温泉スキー場",
+    "skiID": 311,
+    "latitude": 36.184945077521135,
+    "longitude": 137.5528972508897,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0876s.htm"
+  },
+  {
+    "name": "ひだ流葉スキー場",
+    "skiID": 312,
+    "latitude": 36.33229514118309,
+    "longitude": 137.25036216896012,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0877s.htm"
+  },
+  {
+    "name": "飛騨高山スキー場",
+    "skiID": 313,
+    "latitude": 36.1468095429018,
+    "longitude": 137.43045194902675,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0878s.htm"
+  },
+  {
+    "name": "荘川高原スキー場",
+    "skiID": 314,
+    "latitude": 36.05850649676136,
+    "longitude": 136.95748758571844,
+    "region": "岐阜県",
+    "url": "https://surfsnow.jp/guide/htm/r0879s.htm"
+  },
+  {
+    "name": "リバウェル井川スキー場",
+    "skiID": 315,
+    "latitude": 35.21594974992432,
+    "longitude": 138.27890637601675,
+    "region": "静岡県",
+    "url": "https://surfsnow.jp/guide/htm/r0883s.htm"
+  },
+  {
+    "name": "朽木スキー場",
+    "skiID": 316,
+    "latitude": 35.32920803148623,
+    "longitude": 135.93972794900947,
+    "region": "滋賀県",
+    "url": "https://surfsnow.jp/guide/htm/r0889s.htm"
+  },
+  {
+    "name": "赤子山スキー場",
+    "skiID": 318,
+    "latitude": 35.546925223605186,
+    "longitude": 136.21968636435423,
+    "region": "滋賀県",
+    "url": "https://surfsnow.jp/guide/htm/r0891s.htm"
+  },
+  {
+    "name": "ハイパーボウル東鉢",
+    "skiID": 319,
+    "latitude": 35.386123339484875,
+    "longitude": 134.5665553931887,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0897s.htm"
+  },
+  {
+    "name": "氷ノ山国際スキー場",
+    "skiID": 320,
+    "latitude": 35.37011108994163,
+    "longitude": 134.53924782201983,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0898s.htm"
+  },
+  {
+    "name": "但馬牧場公園スキー場",
+    "skiID": 321,
+    "latitude": 35.51599202203232,
+    "longitude": 134.48918764899074,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0899s.htm"
+  },
+  {
+    "name": "六甲山スノーパーク",
+    "skiID": 322,
+    "latitude": 34.76814906823833,
+    "longitude": 135.24261246437135,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0900s.htm"
+  },
+  {
+    "name": "ちくさ高原スキー場",
+    "skiID": 323,
+    "latitude": 35.22069114858311,
+    "longitude": 134.3899018220345,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0901s.htm"
+  },
+  {
+    "name": "奥神鍋スキー場",
+    "skiID": 324,
+    "latitude": 35.50497709358985,
+    "longitude": 134.6523648132875,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0902s.htm"
+  },
+  {
+    "name": "大山ますみず高原スキー場 〜SNOW PARK〜",
+    "skiID": 326,
+    "latitude": 35.380198339070084,
+    "longitude": 133.5176686062554,
+    "region": "鳥取県",
+    "url": "https://surfsnow.jp/guide/htm/r0906s.htm"
+  },
+  {
+    "name": "大山鏡ヶ成スキー場",
+    "skiID": 327,
+    "latitude": 35.34443190381133,
+    "longitude": 133.5914114508473,
+    "region": "鳥取県",
+    "url": "https://surfsnow.jp/guide/htm/r0907s.htm"
+  },
+  {
+    "name": "ひるぜんベアバレースキー場",
+    "skiID": 328,
+    "latitude": 35.26146211065132,
+    "longitude": 133.59628504895898,
+    "region": "岡山県",
+    "url": "https://surfsnow.jp/guide/htm/r0912s.htm"
+  },
+  {
+    "name": "恩原高原スキー場",
+    "skiID": 329,
+    "latitude": 35.319768122115505,
+    "longitude": 133.98148743533793,
+    "region": "岡山県",
+    "url": "https://surfsnow.jp/guide/htm/r0914s.htm"
+  },
+  {
+    "name": "大佐スキー場",
+    "skiID": 332,
+    "latitude": 34.74803734954293,
+    "longitude": 132.2200188220324,
+    "region": "広島県",
+    "url": "https://surfsnow.jp/guide/htm/r0919s.htm"
+  },
+  {
+    "name": "恐羅漢スノーパーク",
+    "skiID": 334,
+    "latitude": 34.59590288242458,
+    "longitude": 132.14660817786665,
+    "region": "広島県",
+    "url": "https://surfsnow.jp/guide/htm/r0922s.htm"
+  },
+  {
+    "name": "ひろしま県民の森スキー場",
+    "skiID": 335,
+    "latitude": 35.090847228328684,
+    "longitude": 133.0712268550292,
+    "region": "島根県",
+    "url": "https://hiroshima-kenmori.com/activity#ski"
+  },
+  {
+    "name": "もみのき森林公園スキー場",
+    "skiID": 337,
+    "latitude": 34.48445700637295,
+    "longitude": 132.17636618383443,
+    "region": "広島県",
+    "url": "https://surfsnow.jp/guide/htm/r0926s.htm"
+  },
+  {
+    "name": "井川スキー場 腕山",
+    "skiID": 338,
+    "latitude": 33.96346260569552,
+    "longitude": 133.8847238894566,
+    "region": "徳島県",
+    "url": "https://surfsnow.jp/guide/htm/r1013s.htm"
+  },
+  {
+    "name": "久万スキーランド",
+    "skiID": 340,
+    "latitude": 33.718676941340824,
+    "longitude": 132.8744327201598,
+    "region": "愛媛県",
+    "url": "https://surfsnow.jp/guide/htm/r0934s.htm"
+  },
+  {
+    "name": "石鎚スキー場",
+    "skiID": 341,
+    "latitude": 33.79348576557905,
+    "longitude": 133.12741306438153,
+    "region": "愛媛県",
+    "url": "https://surfsnow.jp/guide/htm/r0935s.htm"
+  },
+  {
+    "name": "大鰐温泉スキー場",
+    "skiID": 343,
+    "latitude": 40.507792853310704,
+    "longitude": 140.56460519131514,
+    "region": "青森県",
+    "url": "https://surfsnow.jp/guide/htm/r0943s.htm"
+  },
+  {
+    "name": "絶景・猪苗代スキー場",
+    "skiID": 344,
+    "latitude": 37.57546712422607,
+    "longitude": 140.09464210669125,
+    "region": "福島県",
+    "url": "https://surfsnow.jp/guide/htm/r0944s.htm"
+  },
+  {
+    "name": "ニセコHANAZONOリゾート",
+    "skiID": 345,
+    "latitude": 42.893305855486965,
+    "longitude": 140.7001873931851,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0945s.htm"
+  },
+  {
+    "name": "やわたハイランド191リゾート",
+    "skiID": 348,
+    "latitude": 34.6946663289777,
+    "longitude": 132.15990546618235,
+    "region": "広島県",
+    "url": "https://surfsnow.jp/guide/htm/r0948s.htm"
+  },
+  {
+    "name": "YAMABOKU ワイルドスノーパーク",
+    "skiID": 349,
+    "latitude": 36.667810217469714,
+    "longitude": 138.46073907967715,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0949s.htm"
+  },
+  {
+    "name": "IOX‐AROSA",
+    "skiID": 350,
+    "latitude": 36.51518081226816,
+    "longitude": 136.82007297786913,
+    "region": "富山県",
+    "url": "https://surfsnow.jp/guide/htm/r0962s.htm"
+  },
+  {
+    "name": "八海山麓スキー場",
+    "skiID": 351,
+    "latitude": 37.15477654577202,
+    "longitude": 138.97390224716656,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0964s.htm"
+  },
+  {
+    "name": "ニノックススノーパーク",
+    "skiID": 352,
+    "latitude": 37.92697269405344,
+    "longitude": 139.46789616291127,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r0970s.htm"
+  },
+  {
+    "name": "神鍋高原 万場スキー場",
+    "skiID": 354,
+    "latitude": 35.49450655100037,
+    "longitude": 134.6636660778461,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r0974s.htm"
+  },
+  {
+    "name": "九頭竜スキー場",
+    "skiID": 355,
+    "latitude": 35.89849384704492,
+    "longitude": 136.6545484778728,
+    "region": "福井県",
+    "url": "https://surfsnow.jp/guide/htm/r0977s.htm"
+  },
+  {
+    "name": "菅平パインビークスキー場",
+    "skiID": 357,
+    "latitude": 36.517803270018895,
+    "longitude": 138.31800178796144,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r0979s.htm"
+  },
+  {
+    "name": "和寒町東山スキー場",
+    "skiID": 358,
+    "latitude": 44.03452014736599,
+    "longitude": 142.4137071286297,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0982s.htm"
+  },
+  {
+    "name": "石狩平原スキー場",
+    "skiID": 359,
+    "latitude": 43.261007990918166,
+    "longitude": 141.5070487066735,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0984s.htm"
+  },
+  {
+    "name": "メムロスキー場",
+    "skiID": 360,
+    "latitude": 42.83094306501496,
+    "longitude": 142.98853652198954,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0986s.htm"
+  },
+  {
+    "name": "清里町営緑スキー場",
+    "skiID": 361,
+    "latitude": 43.72027125665436,
+    "longitude": 144.50293600667297,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r0989s.htm"
+  },
+  {
+    "name": "ニセコモイワスキーリゾート",
+    "skiID": 362,
+    "latitude": 42.848300624068266,
+    "longitude": 140.63022560483674,
+    "region": "北海道",
+    "url": "https://surfsnow.jp/guide/htm/r1009s.htm"
+  },
+  {
+    "name": "ひるぜんキッズスノーパーク",
+    "skiID": 363,
+    "latitude": 35.29539506936515,
+    "longitude": 133.6310730066725,
+    "region": "岡山県",
+    "url": "https://surfsnow.jp/guide/htm/r1014s.htm"
+  },
+  {
+    "name": "峰山高原リゾート",
+    "skiID": 364,
+    "latitude": 35.13224182510073,
+    "longitude": 134.66668593554445,
+    "region": "兵庫県",
+    "url": "https://surfsnow.jp/guide/htm/r1015s.htm"
+  },
+  {
+    "name": "国見平スキー場",
+    "skiID": 365,
+    "latitude": 39.0602686424522,
+    "longitude": 140.97019663553732,
+    "region": "岩手県",
+    "url": "https://surfsnow.jp/guide/htm/r1019s.htm"
+  },
+  {
+    "name": "アライマウンテンリゾート（旧ロッテアライリゾート）",
+    "skiID": 366,
+    "latitude": 36.98966024650074,
+    "longitude": 138.18008296437588,
+    "region": "新潟県",
+    "url": "https://surfsnow.jp/guide/htm/r1020s.htm"
+  },
+  {
+    "name": "佐久スキーガーデン「パラダ」南パラダスキー場",
+    "skiID": 367,
+    "latitude": 36.27880940322317,
+    "longitude": 138.51301844899783,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r1021s.htm"
+  },
+  {
+    "name": "横手山・渋峠スキー場",
+    "skiID": 368,
+    "latitude": 36.67747801394461,
+    "longitude": 138.51044532202127,
+    "region": "長野県",
+    "url": "https://surfsnow.jp/guide/htm/r1022s.htm"
+  }
+]
