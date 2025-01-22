@@ -134,7 +134,7 @@ function App() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            p: 1,
+            p: 0.7,
           }}
         >
           <Filter
@@ -234,7 +234,7 @@ function App() {
                   // width: "100%",
                   height: "98.3%",
                   mr: 1,
-                  mb: 1,
+
                   // p: 1,
                   // pb: 1,
                   overflow: "hidden",

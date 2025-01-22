@@ -80,7 +80,7 @@ const StackedBarChart = ({
       <BarChart
         data={displayData}
         layout="vertical"
-        margin={{ top: 20, right: 30, left: 100, bottom: 20 }}
+        margin={{ top: 20, right: 30, left: 100 }}
       >
         <XAxis type="number" />
         <YAxis
