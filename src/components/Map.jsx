@@ -52,7 +52,7 @@ const generateDivIcon = (color) =>
 function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
   const mapRef = useRef();
   const DEFAULT_ZOOM = 5;
-  const MAX_ZOOM = 12;
+  const MAX_ZOOM = 14;
   const MIN_Z00M = 5;
   const JAPAN = [40.345119, 140.800075];
   const JAPAN_BOUNDS = [
@@ -145,9 +145,9 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
                         </a>
                       </td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                       <td>{item.region}</td>
-                    </tr>
+                    </tr> */}
                   </tbody>
                 </table>
                 <button
@@ -174,9 +174,10 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
               center={[item.latitude, item.longitude]}
               fillOpacity={0.7}
               radius={
-                hoverCircle === item.skiID
-                  ? 600 * (MAX_ZOOM - zoomLev) + radius
-                  : radius
+                // hoverCircle === item.skiID
+                // ? 600 * (MAX_ZOOM - zoomLev) + radius
+                // :
+                radius
               }
               fillColor="blue"
               color="blue"
@@ -188,7 +189,9 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
               key={`outer${item.skiID}`}
               fillOpacity={0}
               opacity={0}
-              radius={600 * (MAX_ZOOM - zoomLev) + radius}
+              radius={
+                zoomLev >= 10 ? radius : 600 * (MAX_ZOOM - zoomLev) + radius
+              }
               fillColor="blue"
               color="blue"
               strokeOpacity={1}
@@ -218,9 +221,9 @@ function Map({ mapData, skiTargetID, setSkiTargetID, skiColors, setOpen }) {
                     <tr>
                       <td>{item.name}</td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                       <td>{item.region}</td>
-                    </tr>
+                    </tr> */}
                   </tbody>
                 </table>
               </Popup>
