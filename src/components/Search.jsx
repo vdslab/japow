@@ -98,7 +98,7 @@ const Search = ({ skiTargetID, setSkiTargetID, setOpen }) => {
   };
 
   return (
-    <Box sx={{ height: "100%", display: "flex", alignItems: "center", pl: 3 }}>
+    <Box sx={{ height: "95%", display: "flex", alignItems: "center", pl: 3 }}>
       <Autocomplete
         multiple
         options={filteredOptions}

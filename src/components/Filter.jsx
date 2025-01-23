@@ -110,7 +110,12 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
       }}
     >
       {/* 地域選択 */}
-      <FormControl sx={{ m: 1, minWidth: 300 }}>
+      <FormControl
+        sx={{
+          flex: "1 1 40%",
+          minWidth: "200px",
+        }}
+      >
         <InputLabel id="region-label">地域</InputLabel>
         <Select
           labelId="region-label"
@@ -128,7 +133,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
               style: {
                 m: 2,
                 maxHeight: "50%",
-                width: 300,
+                width: "15%",
               },
             },
           }}
@@ -190,7 +195,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
       </FormControl>
 
       {/* 期間選択 */}
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
+      <FormControl sx={{ flex: "1 1 20%", minWidth: "150px" }}>
         <InputLabel id="period-label">時期</InputLabel>
         <Select
           labelId="period-label"
@@ -212,9 +217,9 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
         </Select>
       </FormControl>
 
-      <Box sx={{ position: "relative", display: "inline-block" }}>
-        {/* 雪質の選択 */}
-        <FormControl sx={{ m: 1, minWidth: 200 }}>
+      {/* 雪質の選択 */}
+      <Box sx={{ flex: "1 1 40%", position: "relative" }}>
+        <FormControl sx={{ width: "100%", height: "100%" }}>
           <InputLabel id="sq-label">雪質</InputLabel>
           <Select
             labelId="sq-label"
