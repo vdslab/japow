@@ -1,6 +1,6 @@
 //期間ID
 export const PERIOD_IDS = {
-  all: "0",//全期間
+  ALL: "0",//全期間
   early: "1", //序盤
   middele: "2",//中盤
   late: "3"//終盤

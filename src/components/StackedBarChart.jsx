@@ -10,28 +10,22 @@ import {
   Cell,
 } from "recharts";
 import { calcPeriodAverage } from "../functions/AverageRank";
-import { mapFilterBypref, snowFilterByPeriod, sqFilterByPeriod } from "../functions/filtering";
+import { snowFilterByPeriod } from "../functions/filtering";
 import { SNOW_QUALITY_LIST } from "../constants";
 import { CreateSelecetAndSortData } from "../functions/SortData";
-import sqData from "../assets/aaaa.json";
 
 const StackedBarChart = ({
-  // snowData,
+  snowData,
   sqTarget,
   filter,
   skiTargetID,
   setSkiTargetID,
   setOpen,
 }) => {
-  // const data = snowFilterByPeriod(snowData, filter.period);
-  // console.log(sqFilterByPeriod(sqData, filter.period))
-  // const averageData = calcPeriodAverage(data);
-  // console.log(averageData);
-  let data = sqFilterByPeriod(sqData, filter.period);
-  data = mapFilterBypref(data, filter.pref, skiTargetID);
-
+  const data = snowFilterByPeriod(snowData, filter.period);
+  const averageData = calcPeriodAverage(data);
   const displayData = CreateSelecetAndSortData(
-    data,
+    averageData,
     skiTargetID,
     sqTarget,
     10
