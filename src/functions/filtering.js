@@ -37,8 +37,8 @@ export const mapFilterBypref = (data, slectedPref, skiTargetID) => {
 export const snowFilterByPeriod = (data, period) => {
   if (period === PERIOD_IDS.early) {
     return data.filter(({ month }) => PERIOD_MONTH.early.includes(month));
-  } else if (period === PERIOD_IDS.middele) {
-    return data.filter(({ month }) => PERIOD_MONTH.middele.includes(month));
+  } else if (period === PERIOD_IDS.middle) {
+    return data.filter(({ month }) => PERIOD_MONTH.middle.includes(month));
   } else if (period === PERIOD_IDS.late) {
     return data.filter(({ month }) => PERIOD_MONTH.late.includes(month));
   } else {
