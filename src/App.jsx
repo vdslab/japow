@@ -35,7 +35,7 @@ function App() {
   const [filter, setFilter] = useState({
     pref: [],
     season: "2023/24",
-    period: PERIOD_IDS.ALL,
+    period: PERIOD_IDS.all,
     sq: "powder",
   });
   const [skiColors, setSkiColors] = useState({});
