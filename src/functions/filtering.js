@@ -46,6 +46,22 @@ export const snowFilterByPeriod = (data, period) => {
   }
 };
 
+//帯グラフ用時期フィルタ
+export const sqFilterByPeriod = (data, period) => {
+  let periodKey = "all";
+  for (const p of Object.entries(PERIOD_IDS)) {
+    if (p[1] === period) {
+      periodKey = p[0];
+      break;
+    }
+  }
+  return data.map((item) => {
+    const { name, skiID, region } = item;
+    return { name, skiID, region, ...item[periodKey] };
+  })
+}
+
+
 // 選択されたスキー場の名前でフィルタリング
 export const snowFilterBySkiTarget = (skiTargetID, data) => {
   return data.flatMap((month) => {
