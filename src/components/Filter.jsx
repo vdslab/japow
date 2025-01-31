@@ -272,7 +272,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
                   </>
                 ) : key === "dry" ? (
                   <>
-                    水分量が少なく、さらさらした雪を指します。
+                    水分量が少なく、サラサラした雪を指します。
                     <br />
                     滑走時にスピードが出やすく、カーブもしやすい特徴があります。
                   </>
