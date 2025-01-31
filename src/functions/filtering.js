@@ -37,14 +37,30 @@ export const mapFilterBypref = (data, slectedPref, skiTargetID) => {
 export const snowFilterByPeriod = (data, period) => {
   if (period === PERIOD_IDS.early) {
     return data.filter(({ month }) => PERIOD_MONTH.early.includes(month));
-  } else if (period === PERIOD_IDS.middele) {
-    return data.filter(({ month }) => PERIOD_MONTH.middele.includes(month));
+  } else if (period === PERIOD_IDS.middle) {
+    return data.filter(({ month }) => PERIOD_MONTH.middle.includes(month));
   } else if (period === PERIOD_IDS.late) {
     return data.filter(({ month }) => PERIOD_MONTH.late.includes(month));
   } else {
     return data;
   }
 };
+
+//帯グラフ用時期フィルタ
+export const sqFilterByPeriod = (data, period) => {
+  let periodKey = "all";
+  for (const p of Object.entries(PERIOD_IDS)) {
+    if (p[1] === period) {
+      periodKey = p[0];
+      break;
+    }
+  }
+  return data.map((item) => {
+    const { name, skiID, region } = item;
+    return { name, skiID, region, ...item[periodKey] };
+  })
+}
+
 
 // 選択されたスキー場の名前でフィルタリング
 export const snowFilterBySkiTarget = (skiTargetID, data) => {

@@ -16,9 +16,9 @@ import { PERIOD_IDS, SNOW_QUALITY_LIST } from "../constants";
 const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
   const SELECT_ALL_REGION_NAME = "全国";
   const periods = [
-    { name: "全期間", id: PERIOD_IDS.ALL },
+    { name: "全期間", id: PERIOD_IDS.all },
     { name: "序盤（11月）", id: PERIOD_IDS.early },
-    { name: "中盤（12月〜２月）", id: PERIOD_IDS.middele },
+    { name: "中盤（12月〜２月）", id: PERIOD_IDS.middle },
     { name: "終盤（3月）", id: PERIOD_IDS.late },
   ];
   const SELECT_ALL_PERIOD_NAME = "全期間";

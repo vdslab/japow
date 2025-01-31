@@ -1,14 +1,14 @@
 //期間ID
 export const PERIOD_IDS = {
-  ALL: "0",//全期間
+  all: "0",//全期間
   early: "1", //序盤
-  middele: "2",//中盤
+  middle: "2",//中盤middle
   late: "3"//終盤
 }
 
 export const PERIOD_MONTH = {
   early: ["11月"],
-  middele: ["12月", "1月", "2月"],
+  middle: ["12月", "1月", "2月"],
   late: ["3月"]
 }
 

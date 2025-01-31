@@ -96,51 +96,54 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
     });
 
     return (
-      <ResponsiveContainer width={"100%"} height={"95%"}>
-        <LineC
-          data={pastData}
-          width={"100%"}
-          margin={{ top: 5, right: 20, left: -20, bottom: 17 }}
-        >
-          <CartesianGrid vertical={false} horizontal={true} />
-          <XAxis
-            dataKey="name"
-            interval={0}
-            tick={(tickProps) =>
-              renderTick({ ...tickProps, allTicks: pastData })
-            }
-            tickLine={false}
-          />
-          <YAxis tick={{ style: { fontSize: "12px", fill: "#666" } }} />
-          <Tooltip content={renderCustomTooltip} />
-          <Legend
-            wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }}
-          />
-          {skiTargetNames.map(({ name, skiID }) => (
-            <Line
-              key={name}
-              type="monotone"
-              dataKey={name}
-              stroke={skiColors[skiID]}
-              name={name}
-              strokeOpacity={hoveredLine && hoveredLine !== name ? 0.2 : 1}
-              strokeWidth={hoveredLine === name ? 2 : 1}
-              dot={{
-                r: hoveredLine === name ? 1 : 1,
-                onMouseEnter: () => setHoveredLine(name),
-                onMouseLeave: () => setHoveredLine(null),
-              }}
-              activeDot={{
-                r: 2,
-                onMouseEnter: () => setHoveredLine(name),
-                onMouseLeave: () => setHoveredLine(null),
-              }}
-              onMouseEnter={() => setHoveredLine(name)}
-              onMouseLeave={() => setHoveredLine(null)}
+      // ResponsiveContainerを親タグで囲んで、親タグでサイズを指定する
+      <div style={{width:"100%", height:"90%"}}>
+        <ResponsiveContainer width={"100%"} height={"100%"}>
+          <LineC
+            data={pastData}
+            width={"100%"}
+            margin={{ top: 5, right: 20, left: -20, bottom: 17 }}
+          >
+            <CartesianGrid vertical={false} horizontal={true} />
+            <XAxis
+              dataKey="name"
+              interval={0}
+              tick={(tickProps) =>
+                renderTick({ ...tickProps, allTicks: pastData })
+              }
+              tickLine={false}
             />
-          ))}
-        </LineC>
-      </ResponsiveContainer>
+            <YAxis tick={{ style: { fontSize: "12px", fill: "#666" } }} />
+            <Tooltip content={renderCustomTooltip} />
+            <Legend
+              wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }}
+            />
+            {skiTargetNames.map(({ name, skiID }) => (
+              <Line
+                key={name}
+                type="monotone"
+                dataKey={name}
+                stroke={skiColors[skiID]}
+                name={name}
+                strokeOpacity={hoveredLine && hoveredLine !== name ? 0.2 : 1}
+                strokeWidth={hoveredLine === name ? 2 : 1}
+                dot={{
+                  r: hoveredLine === name ? 1 : 1,
+                  onMouseEnter: () => setHoveredLine(name),
+                  onMouseLeave: () => setHoveredLine(null),
+                }}
+                activeDot={{
+                  r: 2,
+                  onMouseEnter: () => setHoveredLine(name),
+                  onMouseLeave: () => setHoveredLine(null),
+                }}
+                onMouseEnter={() => setHoveredLine(name)}
+                onMouseLeave={() => setHoveredLine(null)}
+              />
+            ))}
+          </LineC>
+        </ResponsiveContainer>
+      </div>
     );
   } else {
     return (
