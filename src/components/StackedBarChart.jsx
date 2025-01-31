@@ -88,7 +88,7 @@ const StackedBarChart = ({
         layout="vertical"
         margin={{ top: 20, right: 30, left: 100 }}
       >
-        <XAxis type="number" />
+        <XAxis type="number" tickFormatter={(value) => `${value}%`} />
         <YAxis
           dataKey="name"
           type="category"

@@ -113,7 +113,7 @@ const LineChart = ({ skiTargetID, skiData, skiColors, sqTarget }) => {
               }
               tickLine={false}
             />
-            <YAxis tick={{ style: { fontSize: "12px", fill: "#666" } }} />
+            <YAxis tick={{ style: { fontSize: "12px", fill: "#666" } }} tickFormatter={(value) => `${value}%`} />
             <Tooltip content={renderCustomTooltip} />
             <Legend
               wrapperStyle={{ height: "10%", fontSize: `${legendFontSize}px` }}
