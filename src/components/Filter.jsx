@@ -18,7 +18,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
   const periods = [
     { name: "全期間", id: PERIOD_IDS.all },
     { name: "序盤（11月）", id: PERIOD_IDS.early },
-    { name: "中盤（12月〜２月）", id: PERIOD_IDS.middle },
+    { name: "中盤（12月〜2月）", id: PERIOD_IDS.middle },
     { name: "終盤（3月）", id: PERIOD_IDS.late },
   ];
   const SELECT_ALL_PERIOD_NAME = "全期間";
@@ -46,16 +46,9 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
     北陸: ["石川県", "富山県", "福井県"],
     中京: ["岐阜県", "愛知県", "三重県"],
     関西: ["滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県"],
-    "中国・四国・九州": [
-      "鳥取県",
-      "島根県",
-      "岡山県",
-      "広島県",
-      "山口県",
-      "徳島県",
-      "香川県",
-      "愛媛県",
-      "高知県",
+    中国: ["鳥取県", "島根県", "岡山県", "広島県", "山口県"],
+    四国: ["徳島県", "香川県", "愛媛県", "高知県"],
+    九州: [
       "福岡県",
       "佐賀県",
       "長崎県",
@@ -202,7 +195,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
       </FormControl>
 
       {/* 期間選択 */}
-      <FormControl sx={{ flex: "1 1 20%", minWidth: "150px" }}>
+      <FormControl sx={{ flex: "1 1 30%", minWidth: "150px" }}>
         <InputLabel id="period-label">時期</InputLabel>
         <Select
           labelId="period-label"
@@ -225,7 +218,7 @@ const Filter = ({ filter, setFilter, setSqTarget, sqTarget }) => {
       </FormControl>
 
       {/* 雪質の選択 */}
-      <Box sx={{ flex: "1 1 40%", position: "relative" }}>
+      <Box sx={{ flex: "1 1 30%", position: "relative", minWidth: "150px" }}>
         <FormControl sx={{ width: "100%", height: "100%" }}>
           <InputLabel id="sq-label">雪質</InputLabel>
           <Select
