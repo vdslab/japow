@@ -1,7 +1,7 @@
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const fs = require("fs");
-const skiPoint = require("../assets/ski_resorts_japan_open.json");
+const skiPoint = require("../assets/ski_resorts_japan_open_all.json");
 const path = require("path");
 const fileNamePrefix = `calculatedData`;
 const gridDirectory = "../../docker-python/data";
