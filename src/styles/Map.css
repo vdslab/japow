@@ -73,3 +73,11 @@
   padding: 0 !important;
   text-align: center;
 }
+
+.leaflet-circle-popup {
+  pointer-events: none !important;
+}
+
+.leaflet-popup-tip{
+  pointer-events: none !important;
+}
