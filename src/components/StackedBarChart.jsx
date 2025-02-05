@@ -35,15 +35,7 @@ const StackedBarChart = ({
     skiTargetID,
     sqTarget,
     10
-  ).map((item) => {
-    if (
-      item.powder + item.new + item.dry + item.wet + item.shaba + item.burn >
-      100
-    ) {
-      item.powder = Math.trunc(item.powder * 100) / 100;
-    }
-    return item;
-  });
+  )
   // 積み上げ順序を定義
   const categories = Object.keys(SNOW_QUALITY_LIST);
   const orderedCategories = [

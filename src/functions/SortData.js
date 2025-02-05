@@ -11,11 +11,20 @@ export const sort = (data, sqTarget) => {
 export const CreateSelecetAndSortData = (data, skiTargetID, sqTarget, num) => {
   const seledtedData = [];
   const notSelectedData = [];
+  let prevScore = 0;
+  let prevRank = 0;
   data
     .slice()
     .sort((a, b) => b[sqTarget] - a[sqTarget])
     .forEach((item, index) => {
-      item["rank"] = index + 1;
+      console.log(item["name"])
+      if(prevScore === item[sqTarget]) {
+        item["rank"] = prevRank;
+      } else {
+        prevScore = item[sqTarget];
+        item["rank"] = index + 1;
+        prevRank = index + 1;
+      }
       if (skiTargetID.includes(item.skiID)) {
         seledtedData.push(item);
       } else {
@@ -28,7 +37,17 @@ export const CreateSelecetAndSortData = (data, skiTargetID, sqTarget, num) => {
       .sort((a, b) => b[sqTarget] - a[sqTarget])
       .slice(0, num - seledtedData.length);
   }
-  const displayData = [...sortData, ...seledtedData];
-  displayData.sort((a, b) => b[sqTarget] - a[sqTarget]);
+  const displayData = [...seledtedData, ...sortData];
+  console.log(displayData);
+  displayData.sort((a, b) => {
+    if(b[sqTarget] - a[sqTarget] > 0) {
+      return 1;
+    } else if(b[sqTarget] - a[sqTarget] < 0) {
+      return -1;
+    } else {
+      console.log(b, a)
+      return b.skiID - a.skiID;
+    }
+  });
   return displayData;
 };
