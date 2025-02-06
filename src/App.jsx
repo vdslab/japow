@@ -16,11 +16,11 @@ import StackedBarChart from "./components/StackedBarChart.jsx";
 import { PERIOD_IDS, SNOW_QUALITY_LIST } from "./constants.js";
 import { createColors } from "./functions/createColors.js";
 import * as React from "react";
-import Alert from "@mui/material/Alert";
-import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import sqData from "./assets/snowQualityData.json";
+import mData from "./assets/ski_resorts_japan_open_all.json"
 
 function App() {
   let snowQualityData;
@@ -29,12 +29,10 @@ function App() {
   const [snowData, setSnowData] = useState([]);
   // マップに描画するデータ
   const [mapData, setMapData] = useState([]);
-  const snowDataRef = useRef([]);
-  const mapDataRef = useRef([]);
   const [skiTargetID, setSkiTargetID] = useState([]);
   const [filter, setFilter] = useState({
     pref: [],
-    season: "2023/24",
+    season: "ave_12y",
     period: PERIOD_IDS.all,
     sq: "powder",
   });
@@ -66,29 +64,12 @@ function App() {
       </IconButton>
     </React.Fragment>
   );
+
   useEffect(() => {
-    (async () => {
-      const sqRes = await fetch("/data/snowQualityData.json");
-      snowQualityData = await sqRes.json();
-      const szRes = await fetch("/data/ski_resorts_japan_open.json");
-      sukijouZahyou = await szRes.json();
-      snowDataRef.current = snowQualityData;
-      mapDataRef.current = sukijouZahyou;
-      setSnowData(
-        snowFilterBySeason(
-          JSON.parse(JSON.stringify(snowDataRef.current)),
-          filter.season
-        )
-      );
-      setMapData(JSON.parse(JSON.stringify(mapDataRef.current)));
-    })();
-  }, []);
-  useEffect(() => {
-    let snowFilteredData = JSON.parse(JSON.stringify(snowDataRef.current));
-    let mapFilteredData = JSON.parse(JSON.stringify(mapDataRef.current));
+    let snowFilteredData = JSON.parse(JSON.stringify(sqData));
+    let mapFilteredData = JSON.parse(JSON.stringify(mData));
     snowFilteredData = snowFilterBySeason(snowFilteredData, filter.season);
     // snowFilteredData = snowFilterBySeason(snowFilteredData, filter.season)
-
     if (filter.pref !== "") {
       snowFilteredData = snowFilterBypref(
         snowFilteredData,
@@ -101,7 +82,6 @@ function App() {
         skiTargetID
       );
     }
-
     if (filter.period !== "") {
       snowFilteredData = snowFilterByPeriod(snowFilteredData, filter.period);
     }

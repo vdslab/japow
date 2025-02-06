@@ -17,7 +17,6 @@ export const CreateSelecetAndSortData = (data, skiTargetID, sqTarget, num) => {
     .slice()
     .sort((a, b) => b[sqTarget] - a[sqTarget])
     .forEach((item, index) => {
-      console.log(item["name"])
       if(prevScore === item[sqTarget]) {
         item["rank"] = prevRank;
       } else {
@@ -38,14 +37,12 @@ export const CreateSelecetAndSortData = (data, skiTargetID, sqTarget, num) => {
       .slice(0, num - seledtedData.length);
   }
   const displayData = [...seledtedData, ...sortData];
-  console.log(displayData);
   displayData.sort((a, b) => {
     if(b[sqTarget] - a[sqTarget] > 0) {
       return 1;
     } else if(b[sqTarget] - a[sqTarget] < 0) {
       return -1;
     } else {
-      console.log(b, a)
       return b.skiID - a.skiID;
     }
   });
