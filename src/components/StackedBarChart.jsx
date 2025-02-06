@@ -13,7 +13,7 @@ import { calcPeriodAverage } from "../functions/AverageRank";
 import { mapFilterBypref, snowFilterByPeriod, sqFilterByPeriod } from "../functions/filtering";
 import { SNOW_QUALITY_LIST } from "../constants";
 import { CreateSelecetAndSortData } from "../functions/SortData";
-import sqData from "../assets/aaaa.json";
+import sqData from "../assets/predict_count.json";
 
 const StackedBarChart = ({
   // snowData,
